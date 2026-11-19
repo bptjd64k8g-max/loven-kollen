@@ -36,18 +36,23 @@ const clean = s => String(s ?? "").replace(/ /g, " ").replace(/\s+/g, " ").trim
 const num = s => { const m = clean(s).replace("−", "-").replace("–", "-").match(/^[+-]?\d+(?:[.,]\d+)?/); return m ? Number(m[0].replace(",", ".")) : NaN; };
 const fold = s => clean(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 
-// Alla tabeller på en sida som {headers, rows}
+// Alla tabeller på en sida som {headers, rows}. Tabeller i tabeller (som på swehockey) läses var för sig,
+// och en rad som ser ut som rubriker (t.ex. "Rk, No, Name, Team, GP") startar en ny tabell.
+const HEADER_WORDS = new Set(["Lag", "Name", "Namn", "Team", "GP", "S", "P", "TP", "GAA", "Rk"]);
 function tables($) {
   const out = [];
   $("table").each((_, t) => {
-    const trs = $(t).find("tr").toArray();
-    if (!trs.length) return;
-    let headers = $(t).find("thead tr").last().find("th,td").toArray().map(c => clean($(c).text()));
-    let body = $(t).find("tbody tr").toArray();
-    if (!headers.length) { headers = $(trs[0]).find("th,td").toArray().map(c => clean($(c).text())); body = trs.slice(1); }
-    if (!body.length) body = trs.filter(tr => $(tr).find("td").length);
-    const rows = body.map(tr => $(tr).find("td,th").toArray().map(c => clean($(c).text()))).filter(r => r.length > 1);
-    out.push({ headers, rows });
+    const trs = $(t).children("thead,tbody,tfoot").children("tr").add($(t).children("tr")).toArray();
+    const rows = trs.map(tr => $(tr).children("td,th").toArray().map(c => clean($(c).text()))).filter(r => r.length > 1);
+    if (!rows.length) return;
+    out.push({ headers: rows[0], rows: rows.slice(1) });
+    rows.forEach((r, i) => {
+      if (i > 0 && r.length >= 4 && r.filter(c => HEADER_WORDS.has(c)).length >= 2) {
+        const next = rows.slice(i + 1);
+        const end = next.findIndex(x => x.length >= 4 && x.filter(c => HEADER_WORDS.has(c)).length >= 2);
+        out.push({ headers: r, rows: end < 0 ? next : next.slice(0, end) });
+      }
+    });
   });
   return out;
 }
@@ -109,13 +114,23 @@ await source("tabell", async () => {
 /* 2. Spelschema och resultat */
 let times = {}; // datum -> "HH:MM"
 await source("tider", async () => {
-  const $ = cheerio.load(await get("https://www.betbuilders.ai/hockey/shl/lag/if-bjorkloven"));
-  $("a[href*='/hockey/shl/']").each((_, a) => {
-    const href = $(a).attr("href") || "";
-    const m = href.match(/(\d{4}-\d{2}-\d{2})\/?$/);
-    const t = clean($(a).text()).match(/\b(\d{1,2}):(\d{2})\b/);
-    if (m && t && href.includes("bjorkloven")) times[m[1]] = `${t[1].padStart(2, "0")}:${t[2]}`;
-  });
+  const MON = { jan: 1, feb: 2, mar: 3, mars: 3, apr: 4, april: 4, maj: 5, jun: 6, juni: 6, jul: 7, juli: 7, aug: 8, sep: 9, okt: 10, nov: 11, dec: 12 };
+  const ymd = (d, m) => { const mo = MON[m]; const y = mo >= 7 ? 2026 : 2027; return `${y}-${String(mo).padStart(2, "0")}-${String(d).padStart(2, "0")}`; };
+  try {
+    const text = clean(cheerio.load(await get("https://www.hockeytabeller.se/shl/lag/if-bjorkloven"))("body").text());
+    const re = /(?:mån|tis|ons|tors|fre|lör|sön)\s+(\d{1,2})\s+(jan|feb|mars?|apr(?:il)?|maj|juni?|juli?|aug|sep|okt|nov|dec)\.?\s+[HB]\s*.{2,30}?\s+(\d{1,2}):(\d{2})/g;
+    for (const m of text.matchAll(re)) times[ymd(+m[1], m[2])] = `${m[3].padStart(2, "0")}:${m[4]}`;
+  } catch (e) { log("   hockeytabeller:", e.message); }
+  try {
+    const $ = cheerio.load(await get("https://www.betbuilders.ai/hockey/shl/lag/if-bjorkloven"));
+    $("a[href*='/hockey/shl/']").each((_, a) => {
+      const href = $(a).attr("href") || "";
+      const m = href.match(/(\d{4}-\d{2}-\d{2})\/?$/);
+      const t = clean($(a).text()).match(/\b(\d{1,2}):(\d{2})\b/);
+      if (m && t && href.includes("bjorkloven")) times[m[1]] = `${t[1].padStart(2, "0")}:${t[2]}`;
+    });
+  } catch (e) { log("   betbuilders:", e.message); }
+  log("   tider:", JSON.stringify(times));
   if (!Object.keys(times).length) throw new Error("inga matchtider hittades");
 });
 
@@ -160,7 +175,10 @@ await source("spelare", async () => {
   }
   const html = await get(`https://stats.swehockey.se/Players/Statistics/ScoringLeaders/${id}`);
   const $ = cheerio.load(html);
-  const code = (clean($("body").text()).match(/\b([A-ZÅÄÖ]{2,5})\s*-\s*IF Björklöven/) || [])[1];
+  const bodyText = clean($("body").text());
+  const code = (bodyText.match(/\b([A-ZÅÄÖ0-9]{2,5})\s*[-–]\s*(?:IF\s*)?Björklöven/) || [])[1];
+  const near = bodyText.indexOf("Björklöven");
+  if (near >= 0) log("   runt Björklöven:", bodyText.slice(Math.max(0, near - 60), near + 40));
   const codes = new Set([code, "IFB", "BJÖ", "BJO", "IF Björklöven", "Björklöven"].filter(Boolean));
   const players = [];
   for (const { headers, rows } of tables($)) {
