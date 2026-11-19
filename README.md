@@ -6,9 +6,9 @@ Sidan uppdaterar sig själv. Var 30:e minut hämtar GitHub Actions ny data (`scr
 
 ## Källor
 - Tabell: hockeytabeller.se (reserv: sportstatistik.nu)
-- Spelschema och resultat: sportstatistik.nu, matchtider från betbuilders.ai
-- Spelarstatistik: stats.swehockey.se
-- Lagets nyckeltal: betbuilders.ai
+- Spelschema, resultat och matchtider: stats.swehockey.se
+- Spelar- och målvaktsstatistik: stats.swehockey.se
+- Lagets nyckeltal: stats.swehockey.se
 - Nyheter och silly: Google News
 
 Misslyckas en källa behålls förra värdet. Se `sources` i `data.json` och loggen under fliken Actions.
