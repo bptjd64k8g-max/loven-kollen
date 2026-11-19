@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Löven-kollen</title>
+<meta name="description" content="Allt om IF Björklöven: matcher, tabell, statistik, silly och trupp – uppdateras automatiskt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2EC; --surface:#FFFFFF; --ink:#16251C; --muted:#5D6B62; --line:#D5DDD6;
+  --green:#1B5A38; --green-deep:#123F27; --leaf:#F3C431; --leaf-ink:#2A2100;
+  --loss:#C9D1CB; --loss-ink:#3B463F; --red:#C42B22; --red-ink:#FFFFFF; --hero-ink:#F4F7F2; --head:#1B5A38;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1A14; --surface:#16241B; --ink:#E7EEE8; --muted:#97A69C; --line:#2A3B30;
+    --green:#1F6B42; --green-deep:#0B2A19; --loss:#2C3A31; --loss-ink:#C3CEC6; --red:#D9443A; --red-ink:#FFFFFF; --head:#F3C431;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1A14; --surface:#16241B; --ink:#E7EEE8; --muted:#97A69C; --line:#2A3B30;
+  --green:#1F6B42; --green-deep:#0B2A19; --loss:#2C3A31; --loss-ink:#C3CEC6; --red:#D9443A; --red-ink:#FFFFFF; --head:#F3C431;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 60px);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--green-deep)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:2px;border-radius:4px}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px}
+h2{font-family:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;font-weight:800;font-size:2.1rem;line-height:1;margin:0 0 6px}
+h3{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.35rem;margin:22px 0 8px;color:var(--head)}
+section{padding:38px 0 6px}
+.sub{color:var(--muted);font-size:.92rem;margin:0 0 16px;max-width:62ch}
+.tl{font-size:.84rem;color:var(--muted);margin-top:8px}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--green-deep);color:var(--hero-ink)}
+nav .wrap{display:flex;align-items:center;gap:4px;height:52px;overflow-x:auto;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+.brand{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:1.5rem;margin-right:auto;padding-right:10px;color:var(--leaf);text-decoration:none;white-space:nowrap}
+nav a.tab{text-decoration:none;font-weight:600;font-size:.9rem;padding:7px 10px;border-radius:999px;white-space:nowrap;color:var(--hero-ink);opacity:.85}
+nav a.tab:hover{opacity:1;background:rgba(255,255,255,.1)}
+
+/* hero */
+.hero{background:var(--green);color:var(--hero-ink);position:relative;overflow:hidden}
+.hero svg.leaves{position:absolute;right:-40px;top:-30px;width:300px;opacity:.13;pointer-events:none}
+.hero .wrap{padding-top:30px;padding-bottom:30px;position:relative}
+.kicker{font-weight:600;font-size:.95rem;margin:0 0 6px;color:var(--leaf)}
+.matchup{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:clamp(2.6rem,11vw,5.4rem);line-height:.9;margin:0;text-transform:uppercase}
+.matchup span{display:block}
+.matchup .vs{font-size:.38em;font-weight:600;opacity:.75;margin:6px 0 4px;text-transform:none}
+.meta{margin:14px 0 0;opacity:.92}
+.count{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.count div{background:var(--leaf);color:var(--leaf-ink);border-radius:10px;padding:8px 12px 6px;min-width:72px;text-align:center}
+.count b{display:block;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:2.3rem;line-height:1}
+.count small{font-size:.78rem;font-weight:600}
+.livebox{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.pulse{display:inline-flex;align-items:center;gap:8px;background:var(--leaf);color:var(--leaf-ink);font-weight:800;padding:8px 14px;border-radius:999px}
+.pulse::before{content:"";width:9px;height:9px;border-radius:50%;background:#C0281C;animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.25}}
+@media (prefers-reduced-motion: reduce){.pulse::before{animation:none}}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:9px 16px;border-radius:999px;border:2px solid var(--hero-ink);color:var(--hero-ink)}
+.btn:hover{background:rgba(255,255,255,.12)}
+.watch{margin-top:16px;font-size:.92rem;opacity:.9}
+
+/* snapshot */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.stats div{background:var(--surface);padding:14px 10px;text-align:center}
+.stats b{display:block;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:2rem;line-height:1.05}
+.stats span{color:var(--muted);font-size:.85rem}
+@media (max-width:520px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+.form{display:flex;gap:5px;flex-wrap:wrap;margin:14px 0 4px}
+.form i{font-style:normal;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;font-weight:700;font-size:.8rem}
+.W{background:var(--green);color:#fff}
+.OTW{background:var(--leaf);color:var(--leaf-ink)}
+.L{background:var(--red);color:var(--red-ink)}
+
+/* lists */
+.games{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.games li{display:grid;grid-template-columns:82px 1fr auto;gap:10px;align-items:center;padding:11px 14px;border-top:1px solid var(--line)}
+.games li:first-child{border-top:0}
+.games .d{color:var(--muted);font-size:.88rem;line-height:1.25}
+.games .o{font-weight:600}
+.games .o small{display:block;font-weight:400;color:var(--muted);font-size:.84rem}
+.score{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.35rem;padding:2px 10px;border-radius:6px;min-width:66px;text-align:center}
+.time{font-weight:700}
+.toggle{margin-top:10px;background:none;border:1px solid var(--line);color:var(--ink);font:600 .9rem Figtree,sans-serif;padding:8px 14px;border-radius:999px;cursor:pointer}
+.toggle:hover{border-color:var(--green)}
+
+/* tables */
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{padding:8px 9px;text-align:right;white-space:nowrap}
+th{color:var(--muted);font-weight:600;font-size:.8rem;border-bottom:1px solid var(--line)}
+.league{min-width:420px}
+.league th:nth-child(2),.league td:nth-child(2){text-align:left;width:100%}
+.league th:first-child,.league td:first-child{text-align:center;width:34px;color:var(--muted)}
+td.p{font-weight:700}
+tr.cut-q td{border-bottom:2px solid var(--green)}
+tr.cut-p td{border-bottom:2px dashed var(--muted)}
+tr.us td{background:color-mix(in srgb,var(--leaf) 28%,transparent);font-weight:700}
+tr.us td:first-child{color:var(--ink)}
+.players{min-width:360px}
+.players th:first-child,.players td:first-child{text-align:left;width:100%}
+.players th button{all:unset;cursor:pointer}
+.players th button:focus-visible{outline:2px solid var(--leaf)}
+.players td small{color:var(--muted);font-weight:400;margin-left:6px}
+
+/* team numbers */
+.nums{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.nums div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px}
+.nums b{display:block;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.7rem;line-height:1.1}
+.nums span{display:block;font-size:.86rem}
+.nums em{font-style:normal;font-size:.78rem;color:var(--muted)}
+
+/* silly feed */
+.feed{list-style:none;margin:0;padding:0;border-left:3px solid var(--line);margin-left:6px}
+.feed li{position:relative;padding:0 0 20px 20px}
+.feed li::before{content:"";position:absolute;left:-8px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--surface);border:3px solid var(--muted)}
+.feed li.klart::before{border-color:var(--green);background:var(--green)}
+.feed li.rykte::before{border-color:var(--leaf);background:var(--leaf)}
+.feed .when{font-size:.82rem;color:var(--muted)}
+.tag{display:inline-block;font-size:.74rem;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:1px}
+.tag.klart{background:var(--green);color:#fff}
+.tag.rykte{background:var(--leaf);color:var(--leaf-ink)}
+.tag.skada,.tag.besked{background:var(--loss);color:var(--loss-ink)}
+.feed h4{margin:2px 0 2px;font-size:1.02rem}
+.feed p{margin:0;max-width:64ch;font-size:.95rem}
+.feed a{font-size:.85rem;color:var(--muted)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+.filters button{font:600 .88rem Figtree,sans-serif;padding:6px 13px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
+
+/* roster */
+.roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:4px 22px}
+.roster h3{margin-top:10px}
+.roster ul{list-style:none;margin:0;padding:0}
+.roster li{border-bottom:1px solid var(--line)}
+.roster summary{list-style:none;cursor:pointer;padding:6px 0;display:flex;gap:10px;align-items:baseline}
+.roster summary::-webkit-details-marker{display:none}
+.roster summary::after{content:"+";margin-left:8px;color:var(--muted);font-weight:700;width:12px;text-align:center}
+.roster details[open] summary::after{content:"–"}
+.roster summary:hover .nm{color:var(--head)}
+.roster summary b{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;width:26px;text-align:right;color:var(--muted)}
+.roster .x{color:var(--muted);font-size:.8rem;margin-left:auto}
+.pcard{display:grid;grid-template-columns:76px 1fr;gap:12px;align-items:start;padding:6px 0 14px}
+.pcard svg{width:76px;height:auto;display:block}
+.pcard .bio{font-size:.86rem;color:var(--muted);margin:0 0 8px;line-height:1.45}
+.pstats{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.pstats div{background:var(--surface);text-align:center;padding:6px 2px}
+.pstats b{display:block;font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.3rem;line-height:1.1;width:auto;color:var(--ink)}
+.pstats span{font-size:.72rem;color:var(--muted)}
+.pnone{font-size:.86rem;color:var(--muted);margin:0}
+.pcard .close{grid-column:1/-1;justify-self:start}
+.roster .c{font-weight:700;color:var(--head);font-size:.8rem}
+
+.about p{max-width:65ch;margin:0 0 12px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.links a{display:inline-block;text-decoration:none;font-weight:600;padding:10px 16px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.links a:hover{border-color:var(--green)}
+footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
+
+.linkbtn{background:none;border:0;padding:0;margin-top:8px;font:600 .85rem Figtree,sans-serif;color:var(--muted);cursor:pointer;text-decoration:underline}
+</style>
+</head>
+<body>
+
+<nav aria-label="Sektioner">
+  <div class="wrap">
+    <a class="brand" href="#top">Löven-kollen</a>
+    <a class="tab" href="#matcher">Matcher</a>
+    <a class="tab" href="#statistik">Statistik</a>
+    <a class="tab" href="#silly">Silly</a>
+    <a class="tab" href="#tabell">Tabell</a>
+    <a class="tab" href="#truppen">Truppen</a>
+    <a class="tab" href="#forslag">Förslag</a>
+    <a class="tab" href="#klubben">Klubben</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="leaves" viewBox="0 0 200 200" aria-hidden="true"><g fill="currentColor">
+    <path d="M100 10c30 25 45 55 40 85-20 10-45 10-80 0-5-30 10-60 40-85z"/>
+    <path d="M40 110c25 0 50 15 60 40-15 20-40 30-70 25-10-25-5-50 10-65z"/>
+    <path d="M160 110c-25 0-50 15-60 40 15 20 40 30 70 25 10-25 5-50-10-65z"/></g></svg>
+  <div class="wrap" id="hero"></div>
+</header>
+
+<main class="wrap">
+
+  <section aria-label="Läget" style="padding-top:22px">
+    <div class="stats" id="stats"></div>
+    <div class="form" id="form" aria-label="Säsongens matcher, äldst till vänster"></div>
+    <p class="tl">Grön = vinst, gul = vinst efter förlängning, röd = förlust. Äldst till vänster.</p>
+  </section>
+
+  <section id="matcher" aria-labelledby="m-h">
+    <h2 id="m-h">Matcher</h2>
+    <h3>Kommande</h3>
+    <ul class="games" id="upcoming"></ul>
+    <button class="toggle" id="moreUp" type="button"></button>
+    <p class="tl">Svensk tid. Tider som inte är satta än visas med streck.</p>
+    <h3>Resultat</h3>
+    <ul class="games" id="results"></ul>
+    <button class="toggle" id="moreRes" type="button"></button>
+  </section>
+
+  <section id="statistik" aria-labelledby="s-h">
+    <h2 id="s-h">Statistik</h2>
+    <p class="sub" id="statnote"></p>
+    <h3>Spelarna</h3>
+    <div class="tablewrap"><table class="players" id="players"></table></div>
+    <p class="tl">Tryck på en kolumnrubrik för att sortera.</p>
+    <div class="tablewrap" id="gwrap" hidden style="margin-top:14px"><table class="players" id="goalies"></table></div>
+    <h3>Laget i siffror</h3>
+    <div class="nums" id="nums"></div>
+    <p class="tl">Placering bland SHL:s 14 lag. Underliggande siffror (xG, skott) från PlaymakerAI-data via BetBuilders.</p>
+  </section>
+
+  <section id="silly" aria-labelledby="si-h">
+    <h2 id="si-h">Silly, rykten och nyförvärv</h2>
+    <p class="sub">Bekräftade affärer är gröna, rykten gula. Rykten är just rykten tills klubben bekräftar.</p>
+    <div class="filters" id="filters" role="group" aria-label="Filtrera">
+      <button type="button" data-f="alla" aria-pressed="true">Allt</button>
+      <button type="button" data-f="klart" aria-pressed="false">Klart</button>
+      <button type="button" data-f="rykte" aria-pressed="false">Rykten</button>
+      <button type="button" data-f="skada" aria-pressed="false">Skador</button>
+      <button type="button" data-f="besked" aria-pressed="false">Besked</button>
+    </div>
+    <ul class="feed" id="feed"></ul>
+  </section>
+
+  <section id="tabell" aria-labelledby="t-h">
+    <h2 id="t-h">SHL-tabellen</h2>
+    <div class="tablewrap"><table class="league" id="table"></table></div>
+    <p class="tl">Plats 1–6 direkt till kvartsfinal (heldragen linje), 7–10 play-in (streckad), 13–14 kvalar.</p>
+  </section>
+
+  <section id="truppen" aria-labelledby="tr-h">
+    <h2 id="tr-h">Truppen</h2>
+    <div class="roster" id="roster"></div>
+    <p class="tl">Tryck på en spelare för att se mer. Huvudtränare Magnus Bogren, sportchef Per Kenttä. C = kapten, A = assisterande.</p>
+  </section>
+
+  <section id="forslag" aria-labelledby="f-h">
+    <h2 id="f-h">Förslag och frågor</h2>
+    <p class="sub">Saknas något på sidan, eller kan något bli bättre? Skicka ett förslag – det hamnar hos den som sköter sidan.</p>
+    <div class="links">
+      <a href="__REPO__/issues/new?template=forslag.yml" target="_blank" rel="noopener">Skicka ett förslag</a>
+      <a href="__REPO__/issues" target="_blank" rel="noopener">Se alla förslag och svar</a>
+    </div>
+    <p class="tl">Du behöver ett gratis GitHub-konto för att skriva.</p>
+  </section>
+
+  <section id="klubben" class="about" aria-labelledby="k-h">
+    <h2 id="k-h">Klubben</h2>
+    <p>IF Björklöven från Umeå bildades 1970 och blev svenska mästare 1987. Våren 2026 vann Löven HockeyAllsvenskans grundserie med 119 poäng och sedan finalen mot BIK Karlskoga med 4–0 i matcher. 2026/27 är laget tillbaka i SHL efter 25 år.</p>
+    <p>Hemmamatcherna spelas i Visionite Arena i Umeå.</p>
+    <div class="links">
+      <a href="https://www.bjorkloven.com" target="_blank" rel="noopener">Björklöven.com</a>
+      <a href="https://www.shl.se" target="_blank" rel="noopener">SHL.se live</a>
+      <a href="https://www.tv4play.se" target="_blank" rel="noopener">TV4 Play</a>
+      <a href="https://hockeysverige.se/klubb/if-bjorkloven/" target="_blank" rel="noopener">Nyheter på Hockeysverige</a>
+      <a href="https://www.hockeytabeller.se/shl/lag/if-bjorkloven" target="_blank" rel="noopener">Tabell och statistik</a>
+    </div>
+  </section>
+
+  <footer id="foot"></footer>
+</main>
+
+<script>
+(async function(){
+let D;
+try { const r = await fetch("data.json?v=" + Date.now(), {cache:"no-store"}); D = await r.json(); }
+catch(e){ document.getElementById("foot").textContent = "Kunde inte läsa sidans data just nu. Ladda om om en stund."; return; }
+
+const UPDATED = D.updatedText;
+const US = "IF Björklöven";
+const RESULTS = D.results, UPCOMING = D.upcoming, ARENAS = D.arenas, TABLE = D.table,
+      PLAYERS = D.players, GOALIES = D.goalies || [], NUMS = D.nums, FEED = D.feed, ROSTER = D.roster, BIO = D.bio;
+
+/* helpers */
+const $ = id => document.getElementById(id);
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const days = ["sön","mån","tis","ons","tors","fre","lör"];
+const months = ["jan","feb","mars","april","maj","juni","juli","aug","sep","okt","nov","dec"];
+const offsetFor = d => { const m = +d.slice(5,7), day = +d.slice(8,10); return (m>3 && m<10) || (m===10 && day<25) || (m===3 && day>28) ? "+02:00" : "+01:00"; };
+const toDate = (d,t) => new Date(`${d}T${t||"12:00"}:00${offsetFor(d)}`);
+const fmtDate = d => `${days[d.getDay()]} ${d.getDate()} ${months[d.getMonth()]}`;
+const outcome = r => r[3] > r[4] ? (r[5] ? "OTW" : "W") : "L";
+const shortName = n => n.replace(/^IF /,"").replace(/ (IF|HC|BK|AIK|HF|IK|HK|Lakers HC)$/,"").replace("Malmö Redhawks","Malmö");
+
+/* läget */
+(function(){
+  const row = TABLE.findIndex(t => t[0] === US), t = TABLE[row];
+  const gf = RESULTS.reduce((a,r)=>a+r[3],0), ga = RESULTS.reduce((a,r)=>a+r[4],0);
+  let streak = 0; for (let i = RESULTS.length-1; i>=0 && outcome(RESULTS[i])==="L"; i--) streak++;
+  [[`${row+1}:a`,"i SHL"],[t[7],"poäng"],[`${gf}–${ga}`,"mål"],[streak?`${streak} raka`:`${t[2]+t[3]}`, streak?"förluster i rad":"vinster"]]
+    .forEach(([b,s]) => $("stats").append(el("div","",`<b>${esc(b)}</b><span>${esc(s)}</span>`)));
+  RESULTS.forEach(r => { const o = outcome(r); const i = el("i",o,o==="L"?"F":o==="OTW"?"ÖV":"V");
+    i.title = `${r[0]}: ${r[1]==="H"?"hemma mot":"borta mot"} ${r[2]} ${r[3]}–${r[4]}${r[5]?" efter förlängning":""}`; $("form").append(i); });
+})();
+
+/* kommande + hero */
+const LIVE_MS = 3*60*60*1000;
+let showAllUp = false, timer;
+function future(){ const now = Date.now(); return UPCOMING.filter(u => toDate(u[0],u[1]||"23:00").getTime() + LIVE_MS > now); }
+function renderUpcoming(){
+  const list = future(), ul = $("upcoming"); ul.innerHTML = "";
+  (showAllUp ? list : list.slice(0,6)).forEach(u => {
+    const d = toDate(u[0],u[1]), home = u[2]==="H";
+    ul.append(el("li","",`<span class="d">${fmtDate(d)}${d.getFullYear()>2026?" 2027":""}</span>
+      <span class="o">${home?"Björklöven – "+esc(shortName(u[3])):esc(shortName(u[3]))+" – Björklöven"}<small>${home?"Hemma, Visionite Arena":"Borta, "+esc(ARENAS[u[3]]||"")}${u[4]?". "+esc(u[4]):""}</small></span>
+      <span class="time">${u[1]?u[1].replace(":","."):"–"}</span>`));
+  });
+  $("moreUp").textContent = showAllUp ? "Visa färre" : `Visa hela schemat (${list.length} matcher kvar)`;
+  $("moreUp").hidden = list.length <= 6;
+  renderHero(list[0]);
+}
+$("moreUp").addEventListener("click", () => { showAllUp = !showAllUp; renderUpcoming(); });
+
+function renderHero(n){
+  const h = $("hero");
+  if (!n){ h.innerHTML = `<p class="kicker">Inga inlagda matcher</p><h1 class="matchup"><span>Björklöven</span></h1>`; return; }
+  const d = toDate(n[0],n[1]), home = n[2]==="H";
+  const a = home ? "Björklöven" : shortName(n[3]), b = home ? shortName(n[3]) : "Björklöven";
+  h.innerHTML = `<p class="kicker">Nästa match${n[4]?": "+esc(n[4]).toLowerCase():""}</p>
+    <h1 class="matchup"><span>${esc(a)}</span><span class="vs">mot</span><span>${esc(b)}</span></h1>
+    <p class="meta">${fmtDate(d)} kl. ${n[1]?n[1].replace(":","."):"–"} i ${home?"Visionite Arena":esc(ARENAS[n[3]]||"")}</p>
+    <div id="cd"></div>`;
+  tick(d);
+}
+function tick(d){
+  clearInterval(timer);
+  const run = () => {
+    const ms = d.getTime() - Date.now(), cd = $("cd");
+    if (!cd) return;
+    if (ms <= 0){
+      cd.innerHTML = `<div class="livebox"><span class="pulse">Live nu</span>
+        <a class="btn" href="https://www.shl.se" target="_blank" rel="noopener">Följ ställningen på SHL.se</a>
+        <a class="btn" href="https://www.tv4play.se" target="_blank" rel="noopener">Se på TV4 Play</a></div>`;
+      clearInterval(timer);
+      if (ms < -LIVE_MS) renderUpcoming();
+      else setTimeout(renderUpcoming, LIVE_MS + ms + 1000);
+      return;
+    }
+    const D = Math.floor(ms/864e5), H = Math.floor(ms/36e5)%24, M = Math.floor(ms/6e4)%60, S = Math.floor(ms/1e3)%60;
+    const parts = D ? [[D,"dagar"],[H,"tim"],[M,"min"]] : [[H,"tim"],[M,"min"],[S,"sek"]];
+    cd.innerHTML = `<div class="count" role="timer" aria-label="Tid kvar till nedsläpp">${parts.map(([v,l])=>`<div><b>${String(v).padStart(2,"0")}</b><small>${l}</small></div>`).join("")}</div>
+      <p class="watch">Sänds på TV4 Play. Under matchen visas länkar till liveställningen här.</p>`;
+  };
+  run(); timer = setInterval(run, 1000);
+}
+renderUpcoming();
+
+/* resultat */
+let showAllRes = false;
+function renderResults(){
+  const ul = $("results"); ul.innerHTML = "";
+  const list = RESULTS.slice().reverse();
+  (showAllRes ? list : list.slice(0,5)).forEach(r => {
+    const o = outcome(r);
+    ul.append(el("li","",`<span class="d">${fmtDate(toDate(r[0]))}</span>
+      <span class="o">${esc(r[2])}<small>${r[1]==="H"?"Hemma":"Borta"}${r[5]?", efter förlängning":""}</small></span>
+      <span class="score ${o}" aria-label="${o==="L"?"Förlust":"Vinst"} ${r[3]}–${r[4]}">${r[3]}–${r[4]}</span>`));
+  });
+  $("moreRes").textContent = showAllRes ? "Visa bara de fem senaste" : `Visa alla ${RESULTS.length} matcher`;
+}
+$("moreRes").addEventListener("click", () => { showAllRes = !showAllRes; renderResults(); });
+renderResults();
+
+/* statistik */
+$("statnote").textContent = D.statnote || "";
+let sortKey = 5, sortDir = -1;
+function renderPlayers(){
+  const cols = [["Spelare",0],["Pos",1],["GP",2],["M",3],["A",4],["P",5]];
+  const rows = PLAYERS.map(p => [...p, p[3]+p[4]]);
+  const key = sortKey;
+  rows.sort((a,b) => key<2 ? sortDir*String(a[key]).localeCompare(b[key],"sv") : sortDir*(a[key]-b[key]) || (b[5]-a[5]));
+  const t = $("players");
+  t.innerHTML = `<thead><tr>${cols.map(([n,i]) => `<th scope="col" aria-sort="${sortKey===i?(sortDir<0?"descending":"ascending"):"none"}"><button type="button" data-k="${i}">${n}</button></th>`).join("")}</tr></thead>
+    <tbody>${rows.map(r => `<tr><td>${esc(r[0])}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td class="p">${r[5]}</td></tr>`).join("")}</tbody>`;
+  t.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
+    const k = +b.dataset.k;
+    if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = k<2 ? 1 : -1; }
+    renderPlayers();
+  }));
+}
+renderPlayers();
+if (GOALIES.length){
+  $("gwrap").hidden = false;
+  $("goalies").innerHTML = `<thead><tr><th>Målvakt</th><th>GP</th><th>Rädd. %</th><th>Insl./match</th></tr></thead><tbody>${GOALIES.map(g => `<tr><td>${esc(g[0])}</td><td>${g[1]}</td><td>${esc(g[2])}</td><td>${esc(g[3])}</td></tr>`).join("")}</tbody>`;
+}
+NUMS.forEach(([v,l,r]) => $("nums").append(el("div","",`<b>${esc(v)}</b><span>${esc(l)}</span>${r?`<em>${r}:a av 14</em>`:""}`)));
+
+/* silly */
+let filter = "alla";
+function renderFeed(){
+  const ul = $("feed"); ul.innerHTML = "";
+  const label = {klart:"Klart",rykte:"Rykte",skada:"Skada",besked:"Besked"};
+  FEED.filter(f => filter==="alla" || f[1]===filter).forEach(f => {
+    const d = toDate(f[0]);
+    ul.append(el("li", f[1], `<span class="when">${d.getDate()} ${months[d.getMonth()]}</span><span class="tag ${f[1]}">${label[f[1]]}</span>
+      <h4>${esc(f[2])}</h4><p>${esc(f[3])}</p><a href="${esc(f[5])}" target="_blank" rel="noopener">Källa: ${esc(f[4])}</a>`));
+  });
+  if (!ul.children.length) ul.append(el("li","",`<p>Inget i den här kategorin just nu.</p>`));
+}
+$("filters").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  filter = b.dataset.f;
+  $("filters").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x===b)));
+  renderFeed();
+});
+renderFeed();
+
+/* tabell */
+(function(){
+  const t = $("table");
+  t.innerHTML = `<thead><tr><th>#</th><th>Lag</th><th title="Spelade">S</th><th title="Vinster">V</th><th title="Vinster efter förlängning">ÖV</th><th title="Förluster efter förlängning">ÖF</th><th title="Förluster">F</th><th title="Målskillnad">+/−</th><th title="Poäng">P</th></tr></thead>`;
+  const tb = el("tbody");
+  TABLE.forEach((r,i) => {
+    const tr = el("tr", [r[0]===US?"us":"", i===5?"cut-q":"", i===9?"cut-p":""].join(" ").trim());
+    tr.innerHTML = `<td>${i+1}</td><td>${esc(r[0])}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td>${r[5]}</td><td>${r[6]>0?"+":""}${r[6]}</td><td class="p">${r[7]}</td>`;
+    tb.append(tr);
+  });
+  t.append(tb);
+})();
+
+/* trupp */
+const posName = {"Målvakter":"Målvakt","Backar":"Back","Centrar":"Center","Forwards":"Forward"};
+const jersey = n => `<svg viewBox="0 0 80 84" aria-hidden="true"><path d="M24 4h32l20 12-8 18-8-4v50H20V30l-8 4-8-18z" fill="var(--green)" stroke="var(--leaf)" stroke-width="3" stroke-linejoin="round"/><path d="M30 4c2 7 18 7 20 0" fill="none" stroke="var(--leaf)" stroke-width="3"/><text x="40" y="62" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="900" font-size="30" fill="var(--leaf)">${n}</text></svg>`;
+Object.entries(ROSTER).forEach(([pos, players]) => {
+  const box = el("div"); box.append(el("h3","",esc(pos)));
+  const ul = el("ul");
+  players.forEach(p => {
+    const [nr, name, status, role] = p;
+    const st = PLAYERS.find(x => x[0] === name); const gst = GOALIES.find(x => x[0] === name);
+    const bio = BIO[name];
+    const roleTxt = role === "C" ? "lagkapten" : role === "A" ? "assisterande kapten" : "";
+    const bioTxt = [posName[pos], roleTxt, bio && `född ${bio[0]}, ${bio[1]}`, bio && `${bio[2]} cm, ${bio[3]} kg`, bio && pos !== "Målvakter" && `${bio[4] === "V" ? "vänster" : "höger"}fattad`, bio && `kontrakt t.o.m. ${bio[5]}`, status].filter(Boolean).join(" · ");
+    const stats = st
+      ? `<div class="pstats">${[[st[2],"matcher"],[st[3],"mål"],[st[4],"assist"],[st[3]+st[4],"poäng"],[((st[3]+st[4])/st[2]).toFixed(2).replace(".",","),"p/match"]].map(([v,l]) => `<div><b>${v}</b><span>${l}</span></div>`).join("")}</div>`
+      : gst ? `<div class="pstats" style="grid-template-columns:repeat(3,1fr)">${[[gst[1],"matcher"],[gst[2],"rädd. %"],[gst[3],"insl./match"]].map(([v,l]) => `<div><b>${esc(v)}</b><span>${l}</span></div>`).join("")}</div>`
+      : `<p class="pnone">${pos === "Målvakter" ? "Målvaktsstatistik kommer vid nästa uppdatering." : "Säsongsstatistik saknas än – fylls på vid nästa uppdatering."}</p>`;
+    const li = el("li");
+    li.innerHTML = `<details><summary><b>${nr}</b><span class="nm">${esc(name)}${role?` <span class="c">${role}</span>`:""}</span>${status?`<span class="x">${esc(status)}</span>`:""}</summary>
+      <div class="pcard">${jersey(nr)}<div><p class="bio">${esc(bioTxt)}</p>${stats}</div>
+      <button type="button" class="linkbtn close">Minimera</button></div></details>`;
+    li.querySelector(".close").addEventListener("click", e => { const d = e.target.closest("details"); d.open = false; d.querySelector("summary").focus(); });
+    ul.append(li);
+  });
+  box.append(ul); $("roster").append(box);
+});
+
+$("foot").textContent = `Senast uppdaterad ${UPDATED}.`;
+
+})();
+</script>
+</body>
+</html>

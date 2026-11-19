@@ -1,0 +1,962 @@
+{
+ "updated": "2026-11-19T22:00:00Z",
+ "updatedText": "19 november 2026, kl. 23.00",
+ "results": [
+  [
+   "2026-09-19",
+   "B",
+   "Djurgårdens IF",
+   3,
+   0,
+   false
+  ],
+  [
+   "2026-09-24",
+   "B",
+   "Örebro HK",
+   4,
+   3,
+   true
+  ],
+  [
+   "2026-09-26",
+   "H",
+   "Färjestad BK",
+   0,
+   5,
+   false
+  ],
+  [
+   "2026-09-29",
+   "H",
+   "HV 71",
+   4,
+   2,
+   false
+  ],
+  [
+   "2026-10-01",
+   "H",
+   "Växjö Lakers",
+   4,
+   2,
+   false
+  ],
+  [
+   "2026-10-03",
+   "B",
+   "Linköping HC",
+   3,
+   2,
+   false
+  ],
+  [
+   "2026-10-08",
+   "B",
+   "Brynäs IF",
+   1,
+   4,
+   false
+  ],
+  [
+   "2026-10-10",
+   "H",
+   "Frölunda HC",
+   3,
+   2,
+   false
+  ],
+  [
+   "2026-10-15",
+   "H",
+   "Rögle BK",
+   1,
+   2,
+   false
+  ],
+  [
+   "2026-10-17",
+   "B",
+   "Timrå IK",
+   0,
+   3,
+   false
+  ],
+  [
+   "2026-10-22",
+   "H",
+   "IF Malmö Redhawks",
+   2,
+   4,
+   false
+  ],
+  [
+   "2026-10-24",
+   "H",
+   "Skellefteå AIK",
+   1,
+   8,
+   false
+  ],
+  [
+   "2026-10-29",
+   "B",
+   "Luleå HF",
+   0,
+   4,
+   false
+  ],
+  [
+   "2026-10-31",
+   "B",
+   "Skellefteå AIK",
+   3,
+   5,
+   false
+  ],
+  [
+   "2026-11-12",
+   "H",
+   "Örebro HK",
+   1,
+   3,
+   false
+  ],
+  [
+   "2026-11-14",
+   "H",
+   "Brynäs IF",
+   1,
+   4,
+   false
+  ],
+  [
+   "2026-11-19",
+   "B",
+   "Växjö Lakers",
+   1,
+   3,
+   false
+  ]
+ ],
+ "upcoming": [
+  [
+   "2026-11-21",
+   "18:00",
+   "H",
+   "Linköping HC",
+   "Bottenmöte, Linköping är ett poäng före"
+  ],
+  [
+   "2026-11-26",
+   "19:00",
+   "B",
+   "Frölunda HC",
+   ""
+  ],
+  [
+   "2026-11-28",
+   "18:00",
+   "B",
+   "HV 71",
+   ""
+  ],
+  [
+   "2026-12-03",
+   "19:00",
+   "H",
+   "Djurgårdens IF",
+   ""
+  ],
+  [
+   "2026-12-05",
+   "15:15",
+   "H",
+   "Luleå HF",
+   ""
+  ],
+  [
+   "2026-12-17",
+   "19:00",
+   "H",
+   "Rögle BK",
+   ""
+  ],
+  [
+   "2026-12-19",
+   "18:00",
+   "B",
+   "Timrå IK",
+   ""
+  ],
+  [
+   "2026-12-26",
+   "18:00",
+   "B",
+   "Färjestad BK",
+   ""
+  ],
+  [
+   "2026-12-28",
+   null,
+   "H",
+   "IF Malmö Redhawks",
+   ""
+  ],
+  [
+   "2026-12-30",
+   null,
+   "H",
+   "Skellefteå AIK",
+   ""
+  ],
+  [
+   "2027-01-02",
+   null,
+   "B",
+   "Luleå HF",
+   ""
+  ],
+  [
+   "2027-01-05",
+   null,
+   "H",
+   "Örebro HK",
+   ""
+  ],
+  [
+   "2027-01-07",
+   null,
+   "H",
+   "Växjö Lakers",
+   ""
+  ],
+  [
+   "2027-01-09",
+   null,
+   "B",
+   "HV 71",
+   ""
+  ],
+  [
+   "2027-01-14",
+   null,
+   "H",
+   "Frölunda HC",
+   ""
+  ],
+  [
+   "2027-01-16",
+   null,
+   "H",
+   "Timrå IK",
+   ""
+  ],
+  [
+   "2027-01-21",
+   null,
+   "B",
+   "IF Malmö Redhawks",
+   ""
+  ],
+  [
+   "2027-01-23",
+   null,
+   "H",
+   "Djurgårdens IF",
+   ""
+  ],
+  [
+   "2027-01-28",
+   null,
+   "B",
+   "Färjestad BK",
+   ""
+  ],
+  [
+   "2027-01-30",
+   null,
+   "H",
+   "Brynäs IF",
+   ""
+  ],
+  [
+   "2027-02-02",
+   null,
+   "B",
+   "Rögle BK",
+   ""
+  ],
+  [
+   "2027-02-04",
+   null,
+   "B",
+   "Linköping HC",
+   ""
+  ],
+  [
+   "2027-02-06",
+   null,
+   "B",
+   "Djurgårdens IF",
+   ""
+  ],
+  [
+   "2027-02-16",
+   null,
+   "H",
+   "Färjestad BK",
+   ""
+  ],
+  [
+   "2027-02-18",
+   null,
+   "B",
+   "Växjö Lakers",
+   ""
+  ],
+  [
+   "2027-02-20",
+   null,
+   "B",
+   "Rögle BK",
+   ""
+  ],
+  [
+   "2027-02-25",
+   null,
+   "B",
+   "Brynäs IF",
+   ""
+  ],
+  [
+   "2027-02-27",
+   null,
+   "H",
+   "Timrå IK",
+   ""
+  ],
+  [
+   "2027-03-02",
+   null,
+   "B",
+   "Örebro HK",
+   ""
+  ],
+  [
+   "2027-03-04",
+   null,
+   "H",
+   "Linköping HC",
+   ""
+  ],
+  [
+   "2027-03-06",
+   null,
+   "H",
+   "HV 71",
+   ""
+  ],
+  [
+   "2027-03-09",
+   null,
+   "B",
+   "Skellefteå AIK",
+   ""
+  ],
+  [
+   "2027-03-11",
+   null,
+   "H",
+   "Luleå HF",
+   ""
+  ],
+  [
+   "2027-03-13",
+   null,
+   "B",
+   "Frölunda HC",
+   ""
+  ],
+  [
+   "2027-03-16",
+   null,
+   "B",
+   "IF Malmö Redhawks",
+   ""
+  ]
+ ],
+ "arenas": {
+  "Skellefteå AIK": "Skellefteå Kraft Arena",
+  "Växjö Lakers": "Vida Arena",
+  "Frölunda HC": "Scandinavium",
+  "HV 71": "Husqvarna Garden",
+  "Timrå IK": "SCA Arena",
+  "Färjestad BK": "Löfbergs Arena",
+  "Luleå HF": "Coop Norrbotten Arena",
+  "Djurgårdens IF": "Hovet",
+  "Brynäs IF": "Monitor ERP Arena",
+  "Örebro HK": "Behrn Arena",
+  "Linköping HC": "Saab Arena",
+  "Rögle BK": "Catena Arena",
+  "IF Malmö Redhawks": "Malmö Arena"
+ },
+ "table": [
+  [
+   "Färjestad BK",
+   17,
+   14,
+   2,
+   1,
+   0,
+   46,
+   47
+  ],
+  [
+   "Frölunda HC",
+   19,
+   11,
+   2,
+   1,
+   5,
+   22,
+   38
+  ],
+  [
+   "Skellefteå AIK",
+   17,
+   11,
+   1,
+   2,
+   3,
+   21,
+   37
+  ],
+  [
+   "Örebro HK",
+   17,
+   8,
+   1,
+   2,
+   6,
+   -9,
+   28
+  ],
+  [
+   "IF Malmö Redhawks",
+   17,
+   6,
+   3,
+   3,
+   5,
+   9,
+   27
+  ],
+  [
+   "Brynäs IF",
+   17,
+   7,
+   1,
+   1,
+   8,
+   12,
+   24
+  ],
+  [
+   "Växjö Lakers HC",
+   17,
+   7,
+   1,
+   1,
+   8,
+   -6,
+   24
+  ],
+  [
+   "Rögle BK",
+   18,
+   6,
+   2,
+   2,
+   8,
+   -7,
+   24
+  ],
+  [
+   "Luleå HF",
+   17,
+   6,
+   1,
+   3,
+   7,
+   -3,
+   23
+  ],
+  [
+   "Timrå IK",
+   17,
+   5,
+   3,
+   1,
+   8,
+   -4,
+   22
+  ],
+  [
+   "Djurgårdens IF",
+   18,
+   4,
+   3,
+   2,
+   9,
+   -16,
+   20
+  ],
+  [
+   "Linköping HC",
+   17,
+   5,
+   1,
+   1,
+   10,
+   -20,
+   18
+  ],
+  [
+   "IF Björklöven",
+   17,
+   5,
+   1,
+   0,
+   11,
+   -24,
+   17
+  ],
+  [
+   "HV 71",
+   17,
+   2,
+   2,
+   4,
+   9,
+   -21,
+   14
+  ]
+ ],
+ "players": [
+  [
+   "Fredrik Forsberg",
+   "RW",
+   13,
+   1,
+   7
+  ],
+  [
+   "Lucas Ekeståhl-Jonsson",
+   "B",
+   13,
+   2,
+   5
+  ],
+  [
+   "Axel Ottosson",
+   "C",
+   13,
+   3,
+   4
+  ],
+  [
+   "Robin Kovács",
+   "LW",
+   12,
+   5,
+   1
+  ],
+  [
+   "Oscar Tellström",
+   "RW",
+   12,
+   3,
+   3
+  ]
+ ],
+ "goalies": [],
+ "nums": [
+  [
+   "2,00",
+   "mål per match",
+   13
+  ],
+  [
+   "3,15",
+   "insläppta per match",
+   11
+  ],
+  [
+   "17,2 %",
+   "powerplay",
+   null
+  ],
+  [
+   "77,1 %",
+   "boxplay",
+   null
+  ],
+  [
+   "88,4 %",
+   "räddningsprocent",
+   7
+  ],
+  [
+   "17,8",
+   "skott på mål per match",
+   14
+  ],
+  [
+   "27,1",
+   "skott emot per match",
+   13
+  ],
+  [
+   "46,3 %",
+   "vunna tekningar",
+   null
+  ],
+  [
+   "1,95",
+   "xG per match",
+   14
+  ],
+  [
+   "3,54",
+   "xG emot per match",
+   14
+  ]
+ ],
+ "feed": [
+  [
+   "2026-11-19",
+   "besked",
+   "Nionde raka förlusten: 1–3 i Växjö",
+   "Kovács reducerade i powerplay sju minuter från slutet, men Växjö svarade direkt. Löven sköt 30 skott mot 23. Bogren kallade starten usel men tyckte laget gjorde en okej match. Löven är nu 13:e, på kvalplats.",
+   "Hockeysverige",
+   "https://hockeysverige.se/shl/bjorkloven-vaxjo-nionde-raka-forlust-skitstart-bogren-aWIMQ8Y8vASi/"
+  ],
+  [
+   "2026-11-18",
+   "skada",
+   "Wallmark närmar sig comeback",
+   "Kaptenen tränar fullt med laget sedan 16 november men har enligt VK inte gått för fullt ännu. Kenttä säger att det inte finns någon anledning till oro. Inget datum för SHL-debuten.",
+   "HockeyNews",
+   "https://hockeynews.se/nyheter/gladjande-bilderna-har-tranar-wallmark-fullt-med-bjorkloven"
+  ],
+  [
+   "2026-11-18",
+   "skada",
+   "Spelare skadad på träning",
+   "VK rapporterar att en spelare fick bryta träningen med smärtor. Vem och hur allvarligt är inte känt.",
+   "VK",
+   "https://www.vk.se/2026-11-18/traningsrapport-1811-skrek-ut-sin-smarta-pa-vag-ut-till-omkladningsrummet-6eb20"
+  ],
+  [
+   "2026-10-30",
+   "klart",
+   "Målvaktslöftet Tim Jurander väljer Löven",
+   "Lidingötalangen, född 2011 och lyft som en av årskullens bästa målvakter, flyttar till Umeå och Björn Bjurlings målvaktsskola. Samma väg som Fabian Salasca Nääs tog.",
+   "Hockeysverige",
+   "https://hockeysverige.se/tv-pucken/tim-jurander-bjorkloven-lamna-stockholm-bjurling-salasca-naas-adpfQ5d6UcIo/"
+  ],
+  [
+   "2026-10-26",
+   "rykte",
+   "Nick Shore fri från Lugano",
+   "Centerns kontrakt i Lugano gick ut. Kenttä fick frågan om Björklöven är intresserade men ville inte kommentera. Inga uppgifter om kontakt eller bud.",
+   "Hockeysverige",
+   "https://hockeysverige.se/nyheter/per-kentta-om-bjorkloven-varvning-skelleftea-nick-shore-ajZb00f06dF6/"
+  ],
+  [
+   "2026-10-26",
+   "besked",
+   "Kenttä: inget nyförvärv i sikte",
+   "Efter 1–8 mot Skellefteå säger sportchefen att marknaden är begränsad och att man håller ögonen öppna men inte har något på gång. Han räknar med att Wallmark och Nilsson snart är tillbaka.",
+   "Hockeysverige",
+   "https://hockeysverige.se/nyheter/per-kentta-om-bjorkloven-varvning-skelleftea-nick-shore-ajZb00f06dF6/"
+  ],
+  [
+   "2026-10-26",
+   "klart",
+   "Magnus Bogren förlänger två år",
+   "Klubben har förlängt huvudtränarens kontrakt med två säsonger, mitt i förlustsviten.",
+   "Hockeysverige",
+   "https://hockeysverige.se/nyheter/per-kentta-om-bjorkloven-varvning-skelleftea-nick-shore-ajZb00f06dF6/"
+  ],
+  [
+   "2026-10-19",
+   "klart",
+   "Anton Malmström tillbaka från lån",
+   "Backen kallades hem från Oskarshamn när Alfred Barklund skadades. Barklund väntas bli borta åtta till tolv veckor.",
+   "Hurbra",
+   "https://hurbra.se/?p=37320"
+  ],
+  [
+   "2026-10-08",
+   "skada",
+   "Di Giuseppe fick matchstraff i Gävle",
+   "Phil Di Giuseppe stängdes av under matchen mot Brynäs efter en tackling på Anton Rödin.",
+   "Hurbra",
+   "https://hurbra.se/?p=32511"
+  ],
+  [
+   "2026-10-06",
+   "skada",
+   "Wallmark borta fyra till sex veckor till",
+   "Lagkaptenen har en underkroppsskada och har ännu inte spelat i SHL. Marcus ”Lilliz” Nilsson skadades mot Linköping 3 oktober. Kenttä vill inte ta in ersättare.",
+   "Hockeysverige",
+   "https://hockeysverige.se/shl/sa-tanker-bjorkloven-efter-stjarnornas-skador-azigQ4j4NXFS/"
+  ],
+  [
+   "2026-08-04",
+   "klart",
+   "Robin Kovács klar på tre år",
+   "Forwarden bröt med Linköping, valde bort AIK och skrev på till och med 2028/29. Var sommarens tolfte nyförvärv.",
+   "Sportnet",
+   "https://sportnet.nu/artiklar/robin-kovacs-klar-for-bjorkloven"
+  ],
+  [
+   "2026-07-15",
+   "klart",
+   "Tarmo Reunanen från TPS",
+   "Finsk landslagsback och TPS-kapten, 24 poäng på 45 matcher i Liiga. Ettårskontrakt.",
+   "HockeyNews",
+   "https://hockeynews.se/nyheter/officiellt-bjorkloven-varvar-finsk-landslagsback"
+  ],
+  [
+   "2026-06-11",
+   "rykte",
+   "Emil Alba från Färjestad",
+   "Sportbladet rapporterade att forwarden var muntligt klar. Han finns nu i truppen.",
+   "Folkbladet",
+   "https://www.folkbladet.nu/2026-06-11/uppgifter-forward-klar-for-bjorkloven-89e63"
+  ],
+  [
+   "2026-05-23",
+   "klart",
+   "Chris DiDomenico från Ambrì-Piotta",
+   "37-årig kanadensare, ettårskontrakt. Har varit en av Schweiz poängbästa sedan 2018 och gjorde 41 poäng på 47 matcher förra säsongen.",
+   "Hockeysverige",
+   "https://hockeysverige.se/shl/bjorkloven-varvar-chris-didomenico-shl/"
+  ],
+  [
+   "2026-05-05",
+   "klart",
+   "Lucas Wallmark kommer hem",
+   "Umeåsonen lämnar Fribourg-Gottéron, där han nyss avgjort finalen, och skriver ett långt kontrakt med moderklubben.",
+   "HockeyNews",
+   "https://hockeynews.se/nyheter/dromvarvningen-klar-sa-langt-ar-kontraktet"
+  ]
+ ],
+ "roster": {
+  "Målvakter": [
+   [
+    30,
+    "Lassi Lehtinen"
+   ],
+   [
+    50,
+    "Frans Tuohimaa"
+   ]
+  ],
+  "Backar": [
+   [
+    7,
+    "Topi Niemelä"
+   ],
+   [
+    11,
+    "Tarmo Reunanen"
+   ],
+   [
+    16,
+    "Lucas Ekeståhl-Jonsson"
+   ],
+   [
+    24,
+    "Linus Cronholm"
+   ],
+   [
+    44,
+    "Josiah Didier"
+   ],
+   [
+    47,
+    "Marcus Björk",
+    "",
+    "A"
+   ],
+   [
+    57,
+    "Alfred Barklund",
+    "skadad"
+   ],
+   [
+    64,
+    "Anton Malmström"
+   ]
+  ],
+  "Centrar": [
+   [
+    18,
+    "Axel Ottosson",
+    "",
+    "A"
+   ],
+   [
+    32,
+    "Lucas Wallmark",
+    "skadad",
+    "C"
+   ],
+   [
+    33,
+    "Albin Lundin",
+    "",
+    "A"
+   ],
+   [
+    77,
+    "Philip Hemmyr"
+   ],
+   [
+    93,
+    "Tristen Robins"
+   ]
+  ],
+  "Forwards": [
+   [
+    10,
+    "Marcus Nilsson",
+    "skadad"
+   ],
+   [
+    28,
+    "Emil Alba"
+   ],
+   [
+    34,
+    "Phil Di Giuseppe"
+   ],
+   [
+    37,
+    "Lenni Killinen"
+   ],
+   [
+    39,
+    "Joel Mustonen"
+   ],
+   [
+    56,
+    "Fredrik Forsberg"
+   ],
+   [
+    71,
+    "Gustav Possler"
+   ],
+   [
+    86,
+    "Robin Kovács"
+   ],
+   [
+    88,
+    "Chris DiDomenico"
+   ],
+   [
+    91,
+    "Oscar Tellström"
+   ]
+  ]
+ },
+ "bio": {
+  "Lassi Lehtinen": [
+   1999,
+   "Finland",
+   183,
+   80,
+   "V",
+   "2026/27"
+  ],
+  "Frans Tuohimaa": [
+   1991,
+   "Finland",
+   188,
+   87,
+   "V",
+   "2026/27"
+  ],
+  "Alfred Barklund": [
+   2000,
+   "Sverige",
+   191,
+   92,
+   "V",
+   "2026/27"
+  ],
+  "Linus Cronholm": [
+   2000,
+   "Sverige",
+   193,
+   94,
+   "V",
+   "2026/27"
+  ],
+  "Josiah Didier": [
+   1993,
+   "USA",
+   191,
+   101,
+   "H",
+   "2026/27"
+  ],
+  "Anton Malmström": [
+   2000,
+   "Sverige",
+   193,
+   92,
+   "V",
+   "2027/28"
+  ],
+  "Tarmo Reunanen": [
+   1998,
+   "Finland",
+   183,
+   89,
+   "V",
+   "2026/27"
+  ],
+  "Emil Alba": [
+   1997,
+   "Sverige",
+   185,
+   99,
+   "V",
+   "2026/27"
+  ],
+  "Philip Hemmyr": [
+   2007,
+   "Sverige",
+   188,
+   84,
+   "V",
+   "2027/28"
+  ],
+  "Axel Ottosson": [
+   1996,
+   "Sverige",
+   178,
+   82,
+   "V",
+   "2027/28"
+  ]
+ },
+ "statnote": "Björklöven har haft det tufft under ytan: sist i ligan på skapade chanser och flest släppta, men målvakterna har hållit uppe räddningsprocenten.",
+ "sources": {}
+}

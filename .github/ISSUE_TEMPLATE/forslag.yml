@@ -1,0 +1,12 @@
+name: Förslag eller fråga
+description: Tipsa om något som saknas eller kan bli bättre på Löven-kollen
+title: "Förslag: "
+labels: ["förslag"]
+body:
+  - type: textarea
+    id: text
+    attributes:
+      label: Vad saknas eller kan bli bättre?
+      placeholder: T.ex. ”Lägg till målvaktsstatistik” eller ”Visa HockeyAllsvenskan också”
+    validations:
+      required: true

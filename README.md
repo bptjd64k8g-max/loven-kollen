@@ -1,0 +1,19 @@
+# Löven-kollen
+
+Allt om IF Björklöven på ett ställe: nästa match, resultat, SHL-tabellen, statistik, silly och truppen.
+
+Sidan uppdaterar sig själv. Var 30:e minut hämtar GitHub Actions ny data (`scripts/update.mjs`), sparar den i `data.json` och publicerar sidan på nytt om något ändrats.
+
+## Källor
+- Tabell: hockeytabeller.se (reserv: sportstatistik.nu)
+- Spelschema och resultat: sportstatistik.nu, matchtider från betbuilders.ai
+- Spelarstatistik: stats.swehockey.se
+- Lagets nyckeltal: betbuilders.ai
+- Nyheter och silly: Google News
+
+Misslyckas en källa behålls förra värdet. Se `sources` i `data.json` och loggen under fliken Actions.
+
+## Ändra för hand
+Truppen, skador, spelarfakta och notiser om matcher ligger i `data.json` (`roster`, `bio`, `upcoming`) och kan redigeras direkt på GitHub. Skriptet skriver inte över dem.
+
+Hittar skriptet inte SHL på swehockey, sätt `swehockeyLeagueId` i `config.json` till siffran i adressen till SHL:s sida på stats.swehockey.se.

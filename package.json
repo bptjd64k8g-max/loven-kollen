@@ -1,0 +1,7 @@
+{
+  "name": "loven-kollen",
+  "private": true,
+  "type": "module",
+  "scripts": { "update": "node scripts/update.mjs" },
+  "dependencies": { "cheerio": "^1.0.0" }
+}
