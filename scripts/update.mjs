@@ -176,7 +176,9 @@ await source("spelare", async () => {
   const html = await get(`https://stats.swehockey.se/Players/Statistics/ScoringLeaders/${id}`);
   const $ = cheerio.load(html);
   const bodyText = clean($("body").text());
-  const code = (bodyText.match(/\b([A-ZÅÄÖ0-9]{2,5})\s*[-–]\s*(?:IF\s*)?Björklöven/) || [])[1];
+  const code = (bodyText.match(/([A-ZÅÄÖ]{2,4})\s*[-–]\s*(?:IF\s*)?Björklöven/) || [])[1];
+  { const hrefs = new Set(); $("a[href]").each((_, a) => { const x = $(a).attr("href"); if (/Team|Player|Statistic/i.test(x)) hrefs.add(x.replace(/\d{3,}/g, "N")); });
+    log("   länkmönster:", [...hrefs].slice(0, 40).join("  ")); }
   const near = bodyText.indexOf("Björklöven");
   if (near >= 0) log("   runt Björklöven:", bodyText.slice(Math.max(0, near - 60), near + 40));
   const codes = new Set([code, "IFB", "BJÖ", "BJO", "IF Björklöven", "Björklöven"].filter(Boolean));
@@ -193,7 +195,7 @@ await source("spelare", async () => {
   }
   if (players.length < 8) {
     log(`   kod: ${code}; ${tables($).length} tabeller`);
-    tables($).slice(0, 6).forEach(t => log("   rubriker:", JSON.stringify(t.headers).slice(0, 200), "rad:", JSON.stringify(t.rows[0] || []).slice(0, 200)));
+    tables($).slice(0, 6).forEach(t => log("   rubriker:", JSON.stringify(t.headers).slice(0, 200), "rader:", t.rows.length, "lag:", [...new Set(t.rows.map(r => r[3]))].join(",")));
     log("   text:", clean($("body").text()).slice(0, 600));
   }
   if (players.length < 8) throw new Error(`för få Björklöven-spelare (${players.length}) på ScoringLeaders/${id}`);
