@@ -12,7 +12,18 @@ const status = {};
 const log = (...a) => console.log(...a);
 
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
+const cache = new Map();
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 async function get(url) {
+  if (cache.has(url)) return cache.get(url);
+  let last;
+  for (let i = 0; i < 3; i++) {
+    try { const t = await fetchOnce(url); cache.set(url, t); return t; }
+    catch (e) { last = e; if (!/HTTP (429|5\d\d)|abort|fetch failed/i.test(e.message)) break; await sleep(4000 * (i + 1)); }
+  }
+  throw last;
+}
+async function fetchOnce(url) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), 25000);
   try {
@@ -140,8 +151,8 @@ await source("spelare", async () => {
     $("a[href]").each((_, a) => {
       const m = ($(a).attr("href") || "").match(/\/(\d{4,6})(?:$|[/?#])/);
       const txt = clean($(a).text());
-      if (m && /^SHL$/i.test(txt)) cands.push(Number(m[1]));
-      else if (m && /\bSHL\b/i.test(txt)) log(`   swehockey-länk: "${txt}" -> ${m[1]}`);
+      if (m && /\bSHL\b/i.test(txt)) log(`   swehockey-länk: "${txt}" ${$(a).attr("href")}`);
+      if (m && /^SHL(\s*\(\d+\))?$/i.test(txt)) cands.push(Number(m[1]));
     });
     if (!cands.length) throw new Error("hittade inget SHL-id på stats.swehockey.se – sätt swehockeyLeagueId i config.json");
     id = Math.max(...cands);
@@ -161,6 +172,11 @@ await source("spelare", async () => {
       players.push([nm, "", num(r[iGP]), num(r[iG]), num(r[iA])]);
     }
     if (players.length) break;
+  }
+  if (players.length < 8) {
+    log(`   kod: ${code}; ${tables($).length} tabeller`);
+    tables($).slice(0, 6).forEach(t => log("   rubriker:", JSON.stringify(t.headers).slice(0, 200), "rad:", JSON.stringify(t.rows[0] || []).slice(0, 200)));
+    log("   text:", clean($("body").text()).slice(0, 600));
   }
   if (players.length < 8) throw new Error(`för få Björklöven-spelare (${players.length}) på ScoringLeaders/${id}`);
   D.players = players.map(fixName);
@@ -235,7 +251,7 @@ await source("nyheter", async () => {
   const xml = await get("https://news.google.com/rss/search?q=Bj%C3%B6rkl%C3%B6ven+hockey&hl=sv&gl=SE&ceid=SE:sv");
   const $ = cheerio.load(xml, { xmlMode: true });
   const rules = [
-    ["rykte", /uppgifter|rykte|aktuell för|jagar|intresserad|kan lämna|nära (en |att )|på väg (till|från)|vill värva/i],
+    ["rykte", /uppgifter|rykte|aktuell för|jagar (en |ny )?(back|forward|center|målvakt|förstärkning|spelare)|intresserad|kan lämna|nära (en |att )|på väg (till|från)|vill värva/i],
     ["klart", /klar för|klart:|officiellt|värvar|förlänger|skriver på|presenterar|återvänder|lämnar|bryter kontraktet/i],
     ["skada", /skad|missar|borta (i|minst|resten)|opererad|sjukskriv|tillbaka i spel|comeback/i],
     ["besked", /kenttä|bogren|sportchef|tränaren|kaptenen|krismöte/i]
@@ -244,10 +260,11 @@ await source("nyheter", async () => {
   $("item").each((_, it) => {
     const full = clean($(it).find("title").text());
     const src = clean($(it).find("source").text()) || (full.match(/ - ([^-]+)$/) || [])[1] || "Nyhet";
-    const title = full.replace(/ - [^-]+$/, "");
+    const title = full.endsWith(" - " + src) ? full.slice(0, -(src.length + 3)) : full.replace(/ - [^-]+$/, "");
     const link = clean($(it).find("link").text());
     const d = new Date($(it).find("pubDate").text());
     if (!link || isNaN(d)) return;
+    if (/^inför match/i.test(title)) return;
     const rule = rules.find(([, re]) => re.test(title));
     if (!rule) return; // matchreferat och annat brus hoppas över
     items.push([d.toISOString().slice(0, 10), rule[0], title, "", src, link]);
