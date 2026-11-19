@@ -162,7 +162,7 @@ const POS = { CE: "C", LD: "B", RD: "B", D: "B", LW: "LW", RW: "RW", F: "F", G: 
 
 await source("spelare", async () => {
   const $ = await page(`${SWE}/Teams/Info/PlayersByTeam/${await league()}`);
-  let current = null; const players = [], goalies = [];
+  let current = null; const players = [], goalies = [], numbers = {};
   for (const t of $("table").toArray()) {
     const rows = rowsOf($, t);
     if (!rows.length || rows[0].join(" ").length > 300) continue;
@@ -172,8 +172,11 @@ await source("spelare", async () => {
     const p = headed(rows, ["Name", "Pos", "GP", "G", "A", "TP"]);
     if (p) for (const r of p.rows) {
       if (!r[p.h.Name]) continue;
-      players.push([rosterName(nameOf(r[p.h.Name])), POS[r[p.h.Pos]] || r[p.h.Pos], num(r[p.h.GP]), num(r[p.h.G]), num(r[p.h.A]),
-        num(r[p.h.PIM]), num(r[p.h["+/-"]]), num(r[p.h.SOG])]);
+      const pos = POS[r[p.h.Pos]] || r[p.h.Pos];
+      if (pos === "MV" || r[p.h.Pos] === "GK") { numbers[rosterName(nameOf(r[p.h.Name]))] = [r[p.h.No], "Målvakter"]; continue; }
+      const name = rosterName(nameOf(r[p.h.Name]));
+      numbers[name] = [r[p.h.No], pos === "B" ? "Backar" : pos === "C" ? "Centrar" : "Forwards"];
+      players.push([name, pos, num(r[p.h.GP]), num(r[p.h.G]), num(r[p.h.A]), num(r[p.h.PIM]), num(r[p.h["+/-"]]), num(r[p.h.SOG])]);
     }
     const g = headed(rows, ["Name", "GPI", "SVS%", "GAA"]);
     if (g) for (const r of g.rows) {
@@ -183,6 +186,16 @@ await source("spelare", async () => {
   }
   if (players.length < 10) throw new Error(`för få spelare (${players.length})`);
   D.players = players.filter(p => p[2] > 0);
+  // Nya spelare som har spelat men saknas i truppen läggs till automatiskt
+  const inRoster = new Set(Object.values(D.roster).flat().map(x => x[1]));
+  for (const [name, [no, group]] of Object.entries(numbers)) {
+    const played = players.find(p => p[0] === name)?.[2] > 0 || goalies.some(g => g[0] === name);
+    if (!inRoster.has(name) && played && D.roster[group]) {
+      D.roster[group].push([Number(no) || 0, name]);
+      D.roster[group].sort((a, b) => a[0] - b[0]);
+      log(`   ny i truppen: ${name} (${group})`);
+    }
+  }
   if (goalies.length) D.goalies = goalies;
   log(`   ${D.players.length} spelare, ${goalies.length} målvakter`);
 });

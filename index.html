@@ -452,7 +452,9 @@ Object.entries(ROSTER).forEach(([pos, players]) => {
     const roleTxt = role === "C" ? "lagkapten" : role === "A" ? "assisterande kapten" : "";
     const bioTxt = [posName[pos], roleTxt, bio && `född ${bio[0]}, ${bio[1]}`, bio && `${bio[2]} cm, ${bio[3]} kg`, bio && pos !== "Målvakter" && `${bio[4] === "V" ? "vänster" : "höger"}fattad`, bio && `kontrakt t.o.m. ${bio[5]}`, status].filter(Boolean).join(" · ");
     const stats = st
-      ? `<div class="pstats">${[[st[2],"matcher"],[st[3],"mål"],[st[4],"assist"],[st[3]+st[4],"poäng"],[((st[3]+st[4])/st[2]).toFixed(2).replace(".",","),"p/match"]].map(([v,l]) => `<div><b>${v}</b><span>${l}</span></div>`).join("")}</div>`
+      ? `<div class="pstats" style="grid-template-columns:repeat(4,1fr)">${[[st[2],"matcher"],[st[3],"mål"],[st[4],"assist"],[st[3]+st[4],"poäng"],
+          ...(st.length > 5 ? [[(st[6] > 0 ? "+" : "") + st[6],"plus/minus"],[st[7],"skott"],[st[5],"utv. min"]] : []),
+          [((st[3]+st[4])/st[2]).toFixed(2).replace(".",","),"p/match"]].map(([v,l]) => `<div><b>${v}</b><span>${l}</span></div>`).join("")}</div>`
       : gst ? `<div class="pstats" style="grid-template-columns:repeat(3,1fr)">${[[gst[1],"matcher"],[gst[2],"rädd. %"],[gst[3],"insl./match"]].map(([v,l]) => `<div><b>${esc(v)}</b><span>${l}</span></div>`).join("")}</div>`
       : `<p class="pnone">${pos === "Målvakter" ? "Målvaktsstatistik kommer vid nästa uppdatering." : "Säsongsstatistik saknas än – fylls på vid nästa uppdatering."}</p>`;
     const li = el("li");
