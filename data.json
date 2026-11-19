@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19T23:00:32.220Z",
- "updatedText": "20 november 2026, kl. 00.00",
+ "updated": "2026-11-19T23:13:19.577Z",
+ "updatedText": "20 november 2026, kl. 00.13",
  "results": [
   [
    "2026-09-19",
@@ -198,189 +198,189 @@
   ],
   [
    "2026-12-28",
-   null,
+   "19:00",
    "H",
    "IF Malmö Redhawks",
    ""
   ],
   [
    "2026-12-30",
-   null,
+   "19:00",
    "H",
    "Skellefteå AIK",
    ""
   ],
   [
    "2027-01-02",
-   null,
+   "15:15",
    "B",
    "Luleå HF",
    ""
   ],
   [
    "2027-01-05",
-   null,
+   "19:00",
    "H",
    "Örebro HK",
    ""
   ],
   [
    "2027-01-07",
-   null,
+   "19:00",
    "H",
    "Växjö Lakers",
    ""
   ],
   [
    "2027-01-09",
-   null,
+   "15:15",
    "B",
    "HV 71",
    ""
   ],
   [
    "2027-01-14",
-   null,
+   "19:00",
    "H",
    "Frölunda HC",
    ""
   ],
   [
    "2027-01-16",
-   null,
+   "15:15",
    "H",
    "Timrå IK",
    ""
   ],
   [
    "2027-01-21",
-   null,
+   "19:00",
    "B",
    "IF Malmö Redhawks",
    ""
   ],
   [
    "2027-01-23",
-   null,
+   "18:00",
    "H",
    "Djurgårdens IF",
    ""
   ],
   [
    "2027-01-28",
-   null,
+   "19:00",
    "B",
    "Färjestad BK",
    ""
   ],
   [
    "2027-01-30",
-   null,
+   "18:00",
    "H",
    "Brynäs IF",
    ""
   ],
   [
    "2027-02-02",
-   null,
+   "19:00",
    "B",
    "Rögle BK",
    ""
   ],
   [
    "2027-02-04",
-   null,
+   "19:00",
    "B",
    "Linköping HC",
    ""
   ],
   [
    "2027-02-06",
-   null,
+   "18:00",
    "B",
    "Djurgårdens IF",
    ""
   ],
   [
    "2027-02-16",
-   null,
+   "19:00",
    "H",
    "Färjestad BK",
    ""
   ],
   [
    "2027-02-18",
-   null,
+   "19:00",
    "B",
    "Växjö Lakers",
    ""
   ],
   [
    "2027-02-20",
-   null,
+   "18:00",
    "B",
    "Rögle BK",
    ""
   ],
   [
    "2027-02-25",
-   null,
+   "19:00",
    "B",
    "Brynäs IF",
    ""
   ],
   [
    "2027-02-27",
-   null,
+   "15:15",
    "H",
    "Timrå IK",
    ""
   ],
   [
    "2027-03-02",
-   null,
+   "19:00",
    "B",
    "Örebro HK",
    ""
   ],
   [
    "2027-03-04",
-   null,
+   "19:00",
    "H",
    "Linköping HC",
    ""
   ],
   [
    "2027-03-06",
-   null,
+   "15:15",
    "H",
    "HV 71",
    ""
   ],
   [
    "2027-03-09",
-   null,
+   "19:00",
    "B",
    "Skellefteå AIK",
    ""
   ],
   [
    "2027-03-11",
-   null,
+   "19:00",
    "H",
    "Luleå HF",
    ""
   ],
   [
    "2027-03-13",
-   null,
+   "15:15",
    "B",
    "Frölunda HC",
    ""
   ],
   [
    "2027-03-16",
-   null,
+   "19:00",
    "B",
    "IF Malmö Redhawks",
    ""
@@ -394,7 +394,7 @@
   "Timrå IK": "SCA Arena",
   "Färjestad BK": "Löfbergs Arena",
   "Luleå HF": "Coop Norrbotten Arena",
-  "Djurgårdens IF": "Hovet",
+  "Djurgårdens IF": "Avicii Arena",
   "Brynäs IF": "Monitor ERP Arena",
   "Örebro HK": "Behrn Arena",
   "Linköping HC": "Saab Arena",
@@ -547,90 +547,323 @@
   [
    "Fredrik Forsberg",
    "RW",
-   13,
-   1,
-   7
-  ],
-  [
-   "Lukas Ekeståhl-Jonsson",
-   "B",
-   13,
-   2,
-   5
-  ],
-  [
-   "Axel Ottosson",
-   "C",
-   13,
+   17,
    3,
-   4
+   7,
+   4,
+   1,
+   38
   ],
   [
    "Robin Kovács",
-   "LW",
-   12,
-   5,
-   1
+   "RW",
+   17,
+   7,
+   2,
+   8,
+   -19,
+   45
   ],
   [
    "Oscar Tellström",
    "RW",
-   12,
+   17,
    3,
-   3
+   4,
+   0,
+   -6,
+   22
+  ],
+  [
+   "Axel Ottosson",
+   "C",
+   17,
+   3,
+   4,
+   6,
+   -2,
+   15
+  ],
+  [
+   "Lukas Ekeståhl-Jonsson",
+   "B",
+   17,
+   2,
+   5,
+   8,
+   -14,
+   32
+  ],
+  [
+   "Marcus Nilsson",
+   "LW",
+   11,
+   1,
+   5,
+   0,
+   -1,
+   4
+  ],
+  [
+   "Phil Di Giuseppe",
+   "LW",
+   17,
+   3,
+   2,
+   31,
+   -5,
+   34
+  ],
+  [
+   "Tristen Robins",
+   "C",
+   17,
+   2,
+   3,
+   2,
+   -2,
+   21
+  ],
+  [
+   "Chris DiDomenico",
+   "RW",
+   17,
+   2,
+   3,
+   18,
+   -14,
+   16
+  ],
+  [
+   "Topi Niemelä",
+   "B",
+   17,
+   1,
+   4,
+   8,
+   -9,
+   26
+  ],
+  [
+   "Tarmo Reunanen",
+   "B",
+   17,
+   0,
+   4,
+   0,
+   2,
+   24
+  ],
+  [
+   "Albin Lundin",
+   "C",
+   17,
+   2,
+   1,
+   4,
+   -11,
+   10
+  ],
+  [
+   "Gustav Possler",
+   "LW",
+   17,
+   1,
+   2,
+   0,
+   -8,
+   10
+  ],
+  [
+   "Emil Alba",
+   "LW",
+   13,
+   1,
+   1,
+   2,
+   -3,
+   5
+  ],
+  [
+   "Joel Mustonen",
+   "LW",
+   17,
+   1,
+   0,
+   6,
+   -6,
+   8
+  ],
+  [
+   "Philip Hemmyr",
+   "C",
+   9,
+   0,
+   1,
+   0,
+   1,
+   0
+  ],
+  [
+   "Lenni Killinen",
+   "LW",
+   17,
+   0,
+   1,
+   4,
+   -4,
+   5
+  ],
+  [
+   "Marcus Björk",
+   "B",
+   17,
+   0,
+   1,
+   10,
+   -6,
+   23
+  ],
+  [
+   "Douglas Flygt",
+   "RW",
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   "Fabian Salasca Nääs",
+   "GK",
+   1,
+   0,
+   0,
+   0,
+   null,
+   0
+  ],
+  [
+   "Alfred Barklund",
+   "B",
+   7,
+   0,
+   0,
+   2,
+   -1,
+   2
+  ],
+  [
+   "Anton Malmström",
+   "B",
+   9,
+   0,
+   0,
+   2,
+   -3,
+   2
+  ],
+  [
+   "Frans Tuohimaa",
+   "GK",
+   17,
+   0,
+   0,
+   0,
+   null,
+   0
+  ],
+  [
+   "Lassi Lehtinen",
+   "GK",
+   17,
+   0,
+   0,
+   0,
+   null,
+   0
+  ],
+  [
+   "Linus Cronholm",
+   "B",
+   17,
+   0,
+   0,
+   8,
+   -5,
+   15
+  ],
+  [
+   "Josiah Didier",
+   "B",
+   17,
+   0,
+   0,
+   14,
+   -4,
+   17
   ]
  ],
- "goalies": [],
+ "goalies": [
+  [
+   "Frans Tuohimaa",
+   10,
+   "90,25",
+   "2,78"
+  ],
+  [
+   "Lassi Lehtinen",
+   8,
+   "90,00",
+   "3,42"
+  ]
+ ],
  "nums": [
   [
-   "2,00",
+   "1,88",
    "mål per match",
-   13
+   14
   ],
   [
-   "3,15",
+   "3,29",
    "insläppta per match",
-   11
+   12
   ],
   [
-   "17,2 %",
+   "21,3 %",
    "powerplay",
-   null
+   10
   ],
   [
-   "77,1 %",
+   "76,0 %",
    "boxplay",
-   null
+   8
   ],
   [
-   "88,4 %",
+   "89,3 %",
    "räddningsprocent",
-   7
+   8
   ],
   [
-   "17,8",
+   "22,0",
    "skott på mål per match",
-   14
-  ],
-  [
-   "27,1",
-   "skott emot per match",
    13
   ],
   [
-   "46,3 %",
+   "30,7",
+   "skott emot per match",
+   12
+  ],
+  [
+   "8,6 %",
+   "skotteffektivitet",
+   12
+  ],
+  [
+   "48,6 %",
    "vunna tekningar",
-   null
-  ],
-  [
-   "1,95",
-   "xG per match",
-   14
-  ],
-  [
-   "3,54",
-   "xG emot per match",
-   14
+   11
   ]
  ],
  "feed": [
@@ -1005,13 +1238,12 @@
    "2027/28"
   ]
  },
- "statnote": "Efter 17 omgångar. Björklöven är 13:a i ligan på gjorda mål per match och 11:a på insläppta.",
+ "statnote": "Efter 17 omgångar. Björklöven är 14:a i SHL på gjorda mål per match och 12:a på insläppta, med 89,3 % i räddningsprocent. Poängbäst i laget är Fredrik Forsberg med 3+7.",
  "sources": {
   "tabell": "ok",
-  "tider": "fel: HTTP 429 från https://www.betbuilders.ai/hockey/shl/lag/if-bjorkloven",
   "schema": "ok",
-  "spelare": "fel: för få Björklöven-spelare (0) på ScoringLeaders/20961",
-  "nyckeltal": "fel: HTTP 429 från https://www.betbuilders.ai/hockey/shl/lag/if-bjorkloven",
+  "spelare": "ok",
+  "nyckeltal": "ok",
   "nyheter": "ok"
  }
 }
