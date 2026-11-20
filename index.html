@@ -39,7 +39,7 @@
   color-scheme: dark;
 }
 *,*::before,*::after{box-sizing:inherit}
-html{height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 60px);scroll-behavior:smooth}
+html{height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--green-deep)}
@@ -55,7 +55,7 @@ section{padding:38px 0 6px}
 /* nav */
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--green-deep);color:var(--hero-ink)}
 nav{box-shadow:0 2px 10px rgba(0,0,0,.18)}
-nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;padding-top:8px;padding-bottom:10px}
+nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding-top:18px;padding-bottom:12px}
 .brand{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:1.5rem;line-height:1.2;color:var(--leaf);text-decoration:none;white-space:nowrap}
 .tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;flex:1 1 100%}
 nav .tab{text-decoration:none;font-weight:600;font-size:.88rem;padding:7px 4px;border-radius:8px;text-align:center;white-space:nowrap;color:var(--hero-ink);background:rgba(255,255,255,.08)}
