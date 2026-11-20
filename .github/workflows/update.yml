@@ -52,7 +52,7 @@ jobs:
           fi
       - name: Förbered sidan
         if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
-        run: mkdir -p _site && cp index.html data.json _site/
+        run: mkdir -p _site && cp -r index.html data.json manifest.webmanifest sw.js icons _site/
       - uses: actions/configure-pages@v5
         if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
       - uses: actions/upload-pages-artifact@v3
