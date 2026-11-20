@@ -304,8 +304,9 @@ await source("nyheter", async () => {
   const items = [], all = [];
   $("item").each((_, it) => {
     const full = clean($(it).find("title").text());
-    const src = clean($(it).find("source").text()) || "Nyhet";
-    const title = full.endsWith(" - " + src) ? full.slice(0, -(src.length + 3)) : full;
+    const srcFull = clean($(it).find("source").text()) || "Nyhet";
+    const src = srcFull.split(/ [–-] /)[0];
+    const title = full.endsWith(" - " + srcFull) ? full.slice(0, -(srcFull.length + 3)) : full.endsWith(" - " + src) ? full.slice(0, -(src.length + 3)) : full;
     const link = clean($(it).find("link").text());
     const d = new Date($(it).find("pubDate").text());
     if (!link || isNaN(d)) return;
