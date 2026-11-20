@@ -59,9 +59,13 @@ nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;padding-to
 .brand{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:1.5rem;line-height:1.2;color:var(--leaf);text-decoration:none;white-space:nowrap}
 .tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;flex:1 1 100%}
 nav .tab{text-decoration:none;font-weight:600;font-size:.88rem;padding:7px 4px;border-radius:8px;text-align:center;white-space:nowrap;color:var(--hero-ink);background:rgba(255,255,255,.08)}
-nav button.tab{border:0;font-family:inherit;cursor:pointer}
-nav .tab.refresh.spin{opacity:.6}
-nav a.tab:hover,nav button.tab:hover{background:rgba(255,255,255,.16)}
+.refresh{margin-left:auto;width:36px;height:36px;border-radius:50%;border:0;padding:0;display:grid;place-items:center;background:var(--leaf);color:var(--leaf-ink);cursor:pointer;flex:none}
+.refresh svg{width:20px;height:20px}
+.refresh:hover{filter:brightness(1.08)}
+.refresh.spin svg{animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (min-width:760px){.refresh{order:3;margin-left:0}}
+nav a.tab:hover{background:rgba(255,255,255,.16)}
 nav a.tab[aria-current="true"]{background:var(--leaf);color:var(--leaf-ink)}
 @media (min-width:760px){.tabs{display:flex;flex:1 1 auto;justify-content:flex-end;flex-wrap:wrap}nav .tab{padding:7px 12px;border-radius:999px}}
 
@@ -222,6 +226,7 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
 <nav aria-label="Sektioner">
   <div class="wrap">
     <a class="brand" href="#top">Löven-kollen</a>
+    <button class="refresh" id="refresh" type="button" title="Uppdatera" aria-label="Uppdatera"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M20.5 3.5v5h-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <div class="tabs">
       <a class="tab" href="#matcher">Matcher</a>
       <a class="tab" href="#statistik">Statistik</a>
@@ -230,7 +235,6 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
       <a class="tab" href="#nyheter">Nyheter</a>
       <a class="tab" href="#forslag">Förslag</a>
       <a class="tab" href="#klubben">Klubben</a>
-      <button class="tab refresh" id="refresh" type="button" title="Hämta det senaste">↻ Uppdatera</button>
     </div>
   </div>
 </nav>
@@ -297,7 +301,7 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
       <button type="button" data-f="rykte" aria-pressed="false">Rykten</button>
       <button type="button" data-f="skada" aria-pressed="false">Skador</button>
       <button type="button" data-f="besked" aria-pressed="false">Besked</button>
-      <button type="button" data-f="nyhet" aria-pressed="false">Övrigt</button>
+      <button type="button" data-f="nyhet" aria-pressed="false">Nyheter</button>
     </div>
     <ul class="feed" id="feed"></ul>
     <button class="toggle" id="moreNews" type="button" hidden></button>
