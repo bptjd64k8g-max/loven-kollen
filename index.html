@@ -162,6 +162,7 @@ tr.us td:first-child{color:var(--ink)}
 .tag.klart{background:var(--green);color:#fff}
 .tag.rykte{background:var(--leaf);color:var(--leaf-ink)}
 .tag.skada,.tag.besked{background:var(--loss);color:var(--loss-ink)}
+.tag.nyhet{background:var(--surface);color:var(--muted);border:1px solid var(--line)}
 .feed h4{margin:2px 0 2px;font-size:1.02rem}
 .feed p{margin:0;max-width:64ch;font-size:.95rem}
 .feed a{font-size:.85rem;color:var(--muted)}
@@ -225,7 +226,6 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
       <a class="tab" href="#tabell">Tabell</a>
       <a class="tab" href="#truppen">Truppen</a>
       <a class="tab" href="#nyheter">Nyheter</a>
-      <a class="tab" href="#silly">Silly</a>
       <a class="tab" href="#forslag">Förslag</a>
       <a class="tab" href="#klubben">Klubben</a>
     </div>
@@ -285,23 +285,19 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
   </section>
 
   <section id="nyheter" aria-labelledby="ny-h">
-    <h2 id="ny-h">Nyheter</h2>
-    <p class="sub">Det senaste som skrivits om Björklöven, hämtat från svenska nyhetssajter.</p>
-    <ul class="feed" id="news"></ul>
-    <button class="toggle" id="moreNews" type="button" hidden></button>
-  </section>
-
-  <section id="silly" aria-labelledby="si-h">
-    <h2 id="si-h">Silly, rykten och nyförvärv</h2>
-    <p class="sub">Bekräftade affärer är gröna, rykten gula. Rykten är just rykten tills klubben bekräftar.</p>
+    <span id="silly"></span>
+    <h2 id="ny-h">Nyheter och silly</h2>
+    <p class="sub">Allt som skrivits om Björklöven, nyast först. Bekräftade affärer är gröna, rykten gula – rykten är bara rykten tills klubben bekräftar. Låset visar artiklar som kräver prenumeration.</p>
     <div class="filters" id="filters" role="group" aria-label="Filtrera">
       <button type="button" data-f="alla" aria-pressed="true">Allt</button>
       <button type="button" data-f="klart" aria-pressed="false">Klart</button>
       <button type="button" data-f="rykte" aria-pressed="false">Rykten</button>
       <button type="button" data-f="skada" aria-pressed="false">Skador</button>
       <button type="button" data-f="besked" aria-pressed="false">Besked</button>
+      <button type="button" data-f="nyhet" aria-pressed="false">Övrigt</button>
     </div>
     <ul class="feed" id="feed"></ul>
+    <button class="toggle" id="moreNews" type="button" hidden></button>
   </section>
 
   <section id="forslag" aria-labelledby="f-h">
@@ -516,55 +512,57 @@ if (GOALIES.length){
 }
 NUMS.forEach(([v,l,r]) => $("nums").append(el("div","",`<b>${esc(v)}</b><span>${esc(l)}</span>${r?`<em>${r}:a av 14</em>`:""}`)));
 
-/* nyheter */
+/* nyheter och silly i ett flöde */
 (function(){
   const N = D.news || [];
-  let all = false;
-  const ago = iso => {
-    const m = Math.round((Date.now() - Date.parse(iso)) / 6e4);
-    if (m < 60) return `${Math.max(m, 1)} min sedan`;
-    if (m < 24 * 60) return `${Math.round(m / 60)} tim sedan`;
-    const d = new Date(iso); return `${d.getDate()} ${months[d.getMonth()]}`;
+  const LOCK = '<svg viewBox="0 0 10 11" aria-hidden="true"><path d="M2 5V3.5a3 3 0 0 1 6 0V5h.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-5A.5.5 0 0 1 1.5 5zm1.5 0h3V3.5a1.5 1.5 0 0 0-3 0z"/></svg>';
+  // Tidningar där sportartiklarna oftast ligger bakom betalvägg (används när artikeln inte gått att kontrollera)
+  const PAYWALLED = /kuriren|folkbladet|norran|göteborgs-posten|smålandsposten|corren|dagens nyheter|svenska dagbladet|sundsvalls|allehanda|barometern|helsingborgs dagblad|sydsvenskan|upsala nya|piteå-tidningen|dagens industri|^vk$/i;
+  const key = t => String(t).replace(/^\(\+\)\s*/, "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, " ").trim().slice(0, 60);
+  const byTitle = new Map(N.map(n => [key(n[1]), n]));
+  const used = new Set();
+  // [sortering, tid(iso|null), datum, kategori, rubrik, text, källa, länk, betald(true/false/undefined)]
+  const items = [];
+  FEED.forEach(f => {
+    const n = byTitle.get(key(f[2])); if (n) used.add(n);
+    const iso = n ? n[0] : null;
+    items.push({ sort: iso || `${f[0]}T11:00:00Z`, iso, date: f[0], cat: f[1], title: f[2], text: f[3] || (n && n[4]) || "", src: f[4], link: f[5], paid: n ? n[5] : undefined });
+  });
+  N.forEach(n => { if (used.has(n)) return;
+    items.push({ sort: n[0], iso: n[0], date: n[0].slice(0, 10), cat: "nyhet", title: n[1], text: n[4] || "", src: n[2], link: n[3], paid: n[5] }); });
+  items.sort((a, b) => b.sort.localeCompare(a.sort));
+
+  const ago = it => {
+    if (it.iso) { const m = Math.round((Date.now() - Date.parse(it.iso)) / 6e4);
+      if (m < 60) return `${Math.max(m, 1)} min sedan`;
+      if (m < 24 * 60) return `${Math.round(m / 60)} tim sedan`; }
+    const d = it.iso ? new Date(it.iso) : toDate(it.date); return `${d.getDate()} ${months[d.getMonth()]}`;
   };
+  const label = {klart:"Klart",rykte:"Rykte",skada:"Skada",besked:"Besked",nyhet:"Nyhet"};
+  let filter = "alla", all = false;
   const draw = () => {
-    const ul = $("news"); ul.innerHTML = "";
-    if (!N.length) { ul.append(el("li","",`<p>Inga nyheter hämtade än.</p>`)); return; }
-    const LOCK = '<svg viewBox="0 0 10 11" aria-hidden="true"><path d="M2 5V3.5a3 3 0 0 1 6 0V5h.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-5A.5.5 0 0 1 1.5 5zm1.5 0h3V3.5a1.5 1.5 0 0 0-3 0z"/></svg>';
-    // Tidningar där sportartiklarna oftast ligger bakom betalvägg (används när artikeln inte gått att kontrollera)
-    const PAYWALLED = /kuriren|folkbladet|norran|göteborgs-posten|smålandsposten|corren|dagens nyheter|svenska dagbladet|sundsvalls|allehanda|barometern|helsingborgs dagblad|sydsvenskan|upsala nya|piteå-tidningen|norrbottens-kuriren|dagens industri/i;
-    (all ? N : N.slice(0, 8)).forEach(n => {
-      const paid = n[5] === true || /^\(\+\)/.test(n[1]), maybe = !paid && n[5] !== false && PAYWALLED.test(n[2]);
-      const title = n[1].replace(/^\(\+\)\s*/, "");
+    const ul = $("feed"); ul.innerHTML = "";
+    const list = items.filter(it => filter === "alla" || it.cat === filter);
+    (all ? list : list.slice(0, 12)).forEach(it => {
+      const paid = it.paid === true || /^\(\+\)/.test(it.title);
+      const maybe = !paid && it.paid !== false && PAYWALLED.test(it.src);
       const ptag = paid ? `<span class="tag paid">${LOCK}Kräver prenumeration</span>` : maybe ? `<span class="tag paid maybe" title="Den här tidningen låser oftast sina artiklar">${LOCK}Troligen betalvägg</span>` : "";
-      const text = n[4] ? (n[4].length > 220 ? n[4].slice(0, 217).replace(/\s+\S*$/, "") + " …" : n[4]) : "";
-      ul.append(el("li","nyhet",`<span class="when">${ago(n[0])}</span><span class="tag src">${esc(n[2])}</span>${ptag}
-        <h4>${esc(title)}</h4>${text ? `<p>${esc(text)}</p>` : ""}<a href="${esc(n[3])}" target="_blank" rel="noopener">Läs hela på ${esc(n[2])}</a>`));
+      const t = it.text.length > 220 ? it.text.slice(0, 217).replace(/\s+\S*$/, "") + " …" : it.text;
+      ul.append(el("li", it.cat, `<span class="when">${ago(it)}</span><span class="tag ${it.cat}">${label[it.cat]}</span>${ptag}
+        <h4>${esc(it.title.replace(/^\(\+\)\s*/, ""))}</h4>${t ? `<p>${esc(t)}</p>` : ""}<a href="${esc(it.link)}" target="_blank" rel="noopener">Läs på ${esc(it.src)}</a>`));
     });
-    const b = $("moreNews"); b.hidden = N.length <= 8; b.textContent = all ? "Visa färre" : `Visa alla ${N.length} nyheter`;
+    if (!list.length) ul.append(el("li","",`<p>Inget i den här kategorin just nu.</p>`));
+    const b = $("moreNews"); b.hidden = list.length <= 12; b.textContent = all ? "Visa färre" : `Visa alla ${list.length}`;
   };
   $("moreNews").addEventListener("click", () => { all = !all; draw(); });
+  $("filters").addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    filter = b.dataset.f; all = false;
+    $("filters").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x===b)));
+    draw();
+  });
   draw();
 })();
-
-/* silly */
-let filter = "alla";
-function renderFeed(){
-  const ul = $("feed"); ul.innerHTML = "";
-  const label = {klart:"Klart",rykte:"Rykte",skada:"Skada",besked:"Besked"};
-  FEED.filter(f => filter==="alla" || f[1]===filter).forEach(f => {
-    const d = toDate(f[0]);
-    ul.append(el("li", f[1], `<span class="when">${d.getDate()} ${months[d.getMonth()]}</span><span class="tag ${f[1]}">${label[f[1]]}</span>
-      <h4>${esc(f[2])}</h4><p>${esc(f[3])}</p><a href="${esc(f[5])}" target="_blank" rel="noopener">Källa: ${esc(f[4])}</a>`));
-  });
-  if (!ul.children.length) ul.append(el("li","",`<p>Inget i den här kategorin just nu.</p>`));
-}
-$("filters").addEventListener("click", e => {
-  const b = e.target.closest("button"); if (!b) return;
-  filter = b.dataset.f;
-  $("filters").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x===b)));
-  renderFeed();
-});
-renderFeed();
 
 /* tabell */
 (function(){
