@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-20T15:39:04.750Z",
- "updatedText": "20 november 2026, kl. 16.39",
+ "updated": "2026-11-20T15:42:22.173Z",
+ "updatedText": "20 november 2026, kl. 16.42",
  "results": [
   [
    "2026-09-19",
@@ -1424,6 +1424,18 @@
    "https://news.google.com/rss/articles/CBMijwFBVV95cUxPX3NiWURyVm1UWmQtM0d6WVFtaUtGZERLSWNsX0dEQzhFbGZFSzBwSmVkZEt0allzQV9FNDloN05zRHE0MjdKRUtRRzJ0M2cwWklQVmZWdmM4MDJ2cW95eVJEaHpUVkdtWjhmRjdGSXpBUENYMUtYeHRBTmJOT3RiOHlaYVhUTmdLZ2RpSWU0NA?oc=5"
   ],
   [
+   "2026-11-20T09:46:19.000Z",
+   "Kovacs nya kedja – på plats hos Björklöven",
+   "Hockeynews",
+   "https://news.google.com/rss/articles/CBMigwFBVV95cUxQOTI2OENZOXZxMkZyUWFSMTN5SkNEMFpFVEdhSzh1UFUtSFFoRkZHVTlXVTZnTUdnekpWQnNXOGgtMlprTnF0LVJOVHFMWHBWUUZPNE02RnpxaU1la3JZaVhaa0hhQlhZN2duZnh1NjR0YUI3NFFlQVdad0pqNFAyUzZNQQ?oc=5"
+  ],
+  [
+   "2026-11-20T09:25:11.000Z",
+   "Björklöven sluter upp efter Junlands ifrågasättande",
+   "Hockeynews",
+   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdFlTekZJa3phTjZra096SUtvMF94SERnTWtKekhvNmVRZ3c0OEFqS0QtVlNVU3VOTEpxc2NjMy14N0tyOG1PQzU5bnBfQW9qSTJ6Y09KMk5aMHVhcDVzQ2EzREx1T3hEYWhaYl9WSVAyUzN5N0NTcTNpN1dnN3EtR2FWOW05RXFt?oc=5"
+  ],
+  [
    "2026-11-20T07:44:37.000Z",
    "SHL-analysen: ”Är ledsen, men nu är det kört”",
    "Expressen",
@@ -1433,9 +1445,9 @@
    "2026-11-20T07:03:03.000Z",
    "Efter nio raka förluster – Ottosson om vad som saknas i Björklöven",
    "Hockeynews",
-   "https://www.aftonbladet.se/sportbladet/hockey/a/6PjnP0/bjorkloven-tappade-ledning-till-forlust-mot-orebro",
-   "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
-   false
+   "https://hockeynews.se/nyheter/efter-nio-raka-forluster-ottosson-om-vad-som-saknas-i-bjorkloven",
+   "Björklöven har tappat greppet om den fina form som präglade säsongsinledningen. Nu kommer förlust efter förlust och efter torsdagens match mot Växjö är ...",
+   true
   ],
   [
    "2026-11-20T05:39:44.000Z",
@@ -1461,8 +1473,8 @@
    "2026-11-19T21:35:25.000Z",
    "SHL: Höjdpunkter – Växjö – Björklöven 19/11",
    "SVT Play",
-   "https://www.gp.se/sport/bjorkloven-vill-ta-sig-ur-formsvackan-borta-mot-vaxjo.c8b2bbb1-c25e-58e6-b761-d64a0381957f",
-   "Inför mötet borta mot Växjö har laget åtta raka förluster och är nu på tolfte plats i tabellen. Det blev seger i den senaste matchen för Växjö, 2–1 mot Malmö på bortaplan. När lagen möttes senast, 1 ...",
+   "https://www.gp.se/sport/formstarka-vaxjo-tog-ny-seger-mot-bjorkloven.3c95110c-d83b-54ee-b08e-2603bc192669",
+   "Växjö började vassast och gjorde 1–0 redan i matchupptakten. Efter bara 1.01 slog Sebastian Strandberg till på pass från Peter Cehlarik och Hugo Gustafsson. Efter 16.58 i andra perioden slog Brogan ...",
    false
   ],
   [
@@ -1509,7 +1521,9 @@
    "2026-11-19T20:29:53.000Z",
    "Formstarka Växjö tog ny seger mot Björklöven",
    "Göteborgs-Posten",
-   "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdHdNTGVZRXlncHRNaUJPRURqQjdwNkF1bHQ0OG1Nc0plRkl3RGZzTEg3VUVDcGtsRDdDVGo3OTA3R3VrMWxyY1RyakdQNm9CN1JQZUlWWWlXQkxTeTNaN1d5dExlYkx1RXFzTFRYWE9JcVhCQ3pfa0VZSVpjMnRDbThhT2kzVVpuczdWVGM5dDN1WUV5UnQya3N0RTBYcENhTkhGTzJubkk?oc=5"
+   "https://www.gp.se/sport/formstarka-vaxjo-tog-ny-seger-mot-bjorkloven.3c95110c-d83b-54ee-b08e-2603bc192669",
+   "Växjö började vassast och gjorde 1–0 redan i matchupptakten. Efter bara 1.01 slog Sebastian Strandberg till på pass från Peter Cehlarik och Hugo Gustafsson. Efter 16.58 i andra perioden slog Brogan ...",
+   false
   ],
   [
    "2026-11-19T20:25:59.000Z",
@@ -1600,26 +1614,12 @@
    true
   ],
   [
-   "2026-11-19T08:13:03.000Z",
-   "Kvällens match kan bara sluta på ett sätt",
-   "Expressen",
-   "https://www.expressen.se/sport/hockey/tips/kvallens-match-kan--bara-sluta-pa-ett-satt/",
-   "Växjö mot Björklöven. Ett möte som bara kan sluta på ett sätt enligt mig. Hemmalaget spikas utan vidare tvivel. ANNONS: Lämna in expertens systemförslag (Svenska Spel) ...",
-   false
-  ],
-  [
    "2026-11-19T06:36:35.000Z",
    "Inför match: Björklöven jagar seger och trendbrott mot Växjö",
    "Björklöven",
-   "https://www.svenskafans.com/ishockey/infor-bjorkloven-brynas-703320",
-   "Brynäs har tagit sig upp till Umeå för att ikväll ställas mot Björklöven i Visionite Arena. Aldrig förr har det varit viktigare att hålla fötterna på jorden, och undvika hybris.",
+   "https://www.gp.se/sport/formstarka-vaxjo-tog-ny-seger-mot-bjorkloven.3c95110c-d83b-54ee-b08e-2603bc192669",
+   "Växjö började vassast och gjorde 1–0 redan i matchupptakten. Efter bara 1.01 slog Sebastian Strandberg till på pass från Peter Cehlarik och Hugo Gustafsson. Efter 16.58 i andra perioden slog Brogan ...",
    false
-  ],
-  [
-   "2026-11-19T03:52:31.000Z",
-   "Kritiserade backarna: ”Har de minst dåliga siffrorna”",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQmY0Ul9NbkpyNm44VnpqQUl0XzZDRXpzNElhSl9VTXVCTFVfRkNfTV8yUl9leHF0Q3V1U1BfYWxqN0ZveDItQXUwQkFnQTdMeGNIXzk1S0oydXhRalVKVDhyZHhaNU51S0pia0d1dFM1QldVVXp0ZUJPQjJFMklUWWpNOA?oc=5"
   ]
  ]
 }
