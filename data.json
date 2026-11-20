@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-20T02:10:03.761Z",
- "updatedText": "20 november 2026, kl. 03.10",
+ "updated": "2026-11-20T02:16:16.091Z",
+ "updatedText": "20 november 2026, kl. 03.16",
  "results": [
   [
    "2026-09-19",
@@ -1397,7 +1397,8 @@
   "spelare": "ok",
   "spelarfakta": "ok",
   "nyckeltal": "ok",
-  "nyheter": "ok"
+  "nyheter": "ok",
+  "tv": "ok"
  },
  "attendance": {
   "avg": 5302,
@@ -1462,8 +1463,7 @@
    "2026-11-19T20:29:53.000Z",
    "Formstarka Växjö tog ny seger mot Björklöven",
    "Göteborgs-Posten",
-   "https://www.gp.se/sport/formstarka-vaxjo-tog-ny-seger-mot-bjorkloven.3c95110c-d83b-54ee-b08e-2603bc192669",
-   "Växjö började vassast och gjorde 1–0 redan i matchupptakten. Efter bara 1.01 slog Sebastian Strandberg till på pass från Peter Cehlarik och Hugo Gustafsson. Efter 16.58 i andra perioden slog Brogan ..."
+   "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdHdNTGVZRXlncHRNaUJPRURqQjdwNkF1bHQ0OG1Nc0plRkl3RGZzTEg3VUVDcGtsRDdDVGo3OTA3R3VrMWxyY1RyakdQNm9CN1JQZUlWWWlXQkxTeTNaN1d5dExlYkx1RXFzTFRYWE9JcVhCQ3pfa0VZSVpjMnRDbThhT2kzVVpuczdWVGM5dDN1WUV5UnQya3N0RTBYcENhTkhGTzJubkk?oc=5"
   ],
   [
    "2026-11-19T20:25:59.000Z",
@@ -1571,8 +1571,8 @@
    "2026-11-19T06:36:35.000Z",
    "Inför match: Björklöven jagar seger och trendbrott mot Växjö",
    "Björklöven",
-   "https://www.gp.se/sport/formstarka-vaxjo-tog-ny-seger-mot-bjorkloven.3c95110c-d83b-54ee-b08e-2603bc192669",
-   "Växjö började vassast och gjorde 1–0 redan i matchupptakten. Efter bara 1.01 slog Sebastian Strandberg till på pass från Peter Cehlarik och Hugo Gustafsson. Efter 16.58 i andra perioden slog Brogan ..."
+   "https://www.svenskafans.com/ishockey/infor-bjorkloven-brynas-703320",
+   "Brynäs har tagit sig upp till Umeå för att ikväll ställas mot Björklöven i Visionite Arena. Aldrig förr har det varit viktigare att hålla fötterna på jorden, och undvika hybris."
   ],
   [
    "2026-11-19T03:52:31.000Z",
