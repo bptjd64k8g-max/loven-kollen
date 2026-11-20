@@ -324,7 +324,8 @@ await source("nyheter", async () => {
   // Ingresser: Bing News RSS har en kort text för varje artikel och direktlänk till tidningen
   const blurbs = [];
   try {
-    const b$ = cheerio.load(await get("https://www.bing.com/news/search?q=Bj%C3%B6rkl%C3%B6ven+hockey&format=rss&setlang=sv-SE&cc=SE"), { xmlMode: true });
+    for (const q of ["Bj%C3%B6rkl%C3%B6ven+hockey", "IF+Bj%C3%B6rkl%C3%B6ven", "Bj%C3%B6rkl%C3%B6ven+SHL", "Bj%C3%B6rkl%C3%B6ven+Ume%C3%A5"]) {
+    let b$; try { b$ = cheerio.load(await get(`https://www.bing.com/news/search?q=${q}&format=rss&setlang=sv-SE&cc=SE`), { xmlMode: true }); } catch (e) { log("   bing:", e.message); continue; }
     b$("item").each((_, it) => {
       const title = clean(b$(it).find("title").text());
       let link = clean(b$(it).find("link").text());
@@ -332,8 +333,9 @@ await source("nyheter", async () => {
       const text = clean(cheerio.load(b$(it).find("description").text() || "").text());
       const d = new Date(b$(it).find("pubDate").text());
       const src = clean(b$(it).find("News\\:Source, Source").first().text()) || (link.match(/https?:\/\/(?:www\.)?([^/]+)/) || [])[1] || "Nyhet";
-      if (title && link && !isNaN(d)) blurbs.push({ title, link, text, d, src });
+      if (title && link && !isNaN(d) && !blurbs.some(x => x.link === link)) blurbs.push({ title, link, text, d, src });
     });
+    }
     log(`   bing: ${blurbs.length} artiklar med ingress`);
   } catch (e) { log("   bing:", e.message); }
   const words = s => new Set(fold(s).split(" ").filter(w => w.length > 3));
