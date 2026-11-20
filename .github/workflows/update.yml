@@ -29,6 +29,7 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm install --no-audit --no-fund
+      - run: node scripts/probe.mjs || true
       - name: Hämta ny data
         run: node scripts/update.mjs
       - name: Spara ändringar
