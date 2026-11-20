@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19T23:14:14.266Z",
- "updatedText": "20 november 2026, kl. 00.14",
+ "updated": "2026-11-20T00:54:40.028Z",
+ "updatedText": "20 november 2026, kl. 01.54",
  "results": [
   [
    "2026-09-19",
@@ -1132,7 +1132,7 @@
  },
  "bio": {
   "Lassi Lehtinen": [
-   1999,
+   "1999-02-25",
    "Finland",
    183,
    80,
@@ -1140,31 +1140,31 @@
    "2026/27"
   ],
   "Frans Tuohimaa": [
-   1991,
+   "1991-08-19",
    "Finland",
    188,
-   87,
+   90,
    "V",
    "2026/27"
   ],
   "Alfred Barklund": [
-   2000,
+   "2000-10-21",
    "Sverige",
-   191,
-   92,
+   190,
+   93,
    "V",
    "2026/27"
   ],
   "Linus Cronholm": [
-   2000,
+   "2000-07-03",
    "Sverige",
    193,
-   94,
+   95,
    "V",
    "2026/27"
   ],
   "Josiah Didier": [
-   1993,
+   "1993-08-11",
    "USA",
    191,
    101,
@@ -1180,36 +1180,164 @@
    "2027/28"
   ],
   "Tarmo Reunanen": [
-   1998,
+   "1998-03-01",
    "Finland",
-   183,
-   89,
+   182,
+   81,
    "V",
    "2026/27"
   ],
   "Emil Alba": [
-   1997,
+   "1997-08-14",
    "Sverige",
-   185,
-   99,
+   187,
+   100,
    "V",
    "2026/27"
   ],
   "Philip Hemmyr": [
-   2007,
+   "2007-06-17",
    "Sverige",
-   188,
-   84,
+   180,
+   77,
    "V",
    "2027/28"
   ],
   "Axel Ottosson": [
-   1996,
+   "1996-04-19",
    "Sverige",
    178,
    82,
    "V",
    "2027/28"
+  ],
+  "Topi Niemelä": [
+   "2002-03-25",
+   "Finland",
+   180,
+   77,
+   "H",
+   ""
+  ],
+  "Marcus Nilsson": [
+   "1991-05-18",
+   "Sverige",
+   171,
+   78,
+   "V",
+   ""
+  ],
+  "Douglas Flygt": [
+   "2007-04-21",
+   "Sverige",
+   185,
+   80,
+   "H",
+   ""
+  ],
+  "Lukas Ekeståhl-Jonsson": [
+   "1996-03-25",
+   "Sverige",
+   183,
+   85,
+   "V",
+   ""
+  ],
+  "Lucas Wallmark": [
+   "1995-09-05",
+   "Sverige",
+   183,
+   82,
+   "V",
+   ""
+  ],
+  "Albin Lundin": [
+   "1996-03-15",
+   "Sverige",
+   185,
+   88,
+   "V",
+   ""
+  ],
+  "Phil Di Giuseppe": [
+   "1993-10-09",
+   "Kanada",
+   183,
+   87,
+   "V",
+   ""
+  ],
+  "Lenni Killinen": [
+   "2000-06-15",
+   "Finland",
+   187,
+   95,
+   "V",
+   ""
+  ],
+  "Joel Mustonen": [
+   "1992-09-18",
+   "Sverige",
+   180,
+   82,
+   "V",
+   ""
+  ],
+  "Marcus Björk": [
+   "1997-11-24",
+   "Sverige",
+   191,
+   92,
+   "H",
+   ""
+  ],
+  "Fredrik Forsberg": [
+   "1996-12-12",
+   "Sverige",
+   183,
+   84,
+   "H",
+   ""
+  ],
+  "Gustav Possler": [
+   "1994-11-11",
+   "Sverige",
+   182,
+   86,
+   "V",
+   ""
+  ],
+  "Robin Kovács": [
+   "1996-11-16",
+   "Sverige",
+   183,
+   87,
+   "V",
+   ""
+  ],
+  "Chris DiDomenico": [
+   "1989-02-20",
+   "Kanada",
+   180,
+   83,
+   "H",
+   ""
+  ],
+  "Oscar Tellström": [
+   "2002-07-17",
+   "Sverige",
+   183,
+   90,
+   "V",
+   ""
+  ],
+  "Tristen Robins": [
+   "2001-11-15",
+   "Kanada",
+   178,
+   80,
+   "H",
+   ""
   ]
  },
  "statnote": "Efter 17 omgångar. Björklöven är 14:a i SHL på gjorda mål per match och 12:a på insläppta, med 89,3 % i räddningsprocent. Poängbäst i laget är Fredrik Forsberg med 3+7.",
@@ -1217,6 +1345,7 @@
   "tabell": "ok",
   "schema": "ok",
   "spelare": "ok",
+  "spelarfakta": "ok",
   "nyckeltal": "ok",
   "nyheter": "ok"
  }
