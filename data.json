@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-20T17:24:20.866Z",
- "updatedText": "20 november 2026, kl. 18.24",
+ "updated": "2026-11-20T18:16:34.137Z",
+ "updatedText": "20 november 2026, kl. 19.16",
  "results": [
   [
    "2026-09-19",
@@ -1426,12 +1426,6 @@
  },
  "news": [
   [
-   "2026-11-20T11:58:43.000Z",
-   "Efter mötet med supportrarna – öppnar för ändring",
-   "Västerbotten | Folkbladet",
-   "https://news.google.com/rss/articles/CBMijwFBVV95cUxPX3NiWURyVm1UWmQtM0d6WVFtaUtGZERLSWNsX0dEQzhFbGZFSzBwSmVkZEt0allzQV9FNDloN05zRHE0MjdKRUtRRzJ0M2cwWklQVmZWdmM4MDJ2cW95eVJEaHpUVkdtWjhmRjdGSXpBUENYMUtYeHRBTmJOT3RiOHlaYVhUTmdLZ2RpSWU0NA?oc=5"
-  ],
-  [
    "2026-11-20T09:46:19.000Z",
    "Kovacs nya kedja – på plats hos Björklöven",
    "Hockeynews",
@@ -1624,6 +1618,14 @@
    "https://www.smp.se/sport/lakers-jagar-tredje-raka-folj-matchen-mot-bjorkloven/",
    "Torsdag och full omgång i SHL. Växjö Lakers kommer till spel med två raka segrar i ryggen när nykomlingen Björklöven gästar Vida Arena. Du kan följa matchen här i vår livechat.",
    true
+  ],
+  [
+   "2026-11-19T08:13:03.000Z",
+   "Kvällens match kan bara sluta på ett sätt",
+   "Expressen",
+   "https://www.expressen.se/sport/hockey/tips/kvallens-match-kan--bara-sluta-pa-ett-satt/",
+   "Växjö mot Björklöven. Ett möte som bara kan sluta på ett sätt enligt mig. Hemmalaget spikas utan vidare tvivel. ANNONS: Lämna in expertens systemförslag (Svenska Spel) ...",
+   false
   ]
  ]
 }
