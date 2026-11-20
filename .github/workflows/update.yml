@@ -47,7 +47,12 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data.json
             git commit -m "Uppdatera data"
-            git push
+            # Om något annat sparats under tiden: lägg ändringen ovanpå och försök igen
+            for i in 1 2 3; do
+              git push && break
+              git pull --rebase -X theirs origin main || { git rebase --abort; git reset --hard origin/main; node scripts/update.mjs; git add data.json; git commit -m "Uppdatera data" || true; }
+              sleep 5
+            done
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
       - name: Förbered sidan
