@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-20T01:30:56.218Z",
- "updatedText": "20 november 2026, kl. 02.30",
+ "updated": "2026-11-20T01:35:31.683Z",
+ "updatedText": "20 november 2026, kl. 02.35",
  "results": [
   [
    "2026-09-19",
@@ -9,7 +9,8 @@
    3,
    0,
    false,
-   14100
+   14100,
+   "18:00"
   ],
   [
    "2026-09-24",
@@ -18,7 +19,8 @@
    4,
    3,
    true,
-   5500
+   5500,
+   "19:00"
   ],
   [
    "2026-09-26",
@@ -27,7 +29,8 @@
    0,
    5,
    false,
-   5400
+   5400,
+   "15:15"
   ],
   [
    "2026-09-29",
@@ -36,7 +39,8 @@
    4,
    2,
    false,
-   5400
+   5400,
+   "19:00"
   ],
   [
    "2026-10-01",
@@ -45,7 +49,8 @@
    4,
    2,
    false,
-   5400
+   5400,
+   "19:00"
   ],
   [
    "2026-10-03",
@@ -54,7 +59,8 @@
    3,
    2,
    false,
-   7900
+   7900,
+   "18:00"
   ],
   [
    "2026-10-08",
@@ -63,7 +69,8 @@
    1,
    4,
    false,
-   7355
+   7355,
+   "19:00"
   ],
   [
    "2026-10-10",
@@ -72,7 +79,8 @@
    3,
    2,
    false,
-   5400
+   5400,
+   "18:00"
   ],
   [
    "2026-10-15",
@@ -81,7 +89,8 @@
    1,
    2,
    false,
-   5181
+   5181,
+   "19:00"
   ],
   [
    "2026-10-17",
@@ -90,7 +99,8 @@
    0,
    3,
    false,
-   5420
+   5420,
+   "18:00"
   ],
   [
    "2026-10-22",
@@ -99,7 +109,8 @@
    2,
    4,
    false,
-   5081
+   5081,
+   "19:00"
   ],
   [
    "2026-10-24",
@@ -108,7 +119,8 @@
    1,
    8,
    false,
-   5400
+   5400,
+   "15:15"
   ],
   [
    "2026-10-29",
@@ -117,7 +129,8 @@
    0,
    4,
    false,
-   6150
+   6150,
+   "19:00"
   ],
   [
    "2026-10-31",
@@ -126,7 +139,8 @@
    3,
    5,
    false,
-   5801
+   5801,
+   "15:15"
   ],
   [
    "2026-11-12",
@@ -135,7 +149,8 @@
    1,
    3,
    false,
-   5060
+   5060,
+   "19:00"
   ],
   [
    "2026-11-14",
@@ -144,7 +159,8 @@
    1,
    4,
    false,
-   5400
+   5400,
+   "18:00"
   ],
   [
    "2026-11-19",
@@ -153,7 +169,8 @@
    1,
    3,
    false,
-   4588
+   4588,
+   "19:00"
   ]
  ],
  "upcoming": [
@@ -911,6 +928,14 @@
    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNelZRRGVTSVVLb01TWTAzOUNhQUoxS3ZHTElPSmZwWE1qbGViTW1iVGdvUHFEalpOZWRzYUQ0bHdDSmw0b2pnZVEycTlJNkRzMVpqZjVPZDJNV3VXTWtENVEyR2VVdkNwblNuSFduOGl5UDZFVEg5RU04eW9Ib294VGxwbnhHSzVzdWlSMGJ2aVk5dGp6X1lZcFlRanJoRENmV2hmenJrMHp6dw?oc=5"
   ],
   [
+   "2026-11-13",
+   "skada",
+   "Forwarden missar Brynäs möte med Björklöven",
+   "",
+   "Hockeynews",
+   "https://news.google.com/rss/articles/CBMifkFVX3lxTE1PVVlMRHl0YUdhQVBYellnYmRrbERiQkRLcV9MYk10Q1pYbmNaYU9rM0psMTAzNHNaR2cwUU9oeF9wSkdJTVFJZC1fRDVWMWtKTHd5ampQWW1XXzc4UldOYXAtYVUyWkUwSm9NeENfbC1lVVlyTm9VRG5aa2RnZw?oc=5"
+  ],
+  [
    "2026-10-30",
    "klart",
    "Målvaktslöftet Tim Jurander väljer Löven",
@@ -973,6 +998,14 @@
    "Lagkaptenen har en underkroppsskada och har ännu inte spelat i SHL. Marcus ”Lilliz” Nilsson skadades mot Linköping 3 oktober. Kenttä vill inte ta in ersättare.",
    "Hockeysverige",
    "https://hockeysverige.se/shl/sa-tanker-bjorkloven-efter-stjarnornas-skador-azigQ4j4NXFS/"
+  ],
+  [
+   "2026-09-18",
+   "skada",
+   "Nu gör Björklöven comeback i SHL – siktar på slutspel: ”Ska sätta ned foten”",
+   "",
+   "SVT Nyheter",
+   "https://news.google.com/rss/articles/CBMiugFBVV95cUxPN2xid1FwOUV4X1laSU0xQU5tX0dLR0RNMFkya1dzNG9RXzhGZW9YZG5kTURyMnV5ZDQ2cGdsdUdaTmpDZXJWRFNHRG9pNlNuaGZISXpkNnlIT0lDTHZ6SnhpUi1lR2lLMm83d2o1RWZ5aHo1em9BQmJBVEcyby1qdUVFY055MVlhWHJSeWV6dS1RRHkzWXdEUGlZZG1BR2tiYnNGMExRdXJSNzUzVXdrcDZKU1hKdkh4ekE?oc=5"
   ],
   [
    "2026-08-04",
