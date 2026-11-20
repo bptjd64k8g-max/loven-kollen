@@ -334,33 +334,53 @@ const shortName = n => n.replace(/^IF /,"").replace(/ (IF|HC|BK|AIK|HF|IK|HK|Lak
 })();
 
 /* kommande + hero */
-const LIVE_MS = 3*60*60*1000;
+const LIVE_MS = 3*60*60*1000, WAIT_MS = 8*60*60*1000, RESULT_MS = 14*60*60*1000;
 const ticketText = u => (u[2] === "H" && u[5] && u[5].biljetter) ? `Biljetter: ${u[5].biljetter}` : "";
 const tvText = u => { const t = u[5]; if (!t || !t.kanal) return ""; return `${t.kanal}${t.start ? ", sändningen börjar " + t.start.replace(":", ".") : ""}`; };
 let showAllUp = false, timer;
-function future(){ const now = Date.now(); return UPCOMING.filter(u => toDate(u[0],u[1]||"23:00").getTime() + LIVE_MS > now); }
+const startOf = u => toDate(u[0], u[1] || "23:00").getTime();
+// Matcher som inte fått något resultat långt efter nedsläpp – troligen uppskjutna
+const stale = u => startOf(u) + WAIT_MS < Date.now();
+function future(){ return UPCOMING.filter(u => !stale(u)); }
 function renderUpcoming(){
-  const list = future(), ul = $("upcoming"); ul.innerHTML = "";
+  const list = UPCOMING.filter(u => startOf(u) + 7*864e5 > Date.now()), ul = $("upcoming"); ul.innerHTML = "";
   (showAllUp ? list : list.slice(0,6)).forEach(u => {
     const d = toDate(u[0],u[1]), home = u[2]==="H";
     ul.append(el("li","",`<span class="d">${fmtDate(d)}${d.getFullYear()>2026?" 2027":""}</span>
-      <span class="o">${home?"Björklöven – "+esc(shortName(u[3])):esc(shortName(u[3]))+" – Björklöven"}<small>${home?"Hemma, Visionite Arena":"Borta, "+esc(ARENAS[u[3]]||"")}${u[4]?". "+esc(u[4]):""}</small>${tvText(u)?`<small class="tv">📺 ${esc(tvText(u))}</small>`:""}${ticketText(u)?`<small class="tv">🎟️ ${esc(ticketText(u))}</small>`:""}</span>
+      <span class="o">${home?"Björklöven – "+esc(shortName(u[3])):esc(shortName(u[3]))+" – Björklöven"}<small>${home?"Hemma, Visionite Arena":"Borta, "+esc(ARENAS[u[3]]||"")}${u[4]?". "+esc(u[4]):""}</small>${tvText(u)?`<small class="tv">📺 ${esc(tvText(u))}</small>`:""}${ticketText(u)?`<small class="tv">🎟️ ${esc(ticketText(u))}</small>`:""}${stale(u)?`<small class="tv">⚠️ Inget resultat registrerat – matchen kan ha skjutits upp</small>`:""}</span>
       <span class="time">${u[1]?u[1].replace(":","."):"–"}</span>`));
   });
   $("moreUp").textContent = showAllUp ? "Visa färre" : `Visa hela schemat (${list.length} matcher kvar)`;
   $("moreUp").hidden = list.length <= 6;
-  renderHero(list[0]);
+  renderHero(future()[0]);
 }
 $("moreUp").addEventListener("click", () => { showAllUp = !showAllUp; renderUpcoming(); });
 
 let NEXT = null;
+function recentResult(){
+  const r = RESULTS[RESULTS.length - 1];
+  if (!r) return null;
+  const t = toDate(r[0], r[7] || "19:00").getTime();
+  return Date.now() - t < RESULT_MS ? r : null;
+}
 function renderHero(n){
   NEXT = n;
+  const last = recentResult();
+  if (last) {
+    const home = last[1] === "H", us = last[3], them = last[4];
+    const [ta, tb, sa, sb] = home ? ["Björklöven", shortName(last[2]), us, them] : [shortName(last[2]), "Björklöven", them, us];
+    $("hero").innerHTML = `<p class="kicker">Slutresultat · ${us > them ? "seger" : "förlust"}${last[5] ? " efter förlängning" : ""}</p>
+      <h1 class="matchup"><span>${esc(ta)} ${sa}</span><span class="vs">–</span><span>${esc(tb)} ${sb}</span></h1>
+      <p class="meta">${fmtDate(toDate(last[0]))}${last[6] ? ` · publik ${last[6].toLocaleString("sv-SE")}` : ""}</p>
+      ${n ? `<p class="watch">Nästa match: ${fmtDate(toDate(n[0],n[1]))} kl. ${n[1] ? n[1].replace(":", ".") : "–"}, ${n[2] === "H" ? "hemma mot" : "borta mot"} ${esc(shortName(n[3]))}</p>` : ""}`;
+    clearInterval(timer);
+    return;
+  }
   const h = $("hero");
   if (!n){ h.innerHTML = `<p class="kicker">Inga inlagda matcher</p><h1 class="matchup"><span>Björklöven</span></h1>`; return; }
   const d = toDate(n[0],n[1]), home = n[2]==="H";
   const a = home ? "Björklöven" : shortName(n[3]), b = home ? shortName(n[3]) : "Björklöven";
-  h.innerHTML = `<p class="kicker">Nästa match${n[4]?": "+esc(n[4].charAt(0).toLowerCase()+n[4].slice(1)):""}</p>
+  h.innerHTML = `<p class="kicker">${d.getTime() <= Date.now() ? "Matchen har börjat" : "Nästa match"}${n[4]?": "+esc(n[4].charAt(0).toLowerCase()+n[4].slice(1)):""}</p>
     <h1 class="matchup"><span>${esc(a)}</span><span class="vs">mot</span><span>${esc(b)}</span></h1>
     <p class="meta">${fmtDate(d)} kl. ${n[1]?n[1].replace(":","."):"–"} i ${home?"Visionite Arena":esc(ARENAS[n[3]]||"")}</p>
     <div id="cd"></div>`;
@@ -372,12 +392,12 @@ function tick(d){
     const ms = d.getTime() - Date.now(), cd = $("cd");
     if (!cd) return;
     if (ms <= 0){
-      cd.innerHTML = `<div class="livebox"><span class="pulse">Live nu</span>
+      const over = ms < -LIVE_MS;
+      cd.innerHTML = `<div class="livebox"><span class="pulse">${over ? "Slut – resultatet kommer strax" : "Live nu"}</span>
         <a class="btn" href="https://www.shl.se" target="_blank" rel="noopener">Följ ställningen på SHL.se</a>
         <a class="btn" href="https://www.tv4play.se" target="_blank" rel="noopener">Se på TV4 Play</a></div>`;
       clearInterval(timer);
-      if (ms < -LIVE_MS) renderUpcoming();
-      else setTimeout(renderUpcoming, LIVE_MS + ms + 1000);
+      watchForResult();
       return;
     }
     const D = Math.floor(ms/864e5), H = Math.floor(ms/36e5)%24, M = Math.floor(ms/6e4)%60, S = Math.floor(ms/1e3)%60;
@@ -386,6 +406,18 @@ function tick(d){
       <p class="watch">${tvText(NEXT) ? "📺 " + esc(tvText(NEXT)) : "Sänds på TV4 Play. Kanal och sändningsstart läggs in på matchdagen."}${ticketText(NEXT) ? "<br>🎟️ " + esc(ticketText(NEXT)) : (NEXT[2] === "H" ? "<br>🎟️ Biljettläget läggs in när det finns uppgifter" : "")}</p>`;
   };
   run(); timer = setInterval(run, 1000);
+}
+// Under och efter match: kolla efter nytt resultat varannan minut och ladda om när det finns
+let watching = false;
+function watchForResult(){
+  if (watching) return; watching = true;
+  const n0 = RESULTS.length, up0 = JSON.stringify(UPCOMING[0] || null);
+  setInterval(async () => {
+    try {
+      const d = await (await fetch("data.json?v=" + Date.now(), {cache:"no-store"})).json();
+      if (d.results.length !== n0 || JSON.stringify(d.upcoming[0] || null) !== up0) location.reload();
+    } catch(e) {}
+  }, 120000);
 }
 renderUpcoming();
 

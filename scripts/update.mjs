@@ -145,7 +145,7 @@ await source("schema", async () => {
   const uniq = games.filter(g => { const k = g.date + g.opp; if (seen.has(k)) return false; seen.add(k); return true; })
     .sort((a, b) => a.date.localeCompare(b.date));
   const oldUp = Object.fromEntries(old.upcoming.map(u => [u[0], u]));
-  D.results = uniq.filter(g => g.us !== null).map(g => [g.date, g.ha, g.opp, g.us, g.them, g.ot, g.spect]);
+  D.results = uniq.filter(g => g.us !== null).map(g => [g.date, g.ha, g.opp, g.us, g.them, g.ot, g.spect, g.time]);
   // Publiksnitt hemma och placering bland lagen
   const avg = Object.entries(crowds).map(([t, l]) => [t, Math.round(l.reduce((a, b) => a + b, 0) / l.length), l.length]);
   const me = avg.find(a => a[0] === "IF Björklöven");
