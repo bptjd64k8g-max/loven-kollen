@@ -1,0 +1,49 @@
+name: Matchläge
+
+# Startar före matchtider och uppdaterar var 3:e minut medan Björklöven spelar
+on:
+  schedule:
+    - cron: "40 13 * * *"   # för matcher 15:15 (svensk vintertid)
+    - cron: "25 16 * * *"   # för matcher 18:00 och 19:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: matchlage
+  cancel-in-progress: false
+
+jobs:
+  match:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm install --no-audit --no-fund
+      - name: Uppdatera tätt under matchen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          END=$(node scripts/matchwindow.mjs)
+          if [ "$END" = "0" ]; then echo "Ingen match nu."; exit 0; fi
+          echo "Matchläge till $(date -d @$END)"
+          git config user.name "loven-kollen-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          while [ "$(date +%s)" -lt "$END" ]; do
+            git pull -q --rebase origin main || true
+            node scripts/update.mjs || true
+            if ! git diff --quiet -- data.json; then
+              git add data.json
+              git commit -qm "Uppdatera data (matchläge)"
+              if git push -q || (git pull -q --rebase origin main && git push -q); then
+                gh workflow run update.yml --ref main -f deploy_only=true || true
+              fi
+            fi
+            sleep 180
+          done

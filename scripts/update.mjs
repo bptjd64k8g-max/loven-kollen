@@ -39,6 +39,13 @@ const clean = s => String(s ?? "").replace(/ /g, " ").replace(/\s+/g, " ").trim
 const num = s => { const m = clean(s).replace(/[−–]/g, "-").match(/^[+-]?\d+(?:[.,]\d+)?/); return m ? Number(m[0].replace(",", ".")) : NaN; };
 const fold = s => clean(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 const sv = (x, d = 2) => Number(x).toFixed(d).replace(".", ",");
+// Svensk lokal tid -> tidsstämpel (sommartid sista söndagen i mars till sista söndagen i oktober)
+function stockholm(date, time) {
+  const [y, m, d] = date.split("-").map(Number), [hh, mm] = time.split(":").map(Number);
+  const lastSun = mo => { const x = new Date(Date.UTC(y, mo, 0)); return x.getUTCDate() - x.getUTCDay(); };
+  const summer = (m > 3 && m < 10) || (m === 3 && d >= lastSun(3)) || (m === 10 && d < lastSun(10));
+  return Date.UTC(y, m - 1, d, hh - (summer ? 2 : 1), mm);
+}
 
 // Raderna i en tabell (bara dess egna rader, inte inbäddade tabellers)
 const rowsOf = ($, t) => $(t).children("thead,tbody,tfoot").children("tr").add($(t).children("tr")).toArray()
@@ -136,7 +143,11 @@ await source("schema", async () => {
       const s = (r[4] || "").match(/(\d+)\s*-\s*(\d+)/);
       const periods = ((r[5] || "").match(/\d+-\d+/g) || []).length;
       const venue = r[r.length - 1];
-      games.push({ date, time, ha: home ? "H" : "B", opp, us: s ? +(home ? s[1] : s[2]) : null, them: s ? +(home ? s[2] : s[1]) : null, ot: periods > 3, venue, spect });
+      // Ett resultat räknas som slutligt först när matchen rimligen är slut – annars är det en pågående ställning
+      const start = stockholm(date, time || "19:00"), mins = (Date.now() - start) / 6e4;
+      const final = !!s && ((periods >= 3 && mins > 150) || mins > 240);
+      const us = s ? +(home ? s[1] : s[2]) : null, them = s ? +(home ? s[2] : s[1]) : null;
+      games.push({ date, time, ha: home ? "H" : "B", opp, us: final ? us : null, them: final ? them : null, live: s && !final ? { us, them, period: Math.max(periods, 1) } : null, ot: periods > 3, venue, spect: final ? spect : null });
     }
     if (games.length) break;
   }
@@ -153,7 +164,8 @@ await source("schema", async () => {
     max: Math.max(...crowds["IF Björklöven"]), league: Math.round(avg.reduce((s, a) => s + a[1], 0) / avg.length) };
   D.upcoming = uniq.filter(g => g.us === null).map(g => {
     const u = [g.date, g.time, g.ha, g.opp, oldUp[g.date]?.[4] || ""];
-    if (oldUp[g.date]?.[5]) u.push(oldUp[g.date][5]); // kanal och sändningsstart, fylls i på matchdagen
+    if (oldUp[g.date]?.[5] || g.live) u.push(oldUp[g.date]?.[5] || null); // kanal, sändningsstart, biljetter
+    if (g.live) u.push(g.live); // pågående ställning
     return u;
   });
   for (const g of uniq) if (g.ha === "B" && g.venue && !/^\d/.test(g.venue)) D.arenas[g.opp] = g.venue;
