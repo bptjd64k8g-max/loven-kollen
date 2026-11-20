@@ -372,8 +372,9 @@ function renderHero(n){
     $("hero").innerHTML = `<p class="kicker">Slutresultat · ${us > them ? "seger" : "förlust"}${last[5] ? " efter förlängning" : ""}</p>
       <h1 class="matchup"><span>${esc(ta)} ${sa}</span><span class="vs">–</span><span>${esc(tb)} ${sb}</span></h1>
       <p class="meta">${fmtDate(toDate(last[0]))}${last[6] ? ` · publik ${last[6].toLocaleString("sv-SE")}` : ""}</p>
-      ${n ? `<p class="watch">Nästa match: ${fmtDate(toDate(n[0],n[1]))} kl. ${n[1] ? n[1].replace(":", ".") : "–"}, ${n[2] === "H" ? "hemma mot" : "borta mot"} ${esc(shortName(n[3]))}</p>` : ""}`;
+      ${n ? `<p class="meta" style="margin-top:22px;font-weight:600">Nästa match: ${fmtDate(toDate(n[0],n[1]))} kl. ${n[1] ? n[1].replace(":", ".") : "–"}, ${n[2] === "H" ? "hemma mot" : "borta mot"} ${esc(shortName(n[3]))}</p><div id="cd"></div>` : ""}`;
     clearInterval(timer);
+    if (n) tick(toDate(n[0], n[1]));
     return;
   }
   const h = $("hero");
