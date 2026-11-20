@@ -16,9 +16,9 @@ const SWE = "https://stats.swehockey.se";
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
 const cache = new Map();
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-async function fetchOnce(url) {
+async function fetchOnce(url, ms = 25000) {
   const ctrl = new AbortController();
-  const t = setTimeout(() => ctrl.abort(), 25000);
+  const t = setTimeout(() => ctrl.abort(), ms);
   try {
     const r = await fetch(url, { headers: { "user-agent": UA, "accept-language": "sv-SE,sv;q=0.9,en;q=0.5" }, signal: ctrl.signal });
     if (!r.ok) throw new Error(`HTTP ${r.status} från ${url}`);
@@ -365,6 +365,24 @@ await source("nyheter", async () => {
     .filter(n => Date.parse(n[0]) > cutoff)
     .filter(n => { const k = fold(n[1]).slice(0, 60); if (seenN.has(k)) return false; seenN.add(k); return true; })
     .sort((a, b) => b[0].localeCompare(a[0])).slice(0, 30);
+  // Betalvägg: "(+)"/"Premium" i rubriken, annars artikelns egen öppna märkning (schema.org isAccessibleForFree / content_tier).
+  // n[5] = true (låst), false (fri) eller saknas (okänt). Redan kontrollerade länkar kontrolleras inte igen.
+  const known = new Map((old.news || []).filter(n => typeof n[5] === "boolean").map(n => [n[3], n[5]]));
+  let checks = 0;
+  for (const n of news) {
+    if (/^\(\+\)|\bpremium\b/i.test(n[1])) { n[4] = n[4] || ""; n[5] = true; continue; }
+    if (known.has(n[3])) { n[4] = n[4] || ""; n[5] = known.get(n[3]); continue; }
+    if (typeof n[5] === "boolean" || /news\.google\.com/.test(n[3]) || checks >= 12) continue;
+    checks++;
+    try {
+      const h = await fetchOnce(n[3], 8000);
+      const locked = /"isAccessibleForFree"\s*:\s*"?false/i.test(h)
+        || /<meta[^>]+(?:property|name)=["'](?:article:)?content_tier["'][^>]+content=["']locked/i.test(h)
+        || /<meta[^>]+content=["']locked["'][^>]+(?:property|name)=["'](?:article:)?content_tier/i.test(h);
+      n[4] = n[4] || ""; n[5] = locked;
+    } catch (e) { log(`   betalvägg ${n[2]}: ${e.message}`.slice(0, 160)); }
+  }
+  log(`   betalvägg: ${checks} artiklar kontrollerade, ${news.filter(n => n[5] === true).length} låsta`);
   if (news.length) D.news = news;
 });
 
