@@ -171,6 +171,8 @@ tr.us td:first-child{color:var(--ink)}
 .roster .x{color:var(--muted);font-size:.8rem;margin-left:auto}
 .pcard{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:start;padding:6px 0 14px}
 .pcard svg{width:96px;height:auto;display:block}
+.pcard .nat{display:flex;align-items:center;gap:8px;margin:0 0 6px;font-weight:600;font-size:.92rem}
+.pcard svg.flag{width:27px;height:18px;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.15);flex:none}
 .pcard .bio{font-size:.86rem;color:var(--muted);margin:0 0 8px;line-height:1.45}
 .pstats{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .pstats div{background:var(--surface);text-align:center;padding:6px 2px}
@@ -549,13 +551,29 @@ renderFeed();
 /* trupp */
 const born = (b, nat) => {
   const s = String(b), m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
-  if (!m) return `född ${s}${nat ? ", " + nat : ""}`;
+  if (!m) return `född ${s}`;
   const d = new Date(+m[1], +m[2] - 1, +m[3]), now = new Date();
   let age = now.getFullYear() - d.getFullYear();
   if (now < new Date(now.getFullYear(), d.getMonth(), d.getDate())) age--;
-  return `${age} år (född ${d.getDate()} ${["jan","feb","mars","april","maj","juni","juli","aug","sep","okt","nov","dec"][d.getMonth()]} ${m[1]})${nat ? ", " + nat : ""}`;
+  return `${age} år (född ${d.getDate()} ${["jan","feb","mars","april","maj","juni","juli","aug","sep","okt","nov","dec"][d.getMonth()]} ${m[1]})`;
 };
 const posName = {"Målvakter":"Målvakt","Backar":"Back","Centrar":"Center","Forwards":"Forward"};
+// Flaggor som bilder (emoji-flaggor syns inte på alla datorer)
+const FLAGS = {
+  "Sverige": '<rect width="30" height="20" fill="#006AA7"/><rect x="9" width="4" height="20" fill="#FECC00"/><rect y="8" width="30" height="4" fill="#FECC00"/>',
+  "Finland": '<rect width="30" height="20" fill="#fff"/><rect x="8" width="5" height="20" fill="#002F6C"/><rect y="7.5" width="30" height="5" fill="#002F6C"/>',
+  "Norge": '<rect width="30" height="20" fill="#BA0C2F"/><rect x="8" width="6" height="20" fill="#fff"/><rect y="7" width="30" height="6" fill="#fff"/><rect x="9.5" width="3" height="20" fill="#00205B"/><rect y="8.5" width="30" height="3" fill="#00205B"/>',
+  "Danmark": '<rect width="30" height="20" fill="#C8102E"/><rect x="9" width="3" height="20" fill="#fff"/><rect y="8.5" width="30" height="3" fill="#fff"/>',
+  "Kanada": '<rect width="30" height="20" fill="#fff"/><rect width="7.5" height="20" fill="#D52B1E"/><rect x="22.5" width="7.5" height="20" fill="#D52B1E"/><path d="M15 4l1.2 2.4 1.6-.6-.5 3.4 2-1.6.6 1.4 2-.4-.8 2.2 1 .6-3.6 2.6.4 1.4-3.3-.4V18h-1.2v-2.6l-3.3.4.4-1.4-3.6-2.6 1-.6-.8-2.2 2 .4.6-1.4 2 1.6-.5-3.4 1.6.6z" fill="#D52B1E"/>',
+  "USA": '<rect width="30" height="20" fill="#fff"/>' + [0,2,4,6,8,10,12].map(i => `<rect y="${i*20/13}" width="30" height="${20/13}" fill="#B22234"/>`).join("") + '<rect width="13" height="10.8" fill="#3C3B6E"/>',
+  "Tjeckien": '<rect width="30" height="10" fill="#fff"/><rect y="10" width="30" height="10" fill="#D7141A"/><path d="M0 0l15 10L0 20z" fill="#11457E"/>',
+  "Slovakien": '<rect width="30" height="6.7" fill="#fff"/><rect y="6.7" width="30" height="6.6" fill="#0B4EA2"/><rect y="13.3" width="30" height="6.7" fill="#EE1C25"/>',
+  "Lettland": '<rect width="30" height="20" fill="#9E3039"/><rect y="8" width="30" height="4" fill="#fff"/>',
+  "Schweiz": '<rect width="30" height="20" fill="#D52B1E"/><rect x="13" y="4" width="4" height="12" fill="#fff"/><rect x="9" y="8" width="12" height="4" fill="#fff"/>',
+  "Tyskland": '<rect width="30" height="6.7" fill="#000"/><rect y="6.7" width="30" height="6.6" fill="#DD0000"/><rect y="13.3" width="30" height="6.7" fill="#FFCE00"/>',
+  "Österrike": '<rect width="30" height="20" fill="#ED2939"/><rect y="6.7" width="30" height="6.6" fill="#fff"/>'
+};
+const flag = nat => FLAGS[nat] ? `<svg class="flag" viewBox="0 0 30 20" aria-hidden="true">${FLAGS[nat]}</svg>` : "";
 let jid = 0;
 const jersey = n => { const id = "j" + (jid++); return `<svg viewBox="0 0 120 116" aria-hidden="true">
   <defs>
@@ -597,7 +615,7 @@ Object.entries(ROSTER).forEach(([pos, players]) => {
       : `<p class="pnone">${pos === "Målvakter" ? "Målvaktsstatistik kommer vid nästa uppdatering." : "Säsongsstatistik saknas än – fylls på vid nästa uppdatering."}</p>`;
     const li = el("li");
     li.innerHTML = `<details><summary><b>${nr}</b><span class="nm">${esc(name)}${role?` <span class="c">${role}</span>`:""}</span>${status?`<span class="x">${esc(status)}</span>`:""}</summary>
-      <div class="pcard">${jersey(nr)}<div><p class="bio">${esc(bioTxt)}</p>${stats}</div>
+      <div class="pcard">${jersey(nr)}<div>${bio && bio[1] ? `<p class="nat">${flag(bio[1])}<span>${esc(bio[1])}</span></p>` : ""}<p class="bio">${esc(bioTxt)}</p>${stats}</div>
       <button type="button" class="linkbtn close">Minimera</button></div></details>`;
     li.querySelector(".close").addEventListener("click", e => { const d = e.target.closest("details"); d.open = false; d.querySelector("summary").focus(); });
     ul.append(li);
