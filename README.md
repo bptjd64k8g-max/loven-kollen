@@ -9,7 +9,9 @@ Sidan uppdaterar sig själv. Var 30:e minut hämtar GitHub Actions ny data (`scr
 - Spelschema, resultat och matchtider: stats.swehockey.se
 - Spelar- och målvaktsstatistik: stats.swehockey.se
 - Lagets nyckeltal: stats.swehockey.se
-- Nyheter och silly: Google News
+- Nyheter och silly: Google News och Bing News
+- TV-kanal och sändningsstart: Hurbras matchguider
+- Under matcher: matchläge (`.github/workflows/match.yml`) uppdaterar var 3:e minut
 
 Misslyckas en källa behålls förra värdet. Se `sources` i `data.json` och loggen under fliken Actions.
 

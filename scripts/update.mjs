@@ -391,11 +391,6 @@ async function tvFor(date, ha, opp) {
   }
   return null;
 }
-if (process.env.TVTEST) {
-  for (const [d, ha, o] of [["2026-11-19", "B", "Växjö Lakers"], ["2026-11-14", "H", "Brynäs IF"], ["2026-11-12", "H", "Örebro HK"], ["2026-10-08", "B", "Brynäs IF"], ["2026-10-17", "B", "Timrå IK"]])
-    log("TVTEST", d, o, JSON.stringify(await tvFor(d, ha, o)));
-  process.exit(0);
-}
 await source("tv", async () => {
   const soon = D.upcoming.filter(u => { const t = stockholm(u[0], u[1] || "19:00"); return t > Date.now() - 3 * 36e5 && t < Date.now() + 2 * 864e5; });
   let n = 0;

@@ -34,7 +34,6 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm install --no-audit --no-fund
-      - run: TVTEST=1 node scripts/update.mjs || true
       - name: Hämta ny data
         if: ${{ !inputs.deploy_only }}
         run: node scripts/update.mjs
