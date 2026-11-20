@@ -368,6 +368,46 @@ await source("nyheter", async () => {
   if (news.length) D.news = news;
 });
 
+/* ---------- 6. TV-kanal och sändningsstart från Hurbras matchguider ---------- */
+const SLUG = { "Färjestad BK": "farjestad", "Frölunda HC": "frolunda", "Skellefteå AIK": "skelleftea", "Örebro HK": "orebro", "IF Malmö Redhawks": "malmo",
+  "Brynäs IF": "brynas", "Växjö Lakers": "vaxjo", "Rögle BK": "rogle", "Luleå HF": "lulea", "Timrå IK": "timra", "Djurgårdens IF": "djurgarden", "Linköping HC": "linkoping", "HV 71": "hv71" };
+const MONTHS = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
+async function tvFor(date, ha, opp) {
+  const [y, m, d] = date.split("-").map(Number), o = SLUG[opp];
+  if (!o) return null;
+  const pair = ha === "H" ? `bjorkloven-${o}` : `${o}-bjorkloven`;
+  const urls = [`https://hurbra.se/${pair}-tv-${d}-${MONTHS[m - 1]}-${y}/`, `https://hurbra.se/${pair}-tv-${d}-${MONTHS[m - 1]}/`];
+  for (const url of urls) {
+    let $; try { $ = await page(url); } catch { continue; }
+    const cells = {};
+    $("tr").each((_, tr) => { const c = $(tr).children("td,th").toArray().map(x => clean($(x).text())); if (c.length >= 2) cells[c[0].toLowerCase()] = c[1]; });
+    const find = (...keys) => { for (const [k, v] of Object.entries(cells)) if (keys.some(x => k.includes(x))) return v; return null; };
+    let kanal = find("tv-kanal", "vilken tv-kanal", "kanal");
+    const stream = find("streaming", "stream", "var kan matchen streamas");
+    const startTxt = find("sändningsstart", "när börjar sändningen", "sändningen börjar");
+    if (kanal && stream && !kanal.toLowerCase().includes(stream.toLowerCase())) kanal = `${kanal} och ${stream}`;
+    const st = (startTxt || "").match(/(\d{1,2})[.:](\d{2})/);
+    if (kanal || st) return { kanal: kanal || undefined, start: st ? `${st[1].padStart(2, "0")}:${st[2]}` : undefined, kalla: url };
+  }
+  return null;
+}
+if (process.env.TVTEST) {
+  for (const [d, ha, o] of [["2026-11-19", "B", "Växjö Lakers"], ["2026-11-14", "H", "Brynäs IF"], ["2026-11-12", "H", "Örebro HK"], ["2026-10-08", "B", "Brynäs IF"], ["2026-10-17", "B", "Timrå IK"]])
+    log("TVTEST", d, o, JSON.stringify(await tvFor(d, ha, o)));
+  process.exit(0);
+}
+await source("tv", async () => {
+  const soon = D.upcoming.filter(u => { const t = stockholm(u[0], u[1] || "19:00"); return t > Date.now() - 3 * 36e5 && t < Date.now() + 2 * 864e5; });
+  let n = 0;
+  for (const u of soon) {
+    const tv = await tvFor(u[0], u[2], u[3]);
+    if (!tv) { log(`   ingen TV-guide än för ${u[0]} ${u[3]}`); continue; }
+    while (u.length < 6) u.push(u.length === 4 ? "" : null);
+    u[5] = { ...(u[5] || {}), ...(tv.kanal ? { kanal: tv.kanal } : {}), ...(tv.start ? { start: tv.start } : {}) };
+    log(`   ${u[0]} ${u[3]}: ${tv.kanal || "?"} ${tv.start || ""}`); n++;
+  }
+});
+
 /* ---------- Text under statistiken ---------- */
 {
   const gp = D.table.find(t => t[0] === "IF Björklöven")?.[1];
