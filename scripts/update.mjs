@@ -301,14 +301,16 @@ await source("nyheter", async () => {
     ["skada", /skad|missar|borta (i|minst|resten)|opererad|sjukskriv|tillbaka i spel|comeback/i],
     ["besked", /kenttä|bogren|sportchef|tränaren|kaptenen|krismöte/i]
   ];
-  const items = [];
+  const items = [], all = [];
   $("item").each((_, it) => {
     const full = clean($(it).find("title").text());
     const src = clean($(it).find("source").text()) || "Nyhet";
     const title = full.endsWith(" - " + src) ? full.slice(0, -(src.length + 3)) : full;
     const link = clean($(it).find("link").text());
     const d = new Date($(it).find("pubDate").text());
-    if (!link || isNaN(d) || /^inför match/i.test(title)) return;
+    if (!link || isNaN(d)) return;
+    all.push([d.toISOString(), title, src, link]);
+    if (/^inför match/i.test(title)) return;
     const rule = rules.find(([, re]) => re.test(title));
     if (rule) items.push([d.toISOString().slice(0, 10), rule[0], title, "", src, link]);
   });
@@ -318,6 +320,13 @@ await source("nyheter", async () => {
     .sort((a, b) => b[0].localeCompare(a[0]))
     .slice(0, 40);
   log(`   ${items.length} relevanta rubriker`);
+  // Alla nyheter till nyhetsfliken, nyast först, max 60 dagar och 30 st
+  const cutoff = Date.now() - 60 * 864e5, seenN = new Set();
+  const news = [...all, ...(old.news || [])]
+    .filter(n => Date.parse(n[0]) > cutoff)
+    .filter(n => { const k = fold(n[1]).slice(0, 60); if (seenN.has(k)) return false; seenN.add(k); return true; })
+    .sort((a, b) => b[0].localeCompare(a[0])).slice(0, 30);
+  if (news.length) D.news = news;
 });
 
 /* ---------- Text under statistiken ---------- */

@@ -147,6 +147,14 @@ tr.us td:first-child{color:var(--ink)}
 .filters button{font:600 .88rem Figtree,sans-serif;padding:6px 13px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
 .filters button[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
 
+/* nyheter */
+.news{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.news li{padding:11px 14px;border-top:1px solid var(--line)}
+.news li:first-child{border-top:0}
+.news a{display:block;font-weight:600;text-decoration:none;line-height:1.35}
+.news a:hover{text-decoration:underline}
+.news .nsrc{display:block;font-size:.82rem;color:var(--muted);margin-top:3px}
+
 /* roster */
 .roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:4px 22px}
 .roster h3{margin-top:10px}
@@ -189,6 +197,7 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
       <a class="tab" href="#statistik">Statistik</a>
       <a class="tab" href="#tabell">Tabell</a>
       <a class="tab" href="#truppen">Truppen</a>
+      <a class="tab" href="#nyheter">Nyheter</a>
       <a class="tab" href="#silly">Silly</a>
       <a class="tab" href="#forslag">Förslag</a>
       <a class="tab" href="#klubben">Klubben</a>
@@ -246,6 +255,13 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
     <h2 id="tr-h">Truppen</h2>
     <div class="roster" id="roster"></div>
     <p class="tl">Tryck på en spelare för att se mer. Huvudtränare Magnus Bogren, sportchef Per Kenttä. C = kapten, A = assisterande.</p>
+  </section>
+
+  <section id="nyheter" aria-labelledby="ny-h">
+    <h2 id="ny-h">Nyheter</h2>
+    <p class="sub">Det senaste som skrivits om Björklöven, hämtat från svenska nyhetssajter.</p>
+    <ul class="news" id="news"></ul>
+    <button class="toggle" id="moreNews" type="button" hidden></button>
   </section>
 
   <section id="silly" aria-labelledby="si-h">
@@ -470,6 +486,30 @@ if (GOALIES.length){
   $("goalies").innerHTML = `<thead><tr><th>Målvakt</th><th>GP</th><th>Rädd. %</th><th>Insl./match</th></tr></thead><tbody>${GOALIES.map(g => `<tr><td>${esc(g[0])}</td><td>${g[1]}</td><td>${esc(g[2])}</td><td>${esc(g[3])}</td></tr>`).join("")}</tbody>`;
 }
 NUMS.forEach(([v,l,r]) => $("nums").append(el("div","",`<b>${esc(v)}</b><span>${esc(l)}</span>${r?`<em>${r}:a av 14</em>`:""}`)));
+
+/* nyheter */
+(function(){
+  const N = D.news || [];
+  let all = false;
+  const ago = iso => {
+    const m = Math.round((Date.now() - Date.parse(iso)) / 6e4);
+    if (m < 60) return `${Math.max(m, 1)} min sedan`;
+    if (m < 24 * 60) return `${Math.round(m / 60)} tim sedan`;
+    const d = new Date(iso); return `${d.getDate()} ${months[d.getMonth()]}`;
+  };
+  const draw = () => {
+    const ul = $("news"); ul.innerHTML = "";
+    if (!N.length) { ul.append(el("li","",`<span class="nsrc">Inga nyheter hämtade än.</span>`)); return; }
+    (all ? N : N.slice(0, 8)).forEach(n => {
+      const li = el("li");
+      li.innerHTML = `<a href="${esc(n[3])}" target="_blank" rel="noopener">${esc(n[1])}</a><span class="nsrc">${esc(n[2])} · ${ago(n[0])}</span>`;
+      ul.append(li);
+    });
+    const b = $("moreNews"); b.hidden = N.length <= 8; b.textContent = all ? "Visa färre" : `Visa alla ${N.length} nyheter`;
+  };
+  $("moreNews").addEventListener("click", () => { all = !all; draw(); });
+  draw();
+})();
 
 /* silly */
 let filter = "alla";
