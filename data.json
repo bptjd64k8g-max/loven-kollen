@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-20T16:29:39.307Z",
- "updatedText": "20 november 2026, kl. 17.29",
+ "updated": "2026-11-20T17:24:20.866Z",
+ "updatedText": "20 november 2026, kl. 18.24",
  "results": [
   [
    "2026-09-19",
@@ -872,6 +872,14 @@
  ],
  "feed": [
   [
+   "2026-11-20",
+   "besked",
+   "Wallmarks framsteg – Kenttäs kryptiska svar",
+   "",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMif0FVX3lxTE9LNFM0UFhzX1pBNGpDZmo3RFdNWWYwRWY5T2JVZXc4VUxZZFBsUGRFU0JKczVhdndUYjczbEctWFVtX0o0d3FRNDVZN3Y4Ym5ON1djNkZQam4zcTNhRTBheHczRFV3WW9QQ2RZV0VBSTRSZ2V3NXUxTXNHVktnWkU?oc=5"
+  ],
+  [
    "2026-11-19",
    "besked",
    "Nionde raka förlusten: 1–3 i Växjö",
@@ -1436,6 +1444,12 @@
    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdFlTekZJa3phTjZra096SUtvMF94SERnTWtKekhvNmVRZ3c0OEFqS0QtVlNVU3VOTEpxc2NjMy14N0tyOG1PQzU5bnBfQW9qSTJ6Y09KMk5aMHVhcDVzQ2EzREx1T3hEYWhaYl9WSVAyUzN5N0NTcTNpN1dnN3EtR2FWOW05RXFt?oc=5"
   ],
   [
+   "2026-11-20T09:02:33.000Z",
+   "Wallmarks framsteg – Kenttäs kryptiska svar",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMif0FVX3lxTE9LNFM0UFhzX1pBNGpDZmo3RFdNWWYwRWY5T2JVZXc4VUxZZFBsUGRFU0JKczVhdndUYjczbEctWFVtX0o0d3FRNDVZN3Y4Ym5ON1djNkZQam4zcTNhRTBheHczRFV3WW9QQ2RZV0VBSTRSZ2V3NXUxTXNHVktnWkU?oc=5"
+  ],
+  [
    "2026-11-20T07:44:37.000Z",
    "SHL-analysen: ”Är ledsen, men nu är det kört”",
    "Expressen",
@@ -1445,9 +1459,9 @@
    "2026-11-20T07:03:03.000Z",
    "Efter nio raka förluster – Ottosson om vad som saknas i Björklöven",
    "Hockeynews",
-   "https://hockeynews.se/nyheter/efter-nio-raka-forluster-ottosson-om-vad-som-saknas-i-bjorkloven",
-   "Björklöven har tappat greppet om den fina form som präglade säsongsinledningen. Nu kommer förlust efter förlust och efter torsdagens match mot Växjö är ...",
-   true
+   "https://www.aftonbladet.se/sportbladet/hockey/a/6PjnP0/bjorkloven-tappade-ledning-till-forlust-mot-orebro",
+   "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
+   false
   ],
   [
    "2026-11-20T05:39:44.000Z",
@@ -1521,7 +1535,9 @@
    "2026-11-19T20:29:53.000Z",
    "Formstarka Växjö tog ny seger mot Björklöven",
    "Göteborgs-Posten",
-   "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdHdNTGVZRXlncHRNaUJPRURqQjdwNkF1bHQ0OG1Nc0plRkl3RGZzTEg3VUVDcGtsRDdDVGo3OTA3R3VrMWxyY1RyakdQNm9CN1JQZUlWWWlXQkxTeTNaN1d5dExlYkx1RXFzTFRYWE9JcVhCQ3pfa0VZSVpjMnRDbThhT2kzVVpuczdWVGM5dDN1WUV5UnQya3N0RTBYcENhTkhGTzJubkk?oc=5"
+   "https://www.gp.se/sport/formstarka-vaxjo-tog-ny-seger-mot-bjorkloven.3c95110c-d83b-54ee-b08e-2603bc192669",
+   "Växjö började vassast och gjorde 1–0 redan i matchupptakten. Efter bara 1.01 slog Sebastian Strandberg till på pass från Peter Cehlarik och Hugo Gustafsson. Efter 16.58 i andra perioden slog Brogan ...",
+   false
   ],
   [
    "2026-11-19T20:25:59.000Z",
@@ -1532,12 +1548,10 @@
    false
   ],
   [
-   "2026-11-19T20:24:04.000Z",
+   "2026-11-19T20:23:00.000Z",
    "Beckmörkt för ”Löven” – nionde raka förlusten",
-   "Västerbottens-Kuriren",
-   "https://www.gp.se/sport/beckmorkt-for-loven-nionde-raka-forlusten.082f1150-22d0-5e4b-86db-bbb6393c9ac7",
-   "Återkomsten till finrummet har inte blivit vad Björklöven hoppats på. Mot Växjö åkte nykomlingen på säsongens nionde raka förlust efter 1–3 på bortais.",
-   false
+   "Nyheter24",
+   "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVVFWMGdmdzFpS2VZQmVtSXZGOVNrdUJGQXBEai1GN2p6T1pJTVVudjh2M1cyNUVMbEFIR3pWX0V4NERIc3EzTWdHdmtLUm5ia3RwNFNuVEN0U1pqU0x1dWhrQzk3RDczLU04QTgwa21kOG1idHZQVXkyUU96d3R2LVlLZlZhVzJVRE1F?oc=5"
   ],
   [
    "2026-11-19T20:15:20.000Z",
@@ -1610,12 +1624,6 @@
    "https://www.smp.se/sport/lakers-jagar-tredje-raka-folj-matchen-mot-bjorkloven/",
    "Torsdag och full omgång i SHL. Växjö Lakers kommer till spel med två raka segrar i ryggen när nykomlingen Björklöven gästar Vida Arena. Du kan följa matchen här i vår livechat.",
    true
-  ],
-  [
-   "2026-11-19T08:13:03.000Z",
-   "Kvällens match kan bara sluta på ett sätt",
-   "Expressen",
-   "https://news.google.com/rss/articles/CBMijwFBVV95cUxQOFpQRy05NUR3T2o0TGw0S2lHODNSRlZOX25QQl82ZWU4Yy1xWE5EN0hMeDVia2ZNVGxFb2JoT09menprSHktRWt0UEZXRDQxVGw0ei1PZzhuam9MZmdldFlxbmJJUU1renE4WEdua0dZeGM5bUxyN2c1dmRLZHNyRFJlT2VGTloyWDR6SHdfUQ?oc=5"
   ]
  ]
 }
