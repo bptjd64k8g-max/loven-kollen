@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-20T19:21:50.910Z",
- "updatedText": "20 november 2026, kl. 20.21",
+ "updated": "2026-11-20T20:17:39.236Z",
+ "updatedText": "20 november 2026, kl. 21.17",
  "results": [
   [
    "2026-09-19",
@@ -890,18 +890,18 @@
   [
    "2026-11-18",
    "besked",
-   "Magnus Bogren: ”Våga skita ner oss” | YouTube",
-   "",
-   "Björklöven",
-   "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAwTjlSTU83NVR6ZVNBQ3MydHhEbXl6UWMxTlhpQTBDZUo2UkZDTVpDR0RkWjVheE9GMWdVdkVmWTdIY2JZZ18xY29idkpPcjd2d3BOZTk2a19lQ0JSbmZ5MjFRYw?oc=5"
-  ],
-  [
-   "2026-11-18",
-   "besked",
    "Wallmark saknades – Kenttäs besked",
    "",
    "Västerbottens-Kuriren",
    "https://news.google.com/rss/articles/CBMidkFVX3lxTFBELWtyajBWZmZjS2RVREk1TzlfZkQ2ZlpoVkhyaVVkcERXbWlxY1Vsdmp4bkNuRC1BQTVhUWZkcnZCTlJNYjhkS2hNT1NxN1NENjhILTdGeFk5SnNYOFp0a0xiakF5OVRiWG9vNW03NVN6VjVaZEE?oc=5"
+  ],
+  [
+   "2026-11-18",
+   "besked",
+   "Magnus Bogren: ”Våga skita ner oss” | YouTube",
+   "",
+   "Björklöven",
+   "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAwTjlSTU83NVR6ZVNBQ3MydHhEbXl6UWMxTlhpQTBDZUo2UkZDTVpDR0RkWjVheE9GMWdVdkVmWTdIY2JZZ18xY29idkpPcjd2d3BOZTk2a19lQ0JSbmZ5MjFRYw?oc=5"
   ],
   [
    "2026-11-18",
@@ -1426,6 +1426,12 @@
  },
  "news": [
   [
+   "2026-11-20T19:21:25.000Z",
+   "Krönika: \"Wallmark-effekten – en mirakelkur eller hägring i öknen?\"",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOWdTOTlxUUxYXzl1MzUzUHk4V09HUEg1WHlGbW5NVjJwSjZXZFlQVFVKbmducmZzdmFCbElqR1VhU0RQTlhRcnBQLWxWOHROWDBiWWtfWk03ekhNNlF6bXdvVy10NXB4aklFcS05MDBxdmF2dnFLTWVfSUw4dVdlTU9HNl9iUnkyUm9KNkZR?oc=5"
+  ],
+  [
    "2026-11-20T09:46:19.000Z",
    "Kovacs nya kedja – på plats hos Björklöven",
    "Hockeynews",
@@ -1618,14 +1624,6 @@
    "https://www.smp.se/sport/lakers-jagar-tredje-raka-folj-matchen-mot-bjorkloven/",
    "Torsdag och full omgång i SHL. Växjö Lakers kommer till spel med två raka segrar i ryggen när nykomlingen Björklöven gästar Vida Arena. Du kan följa matchen här i vår livechat.",
    true
-  ],
-  [
-   "2026-11-19T08:13:03.000Z",
-   "Kvällens match kan bara sluta på ett sätt",
-   "Expressen",
-   "https://www.expressen.se/sport/hockey/tips/kvallens-match-kan--bara-sluta-pa-ett-satt/",
-   "Växjö mot Björklöven. Ett möte som bara kan sluta på ett sätt enligt mig. Hemmalaget spikas utan vidare tvivel. ANNONS: Lämna in expertens systemförslag (Svenska Spel) ...",
-   false
   ]
  ]
 }
