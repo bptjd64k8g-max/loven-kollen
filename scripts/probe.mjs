@@ -1,11 +1,18 @@
-const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
-for (const u of ["https://www.shl.se/statistik/spelare", "https://www.shl.se/lag/if-bjorkloven", "https://www.shl.se/"]) {
-  try {
-    const r = await fetch(u, { headers: { "user-agent": UA } }); const t = await r.text();
-    console.log("== ", u, r.status, t.length, "TOI:", (t.match(/TOI[^"<]{0,20}/g) || []).slice(0, 5));
-    console.log(" api:", [...new Set(t.match(/https?:\/\/[a-z0-9.-]*(api|sportality|playmaker|statnet)[a-z0-9./_-]*/gi) || [])].slice(0, 15));
-    console.log(" paths:", [...new Set(t.match(/\/api\/[a-z0-9_\/-]+/gi) || [])].slice(0, 25));
-    const nd = t.match(/__NEXT_DATA__[^>]*>(.{0,600})/s); if (nd) console.log(" next:", nd[1]);
-    const ids = t.match(/"(?:uuid|teamId|seasonUuid|ssgtUuid)":"[^"]+"/g); if (ids) console.log(" ids:", [...new Set(ids)].slice(0, 15));
-  } catch (e) { console.log(u, e.message); }
+import { chromium } from "playwright";
+const b = await chromium.launch(); const p = await b.newPage();
+const hits = [];
+p.on("response", async r => {
+  const u = r.url(); const ct = r.headers()["content-type"] || "";
+  if (!/json/.test(ct)) return;
+  try { const t = await r.text(); const toi = /toi|timeOnIce|TOI/i.test(t); hits.push([u, t.length, toi, toi ? t.slice(Math.max(0, t.search(/toi|timeOnIce/i) - 300), t.search(/toi|timeOnIce/i) + 300) : ""]); } catch {}
+});
+for (const u of ["https://www.shl.se/statistik/spelare", "https://www.shl.se/lag/if-bjorkloven"]) {
+  await p.goto(u, { waitUntil: "networkidle", timeout: 60000 }).catch(e => console.log("goto", e.message));
+  await p.waitForTimeout(4000);
+  const txt = await p.evaluate(() => document.body.innerText);
+  console.log("== ", u, "TOI in page:", /TOI/.test(txt), txt.slice(txt.indexOf("TOI") - 200, txt.indexOf("TOI") + 400).replace(/\n/g, " | "));
+  const links = await p.evaluate(() => [...document.querySelectorAll("a")].map(a => a.href).filter(h => /statistik|spelare|bjorkloven/i.test(h)).slice(0, 25));
+  console.log(" links:", links.join("  "));
 }
+for (const h of hits) console.log("JSON", h[0].slice(0, 220), h[1], h[2] ? "TOI!" : "", h[3].replace(/\s+/g, " ").slice(0, 600));
+await b.close();
