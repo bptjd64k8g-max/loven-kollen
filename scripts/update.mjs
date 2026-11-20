@@ -144,7 +144,11 @@ await source("schema", async () => {
     .sort((a, b) => a.date.localeCompare(b.date));
   const oldUp = Object.fromEntries(old.upcoming.map(u => [u[0], u]));
   D.results = uniq.filter(g => g.us !== null).map(g => [g.date, g.ha, g.opp, g.us, g.them, g.ot]);
-  D.upcoming = uniq.filter(g => g.us === null).map(g => [g.date, g.time, g.ha, g.opp, oldUp[g.date]?.[4] || ""]);
+  D.upcoming = uniq.filter(g => g.us === null).map(g => {
+    const u = [g.date, g.time, g.ha, g.opp, oldUp[g.date]?.[4] || ""];
+    if (oldUp[g.date]?.[5]) u.push(oldUp[g.date][5]); // kanal och sändningsstart, fylls i på matchdagen
+    return u;
+  });
   for (const g of uniq) if (g.ha === "B" && g.venue && !/^\d/.test(g.venue)) D.arenas[g.opp] = g.venue;
 });
 

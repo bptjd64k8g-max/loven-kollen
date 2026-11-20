@@ -29,7 +29,6 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm install --no-audit --no-fund
-      - run: npm i --no-save playwright@1.49.1 >/dev/null && npx playwright install --with-deps chromium >/dev/null && node scripts/probe.mjs || true
       - name: Hämta ny data
         run: node scripts/update.mjs
       - name: Spara ändringar

@@ -97,6 +97,7 @@ nav a.tab[aria-current="true"]{background:var(--leaf);color:var(--leaf-ink)}
 .games .d{color:var(--muted);font-size:.88rem;line-height:1.25}
 .games .o{font-weight:600}
 .games .o small{display:block;font-weight:400;color:var(--muted);font-size:.84rem}
+.games .o small.tv{color:var(--ink);font-weight:500}
 .score{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;font-size:1.35rem;padding:2px 10px;border-radius:6px;min-width:66px;text-align:center}
 .time{font-weight:700}
 .toggle{margin-top:10px;background:none;border:1px solid var(--line);color:var(--ink);font:600 .9rem Figtree,sans-serif;padding:8px 14px;border-radius:999px;cursor:pointer}
@@ -333,6 +334,7 @@ const shortName = n => n.replace(/^IF /,"").replace(/ (IF|HC|BK|AIK|HF|IK|HK|Lak
 
 /* kommande + hero */
 const LIVE_MS = 3*60*60*1000;
+const tvText = u => { const t = u[5]; if (!t || !t.kanal) return ""; return `${t.kanal}${t.start ? ", sändningen börjar " + t.start.replace(":", ".") : ""}`; };
 let showAllUp = false, timer;
 function future(){ const now = Date.now(); return UPCOMING.filter(u => toDate(u[0],u[1]||"23:00").getTime() + LIVE_MS > now); }
 function renderUpcoming(){
@@ -340,7 +342,7 @@ function renderUpcoming(){
   (showAllUp ? list : list.slice(0,6)).forEach(u => {
     const d = toDate(u[0],u[1]), home = u[2]==="H";
     ul.append(el("li","",`<span class="d">${fmtDate(d)}${d.getFullYear()>2026?" 2027":""}</span>
-      <span class="o">${home?"Björklöven – "+esc(shortName(u[3])):esc(shortName(u[3]))+" – Björklöven"}<small>${home?"Hemma, Visionite Arena":"Borta, "+esc(ARENAS[u[3]]||"")}${u[4]?". "+esc(u[4]):""}</small></span>
+      <span class="o">${home?"Björklöven – "+esc(shortName(u[3])):esc(shortName(u[3]))+" – Björklöven"}<small>${home?"Hemma, Visionite Arena":"Borta, "+esc(ARENAS[u[3]]||"")}${u[4]?". "+esc(u[4]):""}</small>${tvText(u)?`<small class="tv">📺 ${esc(tvText(u))}</small>`:""}</span>
       <span class="time">${u[1]?u[1].replace(":","."):"–"}</span>`));
   });
   $("moreUp").textContent = showAllUp ? "Visa färre" : `Visa hela schemat (${list.length} matcher kvar)`;
@@ -349,7 +351,9 @@ function renderUpcoming(){
 }
 $("moreUp").addEventListener("click", () => { showAllUp = !showAllUp; renderUpcoming(); });
 
+let NEXT = null;
 function renderHero(n){
+  NEXT = n;
   const h = $("hero");
   if (!n){ h.innerHTML = `<p class="kicker">Inga inlagda matcher</p><h1 class="matchup"><span>Björklöven</span></h1>`; return; }
   const d = toDate(n[0],n[1]), home = n[2]==="H";
@@ -377,7 +381,7 @@ function tick(d){
     const D = Math.floor(ms/864e5), H = Math.floor(ms/36e5)%24, M = Math.floor(ms/6e4)%60, S = Math.floor(ms/1e3)%60;
     const parts = D ? [[D,"dagar"],[H,"tim"],[M,"min"]] : [[H,"tim"],[M,"min"],[S,"sek"]];
     cd.innerHTML = `<div class="count" role="timer" aria-label="Tid kvar till nedsläpp">${parts.map(([v,l])=>`<div><b>${String(v).padStart(2,"0")}</b><small>${l}</small></div>`).join("")}</div>
-      <p class="watch">Sänds på TV4 Play. Under matchen visas länkar till liveställningen här.</p>`;
+      <p class="watch">${tvText(NEXT) ? "📺 " + esc(tvText(NEXT)) : "Sänds på TV4 Play. Kanal och sändningsstart läggs in på matchdagen."}</p>`;
   };
   run(); timer = setInterval(run, 1000);
 }
