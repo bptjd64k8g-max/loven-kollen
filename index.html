@@ -46,11 +46,14 @@ section{padding:38px 0 6px}
 
 /* nav */
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--green-deep);color:var(--hero-ink)}
-nav .wrap{display:flex;align-items:center;gap:4px;height:52px;overflow-x:auto;scrollbar-width:none}
-nav .wrap::-webkit-scrollbar{display:none}
-.brand{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:1.5rem;margin-right:auto;padding-right:10px;color:var(--leaf);text-decoration:none;white-space:nowrap}
-nav a.tab{text-decoration:none;font-weight:600;font-size:.9rem;padding:7px 10px;border-radius:999px;white-space:nowrap;color:var(--hero-ink);opacity:.85}
-nav a.tab:hover{opacity:1;background:rgba(255,255,255,.1)}
+nav{box-shadow:0 2px 10px rgba(0,0,0,.18)}
+nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;padding-top:8px;padding-bottom:10px}
+.brand{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:1.5rem;line-height:1.2;color:var(--leaf);text-decoration:none;white-space:nowrap}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;flex:1 1 100%}
+nav a.tab{text-decoration:none;font-weight:600;font-size:.88rem;padding:7px 4px;border-radius:8px;text-align:center;white-space:nowrap;color:var(--hero-ink);background:rgba(255,255,255,.08)}
+nav a.tab:hover{background:rgba(255,255,255,.16)}
+nav a.tab[aria-current="true"]{background:var(--leaf);color:var(--leaf-ink)}
+@media (min-width:760px){.tabs{display:flex;flex:1 1 auto;justify-content:flex-end;flex-wrap:wrap}nav a.tab{padding:7px 12px;border-radius:999px}}
 
 /* hero */
 .hero{background:var(--green);color:var(--hero-ink);position:relative;overflow:hidden}
@@ -155,8 +158,8 @@ tr.us td:first-child{color:var(--ink)}
 .roster summary:hover .nm{color:var(--head)}
 .roster summary b{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;width:26px;text-align:right;color:var(--muted)}
 .roster .x{color:var(--muted);font-size:.8rem;margin-left:auto}
-.pcard{display:grid;grid-template-columns:76px 1fr;gap:12px;align-items:start;padding:6px 0 14px}
-.pcard svg{width:76px;height:auto;display:block}
+.pcard{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:start;padding:6px 0 14px}
+.pcard svg{width:96px;height:auto;display:block}
 .pcard .bio{font-size:.86rem;color:var(--muted);margin:0 0 8px;line-height:1.45}
 .pstats{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .pstats div{background:var(--surface);text-align:center;padding:6px 2px}
@@ -180,13 +183,15 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
 <nav aria-label="Sektioner">
   <div class="wrap">
     <a class="brand" href="#top">Löven-kollen</a>
-    <a class="tab" href="#matcher">Matcher</a>
-    <a class="tab" href="#statistik">Statistik</a>
-    <a class="tab" href="#silly">Silly</a>
-    <a class="tab" href="#tabell">Tabell</a>
-    <a class="tab" href="#truppen">Truppen</a>
-    <a class="tab" href="#forslag">Förslag</a>
-    <a class="tab" href="#klubben">Klubben</a>
+    <div class="tabs">
+      <a class="tab" href="#matcher">Matcher</a>
+      <a class="tab" href="#statistik">Statistik</a>
+      <a class="tab" href="#tabell">Tabell</a>
+      <a class="tab" href="#truppen">Truppen</a>
+      <a class="tab" href="#silly">Silly</a>
+      <a class="tab" href="#forslag">Förslag</a>
+      <a class="tab" href="#klubben">Klubben</a>
+    </div>
   </div>
 </nav>
 
@@ -229,6 +234,18 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
     <p class="tl">Placering bland SHL:s 14 lag. Källa: Svenska Ishockeyförbundet.</p>
   </section>
 
+  <section id="tabell" aria-labelledby="t-h">
+    <h2 id="t-h">SHL-tabellen</h2>
+    <div class="tablewrap"><table class="league" id="table"></table></div>
+    <p class="tl">Plats 1–6 direkt till kvartsfinal (heldragen linje), 7–10 play-in (streckad), 13–14 kvalar.</p>
+  </section>
+
+  <section id="truppen" aria-labelledby="tr-h">
+    <h2 id="tr-h">Truppen</h2>
+    <div class="roster" id="roster"></div>
+    <p class="tl">Tryck på en spelare för att se mer. Huvudtränare Magnus Bogren, sportchef Per Kenttä. C = kapten, A = assisterande.</p>
+  </section>
+
   <section id="silly" aria-labelledby="si-h">
     <h2 id="si-h">Silly, rykten och nyförvärv</h2>
     <p class="sub">Bekräftade affärer är gröna, rykten gula. Rykten är just rykten tills klubben bekräftar.</p>
@@ -240,18 +257,6 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
       <button type="button" data-f="besked" aria-pressed="false">Besked</button>
     </div>
     <ul class="feed" id="feed"></ul>
-  </section>
-
-  <section id="tabell" aria-labelledby="t-h">
-    <h2 id="t-h">SHL-tabellen</h2>
-    <div class="tablewrap"><table class="league" id="table"></table></div>
-    <p class="tl">Plats 1–6 direkt till kvartsfinal (heldragen linje), 7–10 play-in (streckad), 13–14 kvalar.</p>
-  </section>
-
-  <section id="truppen" aria-labelledby="tr-h">
-    <h2 id="tr-h">Truppen</h2>
-    <div class="roster" id="roster"></div>
-    <p class="tl">Tryck på en spelare för att se mer. Huvudtränare Magnus Bogren, sportchef Per Kenttä. C = kapten, A = assisterande.</p>
   </section>
 
   <section id="forslag" aria-labelledby="f-h">
@@ -290,6 +295,18 @@ const UPDATED = D.updatedText;
 const US = "IF Björklöven";
 const RESULTS = D.results, UPCOMING = D.upcoming, ARENAS = D.arenas, TABLE = D.table,
       PLAYERS = D.players, GOALIES = D.goalies || [], NUMS = D.nums, FEED = D.feed, ROSTER = D.roster, BIO = D.bio;
+
+/* menyn: rätt avstånd vid hopp, och markera aktuell flik */
+const navEl = document.querySelector("nav");
+const fitNav = () => { document.documentElement.style.scrollPaddingTop = (navEl.offsetHeight + 8) + "px"; };
+fitNav(); window.addEventListener("resize", fitNav);
+const tabEls = [...document.querySelectorAll("nav a.tab")];
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) tabEls.forEach(a => a.setAttribute("aria-current", String(a.getAttribute("href") === "#" + e.target.id)));
+  }), { rootMargin: "-45% 0px -50% 0px" });
+  tabEls.forEach(a => { const s = document.querySelector(a.getAttribute("href")); if (s) io.observe(s); });
+}
 
 /* helpers */
 const $ = id => document.getElementById(id);
@@ -337,7 +354,7 @@ function renderHero(n){
   if (!n){ h.innerHTML = `<p class="kicker">Inga inlagda matcher</p><h1 class="matchup"><span>Björklöven</span></h1>`; return; }
   const d = toDate(n[0],n[1]), home = n[2]==="H";
   const a = home ? "Björklöven" : shortName(n[3]), b = home ? shortName(n[3]) : "Björklöven";
-  h.innerHTML = `<p class="kicker">Nästa match${n[4]?": "+esc(n[4]).toLowerCase():""}</p>
+  h.innerHTML = `<p class="kicker">Nästa match${n[4]?": "+esc(n[4].charAt(0).toLowerCase()+n[4].slice(1)):""}</p>
     <h1 class="matchup"><span>${esc(a)}</span><span class="vs">mot</span><span>${esc(b)}</span></h1>
     <p class="meta">${fmtDate(d)} kl. ${n[1]?n[1].replace(":","."):"–"} i ${home?"Visionite Arena":esc(ARENAS[n[3]]||"")}</p>
     <div id="cd"></div>`;
@@ -441,7 +458,30 @@ renderFeed();
 
 /* trupp */
 const posName = {"Målvakter":"Målvakt","Backar":"Back","Centrar":"Center","Forwards":"Forward"};
-const jersey = n => `<svg viewBox="0 0 80 84" aria-hidden="true"><path d="M24 4h32l20 12-8 18-8-4v50H20V30l-8 4-8-18z" fill="var(--green)" stroke="var(--leaf)" stroke-width="3" stroke-linejoin="round"/><path d="M30 4c2 7 18 7 20 0" fill="none" stroke="var(--leaf)" stroke-width="3"/><text x="40" y="62" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="900" font-size="30" fill="var(--leaf)">${n}</text></svg>`;
+let jid = 0;
+const jersey = n => { const id = "j" + (jid++); return `<svg viewBox="0 0 120 116" aria-hidden="true">
+  <defs>
+    <clipPath id="${id}"><path d="M40 8 L20 14 L3 33 L10 64 L27 59 L29 110 Q60 114 91 110 L93 59 L110 64 L117 33 L100 14 L80 8 Q60 20 40 8Z"/></clipPath>
+    <linearGradient id="${id}s" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></linearGradient>
+  </defs>
+  <ellipse cx="60" cy="112" rx="34" ry="3" fill="#000" opacity=".15"/>
+  <g clip-path="url(#${id})">
+    <rect width="120" height="116" fill="#1B5A38"/>
+    <path d="M0 0H120V27Q60 33 0 27Z" fill="#F3C431"/>
+    <path d="M0 28Q60 34 120 28V31Q60 37 0 31Z" fill="#fff"/>
+    <g stroke-width="5"><path d="M0 51L32 43M88 43L120 51" stroke="#F3C431"/><path d="M0 57L32 49M88 49L120 57" stroke="#fff" stroke-width="2.5"/></g>
+    <rect y="92" width="120" height="7" fill="#F3C431"/><rect y="100.5" width="120" height="2.5" fill="#fff"/>
+    <path d="M27 59L29 110" stroke="#0f3a24" stroke-width="1.2" opacity=".5"/><path d="M93 59L91 110" stroke="#0f3a24" stroke-width="1.2" opacity=".5"/>
+    <rect width="120" height="116" fill="url(#${id}s)"/>
+  </g>
+  <path d="M40 8 L20 14 L3 33 L10 64 L27 59 L29 110 Q60 114 91 110 L93 59 L110 64 L117 33 L100 14 L80 8 Q60 20 40 8Z" fill="none" stroke="#0f3a24" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M40 8 Q60 20 80 8 L74 6 Q60 15 46 6Z" fill="#fff"/>
+  <path d="M46 7 L60 24 L74 7" fill="none" stroke="#F3C431" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M56 13l8 2M55 17l9 1" stroke="#fff" stroke-width="1"/>
+  <text x="60" y="76" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="900" font-size="${String(n).length > 1 ? 36 : 40}" fill="#fff" stroke="#F3C431" stroke-width="1.6" paint-order="stroke">${n}</text>
+  <text x="15" y="41" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="900" font-size="10" fill="#fff" transform="rotate(-20 15 41)">${n}</text>
+  <text x="105" y="41" text-anchor="middle" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="900" font-size="10" fill="#fff" transform="rotate(20 105 41)">${n}</text>
+</svg>`; };
 Object.entries(ROSTER).forEach(([pos, players]) => {
   const box = el("div"); box.append(el("h3","",esc(pos)));
   const ul = el("ul");
