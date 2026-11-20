@@ -200,6 +200,33 @@ await source("spelare", async () => {
   log(`   ${D.players.length} spelare, ${goalies.length} målvakter`);
 });
 
+/* ---------- 3b. Spelarfakta: födelsedatum, längd, vikt, fattning, nation ---------- */
+const NATION = { SWE: "Sverige", FIN: "Finland", CAN: "Kanada", USA: "USA", CZE: "Tjeckien", SVK: "Slovakien", LAT: "Lettland", NOR: "Norge", DEN: "Danmark", GER: "Tyskland", SUI: "Schweiz", AUT: "Österrike", RUS: "Ryssland", FRA: "Frankrike", SLO: "Slovenien", BLR: "Belarus", KAZ: "Kazakstan", GBR: "Storbritannien", ITA: "Italien", HUN: "Ungern", POL: "Polen", EST: "Estland", LTU: "Litauen", UKR: "Ukraina" };
+await source("spelarfakta", async () => {
+  const $ = await page(`${SWE}/Teams/Info/TeamRoster/${await league()}`);
+  let current = null, n = 0;
+  for (const t of $("table").toArray()) {
+    const rows = rowsOf($, t);
+    if (!rows.length || rows[0].join(" ").length > 300) continue;
+    const head = rows[0].filter(Boolean);
+    if (head.length >= 2 && team(head[0])) current = team(head[0]);
+    if (current !== "IF Björklöven") continue;
+    const x = headed(rows, ["Name", "Birthdate", "Height", "Weight"]);
+    if (!x) continue;
+    for (const r of x.rows) {
+      if (!r[x.h.Name] || !/^\d{4}-\d{2}-\d{2}$/.test(r[x.h.Birthdate])) continue;
+      const name = rosterName(nameOf(r[x.h.Name]));
+      const nat = (r[x.h["Nationality / Club"]] || "").slice(0, 3);
+      const prev = D.bio[name] || [];
+      D.bio[name] = [r[x.h.Birthdate], NATION[nat] || nat || prev[1] || "", num(r[x.h.Height]) || prev[2] || null, num(r[x.h.Weight]) || prev[3] || null,
+        (r[x.h["L/R"]] || prev[4] || "").replace("L", "V").replace("R", "H"), prev[5] || ""];
+      n++;
+    }
+  }
+  if (n < 10) throw new Error(`för få spelare i truppregistret (${n})`);
+  log(`   fakta för ${n} spelare`);
+});
+
 /* ---------- 4. Lagets nyckeltal ---------- */
 await source("nyckeltal", async () => {
   const id = await league();
