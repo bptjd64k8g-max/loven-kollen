@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-20T00:54:40.028Z",
- "updatedText": "20 november 2026, kl. 01.54",
+ "updated": "2026-11-20T01:30:56.218Z",
+ "updatedText": "20 november 2026, kl. 02.30",
  "results": [
   [
    "2026-09-19",
@@ -8,7 +8,8 @@
    "Djurgårdens IF",
    3,
    0,
-   false
+   false,
+   14100
   ],
   [
    "2026-09-24",
@@ -16,7 +17,8 @@
    "Örebro HK",
    4,
    3,
-   true
+   true,
+   5500
   ],
   [
    "2026-09-26",
@@ -24,7 +26,8 @@
    "Färjestad BK",
    0,
    5,
-   false
+   false,
+   5400
   ],
   [
    "2026-09-29",
@@ -32,7 +35,8 @@
    "HV 71",
    4,
    2,
-   false
+   false,
+   5400
   ],
   [
    "2026-10-01",
@@ -40,7 +44,8 @@
    "Växjö Lakers",
    4,
    2,
-   false
+   false,
+   5400
   ],
   [
    "2026-10-03",
@@ -48,7 +53,8 @@
    "Linköping HC",
    3,
    2,
-   false
+   false,
+   7900
   ],
   [
    "2026-10-08",
@@ -56,7 +62,8 @@
    "Brynäs IF",
    1,
    4,
-   false
+   false,
+   7355
   ],
   [
    "2026-10-10",
@@ -64,7 +71,8 @@
    "Frölunda HC",
    3,
    2,
-   false
+   false,
+   5400
   ],
   [
    "2026-10-15",
@@ -72,7 +80,8 @@
    "Rögle BK",
    1,
    2,
-   false
+   false,
+   5181
   ],
   [
    "2026-10-17",
@@ -80,7 +89,8 @@
    "Timrå IK",
    0,
    3,
-   false
+   false,
+   5420
   ],
   [
    "2026-10-22",
@@ -88,7 +98,8 @@
    "IF Malmö Redhawks",
    2,
    4,
-   false
+   false,
+   5081
   ],
   [
    "2026-10-24",
@@ -96,7 +107,8 @@
    "Skellefteå AIK",
    1,
    8,
-   false
+   false,
+   5400
   ],
   [
    "2026-10-29",
@@ -104,7 +116,8 @@
    "Luleå HF",
    0,
    4,
-   false
+   false,
+   6150
   ],
   [
    "2026-10-31",
@@ -112,7 +125,8 @@
    "Skellefteå AIK",
    3,
    5,
-   false
+   false,
+   5801
   ],
   [
    "2026-11-12",
@@ -120,7 +134,8 @@
    "Örebro HK",
    1,
    3,
-   false
+   false,
+   5060
   ],
   [
    "2026-11-14",
@@ -128,7 +143,8 @@
    "Brynäs IF",
    1,
    4,
-   false
+   false,
+   5400
   ],
   [
    "2026-11-19",
@@ -136,7 +152,8 @@
    "Växjö Lakers",
    1,
    3,
-   false
+   false,
+   4588
   ]
  ],
  "upcoming": [
@@ -1348,5 +1365,13 @@
   "spelarfakta": "ok",
   "nyckeltal": "ok",
   "nyheter": "ok"
+ },
+ "attendance": {
+  "avg": 5302,
+  "games": 9,
+  "rank": 12,
+  "of": 14,
+  "max": 5400,
+  "league": 7084
  }
 }
