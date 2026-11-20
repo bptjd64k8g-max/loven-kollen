@@ -58,10 +58,12 @@ nav{box-shadow:0 2px 10px rgba(0,0,0,.18)}
 nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;padding-top:8px;padding-bottom:10px}
 .brand{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:1.5rem;line-height:1.2;color:var(--leaf);text-decoration:none;white-space:nowrap}
 .tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;flex:1 1 100%}
-nav a.tab{text-decoration:none;font-weight:600;font-size:.88rem;padding:7px 4px;border-radius:8px;text-align:center;white-space:nowrap;color:var(--hero-ink);background:rgba(255,255,255,.08)}
-nav a.tab:hover{background:rgba(255,255,255,.16)}
+nav .tab{text-decoration:none;font-weight:600;font-size:.88rem;padding:7px 4px;border-radius:8px;text-align:center;white-space:nowrap;color:var(--hero-ink);background:rgba(255,255,255,.08)}
+nav button.tab{border:0;font-family:inherit;cursor:pointer}
+nav .tab.refresh.spin{opacity:.6}
+nav a.tab:hover,nav button.tab:hover{background:rgba(255,255,255,.16)}
 nav a.tab[aria-current="true"]{background:var(--leaf);color:var(--leaf-ink)}
-@media (min-width:760px){.tabs{display:flex;flex:1 1 auto;justify-content:flex-end;flex-wrap:wrap}nav a.tab{padding:7px 12px;border-radius:999px}}
+@media (min-width:760px){.tabs{display:flex;flex:1 1 auto;justify-content:flex-end;flex-wrap:wrap}nav .tab{padding:7px 12px;border-radius:999px}}
 
 /* hero */
 .hero{background:var(--green);color:var(--hero-ink);position:relative;overflow:hidden}
@@ -228,6 +230,7 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
       <a class="tab" href="#nyheter">Nyheter</a>
       <a class="tab" href="#forslag">Förslag</a>
       <a class="tab" href="#klubben">Klubben</a>
+      <button class="tab refresh" id="refresh" type="button" title="Hämta det senaste">↻ Uppdatera</button>
     </div>
   </div>
 </nav>
@@ -654,6 +657,19 @@ Object.entries(ROSTER).forEach(([pos, players]) => {
 
 $("foot").textContent = `Senast uppdaterad ${UPDATED}.`;
 
+// Uppdatera: knappen laddar om direkt. När man går tillbaka till appen efter minst en minut
+// kollas om det finns ny data, och i så fall laddas sidan om (samma plats på sidan behålls).
+$("refresh").addEventListener("click", e => { e.currentTarget.classList.add("spin"); location.reload(); });
+let hiddenAt = 0;
+document.addEventListener("visibilitychange", async () => {
+  if (document.hidden) { hiddenAt = Date.now(); return; }
+  if (!hiddenAt || Date.now() - hiddenAt < 60000) return;
+  try {
+    const d = await (await fetch("data.json?v=" + Date.now(), {cache:"no-store"})).json();
+    if (d.updated !== D.updated) location.reload();
+  } catch(e) {}
+});
+window.addEventListener("pageshow", e => { if (e.persisted) location.reload(); });
 })();
 if ("serviceWorker" in navigator) { try { navigator.serviceWorker.register("sw.js"); } catch(e) {} }
 </script>
