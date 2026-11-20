@@ -321,6 +321,30 @@ await source("nyheter", async () => {
     .sort((a, b) => b[0].localeCompare(a[0]))
     .slice(0, 40);
   log(`   ${items.length} relevanta rubriker`);
+  // Ingresser: Bing News RSS har en kort text för varje artikel och direktlänk till tidningen
+  const blurbs = [];
+  try {
+    const b$ = cheerio.load(await get("https://www.bing.com/news/search?q=Bj%C3%B6rkl%C3%B6ven+hockey&format=rss&setlang=sv-SE&cc=SE"), { xmlMode: true });
+    b$("item").each((_, it) => {
+      const title = clean(b$(it).find("title").text());
+      let link = clean(b$(it).find("link").text());
+      const u = link.match(/[?&]url=([^&]+)/); if (u) link = decodeURIComponent(u[1]);
+      const text = clean(cheerio.load(b$(it).find("description").text() || "").text());
+      const d = new Date(b$(it).find("pubDate").text());
+      const src = clean(b$(it).find("News\\:Source, Source").first().text()) || (link.match(/https?:\/\/(?:www\.)?([^/]+)/) || [])[1] || "Nyhet";
+      if (title && link && !isNaN(d)) blurbs.push({ title, link, text, d, src });
+    });
+    log(`   bing: ${blurbs.length} artiklar med ingress`);
+  } catch (e) { log("   bing:", e.message); }
+  const words = s => new Set(fold(s).split(" ").filter(w => w.length > 3));
+  const match = t => { const a = words(t); let best = null, score = 0;
+    for (const b of blurbs) { const w = words(b.title); const s = [...a].filter(x => w.has(x)).length / Math.max(1, Math.min(a.size, w.size)); if (s > score) { score = s; best = b; } }
+    return score >= 0.6 ? best : null; };
+  // [tid, rubrik, källa, länk, ingress]
+  for (const n of all) { const b = match(n[1]); if (b) { n[4] = b.text; n[3] = b.link; } }
+  for (const b of blurbs) if (!all.some(n => match(n[1]) === b) && /bj(ö|o)rkl(ö|o)ven|l(ö|o)ven/i.test(b.title + " " + b.text))
+    all.push([b.d.toISOString(), b.title, b.src, b.link, b.text]);
+  for (const f of D.feed) { if (!f[3]) { const b = match(f[2]); if (b) f[3] = b.text; } }
   // Alla nyheter till nyhetsfliken, nyast först, max 60 dagar och 30 st
   const cutoff = Date.now() - 60 * 864e5, seenN = new Set();
   const news = [...all, ...(old.news || [])]

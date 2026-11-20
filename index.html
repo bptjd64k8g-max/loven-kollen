@@ -135,6 +135,8 @@ tr.us td:first-child{color:var(--ink)}
 .feed li::before{content:"";position:absolute;left:-8px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--surface);border:3px solid var(--muted)}
 .feed li.klart::before{border-color:var(--green);background:var(--green)}
 .feed li.rykte::before{border-color:var(--leaf);background:var(--leaf)}
+.feed li.nyhet::before{border-color:var(--green)}
+.tag.src{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
 .feed .when{font-size:.82rem;color:var(--muted)}
 .tag{display:inline-block;font-size:.74rem;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:1px}
 .tag.klart{background:var(--green);color:#fff}
@@ -260,7 +262,7 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
   <section id="nyheter" aria-labelledby="ny-h">
     <h2 id="ny-h">Nyheter</h2>
     <p class="sub">Det senaste som skrivits om Björklöven, hämtat från svenska nyhetssajter.</p>
-    <ul class="news" id="news"></ul>
+    <ul class="feed" id="news"></ul>
     <button class="toggle" id="moreNews" type="button" hidden></button>
   </section>
 
@@ -499,11 +501,11 @@ NUMS.forEach(([v,l,r]) => $("nums").append(el("div","",`<b>${esc(v)}</b><span>${
   };
   const draw = () => {
     const ul = $("news"); ul.innerHTML = "";
-    if (!N.length) { ul.append(el("li","",`<span class="nsrc">Inga nyheter hämtade än.</span>`)); return; }
+    if (!N.length) { ul.append(el("li","",`<p>Inga nyheter hämtade än.</p>`)); return; }
     (all ? N : N.slice(0, 8)).forEach(n => {
-      const li = el("li");
-      li.innerHTML = `<a href="${esc(n[3])}" target="_blank" rel="noopener">${esc(n[1])}</a><span class="nsrc">${esc(n[2])} · ${ago(n[0])}</span>`;
-      ul.append(li);
+      const text = n[4] ? (n[4].length > 220 ? n[4].slice(0, 217).replace(/\s+\S*$/, "") + " …" : n[4]) : "";
+      ul.append(el("li","nyhet",`<span class="when">${ago(n[0])}</span><span class="tag src">${esc(n[2])}</span>
+        <h4>${esc(n[1])}</h4>${text ? `<p>${esc(text)}</p>` : ""}<a href="${esc(n[3])}" target="_blank" rel="noopener">Läs hela på ${esc(n[2])}</a>`));
     });
     const b = $("moreNews"); b.hidden = N.length <= 8; b.textContent = all ? "Visa färre" : `Visa alla ${N.length} nyheter`;
   };
