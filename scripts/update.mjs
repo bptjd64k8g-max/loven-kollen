@@ -120,13 +120,15 @@ await source("tabell", async () => {
 /* ---------- 2. Spelschema och resultat ---------- */
 await source("schema", async () => {
   const $ = await page(`${SWE}/ScheduleAndResults/Schedule/${await league()}`);
-  const games = [];
+  const games = [], crowds = {}; // crowds: hemmalag -> lista med publiksiffror
   for (const t of $("table").toArray()) {
     let date = null;
     for (const r of rowsOf($, t)) {
       if (/^\d{4}-\d{2}-\d{2}$/.test(r[0])) date = r[0];
       if (!date || r.length < 6) continue;
       const game = r[3] || "", m = game.split(/\s+-\s+/);
+      const spect = /^\d+$/.test(r[6] || "") ? +r[6] : null;
+      if (m.length === 2 && spect && /\d+\s*-\s*\d+/.test(r[4] || "")) { const ht = team(m[0]); if (ht) (crowds[ht] ||= []).push(spect); }
       if (m.length !== 2 || !(isUs(m[0]) || isUs(m[1]))) continue;
       const home = isUs(m[0]), opp = team(home ? m[1] : m[0], "opp");
       if (!opp) continue;
@@ -134,7 +136,7 @@ await source("schema", async () => {
       const s = (r[4] || "").match(/(\d+)\s*-\s*(\d+)/);
       const periods = ((r[5] || "").match(/\d+-\d+/g) || []).length;
       const venue = r[r.length - 1];
-      games.push({ date, time, ha: home ? "H" : "B", opp, us: s ? +(home ? s[1] : s[2]) : null, them: s ? +(home ? s[2] : s[1]) : null, ot: periods > 3, venue });
+      games.push({ date, time, ha: home ? "H" : "B", opp, us: s ? +(home ? s[1] : s[2]) : null, them: s ? +(home ? s[2] : s[1]) : null, ot: periods > 3, venue, spect });
     }
     if (games.length) break;
   }
@@ -143,7 +145,12 @@ await source("schema", async () => {
   const uniq = games.filter(g => { const k = g.date + g.opp; if (seen.has(k)) return false; seen.add(k); return true; })
     .sort((a, b) => a.date.localeCompare(b.date));
   const oldUp = Object.fromEntries(old.upcoming.map(u => [u[0], u]));
-  D.results = uniq.filter(g => g.us !== null).map(g => [g.date, g.ha, g.opp, g.us, g.them, g.ot]);
+  D.results = uniq.filter(g => g.us !== null).map(g => [g.date, g.ha, g.opp, g.us, g.them, g.ot, g.spect]);
+  // Publiksnitt hemma och placering bland lagen
+  const avg = Object.entries(crowds).map(([t, l]) => [t, Math.round(l.reduce((a, b) => a + b, 0) / l.length), l.length]);
+  const me = avg.find(a => a[0] === "IF Björklöven");
+  if (me) D.attendance = { avg: me[1], games: me[2], rank: avg.filter(a => a[1] > me[1]).length + 1, of: avg.length,
+    max: Math.max(...crowds["IF Björklöven"]), league: Math.round(avg.reduce((s, a) => s + a[1], 0) / avg.length) };
   D.upcoming = uniq.filter(g => g.us === null).map(g => {
     const u = [g.date, g.time, g.ha, g.opp, oldUp[g.date]?.[4] || ""];
     if (oldUp[g.date]?.[5]) u.push(oldUp[g.date][5]); // kanal och sändningsstart, fylls i på matchdagen

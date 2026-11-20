@@ -221,6 +221,7 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
     <h3>Resultat</h3>
     <ul class="games" id="results"></ul>
     <button class="toggle" id="moreRes" type="button"></button>
+    <div id="crowd"></div>
   </section>
 
   <section id="statistik" aria-labelledby="s-h">
@@ -334,6 +335,7 @@ const shortName = n => n.replace(/^IF /,"").replace(/ (IF|HC|BK|AIK|HF|IK|HK|Lak
 
 /* kommande + hero */
 const LIVE_MS = 3*60*60*1000;
+const ticketText = u => (u[2] === "H" && u[5] && u[5].biljetter) ? `Biljetter: ${u[5].biljetter}` : "";
 const tvText = u => { const t = u[5]; if (!t || !t.kanal) return ""; return `${t.kanal}${t.start ? ", sändningen börjar " + t.start.replace(":", ".") : ""}`; };
 let showAllUp = false, timer;
 function future(){ const now = Date.now(); return UPCOMING.filter(u => toDate(u[0],u[1]||"23:00").getTime() + LIVE_MS > now); }
@@ -342,7 +344,7 @@ function renderUpcoming(){
   (showAllUp ? list : list.slice(0,6)).forEach(u => {
     const d = toDate(u[0],u[1]), home = u[2]==="H";
     ul.append(el("li","",`<span class="d">${fmtDate(d)}${d.getFullYear()>2026?" 2027":""}</span>
-      <span class="o">${home?"Björklöven – "+esc(shortName(u[3])):esc(shortName(u[3]))+" – Björklöven"}<small>${home?"Hemma, Visionite Arena":"Borta, "+esc(ARENAS[u[3]]||"")}${u[4]?". "+esc(u[4]):""}</small>${tvText(u)?`<small class="tv">📺 ${esc(tvText(u))}</small>`:""}</span>
+      <span class="o">${home?"Björklöven – "+esc(shortName(u[3])):esc(shortName(u[3]))+" – Björklöven"}<small>${home?"Hemma, Visionite Arena":"Borta, "+esc(ARENAS[u[3]]||"")}${u[4]?". "+esc(u[4]):""}</small>${tvText(u)?`<small class="tv">📺 ${esc(tvText(u))}</small>`:""}${ticketText(u)?`<small class="tv">🎟️ ${esc(ticketText(u))}</small>`:""}</span>
       <span class="time">${u[1]?u[1].replace(":","."):"–"}</span>`));
   });
   $("moreUp").textContent = showAllUp ? "Visa färre" : `Visa hela schemat (${list.length} matcher kvar)`;
@@ -381,11 +383,20 @@ function tick(d){
     const D = Math.floor(ms/864e5), H = Math.floor(ms/36e5)%24, M = Math.floor(ms/6e4)%60, S = Math.floor(ms/1e3)%60;
     const parts = D ? [[D,"dagar"],[H,"tim"],[M,"min"]] : [[H,"tim"],[M,"min"],[S,"sek"]];
     cd.innerHTML = `<div class="count" role="timer" aria-label="Tid kvar till nedsläpp">${parts.map(([v,l])=>`<div><b>${String(v).padStart(2,"0")}</b><small>${l}</small></div>`).join("")}</div>
-      <p class="watch">${tvText(NEXT) ? "📺 " + esc(tvText(NEXT)) : "Sänds på TV4 Play. Kanal och sändningsstart läggs in på matchdagen."}</p>`;
+      <p class="watch">${tvText(NEXT) ? "📺 " + esc(tvText(NEXT)) : "Sänds på TV4 Play. Kanal och sändningsstart läggs in på matchdagen."}${ticketText(NEXT) ? "<br>🎟️ " + esc(ticketText(NEXT)) : (NEXT[2] === "H" ? "<br>🎟️ Biljettläget läggs in när det finns uppgifter" : "")}</p>`;
   };
   run(); timer = setInterval(run, 1000);
 }
 renderUpcoming();
+
+/* publik */
+if (D.attendance) {
+  const a = D.attendance, f = x => x.toLocaleString("sv-SE");
+  $("crowd").innerHTML = `<h3>Publik</h3><div class="nums">
+    <div><b>${f(a.avg)}</b><span>snitt per hemmamatch</span><em>${a.rank}:a av ${a.of} i SHL</em></div>
+    <div><b>${f(a.max)}</b><span>högsta i år</span><em>${a.games} hemmamatcher</em></div>
+    <div><b>${f(a.league)}</b><span>snitt i hela SHL</span></div></div>`;
+}
 
 /* resultat */
 let showAllRes = false;
@@ -395,7 +406,7 @@ function renderResults(){
   (showAllRes ? list : list.slice(0,5)).forEach(r => {
     const o = outcome(r);
     ul.append(el("li","",`<span class="d">${fmtDate(toDate(r[0]))}</span>
-      <span class="o">${esc(r[2])}<small>${r[1]==="H"?"Hemma":"Borta"}${r[5]?", efter förlängning":""}</small></span>
+      <span class="o">${esc(r[2])}<small>${r[1]==="H"?"Hemma":"Borta"}${r[5]?", efter förlängning":""}${r[6]?` · publik ${r[6].toLocaleString("sv-SE")}`:""}</small></span>
       <span class="score ${o}" aria-label="${o==="L"?"Förlust":"Vinst"} ${r[3]}–${r[4]}">${r[3]}–${r[4]}</span>`));
   });
   $("moreRes").textContent = showAllRes ? "Visa bara de fem senaste" : `Visa alla ${RESULTS.length} matcher`;
