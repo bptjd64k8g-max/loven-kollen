@@ -421,6 +421,45 @@ await source("tv", async () => {
   }
 });
 
+/* ---------- Laguppställning inför dagens match ---------- */
+// Swehockey lägger ut uppställningen strax före nedsläpp. Den visas överst på sidan till 20 min efter nedsläpp.
+await source("uppställning", async () => {
+  const today = new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Stockholm" }).format(new Date());
+  if (D.lineup && D.lineup.date < today) delete D.lineup;
+  const n = D.upcoming.find(u => u[0] === today && u[1]);
+  if (!n) return;
+  const start = stockholm(n[0], n[1]);
+  if (Date.now() < start - 4 * 36e5 || Date.now() > start + 20 * 6e4) return;
+  const $l = await page(`${SWE}/ScheduleAndResults/Live/${await league()}`);
+  let id = null;
+  $l("a[href*='openonlinewindow']").each((_, a) => {
+    const m = ($l(a).attr("href") || "").match(/\/Game\/\w+\/(\d+)/);
+    if (m && !id && fold($l(a).closest(".d-sm-flex").text()).includes("bjorkloven")) id = m[1];
+  });
+  if (!id) throw new Error("hittade inte dagens match på swehockey");
+  const $ = cheerio.load(await fetchOnce(`${SWE}/Game/LineUps/${id}`));
+  const h = $("h3").filter((_, x) => fold($(x).text()).includes("bjorkloven")).first();
+  if (!h.length) { log("   ingen uppställning än"); return; }
+  const LABEL = { "Goalies": "Målvakter", "1st Line": "Femma 1", "2nd Line": "Femma 2", "3rd Line": "Femma 3", "4th Line": "Femma 4", "Extra Players": "Reserver" };
+  const groups = []; let cur = null;
+  for (const r of h.closest("tr").nextAll("tr").toArray()) {
+    if ($(r).find("h3").length) break;
+    const lab = clean($(r).children("th,td").first().children("strong").text());
+    if (/coach/i.test(lab)) break;
+    if (lab) { cur = { label: LABEL[lab] || lab, p: [] }; groups.push(cur); }
+    if (!cur) continue;
+    $(r).find(".lineUpPlayer").each((_, p) => {
+      const m = clean($(p).text()).match(/^(\d+)\.\s*(.+?)(?:\s*\(\w+\))?$/);
+      if (m) cur.p.push([+m[1], rosterName(nameOf(m[2])), $(p).hasClass("red") ? 1 : 0]);
+    });
+  }
+  const ORDER = ["Målvakter", "Femma 1", "Femma 2", "Femma 3", "Femma 4", "Reserver"], ix = l => (ORDER.indexOf(l) + 99) % 99;
+  const g = groups.filter(x => x.p.length).sort((a, b) => ix(a.label) - ix(b.label));
+  if (!g.some(x => x.label === "Målvakter") || g.filter(x => /^Femma/.test(x.label)).length < 2) { log("   uppställningen är inte komplett än"); return; }
+  D.lineup = { date: n[0], opp: n[3], groups: g };
+  log(`   uppställning: ${g.map(x => `${x.label} ${x.p.length}`).join(", ")}`);
+});
+
 /* ---------- Text under statistiken ---------- */
 {
   const gp = D.table.find(t => t[0] === "IF Björklöven")?.[1];

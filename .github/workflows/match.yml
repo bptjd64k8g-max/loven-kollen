@@ -3,8 +3,8 @@ name: Matchläge
 # Startar före matchtider och uppdaterar var 3:e minut medan Björklöven spelar
 on:
   schedule:
-    - cron: "40 13 * * *"   # för matcher 15:15 (svensk vintertid)
-    - cron: "25 16 * * *"   # för matcher 18:00 och 19:00
+    - cron: "15 13 * * *"   # för matcher 15:15 (svensk vintertid) – startar en timme före för att fånga laguppställningen
+    - cron: "0 16 * * *"    # för matcher 18:00 och 19:00
   workflow_dispatch:
 
 permissions:
@@ -18,7 +18,7 @@ concurrency:
 jobs:
   match:
     runs-on: ubuntu-latest
-    timeout-minutes: 340
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
         with:

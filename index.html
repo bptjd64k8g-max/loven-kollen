@@ -92,6 +92,15 @@ nav a.tab[aria-current="true"]{background:var(--leaf);color:var(--leaf-ink)}
 .btn{display:inline-block;text-decoration:none;font-weight:700;padding:9px 16px;border-radius:999px;border:2px solid var(--hero-ink);color:var(--hero-ink)}
 .btn:hover{background:rgba(255,255,255,.12)}
 .watch{margin-top:16px;font-size:.92rem;opacity:.9}
+.lineup{margin-top:18px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);font-size:.9rem;max-width:640px}
+.lineup .lu-h{font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:.78rem;opacity:.85;margin:0 0 8px}
+.lineup .lu-gk{margin:0 0 8px}
+.lineup ol{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.lineup li{display:grid;grid-template-columns:72px 1fr;gap:8px;line-height:1.4}
+.lineup li b{font-weight:600;opacity:.8}
+.lineup .st{font-weight:700;color:var(--leaf)}
+.lineup small{opacity:.75}
+.lineup .lu-note{margin:10px 0 0;font-size:.75rem;opacity:.7}
 
 /* snapshot */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -418,9 +427,10 @@ function renderHero(n){
     $("hero").innerHTML = `<p class="kicker">Slutresultat · ${us > them ? "seger" : "förlust"}${last[5] ? " efter förlängning" : ""}</p>
       <h1 class="matchup"><span>${esc(ta)} ${sa}</span><span class="vs">–</span><span>${esc(tb)} ${sb}</span></h1>
       <p class="meta">${fmtDate(toDate(last[0]))}${last[6] ? ` · publik ${last[6].toLocaleString("sv-SE")}` : ""}</p>
-      ${n ? `<p class="meta" style="margin-top:22px;font-weight:600">Nästa match: ${fmtDate(toDate(n[0],n[1]))} kl. ${n[1] ? n[1].replace(":", ".") : "–"}, ${n[2] === "H" ? "hemma mot" : "borta mot"} ${esc(shortName(n[3]))}</p><div id="cd"></div>` : ""}`;
+      ${n ? `<p class="meta" style="margin-top:22px;font-weight:600">Nästa match: ${fmtDate(toDate(n[0],n[1]))} kl. ${n[1] ? n[1].replace(":", ".") : "–"}, ${n[2] === "H" ? "hemma mot" : "borta mot"} ${esc(shortName(n[3]))}</p><div id="cd"></div><div id="lineup"></div>` : ""}`;
     clearInterval(timer);
     if (n) tick(toDate(n[0], n[1]));
+    renderLineup();
     return;
   }
   const h = $("hero");
@@ -430,8 +440,43 @@ function renderHero(n){
   h.innerHTML = `<p class="kicker">${d.getTime() <= Date.now() ? "Matchen har börjat" : "Nästa match"}${n[4]?": "+esc(n[4].charAt(0).toLowerCase()+n[4].slice(1)):""}</p>
     <h1 class="matchup"><span>${esc(a)}</span><span class="vs">mot</span><span>${esc(b)}</span></h1>
     <p class="meta">${fmtDate(d)} kl. ${n[1]?n[1].replace(":","."):"–"} i ${home?"Visionite Arena":esc(ARENAS[n[3]]||"")}</p>
-    <div id="cd"></div>`;
+    <div id="cd"></div><div id="lineup"></div>`;
   tick(d);
+  renderLineup();
+}
+// Laguppställningen visas under biljettläget från att den kommer ut till 20 min efter nedsläpp
+const LINEUP_MS = 20*60*1000;
+let lineupPoll = null, lineupHide = null;
+function renderLineup(){
+  const box = $("lineup"), n = NEXT;
+  if (!box || !n) return;
+  const end = startOf(n) + LINEUP_MS, L = D.lineup;
+  const isToday = n[0] === new Intl.DateTimeFormat("sv-SE", {timeZone:"Europe/Stockholm"}).format(new Date());
+  // Kolla efter uppställningen varannan minut under matchdagen fram till 20 min efter nedsläpp
+  if (isToday && Date.now() < end && !lineupPoll) {
+    lineupPoll = setInterval(async () => {
+      if (Date.now() > end) { clearInterval(lineupPoll); renderLineup(); return; }
+      try {
+        const d = await (await fetch("data.json?v=" + Date.now(), {cache:"no-store"})).json();
+        if (JSON.stringify(d.lineup || null) !== JSON.stringify(D.lineup || null)) { D.lineup = d.lineup; renderLineup(); }
+      } catch(e) {}
+    }, 120000);
+  }
+  if (!L || L.date !== n[0] || Date.now() >= end) { box.innerHTML = ""; return; }
+  clearTimeout(lineupHide); lineupHide = setTimeout(renderLineup, end - Date.now() + 1000);
+  const p = x => `<span class="${x[2] ? "st" : ""}">${x[0]} ${esc(x[1])}</span>`;
+  const gk = L.groups.find(g => g.label === "Målvakter");
+  const starter = gk && (gk.p.find(x => x[2]) || null);
+  const rows = L.groups.filter(g => g.label !== "Målvakter").map(g => {
+    const body = /^Femma/.test(g.label) && g.p.length > 3
+      ? `${g.p.slice(0,3).map(p).join(", ")}<br><small>Backar:</small> ${g.p.slice(3).map(p).join(", ")}`
+      : g.p.map(p).join(", ");
+    return `<li><b>${esc(g.label)}</b><div>${body}</div></li>`;
+  }).join("");
+  box.innerHTML = `<div class="lineup"><p class="lu-h">Laguppställning</p>
+    ${gk ? `<p class="lu-gk">🥅 Målvakt: ${starter ? `<span class="st">${starter[0]} ${esc(starter[1])}</span>` : ""}${gk.p.filter(x => x !== starter).length ? ` <small>(${starter ? "reserv" : ""} ${gk.p.filter(x => x !== starter).map(x => `${x[0]} ${esc(x[1])}`).join(", ")})</small>` : ""}</p>` : ""}
+    <ol>${rows}</ol>
+    <p class="lu-note">${L.groups.some(g => g.p.some(x => x[2])) ? "Gult = startar matchen. " : ""}Källa: stats.swehockey.se</p></div>`;
 }
 function tick(d){
   clearInterval(timer);
