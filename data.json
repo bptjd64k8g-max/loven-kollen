@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T10:57:30.460Z",
- "updatedText": "21 november 2026, kl. 11.57",
+ "updated": "2026-11-21T11:34:46.930Z",
+ "updatedText": "21 november 2026, kl. 12.34",
  "results": [
   [
    "2026-09-19",
@@ -872,6 +872,14 @@
  ],
  "feed": [
   [
+   "2026-11-21",
+   "besked",
+   "LHC-tränaren hyllar doldiscentern: \"Kanske vår bästa forward\"",
+   "",
+   "Corren",
+   "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdlpScUNwTnFLSFdNVGI1QUl3VUxubFV1Yk5RcFRwbWhINDRZcXFrSHRUYWxnUTh6MnJvSy1jTjVVYmlSVWVJVDBjd0lLMHNtTERRX0JrbXp6anhkMkJqZ19ZMHAtLUJQZWc2VEtoMHFjUUIwNlkxeDRORFFQQlFHLXZ4a2FRVlVYdXdPZHllbDh5a1g4QlpPQ2ZOZw?oc=5"
+  ],
+  [
    "2026-11-20",
    "besked",
    "Wallmarks framsteg – Kenttäs kryptiska svar",
@@ -881,19 +889,19 @@
   ],
   [
    "2026-11-19",
-   "skada",
-   "Björklöven-värvningen borta resten av året",
-   "",
-   "Aftonbladet",
-   "https://news.google.com/rss/articles/CBMisAFBVV95cUxQaUI3Nk9ELWk5RDlHcVJxMkxOd2ZhbWpIcDY5UmxHcExjaDZEck9ZT291dE5yQUIwalliSTFXTUxQVm9xZFgxaFNyMl9DVmYyVmFDdGk2VDdWV25TVDhnTmVJNDJ2T2dvTkZvSGY4bkJmek5KOE9qb1BURGtsYWxsMlhOY0lYNHlXNG41Uzl1VHVTd3V2N0lwOWhvVzRmMWpXU29RYVNwZFZCNXNsM2hiWA?oc=5"
-  ],
-  [
-   "2026-11-19",
    "besked",
    "LHC-kaptenen saknades på träningen",
    "",
    "Västerbottens-Kuriren",
    "https://news.google.com/rss/articles/CBMidEFVX3lxTFB4NjFaUTNUTUszNTB5d2RkZjNHVk1XaUxDekpzRVgxVHpTaTdXT2ItdGJrcUdpUGtFdU9LWmxCckZhMEJWZ2hTRjVBN2hUQkRjaGxucXdiRmc4R1lsMlFnaDh2ckFXNTMyU2NZMWlLTUdKNWlT?oc=5"
+  ],
+  [
+   "2026-11-19",
+   "skada",
+   "Björklöven-värvningen borta resten av året",
+   "",
+   "Aftonbladet",
+   "https://news.google.com/rss/articles/CBMisAFBVV95cUxQaUI3Nk9ELWk5RDlHcVJxMkxOd2ZhbWpIcDY5UmxHcExjaDZEck9ZT291dE5yQUIwalliSTFXTUxQVm9xZFgxaFNyMl9DVmYyVmFDdGk2VDdWV25TVDhnTmVJNDJ2T2dvTkZvSGY4bkJmek5KOE9qb1BURGtsYWxsMlhOY0lYNHlXNG41Uzl1VHVTd3V2N0lwOWhvVzRmMWpXU29RYVNwZFZCNXNsM2hiWA?oc=5"
   ],
   [
    "2026-11-19",
@@ -1443,6 +1451,18 @@
  },
  "news": [
   [
+   "2026-11-21T11:19:33.000Z",
+   "Centern inför ödesmötet: \"Måste hitta ett sätt\"",
+   "Hockeynews",
+   "https://news.google.com/rss/articles/CBMif0FVX3lxTE5HY3NjMldNVDQxVU0zcTdNLWZQd19lZWI2R3I0bTF6LVRaZjFlS1BmQ3BOLVpQVjBRMkF3d1BmSFRHRUhfTkZ3bWhtT21sMHItQ1Q2NVNMcUpjWU0wN0pqcXFhaHcyV2hHSG1sWmxPLVFVMVFuN3B0SjBiNmp5bk0?oc=5"
+  ],
+  [
+   "2026-11-21T11:00:00.000Z",
+   "LHC-tränaren hyllar doldiscentern: \"Kanske vår bästa forward\"",
+   "Corren",
+   "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdlpScUNwTnFLSFdNVGI1QUl3VUxubFV1Yk5RcFRwbWhINDRZcXFrSHRUYWxnUTh6MnJvSy1jTjVVYmlSVWVJVDBjd0lLMHNtTERRX0JrbXp6anhkMkJqZ19ZMHAtLUJQZWc2VEtoMHFjUUIwNlkxeDRORFFQQlFHLXZ4a2FRVlVYdXdPZHllbDh5a1g4QlpPQ2ZOZw?oc=5"
+  ],
+  [
    "2026-11-21T09:03:31.000Z",
    "Kritiserade backarna: ”Har de minst dåliga siffrorna”",
    "Västerbottens-Kuriren",
@@ -1518,15 +1538,9 @@
    "2026-11-20T07:00:04.000Z",
    "Efter nio raka förluster – Ottosson om vad som saknas i Björklöven",
    "Hockeynews",
-   "https://www.aftonbladet.se/sportbladet/hockey/a/6PjnP0/bjorkloven-tappade-ledning-till-forlust-mot-orebro",
-   "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
+   "https://www.expressen.se/sport/hockey/shl/bjorkloven-mardromssvit-vaxer-nio-raka-forluster/",
+   "Björklövens mardrömssvit bara växer och växer. Mot Växjö blev det lagets nionde raka förlust. Växjö ser ut att ha fått bästa möjliga effekt sedan sportchef Henrik Evertsson tog steget ner i ...",
    false
-  ],
-  [
-   "2026-11-20T06:06:33.000Z",
-   "Svaret efter nionde raka: ”För dåligt”",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa3ZLV3VlU1BVRThrVkVJU2pwLXVUTEtpSG1zdVgwTGJXaHlLQk9ocHVxNDlMcF9BSlg1Q2tyLUs2cmsta1hNNk5KTTV1X0ZHQzhsUUtsalR1bGpoNnR6V1M2bTRKeVJPZmdzMjZJenY0VW5yVlhBVzE2VUpCU3dUVVZ3S0ZvakVK?oc=5"
   ],
   [
    "2026-11-20T05:39:44.000Z",
@@ -1559,6 +1573,12 @@
    "Oväntade hyllningen: ”Värmer ett hockeyhjärta”",
    "Västerbotten | Folkbladet",
    "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRXRQQWYxRkVQNmhGTGhBa3loR1BVSTJodnBqZS0xczNtNTFzLWJUanNmSUtCeFRkV3VwNmZGamY4VGNaLUhtZ0VWcjh6bG9PXzJQSnM3NEZHRVE4T0xRc2d4SlpULV80Xy05VUFXVXdrMExBZFRPbVBMcGQ1SFdncnRJZjFOWGtGd211Yg?oc=5"
+  ],
+  [
+   "2026-11-19T21:38:39.000Z",
+   "Svaret efter nionde raka: ”För dåligt”",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa3ZLV3VlU1BVRThrVkVJU2pwLXVUTEtpSG1zdVgwTGJXaHlLQk9ocHVxNDlMcF9BSlg1Q2tyLUs2cmsta1hNNk5KTTV1X0ZHQzhsUUtsalR1bGpoNnR6V1M2bTRKeVJPZmdzMjZJenY0VW5yVlhBVzE2VUpCU3dUVVZ3S0ZvakVK?oc=5"
   ],
   [
    "2026-11-19T21:35:25.000Z",
@@ -1623,22 +1643,6 @@
    "Beckmörkt för ”Löven” – nionde raka förlusten",
    "Västerbottens-Kuriren",
    "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMjVwOEdja0Y2MVhKQ1Zrem80eXdCekZqVTFybDY0X01yUHNBYnpYcVNpSmRzR3ZBcjJfTDVkeDRsQVNJRXZIQmZPTDk3Y1o3cFUzOWNEek5xMm1jR2Vnam9WUTRNQmVsTnZLZkc3dEdRcEZsYl82aDBISkx1T2FpaGdn?oc=5"
-  ],
-  [
-   "2026-11-19T20:15:20.000Z",
-   "Totalt mörker för Björklöven",
-   "Aftonbladet",
-   "https://www.aftonbladet.se/sportbladet/hockey/a/z0GXdO/shl-nionde-raka-forlusten-for-bjorkloven",
-   "Mörka november är mörkare än vanligt i Umeå. Förlusten mot Växjö är Björklövens nionde raka torsk. – Jag tycker ändå att vi gör en okej match, säger tränaren Magnus Bogren till TV4.",
-   false
-  ],
-  [
-   "2026-11-19T20:14:40.000Z",
-   "Förlust mot Växjö för Björklöven",
-   "Björklöven",
-   "https://www.gp.se/sport/bjorkloven-vill-ta-sig-ur-formsvackan-borta-mot-vaxjo.c8b2bbb1-c25e-58e6-b761-d64a0381957f",
-   "Inför mötet borta mot Växjö har laget åtta raka förluster och är nu på tolfte plats i tabellen. Det blev seger i den senaste matchen för Växjö, 2–1 mot Malmö på bortaplan. När lagen möttes senast, 1 ...",
-   false
   ]
  ]
 }
