@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T19:55:05.769Z",
- "updatedText": "21 november 2026, kl. 20.55",
+ "updated": "2026-11-21T20:27:56.222Z",
+ "updatedText": "21 november 2026, kl. 21.27",
  "results": [
   [
    "2026-09-19",
@@ -441,12 +441,12 @@
  "table": [
   [
    "Färjestad BK",
-   17,
+   18,
    14,
    2,
    1,
-   0,
-   46,
+   1,
+   43,
    47
   ],
   [
@@ -461,33 +461,33 @@
   ],
   [
    "Skellefteå AIK",
-   17,
+   18,
    11,
    1,
    2,
-   3,
-   21,
+   4,
+   20,
    37
   ],
   [
    "Örebro HK",
-   17,
-   8,
+   18,
+   9,
    1,
    2,
    6,
-   -9,
-   28
+   -8,
+   31
   ],
   [
    "IF Malmö Redhawks",
-   17,
-   6,
+   18,
+   7,
    3,
    3,
    5,
-   9,
-   27
+   12,
+   30
   ],
   [
    "Luleå HF",
@@ -520,21 +520,21 @@
    24
   ],
   [
-   "Växjö Lakers HC",
-   17,
-   7,
-   1,
-   1,
-   8,
-   -6,
-   24
-  ],
-  [
    "Rögle BK",
    19,
    6,
    2,
    2,
+   9,
+   -8,
+   24
+  ],
+  [
+   "Växjö Lakers HC",
+   18,
+   7,
+   1,
+   1,
    9,
    -8,
    24
@@ -551,33 +551,33 @@
   ],
   [
    "Linköping HC",
-   17,
+   18,
    5,
    1,
-   1,
+   2,
    10,
-   -20,
-   18
+   -21,
+   19
   ],
   [
    "IF Björklöven",
-   17,
+   18,
    5,
-   1,
+   2,
    0,
    11,
-   -24,
-   17
+   -23,
+   19
   ],
   [
    "HV 71",
-   17,
-   2,
+   18,
+   3,
    2,
    4,
    9,
-   -21,
-   14
+   -19,
+   17
   ]
  ],
  "players": [
@@ -878,7 +878,7 @@
    "2026-11-21",
    "besked",
    "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
-   "Efter nio raka förluster väntar en match som kan få stor betydelse för Björklövens fortsatta SHL-säsong. Nu berättar Magnus Bogren om pressen, ...",
+   "",
    "Hockeynews",
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
   ],
@@ -1474,7 +1474,7 @@
    ""
   ]
  },
- "statnote": "Efter 17 omgångar. Björklöven är 14:a i SHL på gjorda mål per match och 12:a på insläppta, med 89,7 % i räddningsprocent. Poängbäst i laget är Fredrik Forsberg med 3+7.",
+ "statnote": "Efter 18 omgångar. Björklöven är 14:a i SHL på gjorda mål per match och 12:a på insläppta, med 89,7 % i räddningsprocent. Poängbäst i laget är Fredrik Forsberg med 3+7.",
  "sources": {
   "tabell": "ok",
   "schema": "ok",
@@ -1501,6 +1501,12 @@
    "https://news.google.com/rss/articles/CBMijwFBVV95cUxPYnBsN1QtR1RCTUQtUEx4MWtFYUdJNlJtT05IM2JuZHVGQkZPYktEbldVMjd4c1BRamlDeDNtRHFlN0VPN0JDMmNQdVJYUGxKSVhUVXFvaWYyTTgyN2JLQl81cUtYZ1hnNTQ4aFNSUjJBT3ZpbkpRbmoyazhhV3BGMk1TQlF5OUFIcnpoMnV4OA?oc=5"
   ],
   [
+   "2026-11-21T19:36:42.000Z",
+   "Efterlängtad seger för Björklöven – steg åt rätt håll mot LHC",
+   "Göteborgs-Posten",
+   "https://news.google.com/rss/articles/CBMivAFBVV95cUxQX1Z1Mi05TENhQWRTbFl6b1JtbngtLTQyQlRSLUxIYUF0OFJRblJ1dXA5NXN6blVxckJKMkpzT0EtZk5mSGtHRTVPRnBiUEliNmxnU0RTTTBXZk4yX0d1QmI4UXJ2MEhCMWktMnI1WnZqanJTNGs3Snd5NnNqaFMtTGw3Wmg3WG1hV3V5YkIxTy1Pa1U3d1dMYjRBNElSN2hfX0FkZXVLS3BwZFYzWi10RTVDcHpIQURKd29fNg?oc=5"
+  ],
+  [
    "2026-11-21T19:31:40.000Z",
    "Äntligen seger för Björklöven mot Linköping",
    "Björklöven",
@@ -1516,6 +1522,14 @@
    "2026-11-21T19:24:16.000Z",
    "Björklöven bröt sviten – första segern på över en månad",
    "Aftonbladet",
+   "https://www.aftonbladet.se/sportbladet/hockey/a/GPGba6/bjorkloven-brot-sviten-forsta-segern-sedan-pa-over-en-manad",
+   "Forwarden klippte till direkt på en flippmacka från Lucas Ekeståhl Jonsson och LHC-keepern Waltteri Ignatjew hade inte en chans. Matchen gick till förlängning och där avgjorde hemmasonen Ekeståhl ...",
+   false
+  ],
+  [
+   "2026-11-21T18:29:38.000Z",
+   "Björklöven U18 tog hem segern mot Skellefteå AIK J18",
+   "Västerbottens-Kuriren",
    "https://www.aftonbladet.se/sportbladet/hockey/a/GPGba6/bjorkloven-brot-sviten-forsta-segern-sedan-pa-over-en-manad",
    "Forwarden klippte till direkt på en flippmacka från Lucas Ekeståhl Jonsson och LHC-keepern Waltteri Ignatjew hade inte en chans. Matchen gick till förlängning och där avgjorde hemmasonen Ekeståhl ...",
    false
@@ -1554,9 +1568,7 @@
    "2026-11-21T16:14:29.000Z",
    "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
    "Hockeynews",
-   "https://hockeynews.se/nyheter/stor-intervju-med-magnus-bogren-infor-angestmotet-med-lhc",
-   "Efter nio raka förluster väntar en match som kan få stor betydelse för Björklövens fortsatta SHL-säsong. Nu berättar Magnus Bogren om pressen, ...",
-   true
+   "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
   ],
   [
    "2026-11-21T14:10:18.000Z",
@@ -1631,14 +1643,6 @@
    false
   ],
   [
-   "2026-11-21T08:02:35.000Z",
-   "Björklöven U18 tog hem segern mot Skellefteå AIK J18",
-   "Västerbottens-Kuriren",
-   "https://www.svt.se/nyheter/lokalt/vasterbotten/folj-bjorkloven-och-skelleftea-aik-under-shl-sasongen?inlagg=4f1c71f26f087e7553ba5e5f2ecd2e2d",
-   "För första gången på 19 år spelar både Björklöven och Skellefteå AIK i seriespel i ishockey. Lördagen den 24 oktober möttes ärkerivalerna på isen.",
-   false
-  ],
-  [
    "2026-11-21T08:02:03.000Z",
    "Björklöven förlänger segersviten",
    "Västerbottens-Kuriren",
@@ -1675,22 +1679,20 @@
    false
   ],
   [
-   "2026-11-20T19:30:00.000Z",
-   "Så ser du Björklöven–Linköping i SHL – tv-kanal, tider och stream",
-   "Hockeyresultat.se",
-   "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTVlxUkVhWFJiSVJ5cHFJN19DZUV2eUN4RV9CX1dtTHV1X1NpLXFMZTRBck1XaTJDQk9qZUhHX3I2d3RwVm1Na2hNV2kzVXN3NTdKVGJPeUVMVkZlbnY0UzAyMEhDNDFOZmVlemtUZ05wT1l5RUF1NmVJTXo3SDIwdXdJaTZSTDJ3YnAzVlNZMkZoUDA?oc=5"
+   "2026-11-21T01:00:00.000Z",
+   "Björklöven bröt jättesviten – slog Linköping i övertid",
+   "SVT",
+   "https://www.svt.se/sport/ishockey/bjorkloven-brot-jattesviten-slog-linkoping-i-overtid",
+   "10 oktober var senast Björklöven vann en SHL-match. Därefter kom nio raka nollpoängare innan segerns sötma återigen tog sig till Umeå när Linköping slogs på hemmaplan. – Otroligt skönt att se den gå i ...",
+   false
   ],
   [
-   "2026-11-20T17:27:54.000Z",
-   "Krönika: \"Wallmark-effekten – en mirakelkur eller hägring i öknen?\"",
-   "Västerbotten | Folkbladet",
-   "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTS1mQ0pjY2tZRHduTkdHVEVCRkJlRmw0T0Rualp5Y2RNajRaXzJGdjE4MG83QlNPak1pQjc1SEthbUhWVExpbno1Wnh0R1hjTWlybm0yLUh2NnFRUElGaW12c25YYTQ1Z3RVZ1VIZ3ZXN3huU2pBdktoSjlfbG1yQS04dldOaXQyaWhmanRGSU1wNHF3aVJzaA?oc=5"
-  ],
-  [
-   "2026-11-20T15:03:31.000Z",
-   "Kritiserade backarna: ”Har de minst dåliga siffrorna”",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQmY0Ul9NbkpyNm44VnpqQUl0XzZDRXpzNElhSl9VTXVCTFVfRkNfTV8yUl9leHF0Q3V1U1BfYWxqN0ZveDItQXUwQkFnQTdMeGNIXzk1S0oydXhRalVKVDhyZHhaNU51S0pia0d1dFM1QldVVXp0ZUJPQjJFMklUWWpNOA?oc=5"
+   "2026-11-20T23:06:00.000Z",
+   "Lättnaden – stoppar (?) Björklövens ras",
+   "Hockeysverige",
+   "https://hockeysverige.se/shl/bjorkloven-lhc-lattnaden-stoppar-ras-mal-ekestahl-jonsson-aEh577u2bI1S/",
+   "Björklöven undviker tio raka förluster i SHL. Efter en tidig uppförsbacke kunde Umeålaget till slut vända och besegra Linköping med 2–1 via förlängning hemma i Visionite Arena. – Man försöker inte ...",
+   false
   ]
  ],
  "lineup": {
