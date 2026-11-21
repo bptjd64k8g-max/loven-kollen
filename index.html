@@ -391,6 +391,15 @@ const shortName = n => n.replace(/^IF /,"").replace(/ (IF|HC|BK|AIK|HF|IK|HK|Lak
 /* kommande + hero */
 const LIVE_MS = 3*60*60*1000, WAIT_MS = 8*60*60*1000, RESULT_MS = 14*60*60*1000;
 const ticketText = u => (u[2] === "H" && u[5] && u[5].biljetter) ? `Biljetter: ${u[5].biljetter}` : "";
+// Nedräkning till studiosändningen (sändningsstart före nedsläpp), visas under matchnedräkningen.
+const studioText = u => {
+  const t = u && u[5]; if (!t || !t.start) return "";
+  const ms = toDate(u[0], t.start).getTime() - Date.now(), kl = t.start.replace(":", ".");
+  if (ms <= 0) return `<p class="watch" style="font-weight:600">🎙️ Studiosändningen är igång${t.kanal ? " i " + esc(t.kanal) : ""} (startade ${kl})</p>`;
+  const H = Math.floor(ms/36e5), M = Math.floor(ms/6e4)%60, S = Math.floor(ms/1e3)%60;
+  const left = H >= 24 ? `${Math.floor(H/24)} d ${H%24} tim` : H ? `${H} tim ${M} min` : `${M} min ${String(S).padStart(2,"0")} sek`;
+  return `<p class="watch" style="font-weight:600">🎙️ Studiosändningen börjar ${kl} – om ${left}</p>`;
+};
 const tvText = u => { const t = u[5]; if (!t || !t.kanal) return ""; return `${t.kanal}${t.start ? ", sändningen börjar " + t.start.replace(":", ".") : ""}`; };
 let showAllUp = false, timer;
 const startOf = u => toDate(u[0], u[1] || "23:00").getTime();
@@ -499,7 +508,7 @@ function tick(d){
     const D = Math.floor(ms/864e5), H = Math.floor(ms/36e5)%24, M = Math.floor(ms/6e4)%60, S = Math.floor(ms/1e3)%60;
     const parts = D ? [[D,"dagar"],[H,"tim"],[M,"min"]] : [[H,"tim"],[M,"min"],[S,"sek"]];
     cd.innerHTML = `<div class="count" role="timer" aria-label="Tid kvar till nedsläpp">${parts.map(([v,l])=>`<div><b>${String(v).padStart(2,"0")}</b><small>${l}</small></div>`).join("")}</div>
-      <p class="watch">${tvText(NEXT) ? "📺 " + esc(tvText(NEXT)) : "Sänds på TV4 Play. Kanal och sändningsstart läggs in på matchdagen."}${ticketText(NEXT) ? "<br>🎟️ " + esc(ticketText(NEXT)) : (NEXT[2] === "H" ? "<br>🎟️ Biljettläget läggs in när det finns uppgifter" : "")}</p>`;
+      ${studioText(NEXT)}<p class="watch">${tvText(NEXT) ? "📺 " + esc(tvText(NEXT)) : "Sänds på TV4 Play. Kanal och sändningsstart läggs in på matchdagen."}${ticketText(NEXT) ? "<br>🎟️ " + esc(ticketText(NEXT)) : (NEXT[2] === "H" ? "<br>🎟️ Biljettläget läggs in när det finns uppgifter" : "")}</p>`;
   };
   run(); timer = setInterval(run, 1000);
 }

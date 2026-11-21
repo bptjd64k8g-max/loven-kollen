@@ -394,7 +394,7 @@ async function tvFor(date, ha, opp) {
   const [y, m, d] = date.split("-").map(Number), o = SLUG[opp];
   if (!o) return null;
   const pair = ha === "H" ? `bjorkloven-${o}` : `${o}-bjorkloven`;
-  const urls = [`https://hurbra.se/${pair}-tv-${d}-${MONTHS[m - 1]}-${y}/`, `https://hurbra.se/${pair}-tv-${d}-${MONTHS[m - 1]}/`];
+  const mo = MONTHS[m - 1], urls = [`https://hurbra.se/${pair}-tv-${d}-${mo}-${y}/`, `https://hurbra.se/${pair}-${d}-${mo}-${y}/`, `https://hurbra.se/${pair}-tv-${d}-${mo}/`, `https://hurbra.se/${pair}-${d}-${mo}/`];
   for (const url of urls) {
     let $; try { $ = await page(url); } catch { continue; }
     const cells = {};
