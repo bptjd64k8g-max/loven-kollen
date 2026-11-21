@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T20:27:56.222Z",
- "updatedText": "21 november 2026, kl. 21.27",
+ "updated": "2026-11-21T21:09:07.922Z",
+ "updatedText": "21 november 2026, kl. 22.09",
  "results": [
   [
    "2026-09-19",
@@ -878,7 +878,7 @@
    "2026-11-21",
    "besked",
    "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
-   "",
+   "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
    "Hockeynews",
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
   ],
@@ -1495,6 +1495,48 @@
  },
  "news": [
   [
+   "2026-11-21T21:04:28.000Z",
+   "Chris DiDomenico har inte träffat sonen på fyra månader",
+   "Expressen",
+   "https://www.expressen.se/sport/hockey/shl/chris-didomenico-har-inte-traffat-sonen-pa-fyra-manader/",
+   "Chris DiDomenico bröt måltorkan när Björklöven satte stopp för sin långa förlustsvit. Men den största glädjen för stjärnan finns just nu utanför isen. – Det har varit tufft, säger han.",
+   false
+  ],
+  [
+   "2026-11-21T20:51:52.000Z",
+   "Björklöven vann på försök tio: ”Är otroligt skönt”",
+   "Omni",
+   "https://omni.se/bjorkloven-vann-pa-forsok-tio-ar-otroligt-skont/a/z0Gy9r",
+   "En trepoängare mot Linköping gör att Björklöven bryter trenden med nio raka förluster, skriver Sportbladet. Inför kvällens drabbning hade Umeålaget inte vunnit sedan 10 oktober och en 2–1-seger efter ...",
+   false
+  ],
+  [
+   "2026-11-21T20:39:59.000Z",
+   "Bröt tunga sviten – utspelet: ”Trodde hallen skulle rivas”",
+   "Hockeynews",
+   "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbjlkOGtOTWxGWTN5OHFYUzZScFo2cEZCM005YVlYbU1QajJoU3NyYXRweUtXWlZORGRtck5kRUJodFl5RkhvVVdDSkxQbl9LaGRxNWVsdklLMWhZSEpwbGxpSWItMmZLY0ZMa1E0M05tMzNUbWpzSjBnVzl5eGs0WlAzU1AyTEQ2VXdv?oc=5"
+  ],
+  [
+   "2026-11-21T20:30:15.000Z",
+   "”Trodde att hela hallen skulle gå sönder”",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYmN1MS16MFp6d2hYY2pNWGxuNURQaHBJMjFWbVZHM1A5dl9fZktGd2xzdkEtNXk1NWhVU3Z0cEk5bUpLeVJhZkFwaFhTV1ZLT0tEZUx1MFFlUF8teTl5UXRLTGxWeG1DMkx5MUZGOVU1aFZ1ZmhSLVZhTlBiUzRTVA?oc=5"
+  ],
+  [
+   "2026-11-21T20:30:15.000Z",
+   "Vann igen efter 42 dagar: ”Nästan glömt bort hur det känns”",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQlEyUi0yU0ZBZVZ5MmFnQVYwc1IxclFTdUtUVkRwdlZiZU9WWkVJNE11MmxhYllBOG1aV0NQTWstMWdlSHJDT0FiN2ROV25kMmUzcjNGWWtiT0lSUnRaUE9TRXFoQTVyY2ZCMm15bXlqWVVjSjdMaEhLUGlYNFNsT0ROTnljNWtnQkRocWhJcHBjUTZJemc?oc=5"
+  ],
+  [
+   "2026-11-21T20:28:26.000Z",
+   "Fem punkter: En seger som kan få Löven att lyfta",
+   "Aftonbladet",
+   "https://www.aftonbladet.se/sportbladet/hockey/a/j3d7rn/fem-punkter-bjorklovenlinkoping-en-seger-som-kan-fa-loven-att-lyfta",
+   "UMEÅ. Björklöven ställdes mot Linköping i en viktig match runt kvalstrecket. Hemmalaget kom med nio raka förluster – men fick stopp med blödningen och vann med 2–1 efter förlängning. Här är Hans Abrah ...",
+   false
+  ],
+  [
    "2026-11-21T19:47:21.000Z",
    "Ishockey: Björklöven bröt jättesviten – slog Linköping i övertid",
    "SVT Nyheter",
@@ -1519,32 +1561,24 @@
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMlFVRlRjbERWS2JIekdnQ2ZIWWtIOHNMVDUxVi1sOHNQYVhJMlNvYzZGLS1FZmNfY0lUVWVSTnJPUkJoS3BmSHhueG1mLW5DWkVSc212VTZTbFFiVzdJbmpPdkd0U1ZQX3NFQzloMXFlc2ZCWkhUN2ZMbkxocnZtMTJCNDFiby1ySUFzalpXemc?oc=5"
   ],
   [
-   "2026-11-21T19:24:16.000Z",
-   "Björklöven bröt sviten – första segern på över en månad",
-   "Aftonbladet",
-   "https://www.aftonbladet.se/sportbladet/hockey/a/GPGba6/bjorkloven-brot-sviten-forsta-segern-sedan-pa-over-en-manad",
-   "Forwarden klippte till direkt på en flippmacka från Lucas Ekeståhl Jonsson och LHC-keepern Waltteri Ignatjew hade inte en chans. Matchen gick till förlängning och där avgjorde hemmasonen Ekeståhl ...",
-   false
-  ],
-  [
    "2026-11-21T18:29:38.000Z",
    "Björklöven U18 tog hem segern mot Skellefteå AIK J18",
    "Västerbottens-Kuriren",
-   "https://www.aftonbladet.se/sportbladet/hockey/a/GPGba6/bjorkloven-brot-sviten-forsta-segern-sedan-pa-over-en-manad",
-   "Forwarden klippte till direkt på en flippmacka från Lucas Ekeståhl Jonsson och LHC-keepern Waltteri Ignatjew hade inte en chans. Matchen gick till förlängning och där avgjorde hemmasonen Ekeståhl ...",
+   "https://www.svt.se/nyheter/lokalt/vasterbotten/folj-bjorkloven-och-skelleftea-aik-under-shl-sasongen?inlagg=4f1c71f26f087e7553ba5e5f2ecd2e2d",
+   "För första gången på 19 år spelar både Björklöven och Skellefteå AIK i seriespel i ishockey. Lördagen den 24 oktober möttes ärkerivalerna på isen.",
    false
+  ],
+  [
+   "2026-11-21T17:57:26.000Z",
+   "Segersviten vid liv för Björklöven dam",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMifkFVX3lxTE15U3llVld6bDlQNE1QOE1wMWJPdkxBbjNJNU10QnJUaG1wWTFzbmdJT3FxTDdDTVJnYjNxS3R0UnNIQlFFcmJtc2ZmNG5feFE1TFRCeERvM2FvWlYtM0NtNVQ0Ym1Nc0FwOHBIVG5CdkRUTF9qckREWTd3OFhwUQ?oc=5"
   ],
   [
    "2026-11-21T17:48:45.000Z",
    "”Första tio minuterna är våra bästa i år”",
    "Västerbottens-Kuriren",
    "https://news.google.com/rss/articles/CBMifkFVX3lxTE15U3llVld6bDlQNE1QOE1wMWJPdkxBbjNJNU10QnJUaG1wWTFzbmdJT3FxTDdDTVJnYjNxS3R0UnNIQlFFcmJtc2ZmNG5feFE1TFRCeERvM2FvWlYtM0NtNVQ0Ym1Nc0FwOHBIVG5CdkRUTF9qckREWTd3OFhwUQ?oc=5"
-  ],
-  [
-   "2026-11-21T17:23:25.000Z",
-   "Segersviten vid liv för Björklöven dam",
-   "Västerbotten | Folkbladet",
-   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQ2RRVjBnZXdzUUJoaU1WZnhQTmFRMl9QSWNuaDVoWkNDendsdEVOcGZzbEQ5RGY4UktXZE9TV05uang4dnFSUnZTQ0JweldlUUVjb21xbXlOMm1rRE1CbUFuQ3QzeGM1LTlGOXBsUzNZX1hTbVhUWGxteUVVaGV1TE9XYVpzaGgw?oc=5"
   ],
   [
    "2026-11-21T16:50:02.000Z",
@@ -1568,13 +1602,31 @@
    "2026-11-21T16:14:29.000Z",
    "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
    "Hockeynews",
-   "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
+   "https://www.aftonbladet.se/sportbladet/hockey/a/6PjnP0/bjorkloven-tappade-ledning-till-forlust-mot-orebro",
+   "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
+   false
   ],
   [
    "2026-11-21T14:10:18.000Z",
    "Avgjorde på gamla lagkamraten",
    "Västerbottens-Kuriren",
    "https://news.google.com/rss/articles/CBMickFVX3lxTE5GQ3ZaX2gxYmlfZWRVeE5SRm81a2cwaUw3Ul9zbHpQNHhyTUNUd0NYVFJVa09ubFNtYkFYVTA1MjhJVnhGZnppaE9YWFZLTHR2ZDNCNVFPRU40dkpDa0xpeWtsQ1djYWdzVVFOckd3WDhCdw?oc=5"
+  ],
+  [
+   "2026-11-21T13:06:00.000Z",
+   "Lättnaden – stoppar (?) Björklövens ras",
+   "Hockeysverige",
+   "https://hockeysverige.se/shl/bjorkloven-lhc-lattnaden-stoppar-ras-mal-ekestahl-jonsson-aEh577u2bI1S/",
+   "Björklöven undviker tio raka förluster i SHL. Efter en tidig uppförsbacke kunde Umeålaget till slut vända och besegra Linköping med 2–1 via förlängning hemma i Visionite Arena. – Man försöker inte ...",
+   false
+  ],
+  [
+   "2026-11-21T12:27:00.000Z",
+   "Björklöven bryter mardrömssvit mot Linköping",
+   "Expressen",
+   "https://www.expressen.se/sport/hockey/shl/bjorkloven-bryter-mardromssvit-mot-linkoping/",
+   "Det blev ett drama i Umeå. Bottenmötet mellan Björklöven och Linköping fick avgöras i förlängning. Väl där klev Lukas Ekeståhl-Jonsson fram för Björklöven.",
+   false
   ],
   [
    "2026-11-21T11:27:49.000Z",
@@ -1588,6 +1640,14 @@
    "HurBra.se",
    "https://hurbra.se/shl-pa-tv-21-november-2026/",
    "SHL på TV lördag 21 november 2026: alla sju matcher med starttider, kanaler och streaming på TV4 Play. Läs försnack, tabell och rekordjakten.",
+   false
+  ],
+  [
+   "2026-11-21T11:24:00.000Z",
+   "Björklöven bröt sviten – första segern på över en månad",
+   "Aftonbladet",
+   "https://www.aftonbladet.se/sportbladet/hockey/a/GPGba6/bjorkloven-brot-sviten-forsta-segern-sedan-pa-over-en-manad",
+   "Forwarden klippte till direkt på en flippmacka från Lucas Ekeståhl Jonsson och LHC-keepern Waltteri Ignatjew hade inte en chans. Matchen gick till förlängning och där avgjorde hemmasonen Ekeståhl ...",
    false
   ],
   [
@@ -1632,66 +1692,6 @@
    "Aftonbladet",
    "https://www.aftonbladet.se/sportbladet/hockey/a/g37OrJ/bjorklovens-lucas-wallmark-talar-ut-om-tuffa-tiden",
    "UMEÅ. Han var stjärnförvärvet som skulle frälsa Björklöven. I stället har hösten utvecklats till ett skadehelvete för Lucas Wallmark, 31. – Det har varit tufft. Det är klart att det har varit väldigt ...",
-   false
-  ],
-  [
-   "2026-11-21T08:33:19.000Z",
-   "IF Björklöven - Örebro HK",
-   "TV4 Play",
-   "https://www.gp.se/sport/formsvaga-bjorkloven-moter-orebro-hockey-pa-hemmaplan.d2ebf1f2-db4e-5c93-94b5-c772deba3665",
-   "Den senaste tiden har varit riktigt tung för Björklöven i SHL och nu söker laget efter ett trendbrott hemma mot sjätteplacerade Örebro Hockey.",
-   false
-  ],
-  [
-   "2026-11-21T08:02:03.000Z",
-   "Björklöven förlänger segersviten",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMidkFVX3lxTFBIS0ZBWWw2U3ZSVmlkTU13YlpJU1hsZ2hRUXN6dDU4SE5yZU5wU2dLeHJIeU0zVkstNEdIbzlvT2xUMkNESVBSWTU0TlI5WUFydUFLblNVZDJpUXhFc2c2cXVCd2JpOUJ1NUZKMUEtQWNtX2xnSlE?oc=5"
-  ],
-  [
-   "2026-11-21T06:17:29.000Z",
-   "Inför match: Björklöven hoppas på ännu en seger i mot Sundsvall Hockey",
-   "Björklöven",
-   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5tZzRvY2pPZDR1S094Nlo3Um9jbU02RFpGS09pNklnelptTFU2TmxpN3YzTDB2X3hYUVYyUmN6eGc5cjRWcnBSVlFOWmlKckJKcERESE8zN1ZNeVVBa19yVVpWaw?oc=5"
-  ],
-  [
-   "2026-11-21T03:05:00.000Z",
-   "Björklöven–Linköping på TV 21 november: så ser du streckmötet",
-   "hurbra",
-   "https://hurbra.se/bjorkloven-linkoping-21-november-2026/",
-   "Björklöven–Linköping visas på TV4 Sport Live 3 och TV4 Play den 21 november 2026. Se nedsläpp, tabelläget och vad som står på spel i SHL.",
-   false
-  ],
-  [
-   "2026-11-21T02:34:00.000Z",
-   "Björklöven vill ta sig ur formsvackan hemma mot LHC",
-   "Göteborgs-Posten",
-   "https://www.gp.se/sport/bjorkloven-vill-ta-sig-ur-formsvackan-hemma-mot-lhc.7d0dc785-cb96-594d-916a-6e8ede2656ed",
-   "LHC har problem på bortaplan och har bara tagit två segrar den här säsongen, mot Växjö och HV71. Efter den här matchen möter Björklöven Frölunda (borta) 26 november, HV71 (borta) 28 november och ...",
-   false
-  ],
-  [
-   "2026-11-21T01:29:00.000Z",
-   "Tionde raka förlusten blir ett faktum i kväll",
-   "Expressen",
-   "https://www.expressen.se/sport/hockey/tips/tionde-raka-forlusten-blir-ett-faktum-i-kvall/",
-   "Nio raka förluster. Krisläget är ett faktum hos nykomlingarna. Björklöven står inför en tuff uppgift under lördagen. ANNONS: Lämna in expertens systemförslag (Svenska Spel) ...",
-   false
-  ],
-  [
-   "2026-11-21T01:00:00.000Z",
-   "Björklöven bröt jättesviten – slog Linköping i övertid",
-   "SVT",
-   "https://www.svt.se/sport/ishockey/bjorkloven-brot-jattesviten-slog-linkoping-i-overtid",
-   "10 oktober var senast Björklöven vann en SHL-match. Därefter kom nio raka nollpoängare innan segerns sötma återigen tog sig till Umeå när Linköping slogs på hemmaplan. – Otroligt skönt att se den gå i ...",
-   false
-  ],
-  [
-   "2026-11-20T23:06:00.000Z",
-   "Lättnaden – stoppar (?) Björklövens ras",
-   "Hockeysverige",
-   "https://hockeysverige.se/shl/bjorkloven-lhc-lattnaden-stoppar-ras-mal-ekestahl-jonsson-aEh577u2bI1S/",
-   "Björklöven undviker tio raka förluster i SHL. Efter en tidig uppförsbacke kunde Umeålaget till slut vända och besegra Linköping med 2–1 via förlängning hemma i Visionite Arena. – Man försöker inte ...",
    false
   ]
  ],
