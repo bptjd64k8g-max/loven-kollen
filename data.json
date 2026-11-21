@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T10:39:03.135Z",
- "updatedText": "21 november 2026, kl. 11.39",
+ "updated": "2026-11-21T10:57:30.460Z",
+ "updatedText": "21 november 2026, kl. 11.57",
  "results": [
   [
    "2026-09-19",
@@ -881,6 +881,14 @@
   ],
   [
    "2026-11-19",
+   "skada",
+   "Björklöven-värvningen borta resten av året",
+   "",
+   "Aftonbladet",
+   "https://news.google.com/rss/articles/CBMisAFBVV95cUxQaUI3Nk9ELWk5RDlHcVJxMkxOd2ZhbWpIcDY5UmxHcExjaDZEck9ZT291dE5yQUIwalliSTFXTUxQVm9xZFgxaFNyMl9DVmYyVmFDdGk2VDdWV25TVDhnTmVJNDJ2T2dvTkZvSGY4bkJmek5KOE9qb1BURGtsYWxsMlhOY0lYNHlXNG41Uzl1VHVTd3V2N0lwOWhvVzRmMWpXU29RYVNwZFZCNXNsM2hiWA?oc=5"
+  ],
+  [
+   "2026-11-19",
    "besked",
    "LHC-kaptenen saknades på träningen",
    "",
@@ -990,14 +998,6 @@
    "Klubben har förlängt huvudtränarens kontrakt med två säsonger, mitt i förlustsviten.",
    "Hockeysverige",
    "https://hockeysverige.se/nyheter/per-kentta-om-bjorkloven-varvning-skelleftea-nick-shore-ajZb00f06dF6/"
-  ],
-  [
-   "2026-10-19",
-   "skada",
-   "Björklöven-värvningen borta resten av året",
-   "",
-   "Aftonbladet",
-   "https://news.google.com/rss/articles/CBMisAFBVV95cUxQaUI3Nk9ELWk5RDlHcVJxMkxOd2ZhbWpIcDY5UmxHcExjaDZEck9ZT291dE5yQUIwalliSTFXTUxQVm9xZFgxaFNyMl9DVmYyVmFDdGk2VDdWV25TVDhnTmVJNDJ2T2dvTkZvSGY4bkJmek5KOE9qb1BURGtsYWxsMlhOY0lYNHlXNG41Uzl1VHVTd3V2N0lwOWhvVzRmMWpXU29RYVNwZFZCNXNsM2hiWA?oc=5"
   ],
   [
    "2026-10-19",
@@ -1491,6 +1491,12 @@
    "https://news.google.com/rss/articles/CBMifkFVX3lxTE44VnZ3bkU5cjJVanp2QzVDdnlTQ3IwTHFpMmRBazBUeGpidnlYRGhXTXJhNkdKb2tQdHVKNGF6WnZVbktMWjZ5d0MtanVuWWw0RzRYOE9XdFhoR2p6cURqNlZhN0dqYUtQRkdDNUNaRGJnZ1VLV0h0NDNsc2NsUQ?oc=5"
   ],
   [
+   "2026-11-20T10:39:55.000Z",
+   "Speltips: Björklöven - Linköping 21/11 \"Tunga poäng på spel i…",
+   "Bettingstugan.se",
+   "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBmVGdmeHBwdzZkZkVRVEc5LXF3MmpmUWVQYTNYTnJmNjZYUm9EdVBHOWVockJ5UEZWVm1GcV8wYzdwMnhZRG1acnpDbFNreVZQcFViMmR1STFkZmJuMzVZOE56MGM?oc=5"
+  ],
+  [
    "2026-11-20T09:46:19.000Z",
    "Kovacs nya kedja – på plats hos Björklöven",
    "Hockeynews",
@@ -1512,9 +1518,9 @@
    "2026-11-20T07:00:04.000Z",
    "Efter nio raka förluster – Ottosson om vad som saknas i Björklöven",
    "Hockeynews",
-   "https://hockeynews.se/nyheter/efter-nio-raka-forluster-ottosson-om-vad-som-saknas-i-bjorkloven",
-   "Björklöven har tappat greppet om den fina form som präglade säsongsinledningen. Nu kommer förlust efter förlust och efter torsdagens match mot Växjö är ...",
-   true
+   "https://www.aftonbladet.se/sportbladet/hockey/a/6PjnP0/bjorkloven-tappade-ledning-till-forlust-mot-orebro",
+   "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
+   false
   ],
   [
    "2026-11-20T06:06:33.000Z",
@@ -1616,9 +1622,7 @@
    "2026-11-19T20:24:04.000Z",
    "Beckmörkt för ”Löven” – nionde raka förlusten",
    "Västerbottens-Kuriren",
-   "https://www.gp.se/sport/beckmorkt-for-loven-nionde-raka-forlusten.082f1150-22d0-5e4b-86db-bbb6393c9ac7",
-   "Återkomsten till finrummet har inte blivit vad Björklöven hoppats på. Mot Växjö åkte nykomlingen på säsongens nionde raka förlust efter 1–3 på bortais.",
-   false
+   "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMjVwOEdja0Y2MVhKQ1Zrem80eXdCekZqVTFybDY0X01yUHNBYnpYcVNpSmRzR3ZBcjJfTDVkeDRsQVNJRXZIQmZPTDk3Y1o3cFUzOWNEek5xMm1jR2Vnam9WUTRNQmVsTnZLZkc3dEdRcEZsYl82aDBISkx1T2FpaGdn?oc=5"
   ],
   [
    "2026-11-19T20:15:20.000Z",
@@ -1635,12 +1639,6 @@
    "https://www.gp.se/sport/bjorkloven-vill-ta-sig-ur-formsvackan-borta-mot-vaxjo.c8b2bbb1-c25e-58e6-b761-d64a0381957f",
    "Inför mötet borta mot Växjö har laget åtta raka förluster och är nu på tolfte plats i tabellen. Det blev seger i den senaste matchen för Växjö, 2–1 mot Malmö på bortaplan. När lagen möttes senast, 1 ...",
    false
-  ],
-  [
-   "2026-11-19T20:13:10.000Z",
-   "Växjö Lakers fortsätter att vinna",
-   "Smålandsposten",
-   "https://news.google.com/rss/articles/CBMia0FVX3lxTE91Q2s1QzZPaDdfWE9qLTNFbWFqeHd6aHhvcXRsMkQ0TjVBcElkTmJ4WnVDWkNsR2xqTjVfTWEwbThoclJhZ3g5am85cmRqbldDaWMyTHUwYVA5Wll3YW0wZzRNTERxNml2X2FJ?oc=5"
   ]
  ]
 }
