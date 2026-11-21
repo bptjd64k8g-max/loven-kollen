@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T15:00:51.705Z",
- "updatedText": "21 november 2026, kl. 16.00",
+ "updated": "2026-11-21T15:45:42.737Z",
+ "updatedText": "21 november 2026, kl. 16.45",
  "results": [
   [
    "2026-09-19",
@@ -1508,17 +1508,19 @@
    "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdlpScUNwTnFLSFdNVGI1QUl3VUxubFV1Yk5RcFRwbWhINDRZcXFrSHRUYWxnUTh6MnJvSy1jTjVVYmlSVWVJVDBjd0lLMHNtTERRX0JrbXp6anhkMkJqZ19ZMHAtLUJQZWc2VEtoMHFjUUIwNlkxeDRORFFQQlFHLXZ4a2FRVlVYdXdPZHllbDh5a1g4QlpPQ2ZOZw?oc=5"
   ],
   [
-   "2026-11-21T09:03:31.000Z",
-   "Kritiserade backarna: ”Har de minst dåliga siffrorna”",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQmY0Ul9NbkpyNm44VnpqQUl0XzZDRXpzNElhSl9VTXVCTFVfRkNfTV8yUl9leHF0Q3V1U1BfYWxqN0ZveDItQXUwQkFnQTdMeGNIXzk1S0oydXhRalVKVDhyZHhaNU51S0pia0d1dFM1QldVVXp0ZUJPQjJFMklUWWpNOA?oc=5"
-  ],
-  [
    "2026-11-21T08:33:19.000Z",
    "IF Björklöven - Örebro HK",
    "TV4 Play",
    "https://www.gp.se/sport/formsvaga-bjorkloven-moter-orebro-hockey-pa-hemmaplan.d2ebf1f2-db4e-5c93-94b5-c772deba3665",
    "Den senaste tiden har varit riktigt tung för Björklöven i SHL och nu söker laget efter ett trendbrott hemma mot sjätteplacerade Örebro Hockey.",
+   false
+  ],
+  [
+   "2026-11-21T08:02:35.000Z",
+   "Björklöven U18 tog hem segern mot Skellefteå AIK J18",
+   "Västerbottens-Kuriren",
+   "https://www.svt.se/nyheter/lokalt/vasterbotten/folj-bjorkloven-och-skelleftea-aik-under-shl-sasongen?inlagg=4f1c71f26f087e7553ba5e5f2ecd2e2d",
+   "För första gången på 19 år spelar både Björklöven och Skellefteå AIK i seriespel i ishockey. Lördagen den 24 oktober möttes ärkerivalerna på isen.",
    false
   ],
   [
@@ -1564,6 +1566,12 @@
    "Krönika: \"Wallmark-effekten – en mirakelkur eller hägring i öknen?\"",
    "Västerbotten | Folkbladet",
    "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTS1mQ0pjY2tZRHduTkdHVEVCRkJlRmw0T0Rualp5Y2RNajRaXzJGdjE4MG83QlNPak1pQjc1SEthbUhWVExpbno1Wnh0R1hjTWlybm0yLUh2NnFRUElGaW12c25YYTQ1Z3RVZ1VIZ3ZXN3huU2pBdktoSjlfbG1yQS04dldOaXQyaWhmanRGSU1wNHF3aVJzaA?oc=5"
+  ],
+  [
+   "2026-11-20T15:03:31.000Z",
+   "Kritiserade backarna: ”Har de minst dåliga siffrorna”",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQmY0Ul9NbkpyNm44VnpqQUl0XzZDRXpzNElhSl9VTXVCTFVfRkNfTV8yUl9leHF0Q3V1U1BfYWxqN0ZveDItQXUwQkFnQTdMeGNIXzk1S0oydXhRalVKVDhyZHhaNU51S0pia0d1dFM1QldVVXp0ZUJPQjJFMklUWWpNOA?oc=5"
   ],
   [
    "2026-11-20T10:42:30.000Z",
@@ -1625,6 +1633,12 @@
   ],
   [
    "2026-11-19T22:20:00.000Z",
+   "Live: Löven gör en ändring",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMidEFVX3lxTE92N3Vrd1hqNWZhaHBqd1lBR1dScGZYM2w1ckFKTmFpNS1QZzQ1ZWY0TV9rem1oOXY5a05MbWRxT3I4QkVsRkR4Y2Uwczl3bURYYmRjM0NTY0RqTGV4ZkZpalgwMXdBZi1KUldsWmtLU3p1OTdV?oc=5"
+  ],
+  [
+   "2026-11-19T22:20:00.000Z",
    "LHC-kaptenen saknades på träningen",
    "Västerbottens-Kuriren",
    "https://news.google.com/rss/articles/CBMidEFVX3lxTFB4NjFaUTNUTUszNTB5d2RkZjNHVk1XaUxDekpzRVgxVHpTaTdXT2ItdGJrcUdpUGtFdU9LWmxCckZhMEJWZ2hTRjVBN2hUQkRjaGxucXdiRmc4R1lsMlFnaDh2ckFXNTMyU2NZMWlLTUdKNWlT?oc=5"
@@ -1654,18 +1668,152 @@
    "Hyllar krislagets back: ”Det värmer ett hockeyhjärta”",
    "Omni",
    "https://news.google.com/rss/articles/CBMigAFBVV95cUxPMUp0YjlRXzZIQnQ0ZGVnMU1Dbm1ISGNzUDBMa3k2S3NGckxLX1ZXelpRdm5jclBZRmZsQlNKUzRJTWR5cmF5Y1I4TFl6bk1acVNiTlEtRXRqb1pNUjVXakh2ejJUemp0VV9qTlZVNnJPMHRHcVlaNWwxU3h1OFhMTw?oc=5"
-  ],
-  [
-   "2026-11-19T21:24:03.000Z",
-   "Vi har börjat att se ljuset i tunneln.",
-   "SvenskaFans.com",
-   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNnFMOWllVG5kdDhRcmx0TFo1cW5TVm0zb05adzNfNF95NXBkdmNtUWNKTWlheGtHYUZ6ZUQ4d09kN0cxMUZjUUJFT01WRnJIa2EtZldqcmRGNVloQnZRVUlyRk1zRmxjdXY5QjZMY2RscDlXT3JxM3FsNTd0SHZ5SC1CWklyMlZP?oc=5"
-  ],
-  [
-   "2026-11-19T21:16:57.000Z",
-   "”Umeå har en speciell plats i mitt hjärta”",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLVJIZWlhRVh1dnRod1U5dXFSSS01a1JNU2NHQkNqMV85a1UyR3p2LUFhZ2hkenUtQWlKbWFYOEJrUlFwZzRqSkJYVlljWnNxWjl5bW9oMlB3c3hYbHJrZGJSY1pOdHZfeWtYTWZ6dDN2bl9FX3BoNVhZR3hrOEtjclA3d3BrQnRBOUtiVmQ4QmdqMHc?oc=5"
   ]
- ]
+ ],
+ "lineup": {
+  "date": "2026-11-21",
+  "opp": "Linköping HC",
+  "groups": [
+   {
+    "label": "Målvakter",
+    "p": [
+     [
+      30,
+      "Lassi Lehtinen",
+      1
+     ],
+     [
+      50,
+      "Frans Tuohimaa",
+      0
+     ]
+    ]
+   },
+   {
+    "label": "Femma 1",
+    "p": [
+     [
+      7,
+      "Topi Niemelä",
+      1
+     ],
+     [
+      16,
+      "Lukas Ekeståhl-Jonsson",
+      1
+     ],
+     [
+      71,
+      "Gustav Possler",
+      1
+     ],
+     [
+      88,
+      "Chris DiDomenico",
+      1
+     ],
+     [
+      86,
+      "Robin Kovács",
+      1
+     ]
+    ]
+   },
+   {
+    "label": "Femma 2",
+    "p": [
+     [
+      44,
+      "Josiah Didier",
+      0
+     ],
+     [
+      11,
+      "Tarmo Reunanen",
+      0
+     ],
+     [
+      34,
+      "Phil Di Giuseppe",
+      0
+     ],
+     [
+      93,
+      "Tristen Robins",
+      0
+     ],
+     [
+      10,
+      "Marcus Nilsson",
+      0
+     ]
+    ]
+   },
+   {
+    "label": "Femma 3",
+    "p": [
+     [
+      47,
+      "Marcus Björk",
+      0
+     ],
+     [
+      24,
+      "Linus Cronholm",
+      0
+     ],
+     [
+      56,
+      "Fredrik Forsberg",
+      0
+     ],
+     [
+      18,
+      "Axel Ottosson",
+      0
+     ],
+     [
+      91,
+      "Oscar Tellström",
+      0
+     ]
+    ]
+   },
+   {
+    "label": "Femma 4",
+    "p": [
+     [
+      64,
+      "Anton Malmström",
+      0
+     ],
+     [
+      37,
+      "Lenni Killinen",
+      0
+     ],
+     [
+      33,
+      "Albin Lundin",
+      0
+     ],
+     [
+      39,
+      "Joel Mustonen",
+      0
+     ]
+    ]
+   },
+   {
+    "label": "Reserver",
+    "p": [
+     [
+      14,
+      "Douglas Flygt",
+      0
+     ]
+    ]
+   }
+  ]
+ }
 }
