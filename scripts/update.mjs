@@ -448,9 +448,11 @@ await source("uppställning", async () => {
     if (/coach/i.test(lab)) break;
     if (lab) { cur = { label: LABEL[lab] || lab, p: [] }; groups.push(cur); }
     if (!cur) continue;
+    // I femmorna står backarna på raden med etiketten och forwards på raden under.
+    const pos = /^Femma/.test(cur.label) ? (lab ? "B" : "F") : "";
     $(r).find(".lineUpPlayer").each((_, p) => {
       const m = clean($(p).text()).match(/^(\d+)\.\s*(.+?)(?:\s*\(\w+\))?$/);
-      if (m) cur.p.push([+m[1], rosterName(nameOf(m[2])), $(p).hasClass("red") ? 1 : 0]);
+      if (m) cur.p.push([+m[1], rosterName(nameOf(m[2])), $(p).hasClass("red") ? 1 : 0, pos]);
     });
   }
   const ORDER = ["Målvakter", "Femma 1", "Femma 2", "Femma 3", "Femma 4", "Reserver"], ix = l => (ORDER.indexOf(l) + 99) % 99;

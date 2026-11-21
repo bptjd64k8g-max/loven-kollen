@@ -468,8 +468,9 @@ function renderLineup(){
   const gk = L.groups.find(g => g.label === "Målvakter");
   const starter = gk && (gk.p.find(x => x[2]) || null);
   const rows = L.groups.filter(g => g.label !== "Målvakter").map(g => {
-    const body = /^Femma/.test(g.label) && g.p.length > 3
-      ? `${g.p.slice(0,3).map(p).join(", ")}<br><small>Backar:</small> ${g.p.slice(3).map(p).join(", ")}`
+    const B = g.p.filter(x => x[3] === "B"), F = g.p.filter(x => x[3] === "F");
+    const body = B.length || F.length
+      ? `${F.length ? `<small>Forwards:</small> ${F.map(p).join(", ")}` : ""}${B.length ? `<br><small>Backar:</small> ${B.map(p).join(", ")}` : ""}`
       : g.p.map(p).join(", ");
     return `<li><b>${esc(g.label)}</b><div>${body}</div></li>`;
   }).join("");

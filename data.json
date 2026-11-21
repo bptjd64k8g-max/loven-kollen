@@ -1688,12 +1688,14 @@
      [
       30,
       "Lassi Lehtinen",
-      1
+      1,
+      ""
      ],
      [
       50,
       "Frans Tuohimaa",
-      0
+      0,
+      ""
      ]
     ]
    },
@@ -1703,27 +1705,32 @@
      [
       7,
       "Topi Niemelä",
-      1
+      1,
+      "B"
      ],
      [
       16,
       "Lukas Ekeståhl-Jonsson",
-      1
+      1,
+      "B"
      ],
      [
       71,
       "Gustav Possler",
-      1
+      1,
+      "F"
      ],
      [
       88,
       "Chris DiDomenico",
-      1
+      1,
+      "F"
      ],
      [
       86,
       "Robin Kovács",
-      1
+      1,
+      "F"
      ]
     ]
    },
@@ -1733,27 +1740,32 @@
      [
       44,
       "Josiah Didier",
-      0
+      0,
+      "B"
      ],
      [
       11,
       "Tarmo Reunanen",
-      0
+      0,
+      "B"
      ],
      [
       34,
       "Phil Di Giuseppe",
-      0
+      0,
+      "F"
      ],
      [
       93,
       "Tristen Robins",
-      0
+      0,
+      "F"
      ],
      [
       10,
       "Marcus Nilsson",
-      0
+      0,
+      "F"
      ]
     ]
    },
@@ -1763,27 +1775,32 @@
      [
       47,
       "Marcus Björk",
-      0
+      0,
+      "B"
      ],
      [
       24,
       "Linus Cronholm",
-      0
+      0,
+      "B"
      ],
      [
       56,
       "Fredrik Forsberg",
-      0
+      0,
+      "F"
      ],
      [
       18,
       "Axel Ottosson",
-      0
+      0,
+      "F"
      ],
      [
       91,
       "Oscar Tellström",
-      0
+      0,
+      "F"
      ]
     ]
    },
@@ -1793,22 +1810,26 @@
      [
       64,
       "Anton Malmström",
-      0
+      0,
+      "B"
      ],
      [
       37,
       "Lenni Killinen",
-      0
+      0,
+      "F"
      ],
      [
       33,
       "Albin Lundin",
-      0
+      0,
+      "F"
      ],
      [
       39,
       "Joel Mustonen",
-      0
+      0,
+      "F"
      ]
     ]
    },
@@ -1818,7 +1839,8 @@
      [
       14,
       "Douglas Flygt",
-      0
+      0,
+      ""
      ]
     ]
    }
