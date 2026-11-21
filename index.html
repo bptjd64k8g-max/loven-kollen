@@ -398,7 +398,7 @@ const studioText = u => {
   if (ms <= 0) return `<p class="watch" style="font-weight:600">🎙️ Studiosändningen är igång${t.kanal ? " i " + esc(t.kanal) : ""} (startade ${kl})</p>`;
   const H = Math.floor(ms/36e5), M = Math.floor(ms/6e4)%60, S = Math.floor(ms/1e3)%60;
   const left = H >= 24 ? `${Math.floor(H/24)} d ${H%24} tim` : H ? `${H} tim ${M} min` : `${M} min ${String(S).padStart(2,"0")} sek`;
-  return `<p class="watch" style="font-weight:600">🎙️ Studiosändningen börjar ${kl} – om ${left}</p>`;
+  return `<p class="watch" style="font-weight:600">🎙️ Studiosändningen börjar ${kl}${t.kanal ? " i " + esc(t.kanal) : ""} – om ${left}</p>`;
 };
 const tvText = u => { const t = u[5]; if (!t || !t.kanal) return ""; return `${t.kanal}${t.start ? ", sändningen börjar " + t.start.replace(":", ".") : ""}`; };
 let showAllUp = false, timer;
@@ -508,7 +508,12 @@ function tick(d){
     const D = Math.floor(ms/864e5), H = Math.floor(ms/36e5)%24, M = Math.floor(ms/6e4)%60, S = Math.floor(ms/1e3)%60;
     const parts = D ? [[D,"dagar"],[H,"tim"],[M,"min"]] : [[H,"tim"],[M,"min"],[S,"sek"]];
     cd.innerHTML = `<div class="count" role="timer" aria-label="Tid kvar till nedsläpp">${parts.map(([v,l])=>`<div><b>${String(v).padStart(2,"0")}</b><small>${l}</small></div>`).join("")}</div>
-      ${studioText(NEXT)}<p class="watch">${tvText(NEXT) ? "📺 " + esc(tvText(NEXT)) : "Sänds på TV4 Play. Kanal och sändningsstart läggs in på matchdagen."}${ticketText(NEXT) ? "<br>🎟️ " + esc(ticketText(NEXT)) : (NEXT[2] === "H" ? "<br>🎟️ Biljettläget läggs in när det finns uppgifter" : "")}</p>`;
+      ${studioText(NEXT)}${(() => { // Med studioraden står kanal och tid redan där – visa då bara biljetterna här
+        const st = studioText(NEXT), tv = st ? "" : (tvText(NEXT) ? "📺 " + esc(tvText(NEXT)) : "Sänds på TV4 Play. Kanal och sändningsstart läggs in på matchdagen.");
+        const tk = ticketText(NEXT) ? "🎟️ " + esc(ticketText(NEXT)) : (NEXT[2] === "H" ? "🎟️ Biljettläget läggs in när det finns uppgifter" : "");
+        const body = [tv, tk].filter(Boolean).join("<br>");
+        return body ? `<p class="watch">${body}</p>` : "";
+      })()}`;
   };
   run(); timer = setInterval(run, 1000);
 }
