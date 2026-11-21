@@ -458,7 +458,10 @@ await source("uppställning", async () => {
   const ORDER = ["Målvakter", "Femma 1", "Femma 2", "Femma 3", "Femma 4", "Reserver"], ix = l => (ORDER.indexOf(l) + 99) % 99;
   const g = groups.filter(x => x.p.length).sort((a, b) => ix(a.label) - ix(b.label));
   if (!g.some(x => x.label === "Målvakter") || g.filter(x => /^Femma/.test(x.label)).length < 2) { log("   uppställningen är inte komplett än"); return; }
-  D.lineup = { date: n[0], opp: n[3], groups: g };
+  // Spelare i truppen som inte finns i uppställningen, med orsak från truppens status (skador m.m.) om den finns.
+  const inL = new Set(g.flatMap(x => x.p.map(p => p[1])));
+  const out = Object.values(D.roster || {}).flat().filter(p => !inL.has(p[1])).map(p => [p[0], p[1], p[2] || ""]);
+  D.lineup = { date: n[0], opp: n[3], groups: g, out };
   log(`   uppställning: ${g.map(x => `${x.label} ${x.p.length}`).join(", ")}`);
 });
 

@@ -477,6 +477,7 @@ function renderLineup(){
   box.innerHTML = `<div class="lineup"><p class="lu-h">Laguppställning</p>
     ${gk ? `<p class="lu-gk">🥅 Målvakt: ${starter ? `<span class="st">${starter[0]} ${esc(starter[1])}</span>` : ""}${gk.p.filter(x => x !== starter).length ? ` <small>(${starter ? "reserv" : ""} ${gk.p.filter(x => x !== starter).map(x => `${x[0]} ${esc(x[1])}`).join(", ")})</small>` : ""}</p>` : ""}
     <ol>${rows}</ol>
+    ${L.out && L.out.length ? `<p class="lu-gk" style="margin:10px 0 0">🚑 Borta: ${L.out.map(x => `${x[0]} ${esc(x[1])}${x[2] ? ` <small>(${esc(x[2])})</small>` : ` <small>(orsak okänd)</small>`}`).join(", ")}</p>` : ""}
     <p class="lu-note">${L.groups.some(g => g.p.some(x => x[2])) ? "Gult = startar matchen. " : ""}Källa: stats.swehockey.se</p></div>`;
 }
 function tick(d){
