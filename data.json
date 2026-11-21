@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T23:02:25.211Z",
- "updatedText": "22 november 2026, kl. 00.02",
+ "updated": "2026-11-21T23:39:05.728Z",
+ "updatedText": "22 november 2026, kl. 00.39",
  "results": [
   [
    "2026-09-19",
@@ -878,7 +878,7 @@
    "2026-11-21",
    "besked",
    "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
-   "Efter nio raka förluster väntar en match som kan få stor betydelse för Björklövens fortsatta SHL-säsong. Nu berättar Magnus Bogren om pressen, ...",
+   "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
    "Hockeynews",
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
   ],
@@ -1535,12 +1535,6 @@
    "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYmN1MS16MFp6d2hYY2pNWGxuNURQaHBJMjFWbVZHM1A5dl9fZktGd2xzdkEtNXk1NWhVU3Z0cEk5bUpLeVJhZkFwaFhTV1ZLT0tEZUx1MFFlUF8teTl5UXRLTGxWeG1DMkx5MUZGOVU1aFZ1ZmhSLVZhTlBiUzRTVA?oc=5"
   ],
   [
-   "2026-11-21T20:30:15.000Z",
-   "Vann igen efter 42 dagar: ”Nästan glömt bort hur det känns”",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQlEyUi0yU0ZBZVZ5MmFnQVYwc1IxclFTdUtUVkRwdlZiZU9WWkVJNE11MmxhYllBOG1aV0NQTWstMWdlSHJDT0FiN2ROV25kMmUzcjNGWWtiT0lSUnRaUE9TRXFoQTVyY2ZCMm15bXlqWVVjSjdMaEhLUGlYNFNsT0ROTnljNWtnQkRocWhJcHBjUTZJemc?oc=5"
-  ],
-  [
    "2026-11-21T20:28:26.000Z",
    "Fem punkter: En seger som kan få Löven att lyfta",
    "Aftonbladet",
@@ -1623,12 +1617,18 @@
    "https://news.google.com/rss/articles/CBMiogFBVV95cUxQOGhSa3Y1d29nV3M5ZkRfcUdBdFFQUWpSMFNtbjlSd0JFMlhXMUpSUFZXc2NVR0hiWFpRdDBBd0VtY3lZdE53OThoSjVyMUlSQTRDcEJiNWFIS0hfOExaS09Ca2JQSVZjZEhmakZMaGRUUXlIMzVObDJ1aDBON29DazBocndrWlJWX3ktY0NWNC1Ma3V3bmVHQVhQY0tRRklBLUE?oc=5"
   ],
   [
+   "2026-11-21T16:17:55.000Z",
+   "Vann igen efter 42 dagar: ”Nästan glömt bort hur det känns”",
+   "Västerbotten | Folkbladet",
+   "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbE1sdU5tSEpRdFRUUTlEbm5IeUNRUlYwVi1VZl9RWXdsRjR3VERzWGM0NnNwVWNhcWw0MUxkNWozd3RDUlRPemhiUUwzRkpleUFiVGpoYjY5a3B4NUdPc25wWUNOSURYWmFLc21weGZoUUFkZTRVQnc2Z0RqWG84SXJXRWNIT2xUOTNocGVpNkZZX0RSaHlZZG92bWdDWWxZ?oc=5"
+  ],
+  [
    "2026-11-21T15:21:34.000Z",
    "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
    "Hockeynews",
-   "https://hockeynews.se/nyheter/stor-intervju-med-magnus-bogren-infor-angestmotet-med-lhc",
-   "Efter nio raka förluster väntar en match som kan få stor betydelse för Björklövens fortsatta SHL-säsong. Nu berättar Magnus Bogren om pressen, ...",
-   true
+   "https://www.aftonbladet.se/sportbladet/hockey/a/6PjnP0/bjorkloven-tappade-ledning-till-forlust-mot-orebro",
+   "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
+   false
   ],
   [
    "2026-11-21T14:10:18.000Z",
@@ -1654,17 +1654,15 @@
   ],
   [
    "2026-11-21T11:27:49.000Z",
-   "SHL på TV 21 november 2026 – matcher och kanaler",
+   "SHL på TV i dag 21 november – alla matcher och försnack",
    "HurBra.se",
    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4zcVh2TU05UUk5WkR4QTZod0phcHlqMmR3NEFHVUJnNTVqck1RYmp0WjE5d0p6cDgzY0Q4OXVDSnBMblQtNThTcXJ2NVRYMFYtN0d5SmFRaVE?oc=5"
   ],
   [
-   "2026-11-21T11:26:15.000Z",
-   "SHL på TV i dag 21 november – alla matcher och försnack",
+   "2026-11-21T11:27:49.000Z",
+   "SHL på TV 21 november 2026 – matcher och kanaler",
    "HurBra.se",
-   "https://hurbra.se/shl-pa-tv-21-november-2026/",
-   "SHL på TV lördag 21 november 2026: alla sju matcher med starttider, kanaler och streaming på TV4 Play. Läs försnack, tabell och rekordjakten.",
-   false
+   "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4zcVh2TU05UUk5WkR4QTZod0phcHlqMmR3NEFHVUJnNTVqck1RYmp0WjE5d0p6cDgzY0Q4OXVDSnBMblQtNThTcXJ2NVRYMFYtN0d5SmFRaVE?oc=5"
   ],
   [
    "2026-11-21T11:24:00.000Z",
