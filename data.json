@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T10:11:54.606Z",
- "updatedText": "21 november 2026, kl. 11.11",
+ "updated": "2026-11-21T10:39:03.135Z",
+ "updatedText": "21 november 2026, kl. 11.39",
  "results": [
   [
    "2026-09-19",
@@ -1430,7 +1430,8 @@
   "spelarfakta": "ok",
   "nyckeltal": "ok",
   "nyheter": "ok",
-  "tv": "ok"
+  "tv": "ok",
+  "uppställning": "ok"
  },
  "attendance": {
   "avg": 5302,
@@ -1448,6 +1449,22 @@
    "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQmY0Ul9NbkpyNm44VnpqQUl0XzZDRXpzNElhSl9VTXVCTFVfRkNfTV8yUl9leHF0Q3V1U1BfYWxqN0ZveDItQXUwQkFnQTdMeGNIXzk1S0oydXhRalVKVDhyZHhaNU51S0pia0d1dFM1QldVVXp0ZUJPQjJFMklUWWpNOA?oc=5"
   ],
   [
+   "2026-11-21T08:33:19.000Z",
+   "IF Björklöven - Örebro HK",
+   "TV4 Play",
+   "https://www.gp.se/sport/formsvaga-bjorkloven-moter-orebro-hockey-pa-hemmaplan.d2ebf1f2-db4e-5c93-94b5-c772deba3665",
+   "Den senaste tiden har varit riktigt tung för Björklöven i SHL och nu söker laget efter ett trendbrott hemma mot sjätteplacerade Örebro Hockey.",
+   false
+  ],
+  [
+   "2026-11-21T06:17:29.000Z",
+   "Inför match: Björklöven hoppas på ännu en seger i mot Sundsvall Hockey",
+   "Björklöven",
+   "https://www.svenskafans.com/ishockey/infor-bjorkloven-brynas-703320",
+   "Brynäs har tagit sig upp till Umeå för att ikväll ställas mot Björklöven i Visionite Arena. Aldrig förr har det varit viktigare att hålla fötterna på jorden, och undvika hybris.",
+   false
+  ],
+  [
    "2026-11-21T01:29:00.000Z",
    "Tionde raka förlusten blir ett faktum i kväll",
    "Expressen",
@@ -1462,10 +1479,10 @@
    "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTVlxUkVhWFJiSVJ5cHFJN19DZUV2eUN4RV9CX1dtTHV1X1NpLXFMZTRBck1XaTJDQk9qZUhHX3I2d3RwVm1Na2hNV2kzVXN3NTdKVGJPeUVMVkZlbnY0UzAyMEhDNDFOZmVlemtUZ05wT1l5RUF1NmVJTXo3SDIwdXdJaTZSTDJ3YnAzVlNZMkZoUDA?oc=5"
   ],
   [
-   "2026-11-20T17:27:54.000Z",
+   "2026-11-20T19:21:25.000Z",
    "Krönika: \"Wallmark-effekten – en mirakelkur eller hägring i öknen?\"",
-   "Västerbotten | Folkbladet",
-   "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTS1mQ0pjY2tZRHduTkdHVEVCRkJlRmw0T0Rualp5Y2RNajRaXzJGdjE4MG83QlNPak1pQjc1SEthbUhWVExpbno1Wnh0R1hjTWlybm0yLUh2NnFRUElGaW12c25YYTQ1Z3RVZ1VIZ3ZXN3huU2pBdktoSjlfbG1yQS04dldOaXQyaWhmanRGSU1wNHF3aVJzaA?oc=5"
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOWdTOTlxUUxYXzl1MzUzUHk4V09HUEg1WHlGbW5NVjJwSjZXZFlQVFVKbmducmZzdmFCbElqR1VhU0RQTlhRcnBQLWxWOHROWDBiWWtfWk03ekhNNlF6bXdvVy10NXB4aklFcS05MDBxdmF2dnFLTWVfSUw4dVdlTU9HNl9iUnkyUm9KNkZR?oc=5"
   ],
   [
    "2026-11-20T10:42:30.000Z",
@@ -1495,9 +1512,15 @@
    "2026-11-20T07:00:04.000Z",
    "Efter nio raka förluster – Ottosson om vad som saknas i Björklöven",
    "Hockeynews",
-   "https://www.aftonbladet.se/sportbladet/hockey/a/6PjnP0/bjorkloven-tappade-ledning-till-forlust-mot-orebro",
-   "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
-   false
+   "https://hockeynews.se/nyheter/efter-nio-raka-forluster-ottosson-om-vad-som-saknas-i-bjorkloven",
+   "Björklöven har tappat greppet om den fina form som präglade säsongsinledningen. Nu kommer förlust efter förlust och efter torsdagens match mot Växjö är ...",
+   true
+  ],
+  [
+   "2026-11-20T06:06:33.000Z",
+   "Svaret efter nionde raka: ”För dåligt”",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa3ZLV3VlU1BVRThrVkVJU2pwLXVUTEtpSG1zdVgwTGJXaHlLQk9ocHVxNDlMcF9BSlg1Q2tyLUs2cmsta1hNNk5KTTV1X0ZHQzhsUUtsalR1bGpoNnR6V1M2bTRKeVJPZmdzMjZJenY0VW5yVlhBVzE2VUpCU3dUVVZ3S0ZvakVK?oc=5"
   ],
   [
    "2026-11-20T05:39:44.000Z",
@@ -1530,12 +1553,6 @@
    "Oväntade hyllningen: ”Värmer ett hockeyhjärta”",
    "Västerbotten | Folkbladet",
    "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRXRQQWYxRkVQNmhGTGhBa3loR1BVSTJodnBqZS0xczNtNTFzLWJUanNmSUtCeFRkV3VwNmZGamY4VGNaLUhtZ0VWcjh6bG9PXzJQSnM3NEZHRVE4T0xRc2d4SlpULV80Xy05VUFXVXdrMExBZFRPbVBMcGQ1SFdncnRJZjFOWGtGd211Yg?oc=5"
-  ],
-  [
-   "2026-11-19T21:38:39.000Z",
-   "Svaret efter nionde raka: ”För dåligt”",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa3ZLV3VlU1BVRThrVkVJU2pwLXVUTEtpSG1zdVgwTGJXaHlLQk9ocHVxNDlMcF9BSlg1Q2tyLUs2cmsta1hNNk5KTTV1X0ZHQzhsUUtsalR1bGpoNnR6V1M2bTRKeVJPZmdzMjZJenY0VW5yVlhBVzE2VUpCU3dUVVZ3S0ZvakVK?oc=5"
   ],
   [
    "2026-11-19T21:35:25.000Z",
@@ -1624,18 +1641,6 @@
    "Växjö Lakers fortsätter att vinna",
    "Smålandsposten",
    "https://news.google.com/rss/articles/CBMia0FVX3lxTE91Q2s1QzZPaDdfWE9qLTNFbWFqeHd6aHhvcXRsMkQ0TjVBcElkTmJ4WnVDWkNsR2xqTjVfTWEwbThoclJhZ3g5am85cmRqbldDaWMyTHUwYVA5Wll3YW0wZzRNTERxNml2X2FJ?oc=5"
-  ],
-  [
-   "2026-11-19T20:13:07.000Z",
-   "Tunga sviten intakt – Björklöven föll i nionde raka",
-   "Sveriges Radio",
-   "https://news.google.com/rss/articles/CBMijwFBVV95cUxQLUN0MHJQR1k3MDZndGc5dTJydGtVM1BQUW9vYlhmUlpBX2FyRDcyTGdCY1RVZVVhU1dMTGJxeUNFN1lpNEFwNl9YYThUTGVzWGl3WGtBU0JWWUtodnZ5MW15WjQ2Rm4wVUdyQjlWaDNCRGxQU3N4Y1NuN19tMEJXRUVRMUhaTVhwRVJjd20wZw?oc=5"
-  ],
-  [
-   "2026-11-19T20:06:20.000Z",
-   "ANALYS: Växjös förvandling – här är den stora skillnaden",
-   "Hockeynews",
-   "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTGtpX3FLLVVvaDZPU2dQR01xYnI5NWphOW9aWHFLN2g0c1FHakdpU1BaSWVYa2FnWXVBbnRtZENKb3FzTERaUldYcHNRU2V0SEhYb3A3cmpVVlFMYVo5a3U4Y05TUmhFcXZ6Q0NDQkxVc253WDc3dTBNVExEdnpkMXNwU1BYejBHZ2Q4?oc=5"
   ]
  ]
 }
