@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T17:09:32.730Z",
- "updatedText": "21 november 2026, kl. 18.09",
+ "updated": "2026-11-21T17:46:17.624Z",
+ "updatedText": "21 november 2026, kl. 18.46",
  "results": [
   [
    "2026-09-19",
@@ -452,13 +452,13 @@
   ],
   [
    "Frölunda HC",
-   19,
-   11,
+   20,
+   12,
    2,
    1,
    5,
-   22,
-   38
+   24,
+   41
   ],
   [
    "Skellefteå AIK",
@@ -491,13 +491,33 @@
    27
   ],
   [
+   "Luleå HF",
+   18,
+   7,
+   1,
+   3,
+   7,
+   0,
+   26
+  ],
+  [
+   "Timrå IK",
+   18,
+   6,
+   3,
+   1,
+   8,
+   -3,
+   25
+  ],
+  [
    "Brynäs IF",
-   17,
+   18,
    7,
    1,
    1,
-   8,
-   12,
+   9,
+   10,
    24
   ],
   [
@@ -512,42 +532,22 @@
   ],
   [
    "Rögle BK",
-   18,
+   19,
    6,
    2,
    2,
-   8,
-   -7,
+   9,
+   -8,
    24
   ],
   [
-   "Luleå HF",
-   17,
-   6,
-   1,
-   3,
-   7,
-   -3,
-   23
-  ],
-  [
-   "Timrå IK",
-   17,
-   5,
-   3,
-   1,
-   8,
-   -4,
-   22
-  ],
-  [
    "Djurgårdens IF",
-   18,
+   19,
    4,
    3,
    2,
-   9,
-   -16,
+   10,
+   -19,
    20
   ],
   [
@@ -877,19 +877,19 @@
  "feed": [
   [
    "2026-11-21",
-   "klart",
-   "Björklöven förlänger segersviten",
-   "",
-   "Västerbotten | Folkbladet",
-   "https://news.google.com/rss/articles/CBMigAFBVV95cUxQbC1aeFJnZW9Rd3p5M2RXWF8wWUtKSUljSHJadkxHZ1RVbm80a0ZXYnpGN01wN3RCX1c5SkRSV0t5anVTMWViZHk2dUdIUFFHYU1YX3paQl9hMllXa3NoYmJTSWdUWlpCQlFna2dGQWJ4dVNlX3Y0TzdYQlQ5RU1wcA?oc=5"
-  ],
-  [
-   "2026-11-21",
    "besked",
    "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
    "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
    "Hockeynews",
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
+  ],
+  [
+   "2026-11-21",
+   "klart",
+   "Björklöven förlänger segersviten",
+   "",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMidkFVX3lxTFBIS0ZBWWw2U3ZSVmlkTU13YlpJU1hsZ2hRUXN6dDU4SE5yZU5wU2dLeHJIeU0zVkstNEdIbzlvT2xUMkNESVBSWTU0TlI5WUFydUFLblNVZDJpUXhFc2c2cXVCd2JpOUJ1NUZKMUEtQWNtX2xnSlE?oc=5"
   ],
   [
    "2026-11-21",
@@ -1488,6 +1488,12 @@
  },
  "news": [
   [
+   "2026-11-21T17:23:25.000Z",
+   "Segersviten vid liv för Björklöven dam",
+   "Västerbotten | Folkbladet",
+   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQ2RRVjBnZXdzUUJoaU1WZnhQTmFRMl9QSWNuaDVoWkNDendsdEVOcGZzbEQ5RGY4UktXZE9TV05uang4dnFSUnZTQ0JweldlUUVjb21xbXlOMm1rRE1CbUFuQ3QzeGM1LTlGOXBsUzNZX1hTbVhUWGxteUVVaGV1TE9XYVpzaGgw?oc=5"
+  ],
+  [
    "2026-11-21T16:50:02.000Z",
    "Förlust för Sundsvall Hockey hemma mot Björklöven",
    "Sundsvalls Tidning",
@@ -1498,12 +1504,6 @@
    "Björklöven vann på nytt – 4-0 mot Sundsvall Hockey",
    "Björklöven",
    "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9mcUU4dTVKZ3FvSmI2STRxaU9MWWIxaldTTW5KdkhCSWw5SUItZjB3QzFIZFZfVVZmOEVvNGJmcTF5V09BNUtwM2ZrOTF6YVl5RnB0OGZqZDVFcWZmM0o5bzl5NA?oc=5"
-  ],
-  [
-   "2026-11-21T16:32:27.000Z",
-   "Segersviten vid liv för Björklöven dam",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMifkFVX3lxTE15U3llVld6bDlQNE1QOE1wMWJPdkxBbjNJNU10QnJUaG1wWTFzbmdJT3FxTDdDTVJnYjNxS3R0UnNIQlFFcmJtc2ZmNG5feFE1TFRCeERvM2FvWlYtM0NtNVQ0Ym1Nc0FwOHBIVG5CdkRUTF9qckREWTd3OFhwUQ?oc=5"
   ],
   [
    "2026-11-21T15:21:34.000Z",
@@ -1520,10 +1520,10 @@
    "https://news.google.com/rss/articles/CBMickFVX3lxTE5GQ3ZaX2gxYmlfZWRVeE5SRm81a2cwaUw3Ul9zbHpQNHhyTUNUd0NYVFJVa09ubFNtYkFYVTA1MjhJVnhGZnppaE9YWFZLTHR2ZDNCNVFPRU40dkpDa0xpeWtsQ1djYWdzVVFOckd3WDhCdw?oc=5"
   ],
   [
-   "2026-11-21T13:58:41.000Z",
-   "Björklöven förlänger segersviten",
-   "Västerbotten | Folkbladet",
-   "https://news.google.com/rss/articles/CBMigAFBVV95cUxQbC1aeFJnZW9Rd3p5M2RXWF8wWUtKSUljSHJadkxHZ1RVbm80a0ZXYnpGN01wN3RCX1c5SkRSV0t5anVTMWViZHk2dUdIUFFHYU1YX3paQl9hMllXa3NoYmJTSWdUWlpCQlFna2dGQWJ4dVNlX3Y0TzdYQlQ5RU1wcA?oc=5"
+   "2026-11-21T11:27:49.000Z",
+   "SHL på TV 21 november 2026 – matcher och kanaler",
+   "HurBra.se",
+   "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4zcVh2TU05UUk5WkR4QTZod0phcHlqMmR3NEFHVUJnNTVqck1RYmp0WjE5d0p6cDgzY0Q4OXVDSnBMblQtNThTcXJ2NVRYMFYtN0d5SmFRaVE?oc=5"
   ],
   [
    "2026-11-21T11:26:15.000Z",
@@ -1538,6 +1538,12 @@
    "Centern inför ödesmötet: \"Måste hitta ett sätt\"",
    "Hockeynews",
    "https://news.google.com/rss/articles/CBMif0FVX3lxTE5HY3NjMldNVDQxVU0zcTdNLWZQd19lZWI2R3I0bTF6LVRaZjFlS1BmQ3BOLVpQVjBRMkF3d1BmSFRHRUhfTkZ3bWhtT21sMHItQ1Q2NVNMcUpjWU0wN0pqcXFhaHcyV2hHSG1sWmxPLVFVMVFuN3B0SjBiNmp5bk0?oc=5"
+  ],
+  [
+   "2026-11-21T11:00:00.000Z",
+   "Dubbla ramträffar för LHC – följ matchen mot Björklöven",
+   "Corren",
+   "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdlpScUNwTnFLSFdNVGI1QUl3VUxubFV1Yk5RcFRwbWhINDRZcXFrSHRUYWxnUTh6MnJvSy1jTjVVYmlSVWVJVDBjd0lLMHNtTERRX0JrbXp6anhkMkJqZ19ZMHAtLUJQZWc2VEtoMHFjUUIwNlkxeDRORFFQQlFHLXZ4a2FRVlVYdXdPZHllbDh5a1g4QlpPQ2ZOZw?oc=5"
   ],
   [
    "2026-11-21T11:00:00.000Z",
@@ -1578,6 +1584,12 @@
    "https://www.svt.se/nyheter/lokalt/vasterbotten/folj-bjorkloven-och-skelleftea-aik-under-shl-sasongen?inlagg=4f1c71f26f087e7553ba5e5f2ecd2e2d",
    "För första gången på 19 år spelar både Björklöven och Skellefteå AIK i seriespel i ishockey. Lördagen den 24 oktober möttes ärkerivalerna på isen.",
    false
+  ],
+  [
+   "2026-11-21T08:02:03.000Z",
+   "Björklöven förlänger segersviten",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMidkFVX3lxTFBIS0ZBWWw2U3ZSVmlkTU13YlpJU1hsZ2hRUXN6dDU4SE5yZU5wU2dLeHJIeU0zVkstNEdIbzlvT2xUMkNESVBSWTU0TlI5WUFydUFLblNVZDJpUXhFc2c2cXVCd2JpOUJ1NUZKMUEtQWNtX2xnSlE?oc=5"
   ],
   [
    "2026-11-21T06:17:29.000Z",
@@ -1674,18 +1686,6 @@
    "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMzVjZ1hUWlY3ajk1aXBDWTFmX1EwZlhWLWQzX3Z1eTkza2RPWS1pSE5XZkdSX3FkRVNiVGc3NEJCMmNuODJnODhsc3dLMWFUY29pRXZaU2trU3YxbG9lYnBjWnlWcHRkRUNac01iSk8xUlBfZTBGM05VUGdJSWU2RUxPS3dvTW9yMlZIOWQ0ejBMYVQ3Q3FxdFczaWU3c05oVHltN25n?oc=5",
    "",
    true
-  ],
-  [
-   "2026-11-20T01:47:35.000Z",
-   "Analys: ”Allt självförtroende saknas”",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMimgFBVV95cUxOamI0cG5aREx1ZFNiQ2tFSW1neV9McnRHOXBlaU5pb3hxd3V2V2VNSDVMUVpUV1VHZngtWUo1am9qMExrWHViQjNqejNJVnUxcHp4VTdfbEZheWlRc05VWmN3V3V6N3dfWFBvUWtUMWVUck83RFhQYUc3aWtfalFTeWJYaEwyOHJpZmRJUUZueF9udUNVTG4wSXRB?oc=5"
-  ],
-  [
-   "2026-11-20T00:56:08.000Z",
-   "Tre raka segrar för Växjö – Rafferty pekar ut nyckeln bakom lyftet",
-   "SvenskaFans.com",
-   "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWDl6NUhLZjNQR0pJZk5hWlZHNXBrTndsc2lqdDJfbS03cHdfTGVjazk1R3NaTnZKSDBqbzI2TTRzTzg3cE9rdnJlYXVQZGVVMFc0QlZjSFVuNXZybFBtVVJaanUwSUVaSHo5YWg5NzYyalFfMnJDblkyTHBLUFdjWUUyR1VNNTZCczNwMVpQbTlZS0VJVzdRY1A2Q1d5Q0Ztd29KVzNmc2o3TGxi?oc=5"
   ]
  ],
  "lineup": {
