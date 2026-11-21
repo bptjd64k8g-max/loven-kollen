@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T02:17:56.209Z",
- "updatedText": "21 november 2026, kl. 03.17",
+ "updated": "2026-11-21T03:01:08.504Z",
+ "updatedText": "21 november 2026, kl. 04.01",
  "results": [
   [
    "2026-09-19",
@@ -874,18 +874,18 @@
   [
    "2026-11-20",
    "besked",
-   "LHC-kaptenen saknades på träningen",
-   "",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMidEFVX3lxTFB4NjFaUTNUTUszNTB5d2RkZjNHVk1XaUxDekpzRVgxVHpTaTdXT2ItdGJrcUdpUGtFdU9LWmxCckZhMEJWZ2hTRjVBN2hUQkRjaGxucXdiRmc4R1lsMlFnaDh2ckFXNTMyU2NZMWlLTUdKNWlT?oc=5"
-  ],
-  [
-   "2026-11-20",
-   "besked",
    "Wallmarks framsteg – Kenttäs kryptiska svar",
    "",
    "Västerbottens-Kuriren",
    "https://news.google.com/rss/articles/CBMif0FVX3lxTE9LNFM0UFhzX1pBNGpDZmo3RFdNWWYwRWY5T2JVZXc4VUxZZFBsUGRFU0JKczVhdndUYjczbEctWFVtX0o0d3FRNDVZN3Y4Ym5ON1djNkZQam4zcTNhRTBheHczRFV3WW9QQ2RZV0VBSTRSZ2V3NXUxTXNHVktnWkU?oc=5"
+  ],
+  [
+   "2026-11-19",
+   "besked",
+   "LHC-kaptenen saknades på träningen",
+   "",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMidEFVX3lxTFB4NjFaUTNUTUszNTB5d2RkZjNHVk1XaUxDekpzRVgxVHpTaTdXT2ItdGJrcUdpUGtFdU9LWmxCckZhMEJWZ2hTRjVBN2hUQkRjaGxucXdiRmc4R1lsMlFnaDh2ckFXNTMyU2NZMWlLTUdKNWlT?oc=5"
   ],
   [
    "2026-11-19",
@@ -1454,12 +1454,6 @@
    "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOWdTOTlxUUxYXzl1MzUzUHk4V09HUEg1WHlGbW5NVjJwSjZXZFlQVFVKbmducmZzdmFCbElqR1VhU0RQTlhRcnBQLWxWOHROWDBiWWtfWk03ekhNNlF6bXdvVy10NXB4aklFcS05MDBxdmF2dnFLTWVfSUw4dVdlTU9HNl9iUnkyUm9KNkZR?oc=5"
   ],
   [
-   "2026-11-20T11:41:00.000Z",
-   "LHC-kaptenen saknades på träningen",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMidEFVX3lxTFB4NjFaUTNUTUszNTB5d2RkZjNHVk1XaUxDekpzRVgxVHpTaTdXT2ItdGJrcUdpUGtFdU9LWmxCckZhMEJWZ2hTRjVBN2hUQkRjaGxucXdiRmc4R1lsMlFnaDh2ckFXNTMyU2NZMWlLTUdKNWlT?oc=5"
-  ],
-  [
    "2026-11-20T10:42:30.000Z",
    "Tungt besked för Björklöven – forwarden borta",
    "Hockeynews",
@@ -1518,6 +1512,12 @@
    "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWDl6NUhLZjNQR0pJZk5hWlZHNXBrTndsc2lqdDJfbS03cHdfTGVjazk1R3NaTnZKSDBqbzI2TTRzTzg3cE9rdnJlYXVQZGVVMFc0QlZjSFVuNXZybFBtVVJaanUwSUVaSHo5YWg5NzYyalFfMnJDblkyTHBLUFdjWUUyR1VNNTZCczNwMVpQbTlZS0VJVzdRY1A2Q1d5Q0Ztd29KVzNmc2o3TGxi?oc=5"
   ],
   [
+   "2026-11-19T22:20:00.000Z",
+   "LHC-kaptenen saknades på träningen",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMidEFVX3lxTFB4NjFaUTNUTUszNTB5d2RkZjNHVk1XaUxDekpzRVgxVHpTaTdXT2ItdGJrcUdpUGtFdU9LWmxCckZhMEJWZ2hTRjVBN2hUQkRjaGxucXdiRmc4R1lsMlFnaDh2ckFXNTMyU2NZMWlLTUdKNWlT?oc=5"
+  ],
+  [
    "2026-11-19T21:38:39.000Z",
    "Svaret efter nionde raka: ”För dåligt”",
    "Västerbottens-Kuriren",
@@ -1527,8 +1527,8 @@
    "2026-11-19T21:35:25.000Z",
    "SHL: Höjdpunkter – Växjö – Björklöven 19/11",
    "SVT Play",
-   "https://www.tv4.se/klipp/va/21155894/hojdpunkter-djurgardens-if-if-bjorkloven",
-   "Följer välkänt mönster från brittiska internatskolor • Pekar ut ”centrala” liknelsen Skolchefen ignorerade mejl när ”Maria” mobbades – tvingades byta skola Åklagarens fynd: Hemliga boken – med lista ...",
+   "https://www.gp.se/sport/bjorkloven-vill-ta-sig-ur-formsvackan-borta-mot-vaxjo.c8b2bbb1-c25e-58e6-b761-d64a0381957f",
+   "Inför mötet borta mot Växjö har laget åtta raka förluster och är nu på tolfte plats i tabellen. Det blev seger i den senaste matchen för Växjö, 2–1 mot Malmö på bortaplan. När lagen möttes senast, 1 ...",
    false
   ],
   [
