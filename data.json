@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T11:34:46.930Z",
- "updatedText": "21 november 2026, kl. 12.34",
+ "updated": "2026-11-21T12:16:37.391Z",
+ "updatedText": "21 november 2026, kl. 13.16",
  "results": [
   [
    "2026-09-19",
@@ -1454,6 +1454,12 @@
  },
  "news": [
   [
+   "2026-11-21T11:26:15.000Z",
+   "SHL på TV i dag 21 november – alla matcher och försnack",
+   "HurBra.se",
+   "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4zcVh2TU05UUk5WkR4QTZod0phcHlqMmR3NEFHVUJnNTVqck1RYmp0WjE5d0p6cDgzY0Q4OXVDSnBMblQtNThTcXJ2NVRYMFYtN0d5SmFRaVE?oc=5"
+  ],
+  [
    "2026-11-21T11:19:33.000Z",
    "Centern inför ödesmötet: \"Måste hitta ett sätt\"",
    "Hockeynews",
@@ -1541,9 +1547,9 @@
    "2026-11-20T07:00:04.000Z",
    "Efter nio raka förluster – Ottosson om vad som saknas i Björklöven",
    "Hockeynews",
-   "https://www.expressen.se/sport/hockey/shl/bjorkloven-mardromssvit-vaxer-nio-raka-forluster/",
-   "Björklövens mardrömssvit bara växer och växer. Mot Växjö blev det lagets nionde raka förlust. Växjö ser ut att ha fått bästa möjliga effekt sedan sportchef Henrik Evertsson tog steget ner i ...",
-   false
+   "https://hockeynews.se/nyheter/efter-nio-raka-forluster-ottosson-om-vad-som-saknas-i-bjorkloven",
+   "Björklöven har tappat greppet om den fina form som präglade säsongsinledningen. Nu kommer förlust efter förlust och efter torsdagens match mot Växjö är ...",
+   true
   ],
   [
    "2026-11-20T05:39:44.000Z",
@@ -1640,12 +1646,6 @@
    "https://www.expressen.se/sport/hockey/shl/bjorkloven-mardromssvit-vaxer-nio-raka-forluster/",
    "Björklövens mardrömssvit bara växer och växer. Mot Växjö blev det lagets nionde raka förlust. Växjö ser ut att ha fått bästa möjliga effekt sedan sportchef Henrik Evertsson tog steget ner i ...",
    false
-  ],
-  [
-   "2026-11-19T20:24:04.000Z",
-   "Beckmörkt för ”Löven” – nionde raka förlusten",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMjVwOEdja0Y2MVhKQ1Zrem80eXdCekZqVTFybDY0X01yUHNBYnpYcVNpSmRzR3ZBcjJfTDVkeDRsQVNJRXZIQmZPTDk3Y1o3cFUzOWNEek5xMm1jR2Vnam9WUTRNQmVsTnZLZkc3dEdRcEZsYl82aDBISkx1T2FpaGdn?oc=5"
   ]
  ]
 }
