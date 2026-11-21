@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T00:09:14.148Z",
- "updatedText": "21 november 2026, kl. 01.09",
+ "updated": "2026-11-21T01:12:52.504Z",
+ "updatedText": "21 november 2026, kl. 02.12",
  "results": [
   [
    "2026-09-19",
@@ -874,18 +874,18 @@
   [
    "2026-11-20",
    "besked",
-   "Wallmarks framsteg – Kenttäs kryptiska svar",
-   "",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMif0FVX3lxTE9LNFM0UFhzX1pBNGpDZmo3RFdNWWYwRWY5T2JVZXc4VUxZZFBsUGRFU0JKczVhdndUYjczbEctWFVtX0o0d3FRNDVZN3Y4Ym5ON1djNkZQam4zcTNhRTBheHczRFV3WW9QQ2RZV0VBSTRSZ2V3NXUxTXNHVktnWkU?oc=5"
-  ],
-  [
-   "2026-11-19",
-   "besked",
    "LHC-kaptenen saknades på träningen",
    "",
    "Västerbottens-Kuriren",
    "https://news.google.com/rss/articles/CBMidEFVX3lxTFB4NjFaUTNUTUszNTB5d2RkZjNHVk1XaUxDekpzRVgxVHpTaTdXT2ItdGJrcUdpUGtFdU9LWmxCckZhMEJWZ2hTRjVBN2hUQkRjaGxucXdiRmc4R1lsMlFnaDh2ckFXNTMyU2NZMWlLTUdKNWlT?oc=5"
+  ],
+  [
+   "2026-11-20",
+   "besked",
+   "Wallmarks framsteg – Kenttäs kryptiska svar",
+   "",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMif0FVX3lxTE9LNFM0UFhzX1pBNGpDZmo3RFdNWWYwRWY5T2JVZXc4VUxZZFBsUGRFU0JKczVhdndUYjczbEctWFVtX0o0d3FRNDVZN3Y4Ym5ON1djNkZQam4zcTNhRTBheHczRFV3WW9QQ2RZV0VBSTRSZ2V3NXUxTXNHVktnWkU?oc=5"
   ],
   [
    "2026-11-19",
@@ -1442,6 +1442,12 @@
  },
  "news": [
   [
+   "2026-11-20T21:22:30.000Z",
+   "Fagervall: ”Vi har inte pratat om det”",
+   "Västerbotten | Folkbladet",
+   "https://news.google.com/rss/articles/CBMiekFVX3lxTE5fTFBtbll5R2paMzRCZHQySlVnNVJkakpmY3dpU2lBcUc1bDVZT2JHN2NweE9CSTNMRGlObDMwbjNYcUp1bGw3Y3hKdnRmbkJiY2NsREJsSnptTjhNRVVNcjljT1pySHRPVFlRY3Q2ejRSamZ3dmpYdXFB?oc=5"
+  ],
+  [
    "2026-11-20T19:30:00.000Z",
    "Så ser du Björklöven–Linköping i SHL – tv-kanal, tider och stream",
    "Hockeyresultat.se",
@@ -1452,6 +1458,12 @@
    "Krönika: \"Wallmark-effekten – en mirakelkur eller hägring i öknen?\"",
    "Västerbottens-Kuriren",
    "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOWdTOTlxUUxYXzl1MzUzUHk4V09HUEg1WHlGbW5NVjJwSjZXZFlQVFVKbmducmZzdmFCbElqR1VhU0RQTlhRcnBQLWxWOHROWDBiWWtfWk03ekhNNlF6bXdvVy10NXB4aklFcS05MDBxdmF2dnFLTWVfSUw4dVdlTU9HNl9iUnkyUm9KNkZR?oc=5"
+  ],
+  [
+   "2026-11-20T11:41:00.000Z",
+   "LHC-kaptenen saknades på träningen",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMidEFVX3lxTFB4NjFaUTNUTUszNTB5d2RkZjNHVk1XaUxDekpzRVgxVHpTaTdXT2ItdGJrcUdpUGtFdU9LWmxCckZhMEJWZ2hTRjVBN2hUQkRjaGxucXdiRmc4R1lsMlFnaDh2ckFXNTMyU2NZMWlLTUdKNWlT?oc=5"
   ],
   [
    "2026-11-20T10:42:30.000Z",
@@ -1487,9 +1499,9 @@
    "2026-11-20T07:03:03.000Z",
    "Efter nio raka förluster – Ottosson om vad som saknas i Björklöven",
    "Hockeynews",
-   "https://hockeynews.se/nyheter/efter-nio-raka-forluster-ottosson-om-vad-som-saknas-i-bjorkloven",
-   "Björklöven har tappat greppet om den fina form som präglade säsongsinledningen. Nu kommer förlust efter förlust och efter torsdagens match mot Växjö är ...",
-   true
+   "https://www.aftonbladet.se/sportbladet/hockey/a/6PjnP0/bjorkloven-tappade-ledning-till-forlust-mot-orebro",
+   "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
+   false
   ],
   [
    "2026-11-20T05:39:44.000Z",
@@ -1506,10 +1518,10 @@
    "https://news.google.com/rss/articles/CBMimgFBVV95cUxOamI0cG5aREx1ZFNiQ2tFSW1neV9McnRHOXBlaU5pb3hxd3V2V2VNSDVMUVpUV1VHZngtWUo1am9qMExrWHViQjNqejNJVnUxcHp4VTdfbEZheWlRc05VWmN3V3V6N3dfWFBvUWtUMWVUck83RFhQYUc3aWtfalFTeWJYaEwyOHJpZmRJUUZueF9udUNVTG4wSXRB?oc=5"
   ],
   [
-   "2026-11-19T22:20:00.000Z",
-   "LHC-kaptenen saknades på träningen",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMidEFVX3lxTFB4NjFaUTNUTUszNTB5d2RkZjNHVk1XaUxDekpzRVgxVHpTaTdXT2ItdGJrcUdpUGtFdU9LWmxCckZhMEJWZ2hTRjVBN2hUQkRjaGxucXdiRmc4R1lsMlFnaDh2ckFXNTMyU2NZMWlLTUdKNWlT?oc=5"
+   "2026-11-20T00:56:08.000Z",
+   "Tre raka segrar för Växjö – Rafferty pekar ut nyckeln bakom lyftet",
+   "SvenskaFans.com",
+   "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWDl6NUhLZjNQR0pJZk5hWlZHNXBrTndsc2lqdDJfbS03cHdfTGVjazk1R3NaTnZKSDBqbzI2TTRzTzg3cE9rdnJlYXVQZGVVMFc0QlZjSFVuNXZybFBtVVJaanUwSUVaSHo5YWg5NzYyalFfMnJDblkyTHBLUFdjWUUyR1VNNTZCczNwMVpQbTlZS0VJVzdRY1A2Q1d5Q0Ztd29KVzNmc2o3TGxi?oc=5"
   ],
   [
    "2026-11-19T21:38:39.000Z",
@@ -1622,18 +1634,6 @@
    "Ishockey: Växjö – Björklöven (2-1) – Senaste nytt från SHL",
    "SVT Nyheter",
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTC1WYTBUdDNIdWdjeElQbnpqcWVBeGxqWjhyY01XU1dpVlpVU1NLYm5xOVhwTjZVeEpHV05nRmpHUmVYUUhsTXFQX2hBNElrcDdvUTRxTFdhTWRDMEF4TkxkVUMzR1lRMW9laEtMY0MzX1gtZmphMjRjQi1NTFRsWkhRSmx0OExMWjVxdVVEeDM?oc=5"
-  ],
-  [
-   "2026-11-19T15:42:54.000Z",
-   "Fagervall: ”Vi har inte pratat om det”",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMib0FVX3lxTFBIVHRvRWp4czVuLS1XbURjY2p2NXJHS3lNdV9HWG5mWS15X2NHT3ZId1V3U3d2dE81Q3dfU3EwbUVzV1A1UTRieDF0TTMtVGZ0QktGMHNwU3RNVVhsYXVZTUd5Yjg1VmprTFlfMEk3QQ?oc=5"
-  ],
-  [
-   "2026-11-19T13:53:53.000Z",
-   "Var kan man se Växjö Lakers – IF Björklöven? TV-kanal, streaming och tid",
-   "news.bet365.com",
-   "https://news.google.com/rss/articles/CBMixAFBVV95cUxPRTI2Z3ZhclBlU05nQ0FMZElRNEh6eHQ3RXJMa2pXM0FlUDhpNXBRR2xGRUNDYzF5Y0hIU2xfSkdHYV8xVWgxWUxYU0dPdFh4SUFCQktwVGMzVjVjLVozWU5tTWJTRnNPN0JaNWV0a242TndLUnJ3WUExbkVRTV8wWHhrbzM2UTZhbXRyazJFa2RJWm1wbXc3YklXUkhkVnQzUTR3VWtPMVVYMDhuZjRCdTlKLWxfUXVNUlhFWmtqSlBwNnNp?oc=5"
   ]
  ]
 }
