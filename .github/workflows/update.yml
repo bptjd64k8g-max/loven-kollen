@@ -76,3 +76,10 @@ jobs:
         uses: actions/deploy-pages@v4
         continue-on-error: true
         if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
+      - name: Vänta och försök publicera igen
+        if: steps.deploy.outcome == 'failure'
+        run: sleep 20
+      - id: deploy2
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+        if: steps.deploy.outcome == 'failure'
