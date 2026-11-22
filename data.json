@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-22T05:48:22.621Z",
- "updatedText": "22 november 2026, kl. 06.48",
+ "updated": "2026-11-22T06:41:53.051Z",
+ "updatedText": "22 november 2026, kl. 07.41",
  "results": [
   [
    "2026-09-19",
@@ -876,11 +876,19 @@
  "feed": [
   [
    "2026-11-21",
-   "besked",
-   "Öhrqvists jubel kom av sig – tränarens ilska",
+   "rykte",
+   "Så var matchen – och uppgifter om ny back",
    "",
    "Corren",
-   "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUHVKYjBaWUpreGE1TGlfTkxNNlIwYWRoRUl4Y2NoVEpnVk5sd3RVNzFFUHBtUERxbExCZE0wUkI0VkxpVHlVbjVHWGZkOVBmWk9tYnVXVnZEUXpWazBpcERlb2NrVXFpWDV3STVEZmkzeWVUZ09KYURRV1paVDUwRUVUY243Vl9YUTJZblVudExaNllJdGZSd3hOeHNQaVU?oc=5"
+   "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdlpScUNwTnFLSFdNVGI1QUl3VUxubFV1Yk5RcFRwbWhINDRZcXFrSHRUYWxnUTh6MnJvSy1jTjVVYmlSVWVJVDBjd0lLMHNtTERRX0JrbXp6anhkMkJqZ19ZMHAtLUJQZWc2VEtoMHFjUUIwNlkxeDRORFFQQlFHLXZ4a2FRVlVYdXdPZHllbDh5a1g4QlpPQ2ZOZw?oc=5"
+  ],
+  [
+   "2026-11-21",
+   "besked",
+   "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
+   "Efter nio raka förluster väntar en match som kan få stor betydelse för Björklövens fortsatta SHL-säsong. Nu berättar Magnus Bogren om pressen, ...",
+   "Hockeynews",
+   "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
   ],
   [
    "2026-11-21",
@@ -900,19 +908,11 @@
   ],
   [
    "2026-11-21",
-   "rykte",
-   "Så var matchen – och uppgifter om ny back",
+   "besked",
+   "Öhrqvists jubel kom av sig – tränarens ilska",
    "",
    "Corren",
-   "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdlpScUNwTnFLSFdNVGI1QUl3VUxubFV1Yk5RcFRwbWhINDRZcXFrSHRUYWxnUTh6MnJvSy1jTjVVYmlSVWVJVDBjd0lLMHNtTERRX0JrbXp6anhkMkJqZ19ZMHAtLUJQZWc2VEtoMHFjUUIwNlkxeDRORFFQQlFHLXZ4a2FRVlVYdXdPZHllbDh5a1g4QlpPQ2ZOZw?oc=5"
-  ],
-  [
-   "2026-11-21",
-   "besked",
-   "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
-   "Efter nio raka förluster väntar en match som kan få stor betydelse för Björklövens fortsatta SHL-säsong. Nu berättar Magnus Bogren om pressen, ...",
-   "Hockeynews",
-   "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
+   "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUHVKYjBaWUpreGE1TGlfTkxNNlIwYWRoRUl4Y2NoVEpnVk5sd3RVNzFFUHBtUERxbExCZE0wUkI0VkxpVHlVbjVHWGZkOVBmWk9tYnVXVnZEUXpWazBpcERlb2NrVXFpWDV3STVEZmkzeWVUZ09KYURRV1paVDUwRUVUY243Vl9YUTJZblVudExaNllJdGZSd3hOeHNQaVU?oc=5"
   ],
   [
    "2026-11-21",
@@ -1511,6 +1511,12 @@
  },
  "news": [
   [
+   "2026-11-22T06:02:44.000Z",
+   "Den fula ankungens revansch",
+   "SvenskaFans.com",
+   "https://news.google.com/rss/articles/CBMie0FVX3lxTFBWZkRYTDJvYTZGTUFHZU1mZVRUTW84VDhZVmc1bXZYcGFUSFZjeEltZjYzOFgxLS10SG1qYkI3bDJpTEpuVjVOU3BhVDNUTUw4Tnh5Q3p0WllYY3g3YkIteTEyX0lLOFJ2cUlPR0ZmZkFRcTRMSV9pZ3NvRQ?oc=5"
+  ],
+  [
    "2026-11-22T04:52:36.000Z",
    "Segersviten vid liv för Björklöven dam",
    "Västerbottens-Kuriren",
@@ -1529,12 +1535,6 @@
    "https://www.aftonbladet.se/sportbladet/hockey/a/GPGba6/bjorkloven-brot-sviten-forsta-segern-sedan-pa-over-en-manad",
    "Forwarden klippte till direkt på en flippmacka från Lucas Ekeståhl Jonsson och LHC-keepern Waltteri Ignatjew hade inte en chans. Matchen gick till förlängning och där avgjorde hemmasonen Ekeståhl ...",
    false
-  ],
-  [
-   "2026-11-22T00:12:32.000Z",
-   "Den fula ankungens revansch",
-   "SvenskaFans.com",
-   "https://news.google.com/rss/articles/CBMie0FVX3lxTFBWZkRYTDJvYTZGTUFHZU1mZVRUTW84VDhZVmc1bXZYcGFUSFZjeEltZjYzOFgxLS10SG1qYkI3bDJpTEpuVjVOU3BhVDNUTUw4Tnh5Q3p0WllYY3g3YkIteTEyX0lLOFJ2cUlPR0ZmZkFRcTRMSV9pZ3NvRQ?oc=5"
   ],
   [
    "2026-11-21T21:23:12.000Z",
@@ -1597,6 +1597,14 @@
    "Chocken: ”Trodde hallen skulle rivas”",
    "Expressen",
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMlFVRlRjbERWS2JIekdnQ2ZIWWtIOHNMVDUxVi1sOHNQYVhJMlNvYzZGLS1FZmNfY0lUVWVSTnJPUkJoS3BmSHhueG1mLW5DWkVSc212VTZTbFFiVzdJbmpPdkd0U1ZQX3NFQzloMXFlc2ZCWkhUN2ZMbkxocnZtMTJCNDFiby1ySUFzalpXemc?oc=5"
+  ],
+  [
+   "2026-11-21T20:08:51.000Z",
+   "Lättnaden – stoppar (?) Björklövens ras",
+   "Hockeysverige",
+   "https://hockeysverige.se/shl/bjorkloven-lhc-lattnaden-stoppar-ras-mal-ekestahl-jonsson-aEh577u2bI1S/",
+   "Björklöven undviker tio raka förluster i SHL. Efter en tidig uppförsbacke kunde Umeålaget till slut vända och besegra Linköping med 2–1 via förlängning hemma i Visionite Arena. – Man försöker inte ...",
+   false
   ],
   [
    "2026-11-21T19:55:00.000Z",
@@ -1681,26 +1689,18 @@
    "https://news.google.com/rss/articles/CBMiogFBVV95cUxQOGhSa3Y1d29nV3M5ZkRfcUdBdFFQUWpSMFNtbjlSd0JFMlhXMUpSUFZXc2NVR0hiWFpRdDBBd0VtY3lZdE53OThoSjVyMUlSQTRDcEJiNWFIS0hfOExaS09Ca2JQSVZjZEhmakZMaGRUUXlIMzVObDJ1aDBON29DazBocndrWlJWX3ktY0NWNC1Ma3V3bmVHQVhQY0tRRklBLUE?oc=5"
   ],
   [
-   "2026-11-21T14:10:18.000Z",
-   "Avgjorde på gamla lagkamraten",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMickFVX3lxTE5GQ3ZaX2gxYmlfZWRVeE5SRm81a2cwaUw3Ul9zbHpQNHhyTUNUd0NYVFJVa09ubFNtYkFYVTA1MjhJVnhGZnppaE9YWFZLTHR2ZDNCNVFPRU40dkpDa0xpeWtsQ1djYWdzVVFOckd3WDhCdw?oc=5"
-  ],
-  [
-   "2026-11-21T13:06:00.000Z",
-   "Lättnaden – stoppar (?) Björklövens ras",
-   "Hockeysverige",
-   "https://hockeysverige.se/shl/bjorkloven-lhc-lattnaden-stoppar-ras-mal-ekestahl-jonsson-aEh577u2bI1S/",
-   "Björklöven undviker tio raka förluster i SHL. Efter en tidig uppförsbacke kunde Umeålaget till slut vända och besegra Linköping med 2–1 via förlängning hemma i Visionite Arena. – Man försöker inte ...",
-   false
-  ],
-  [
    "2026-11-21T12:23:00.000Z",
    "Björklöven bryter mardrömssvit mot Linköping",
    "Expressen",
    "https://www.expressen.se/sport/hockey/shl/bjorkloven-bryter-mardromssvit-mot-linkoping/",
    "Det blev ett drama i Umeå. Bottenmötet mellan Björklöven och Linköping fick avgöras i förlängning. Väl där klev Lukas Ekeståhl-Jonsson fram för Björklöven.",
    false
+  ],
+  [
+   "2026-11-21T12:02:55.000Z",
+   "Avgjorde på gamla lagkamraten",
+   "Västerbotten | Folkbladet",
+   "https://news.google.com/rss/articles/CBMifEFVX3lxTE9acXRRa2R5NXVOWmtfQmdzbzhubFBDR29kTEY2dzA3anpieTBKVzg0MzRIcDNpSGF2d2lkbXRiT3RJalM2WGVZbGRPTTZHTW5HR0s4MG45SFJPZklnZU1ndUdNa2Nfb1ExbE1Oa190Zm1adTdIN0NWOWl0bFc?oc=5"
   ],
   [
    "2026-11-21T11:27:49.000Z",
