@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-22T01:21:14.891Z",
- "updatedText": "22 november 2026, kl. 02.21",
+ "updated": "2026-11-22T02:23:33.882Z",
+ "updatedText": "22 november 2026, kl. 03.23",
  "results": [
   [
    "2026-09-19",
@@ -877,6 +877,14 @@
   [
    "2026-11-21",
    "besked",
+   "Öhrqvists jubel kom av sig – tränarens ilska",
+   "",
+   "Corren",
+   "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUHVKYjBaWUpreGE1TGlfTkxNNlIwYWRoRUl4Y2NoVEpnVk5sd3RVNzFFUHBtUERxbExCZE0wUkI0VkxpVHlVbjVHWGZkOVBmWk9tYnVXVnZEUXpWazBpcERlb2NrVXFpWDV3STVEZmkzeWVUZ09KYURRV1paVDUwRUVUY243Vl9YUTJZblVudExaNllJdGZSd3hOeHNQaVU?oc=5"
+  ],
+  [
+   "2026-11-21",
+   "besked",
    "Wallmark om tuffa hösten: ”Kenttä säger att jag spelar på torsdag”",
    "",
    "Aftonbladet",
@@ -893,10 +901,10 @@
   [
    "2026-11-21",
    "besked",
-   "Öhrqvists jubel kom av sig – tränarens ilska",
-   "",
-   "Corren",
-   "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUHVKYjBaWUpreGE1TGlfTkxNNlIwYWRoRUl4Y2NoVEpnVk5sd3RVNzFFUHBtUERxbExCZE0wUkI0VkxpVHlVbjVHWGZkOVBmWk9tYnVXVnZEUXpWazBpcERlb2NrVXFpWDV3STVEZmkzeWVUZ09KYURRV1paVDUwRUVUY243Vl9YUTJZblVudExaNllJdGZSd3hOeHNQaVU?oc=5"
+   "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
+   "Efter nio raka förluster väntar en match som kan få stor betydelse för Björklövens fortsatta SHL-säsong. Nu berättar Magnus Bogren om pressen, ...",
+   "Hockeynews",
+   "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
   ],
   [
    "2026-11-21",
@@ -905,14 +913,6 @@
    "",
    "Corren",
    "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdlpScUNwTnFLSFdNVGI1QUl3VUxubFV1Yk5RcFRwbWhINDRZcXFrSHRUYWxnUTh6MnJvSy1jTjVVYmlSVWVJVDBjd0lLMHNtTERRX0JrbXp6anhkMkJqZ19ZMHAtLUJQZWc2VEtoMHFjUUIwNlkxeDRORFFQQlFHLXZ4a2FRVlVYdXdPZHllbDh5a1g4QlpPQ2ZOZw?oc=5"
-  ],
-  [
-   "2026-11-21",
-   "besked",
-   "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
-   "Efter nio raka förluster väntar en match som kan få stor betydelse för Björklövens fortsatta SHL-säsong. Nu berättar Magnus Bogren om pressen, ...",
-   "Hockeynews",
-   "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
   ],
   [
    "2026-11-21",
@@ -1511,6 +1511,14 @@
  },
  "news": [
   [
+   "2026-11-22T01:38:17.000Z",
+   "Björklöven U18 tog hem segern mot Skellefteå AIK J18",
+   "Västerbottens-Kuriren",
+   "https://www.aftonbladet.se/sportbladet/hockey/a/GPGba6/bjorkloven-brot-sviten-forsta-segern-sedan-pa-over-en-manad",
+   "Forwarden klippte till direkt på en flippmacka från Lucas Ekeståhl Jonsson och LHC-keepern Waltteri Ignatjew hade inte en chans. Matchen gick till förlängning och där avgjorde hemmasonen Ekeståhl ...",
+   false
+  ],
+  [
    "2026-11-22T00:12:32.000Z",
    "Den fula ankungens revansch",
    "SvenskaFans.com",
@@ -1625,18 +1633,16 @@
    false
   ],
   [
-   "2026-11-21T18:29:38.000Z",
-   "Björklöven U18 tog hem segern mot Skellefteå AIK J18",
-   "Västerbottens-Kuriren",
-   "https://www.aftonbladet.se/sportbladet/hockey/a/GPGba6/bjorkloven-brot-sviten-forsta-segern-sedan-pa-over-en-manad",
-   "Forwarden klippte till direkt på en flippmacka från Lucas Ekeståhl Jonsson och LHC-keepern Waltteri Ignatjew hade inte en chans. Matchen gick till förlängning och där avgjorde hemmasonen Ekeståhl ...",
-   false
-  ],
-  [
    "2026-11-21T18:12:28.000Z",
    "Wallmark om tuffa hösten: ”Kenttä säger att jag spelar på torsdag”",
    "Aftonbladet",
    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPa2J6aE5sa090Vm5hSmVWYTN5dW5SY1h3eEtKY194U1lySzlHRE1IcFBDbWlGWUpZZGhFNTRDUDdkRkFqSFFiVXhFMUFLMFR5TEVXYlVIRTdIb0hDcTU3TFJFNE5MekltQkFOdWJlTFRod1pfQ0pROGF4UmlRd3lhY1JBRVhuZTVyb1ZNd2oyRUxnZFk1Z1RYRU5ZS0laeV9qLWFsNlZ1TTI?oc=5"
+  ],
+  [
+   "2026-11-21T18:03:28.000Z",
+   "Björklöven förlänger segersviten",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMidkFVX3lxTFBIS0ZBWWw2U3ZSVmlkTU13YlpJU1hsZ2hRUXN6dDU4SE5yZU5wU2dLeHJIeU0zVkstNEdIbzlvT2xUMkNESVBSWTU0TlI5WUFydUFLblNVZDJpUXhFc2c2cXVCd2JpOUJ1NUZKMUEtQWNtX2xnSlE?oc=5"
   ],
   [
    "2026-11-21T18:01:28.000Z",
@@ -1649,6 +1655,12 @@
    "Segersviten vid liv för Björklöven dam",
    "Västerbottens-Kuriren",
    "https://news.google.com/rss/articles/CBMifkFVX3lxTE15U3llVld6bDlQNE1QOE1wMWJPdkxBbjNJNU10QnJUaG1wWTFzbmdJT3FxTDdDTVJnYjNxS3R0UnNIQlFFcmJtc2ZmNG5feFE1TFRCeERvM2FvWlYtM0NtNVQ0Ym1Nc0FwOHBIVG5CdkRUTF9qckREWTd3OFhwUQ?oc=5"
+  ],
+  [
+   "2026-11-21T17:00:00.000Z",
+   "Game Center efter match IFB, LHC, 21 november",
+   "Björklöven",
+   "https://news.google.com/rss/articles/CBMigwFBVV95cUxPY0JWazRjb29HUE4ydzVvaXh1ZFlOZy11OHZLRHlSMThIYk9sTzRJdkdWS291OUM4d2FZY1NxcEZ0UUE0UFlXblNmMVNJQ05xZk9KT0c3RFdUSS1OWkFGUG44QzU4MDVBbzIxR0dQeTBtTzFldk1IU242TGM4U01SZEhJWQ?oc=5"
   ],
   [
    "2026-11-21T16:50:02.000Z",
@@ -1695,18 +1707,6 @@
    "https://www.expressen.se/sport/hockey/shl/bjorkloven-bryter-mardromssvit-mot-linkoping/",
    "Det blev ett drama i Umeå. Bottenmötet mellan Björklöven och Linköping fick avgöras i förlängning. Väl där klev Lukas Ekeståhl-Jonsson fram för Björklöven.",
    false
-  ],
-  [
-   "2026-11-21T11:27:49.000Z",
-   "SHL på TV i dag 21 november – alla matcher och försnack",
-   "HurBra.se",
-   "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4zcVh2TU05UUk5WkR4QTZod0phcHlqMmR3NEFHVUJnNTVqck1RYmp0WjE5d0p6cDgzY0Q4OXVDSnBMblQtNThTcXJ2NVRYMFYtN0d5SmFRaVE?oc=5"
-  ],
-  [
-   "2026-11-21T11:27:49.000Z",
-   "SHL på TV 21 november 2026 – matcher och kanaler",
-   "HurBra.se",
-   "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4zcVh2TU05UUk5WkR4QTZod0phcHlqMmR3NEFHVUJnNTVqck1RYmp0WjE5d0p6cDgzY0Q4OXVDSnBMblQtNThTcXJ2NVRYMFYtN0d5SmFRaVE?oc=5"
   ]
  ]
 }
