@@ -303,6 +303,27 @@ await source("nyckeltal", async () => {
   D.nums = nums;
 });
 
+/* Bara Björklövens herrlag: dam-, junior- och ungdomslag, andra klubbars nyheter och föreningsinfo sorteras bort */
+const NOT_MEN = /\bdam(?:er|erna|laget|lag|en|hockey)?\b|\bsdhl\b|\b[uj] ?(?:1[0-9]|20)\b|junior|flick|ungdom|tr(?:a|ä)ningstider|hockeyskola|hockeygymnas|parahockey|sledge/i;
+// Källor som skriver om Löven även när rubriken inte nämner laget; övriga måste nämna Löven eller en spelare i rubriken
+const LOVEN_SRC = /bj(?:ö|o)rkl(?:ö|o)ven|v(?:ä|a)sterbottens-kuriren|^vk$|folkbladet|svenskafans|hockeysverige|hockeynews|hurbra|aftonbladet|expressen|svt|sveriges radio|sportnet|eliteprospects|^shl/i;
+function menOnly(list, get) {
+  const roster = Object.values(old.roster || {}).flat().map(p => fold(p[1]).split(" ").pop()).filter(w => w && w.length > 3);
+  const usRe = new RegExp(`bjorkloven|\\bloven|bogren|kentta${roster.length ? "|\\b(?:" + roster.join("|") + ")\\b" : ""}`);
+  const bad = new Set(), badLinks = new Set(), badNames = new Set();
+  const names = t => (String(t).match(/\b[A-ZÅÄÖÉ][a-zåäöéü]+ [A-ZÅÄÖÉ][a-zåäöéü]+(?:-[A-ZÅÄÖÉ][a-zåäöéü]+)?/g) || []).map(fold).filter(n => !usRe.test(n));
+  for (const x of list) { const g = get(x); if (NOT_MEN.test(g.title + " " + g.text)) { bad.add(x); badLinks.add(g.link); names(g.title).forEach(n => badNames.add(n)); } }
+  return list.filter(x => {
+    if (bad.has(x)) return false;
+    const g = get(x), t = fold(g.title);
+    if (badLinks.has(g.link)) return false;                       // samma artikel som en dam/junior-artikel
+    if (names(g.title).some(n => badNames.has(n))) return false;  // samma person som i en dam/junior-artikel
+    if (usRe.test(t)) return true;
+    // "LHC-kaptenen", "Modo-tränaren" o.d. handlar om en annan klubb
+    return LOVEN_SRC.test(g.src) && !/(?:^|[^a-zåäö])(?:lhc|modo|brynäs|luleå|skellefteå|timrå|frölunda|färjestad|rögle|växjö|örebro|hv ?71|djurgården|malmö|linköping|sundsvall|aik)-[a-zåäö]/i.test(g.title);
+  });
+}
+
 /* ---------- 5. Nyheter och silly via Google News ---------- */
 await source("nyheter", async () => {
   const xml = await get("https://news.google.com/rss/search?q=Bj%C3%B6rkl%C3%B6ven+hockey&hl=sv&gl=SE&ceid=SE:sv");
@@ -328,7 +349,7 @@ await source("nyheter", async () => {
     if (rule) items.push([d.toISOString().slice(0, 10), rule[0], title, "", src, link]);
   });
   const seen = new Set();
-  D.feed = [...items, ...old.feed]
+  D.feed = menOnly([...items, ...old.feed], f => ({ title: f[2], text: f[3] || "", src: f[4], link: f[5] }))
     .filter(f => { const k = fold(f[2]).slice(0, 60); if (seen.has(k)) return false; seen.add(k); return true; })
     .sort((a, b) => b[0].localeCompare(a[0]))
     .slice(0, 40);
@@ -361,7 +382,7 @@ await source("nyheter", async () => {
   for (const f of D.feed) { if (!f[3]) { const b = match(f[2]); if (b) f[3] = b.text; } }
   // Alla nyheter till nyhetsfliken, nyast först, max 60 dagar och 30 st
   const cutoff = Date.now() - 60 * 864e5, seenN = new Set();
-  const news = [...all, ...(old.news || [])]
+  const news = menOnly([...all, ...(old.news || [])], n => ({ title: n[1], text: n[4] || "", src: n[2], link: n[3] }))
     .filter(n => Date.parse(n[0]) > cutoff)
     .filter(n => { const k = fold(n[1]).slice(0, 60); if (seenN.has(k)) return false; seenN.add(k); return true; })
     .sort((a, b) => b[0].localeCompare(a[0])).slice(0, 30);
