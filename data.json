@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-23T23:09:51.009Z",
- "updatedText": "24 november 2026, kl. 00.09",
+ "updated": "2026-11-23T23:12:50.998Z",
+ "updatedText": "24 november 2026, kl. 00.12",
  "results": [
   [
    "2026-09-19",
@@ -1535,12 +1535,6 @@
    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQLWgyWktjQXJJT0E1M3Fic1NtdWRUcnIzLTF6V1RFTElOZjVHcFRkVUNpVjlMX3BONm9CYTB2MEwtR3JIRnZPWXFVVk1KQm00N2VhLU82TFhGejZTYWNxS1NKOVduVjIzenJUbm9jcGhwYzBNSmlFV1huTWxVRndpZi1BWUExc1hM?oc=5"
   ],
   [
-   "2026-11-22T14:27:41.000Z",
-   "Elissa Benjamin tremålsskytt när Björklöven vann",
-   "Björklöven",
-   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE05ZTgwNEhHbkVUX1ZnWERKdFZWYm1Wc0NzY3k0ekk5R2lWdHY3S1VqZDFzZDFuZm5KV2NXaDBpQ1NhQ0JaR21QeVBOblNlVzduemxkOVctX2ZKekxuaGgwWTV1RQ?oc=5"
-  ],
-  [
    "2026-11-22T13:32:02.000Z",
    "(+) Björklövens Chris DiDomenico om kritiken: ”Jag har fått ta mycket skit”",
    "Aftonbladet",
@@ -1585,6 +1579,12 @@
    "https://www.expressen.se/sport/hockey/shl/chris-didomenico-har-inte-traffat-sonen-pa-fyra-manader/",
    "Chris DiDomenico bröt måltorkan när Björklöven satte stopp för sin långa förlustsvit. Men den största glädjen för stjärnan finns just nu utanför isen. – Det har varit tufft, säger han.",
    false
+  ],
+  [
+   "2026-11-21T20:55:28.000Z",
+   "Live: Löven gör en ändring",
+   "Västerbotten | Folkbladet",
+   "https://news.google.com/rss/articles/CBMif0FVX3lxTE5rdnlFQ25vQ0dUNnJYd21XM3RRV0lSN0hNdjV4VWFrVWtUU3NCQWZpMVA3MGlTdnNNRncxS2hvVmU1V29kZHpvckpfbXNCVXhUTHlPZTRta3pYUkhUeHktVk52b01JakdfUmEzYWY5bE5BUmV6c1M3d2xjLXUtTWM?oc=5"
   ],
   [
    "2026-11-21T20:51:52.000Z",
@@ -1648,15 +1648,21 @@
    "2026-11-21T20:13:56.000Z",
    "Supporterinformation: 19/11 Växjö-Björklöven",
    "Björklöven",
-   "https://www.gp.se/sport/bjorkloven-vill-ta-sig-ur-formsvackan-borta-mot-vaxjo.c8b2bbb1-c25e-58e6-b761-d64a0381957f",
-   "Inför mötet borta mot Växjö har laget åtta raka förluster och är nu på tolfte plats i tabellen. Det blev seger i den senaste matchen för Växjö, 2–1 mot Malmö på bortaplan. När lagen möttes senast, 1 ...",
-   false
+   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8teloyR0RSb1dXdXNSUGRiQzhtb3pEekc3SnZVLW81eHRNY0oybG1hRFVJdVltWDRiS3M3ZEJ6eHVhOV90ajMyb3pkdGNCalFPeWNieEZ0b0cyTzM2bzlHa2pTMA?oc=5"
   ],
   [
    "2026-11-21T20:13:36.000Z",
    "Chocken: ”Trodde hallen skulle rivas”",
    "Expressen",
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMlFVRlRjbERWS2JIekdnQ2ZIWWtIOHNMVDUxVi1sOHNQYVhJMlNvYzZGLS1FZmNfY0lUVWVSTnJPUkJoS3BmSHhueG1mLW5DWkVSc212VTZTbFFiVzdJbmpPdkd0U1ZQX3NFQzloMXFlc2ZCWkhUN2ZMbkxocnZtMTJCNDFiby1ySUFzalpXemc?oc=5"
+  ],
+  [
+   "2026-11-21T20:12:46.000Z",
+   "SHL: Höjdpunkter – Björklöven – Linköping 21/11",
+   "SVT Play",
+   "https://www.svt.se/sport/ishockey/bjorkloven-brot-jattesviten-slog-linkoping-i-overtid",
+   "10 oktober var senast Björklöven vann en SHL-match. Därefter kom nio raka nollpoängare innan segerns sötma återigen tog sig till Umeå när Linköping slogs på hemmaplan. – Otroligt skönt att se den gå i ...",
+   false
   ],
   [
    "2026-11-21T20:08:51.000Z",
@@ -1670,7 +1676,25 @@
    "2026-11-21T19:36:42.000Z",
    "Efterlängtad seger för Björklöven – steg åt rätt håll mot LHC",
    "Göteborgs-Posten",
-   "https://news.google.com/rss/articles/CBMivAFBVV95cUxQX1Z1Mi05TENhQWRTbFl6b1JtbngtLTQyQlRSLUxIYUF0OFJRblJ1dXA5NXN6blVxckJKMkpzT0EtZk5mSGtHRTVPRnBiUEliNmxnU0RTTTBXZk4yX0d1QmI4UXJ2MEhCMWktMnI1WnZqanJTNGs3Snd5NnNqaFMtTGw3Wmg3WG1hV3V5YkIxTy1Pa1U3d1dMYjRBNElSN2hfX0FkZXVLS3BwZFYzWi10RTVDcHpIQURKd29fNg?oc=5"
+   "https://www.expressen.se/sport/hockey/hockeyallsvenskan/bjorkloven-ar-en-seger-fran-shl-/",
+   "Karlskoga tappade ledning sent – Björklöven vände till 5–4. Björklöven leder nu finalserien med 3–0 i matcher. Segern ger chans att säkra SHL-platsen redan på onsdag. Dramatisk avslutning med ...",
+   false
+  ],
+  [
+   "2026-11-21T19:31:40.000Z",
+   "Äntligen seger för Björklöven mot Linköping",
+   "Björklöven",
+   "https://www.expressen.se/sport/hockey/hockeyallsvenskan/bjorkloven-ar-en-seger-fran-shl-/",
+   "Karlskoga tappade ledning sent – Björklöven vände till 5–4. Björklöven leder nu finalserien med 3–0 i matcher. Segern ger chans att säkra SHL-platsen redan på onsdag. Dramatisk avslutning med ...",
+   false
+  ],
+  [
+   "2026-11-21T19:24:16.000Z",
+   "Björklöven bröt sviten – första segern på över en månad",
+   "Aftonbladet",
+   "https://www.aftonbladet.se/sportbladet/hockey/a/GPGba6/bjorkloven-brot-sviten-forsta-segern-sedan-pa-over-en-manad",
+   "Forwarden klippte till direkt på en flippmacka från Lucas Ekeståhl Jonsson och LHC-keepern Waltteri Ignatjew hade inte en chans. Matchen gick till förlängning och där avgjorde hemmasonen Ekeståhl ...",
+   false
   ],
   [
    "2026-11-21T18:12:28.000Z",
@@ -1679,36 +1703,28 @@
    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPa2J6aE5sa090Vm5hSmVWYTN5dW5SY1h3eEtKY194U1lySzlHRE1IcFBDbWlGWUpZZGhFNTRDUDdkRkFqSFFiVXhFMUFLMFR5TEVXYlVIRTdIb0hDcTU3TFJFNE5MekltQkFOdWJlTFRod1pfQ0pROGF4UmlRd3lhY1JBRVhuZTVyb1ZNd2oyRUxnZFk1Z1RYRU5ZS0laeV9qLWFsNlZ1TTI?oc=5"
   ],
   [
-   "2026-11-21T17:00:51.000Z",
-   "Live: Löven gör en ändring",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMidEFVX3lxTE92N3Vrd1hqNWZhaHBqd1lBR1dScGZYM2w1ckFKTmFpNS1QZzQ1ZWY0TV9rem1oOXY5a05MbWRxT3I4QkVsRkR4Y2Uwczl3bURYYmRjM0NTY0RqTGV4ZkZpalgwMXdBZi1KUldsWmtLU3p1OTdV?oc=5"
-  ],
-  [
    "2026-11-21T16:50:02.000Z",
    "Förlust för Sundsvall Hockey hemma mot Björklöven",
    "Sundsvalls Tidning",
    "https://news.google.com/rss/articles/CBMif0FVX3lxTE92UVA0T045ZzVmSlNERGJXSjlkbk4tY21BQlJpQ1dPUUFTZ1hsQkpUcGFjVXVDT19PRzJBY18tUU9HMlByT3N3RllYUnlYX1FJZ09INHhQcmN6UXNPazJobVQ1WHhIbXVLX0FqME52V21VVjdOb0ZkengtUkVFZGM?oc=5"
-  ],
-  [
-   "2026-11-21T16:48:40.000Z",
-   "Björklöven vann på nytt – 4-0 mot Sundsvall Hockey",
-   "Björklöven",
-   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9mcUU4dTVKZ3FvSmI2STRxaU9MWWIxaldTTW5KdkhCSWw5SUItZjB3QzFIZFZfVVZmOEVvNGJmcTF5V09BNUtwM2ZrOTF6YVl5RnB0OGZqZDVFcWZmM0o5bzl5NA?oc=5"
-  ],
-  [
-   "2026-11-21T16:27:35.000Z",
-   "Analys: ”Förlösande för en hel stad”",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMiogFBVV95cUxQOGhSa3Y1d29nV3M5ZkRfcUdBdFFQUWpSMFNtbjlSd0JFMlhXMUpSUFZXc2NVR0hiWFpRdDBBd0VtY3lZdE53OThoSjVyMUlSQTRDcEJiNWFIS0hfOExaS09Ca2JQSVZjZEhmakZMaGRUUXlIMzVObDJ1aDBON29DazBocndrWlJWX3ktY0NWNC1Ma3V3bmVHQVhQY0tRRklBLUE?oc=5"
   ]
  ],
  "newsBlock": {
   "names": [
    "elissa benjamin",
    "katy mckenna",
-   "katy mckennas"
+   "katy mckennas",
+   "modo hockey"
   ],
-  "links": []
+  "links": [
+   "https://news.google.com/rss/articles/CBMie0FVX3lxTE9MQ0JUd2NETk5SQ2dDYThSMS0tNTRpQVN2SHcwM3gtLVlsclB6MHRHek02RW5hQzBCeWRJckR3Y0x0RTZVNEU3cUhHZDdVTmQ5U2MxeTJpTE1vVTBfZE1mWHpZVlpNYVVEUTgwRVJ0ODlQajFhVEVVa3lFTQ?oc=5",
+   "https://news.google.com/rss/articles/CBMikwFBVV95cUxNME4yUFJpNGNWSW15RTFLTEdNd2hldkx4VXVEMElNRnVKelZiN19VNlBlNFFzWTdvcjJjYjRfVXJJa2xYcW9KME1MTnBQZkEtOVQ0d2Z1WVAyUnJoRkJ1eXF3MlEybzF6dHllRWo5dHo2VlRXbzJNX3NfSnNfNDliWVh2ZHJ0SDZCRjhBcWtBcEpLQlU?oc=5",
+   "https://news.google.com/rss/articles/CBMifkFVX3lxTE15U3llVld6bDlQNE1QOE1wMWJPdkxBbjNJNU10QnJUaG1wWTFzbmdJT3FxTDdDTVJnYjNxS3R0UnNIQlFFcmJtc2ZmNG5feFE1TFRCeERvM2FvWlYtM0NtNVQ0Ym1Nc0FwOHBIVG5CdkRUTF9qckREWTd3OFhwUQ?oc=5",
+   "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTFU1QjB4T1JXMDRhbjV6NHptZGpRcjlvZTBjWFVYUU50MTU3U095YUh3TndlbmtYRDNnLWluWUw4U0taN2s2c2FwRHF6WExUc1BNZ2NCdGVLQVB6SE5Fa2NrLUQ1YWZJY0hSUDVsMXk0SHZTX1B5R0ZsVFBEeFEtNmg1VjRtQWpsTmFiRi1CQQ?oc=5",
+   "https://news.google.com/rss/articles/CBMipAFBVV95cUxPaXNWNGs0RkNrc25odzNNVXEyVlpjM2sybE5PdFZ0WG4wWE9ySWxUbk5yVEtwV082NHZESE40aUc2akVXMERXQTFNUEJFNXl1SDNJVk5hcVM2YUhFYlBpZVBkSGlTbUxLYXBGaF9LdktqTUNsRHFHSXl1NXhIc3dTOHo0TVJTcm1qOUxZN2xGSk93cnJGNXNZM3JKemZzeXRldDJzdQ?oc=5",
+   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5hd19fczM3cF9MRTROT0VGLTZyc2ZPR3hDLUhBVWxYdGNZeGRwNFZWSUNQamdRaFA5TTZ6SUQxNy1VSEs3QVJ2S0pRT1BRYlJIbWlTSy1wdXA3aHh3Wm16dlEwOA?oc=5",
+   "https://www.svt.se/nyheter/lokalt/vasterbotten/folj-bjorkloven-och-skelleftea-aik-under-shl-sasongen?inlagg=4f1c71f26f087e7553ba5e5f2ecd2e2d",
+   "https://www.vk.se/2023-01-21/modo-hockey-j18-besegrade-bjorkloven-pa-bortaplan"
+  ]
  }
 }
