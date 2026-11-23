@@ -307,10 +307,12 @@ await source("nyckeltal", async () => {
 const NOT_MEN = /\bdam(?:er|erna|laget|lag|en|hockey)?\b|\bsdhl\b|\b[uj] ?(?:1[0-9]|20)\b|junior|flick|ungdom|tr(?:a|ä)ningstider|hockeyskola|hockeygymnas|parahockey|sledge/i;
 // Källor som skriver om Löven även när rubriken inte nämner laget; övriga måste nämna Löven eller en spelare i rubriken
 const LOVEN_SRC = /bj(?:ö|o)rkl(?:ö|o)ven|v(?:ä|a)sterbottens-kuriren|^vk$|folkbladet|svenskafans|hockeysverige|hockeynews|hurbra|aftonbladet|expressen|svt|sveriges radio|sportnet|eliteprospects|^shl/i;
+// Personer och länkar från dam-/juniorartiklar sparas mellan körningarna (data.json: newsBlock)
+const badLinks = new Set(old.newsBlock?.links || []), badNames = new Set(old.newsBlock?.names || []);
 function menOnly(list, get) {
   const roster = Object.values(old.roster || {}).flat().map(p => fold(p[1]).split(" ").pop()).filter(w => w && w.length > 3);
   const usRe = new RegExp(`bjorkloven|\\bloven|bogren|kentta${roster.length ? "|\\b(?:" + roster.join("|") + ")\\b" : ""}`);
-  const bad = new Set(), badLinks = new Set(), badNames = new Set();
+  const bad = new Set();
   const names = t => (String(t).match(/\b[A-ZÅÄÖÉ][a-zåäöéü]+ [A-ZÅÄÖÉ][a-zåäöéü]+(?:-[A-ZÅÄÖÉ][a-zåäöéü]+)?/g) || []).map(fold).filter(n => !usRe.test(n));
   for (const x of list) { const g = get(x); if (NOT_MEN.test(g.title + " " + g.text)) { bad.add(x); badLinks.add(g.link); names(g.title).forEach(n => badNames.add(n)); } }
   // Matchrapporter: resultatet i rubriken måste stämma med en herrmatch samma dag eller de två dagarna innan
@@ -428,6 +430,7 @@ await source("nyheter", async () => {
   }
   log(`   betalvägg: ${checks} artiklar kontrollerade, ${news.filter(n => n[5] === true).length} låsta`);
   if (news.length) D.news = news;
+  D.newsBlock = { names: [...badNames].slice(-150), links: [...badLinks].slice(-150) };
 });
 
 /* ---------- 6. TV-kanal och sändningsstart från Hurbras matchguider ---------- */
