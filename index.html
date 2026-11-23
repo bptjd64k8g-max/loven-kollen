@@ -261,7 +261,7 @@ footer{padding:34px 0 44px;color:var(--muted);font-size:.86rem}
   <section aria-label="Läget" style="padding-top:22px">
     <div class="stats" id="stats"></div>
     <div class="form" id="form" aria-label="Säsongens matcher, äldst till vänster"></div>
-    <p class="tl">Grön = vinst, gul = vinst efter förlängning, röd = förlust. Äldst till vänster.</p>
+    <p class="tl">Grön = vinst, gul = vinst efter övertid, röd = förlust. Äldst till vänster.</p>
   </section>
 
   <section id="matcher" aria-labelledby="m-h">
@@ -385,7 +385,7 @@ const shortName = n => n.replace(/^IF /,"").replace(/ (IF|HC|BK|AIK|HF|IK|HK|Lak
   [[`${row+1}:a`,"i SHL"],[t[7],"poäng"],[`${gf}–${ga}`,"mål"],[streak?`${streak} raka`:`${t[2]+t[3]}`, streak?"förluster i rad":"vinster"]]
     .forEach(([b,s]) => $("stats").append(el("div","",`<b>${esc(b)}</b><span>${esc(s)}</span>`)));
   RESULTS.forEach(r => { const o = outcome(r); const i = el("i",o,o==="L"?"F":o==="OTW"?"ÖV":"V");
-    i.title = `${r[0]}: ${r[1]==="H"?"hemma mot":"borta mot"} ${r[2]} ${r[3]}–${r[4]}${r[5]?" efter förlängning":""}`; $("form").append(i); });
+    i.title = `${r[0]}: ${r[1]==="H"?"hemma mot":"borta mot"} ${r[2]} ${r[3]}–${r[4]}${r[5]?" efter övertid":""}`; $("form").append(i); });
 })();
 
 /* kommande + hero */
@@ -433,7 +433,7 @@ function renderHero(n){
   if (last) {
     const home = last[1] === "H", us = last[3], them = last[4];
     const [ta, tb, sa, sb] = home ? ["Björklöven", shortName(last[2]), us, them] : [shortName(last[2]), "Björklöven", them, us];
-    $("hero").innerHTML = `<p class="kicker">Slutresultat · ${us > them ? "seger" : "förlust"}${last[5] ? " efter förlängning" : ""}</p>
+    $("hero").innerHTML = `<p class="kicker">Slutresultat · ${us > them ? "seger" : "förlust"}${last[5] ? " efter övertid" : ""}</p>
       <h1 class="matchup"><span>${esc(ta)} ${sa}</span><span class="vs">–</span><span>${esc(tb)} ${sb}</span></h1>
       <p class="meta">${fmtDate(toDate(last[0]))}${last[6] ? ` · publik ${last[6].toLocaleString("sv-SE")}` : ""}</p>
       ${n ? `<p class="meta" style="margin-top:22px;font-weight:600">Nästa match: ${fmtDate(toDate(n[0],n[1]))} kl. ${n[1] ? n[1].replace(":", ".") : "–"}, ${n[2] === "H" ? "hemma mot" : "borta mot"} ${esc(shortName(n[3]))}</p><div id="cd"></div><div id="lineup"></div>` : ""}`;
@@ -497,7 +497,7 @@ function tick(d){
     if (ms <= 0){
       const over = ms < -LIVE_MS;
       const L = NEXT && NEXT[6], home = NEXT && NEXT[2] === "H";
-      const score = L ? `<p class="livescore">${home ? `Björklöven ${L.us} – ${L.them} ${esc(shortName(NEXT[3]))}` : `${esc(shortName(NEXT[3]))} ${L.them} – ${L.us} Björklöven`}<small>${L.period > 3 ? "förlängning" : `period ${L.period}`} · uppdateras automatiskt</small></p>` : "";
+      const score = L ? `<p class="livescore">${home ? `Björklöven ${L.us} – ${L.them} ${esc(shortName(NEXT[3]))}` : `${esc(shortName(NEXT[3]))} ${L.them} – ${L.us} Björklöven`}<small>${L.period > 3 ? "övertid" : `period ${L.period}`} · uppdateras automatiskt</small></p>` : "";
       cd.innerHTML = `${score}<div class="livebox"><span class="pulse">${over ? "Slut – resultatet kommer strax" : "Live nu"}</span>
         <a class="btn" href="https://www.shl.se" target="_blank" rel="noopener">Följ ställningen på SHL.se</a>
         <a class="btn" href="https://www.tv4play.se" target="_blank" rel="noopener">Se på TV4 Play</a></div>`;
@@ -548,7 +548,7 @@ function renderResults(){
   (showAllRes ? list : list.slice(0,5)).forEach(r => {
     const o = outcome(r);
     ul.append(el("li","",`<span class="d">${fmtDate(toDate(r[0]))}</span>
-      <span class="o">${esc(r[2])}<small>${r[1]==="H"?"Hemma":"Borta"}${r[5]?", efter förlängning":""}${r[6]?` · publik ${r[6].toLocaleString("sv-SE")}`:""}</small></span>
+      <span class="o">${esc(r[2])}<small>${o==="L"?"Förlust":"Vinst"} · ${r[1]==="H"?"Hemma":"Borta"}${r[5]?", efter övertid":""}${r[6]?` · publik ${r[6].toLocaleString("sv-SE")}`:""}</small></span>
       <span class="score ${o}" aria-label="${o==="L"?"Förlust":"Vinst"} ${r[3]}–${r[4]}">${r[3]}–${r[4]}</span>`));
   });
   $("moreRes").textContent = showAllRes ? "Visa bara de fem senaste" : `Visa alla ${RESULTS.length} matcher`;
@@ -635,7 +635,7 @@ NUMS.forEach(([v,l,r]) => $("nums").append(el("div","",`<b>${esc(v)}</b><span>${
 /* tabell */
 (function(){
   const t = $("table");
-  t.innerHTML = `<thead><tr><th>#</th><th>Lag</th><th title="Spelade">S</th><th title="Vinster">V</th><th title="Vinster efter förlängning">ÖV</th><th title="Förluster efter förlängning">ÖF</th><th title="Förluster">F</th><th title="Målskillnad">+/−</th><th title="Poäng">P</th></tr></thead>`;
+  t.innerHTML = `<thead><tr><th>#</th><th>Lag</th><th title="Spelade">S</th><th title="Vinster">V</th><th title="Vinster efter övertid">ÖV</th><th title="Förluster efter övertid">ÖF</th><th title="Förluster">F</th><th title="Målskillnad">+/−</th><th title="Poäng">P</th></tr></thead>`;
   const tb = el("tbody");
   TABLE.forEach((r,i) => {
     const tr = el("tr", [r[0]===US?"us":"", i===5?"cut-q":"", i===9?"cut-p":"", i===11&&TABLE.length>12?"cut-k":""].join(" ").trim());
