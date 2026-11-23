@@ -313,11 +313,34 @@ function menOnly(list, get) {
   const bad = new Set(), badLinks = new Set(), badNames = new Set();
   const names = t => (String(t).match(/\b[A-ZÅÄÖÉ][a-zåäöéü]+ [A-ZÅÄÖÉ][a-zåäöéü]+(?:-[A-ZÅÄÖÉ][a-zåäöéü]+)?/g) || []).map(fold).filter(n => !usRe.test(n));
   for (const x of list) { const g = get(x); if (NOT_MEN.test(g.title + " " + g.text)) { bad.add(x); badLinks.add(g.link); names(g.title).forEach(n => badNames.add(n)); } }
+  // Matchrapporter: resultatet i rubriken måste stämma med en herrmatch samma dag eller de två dagarna innan
+  const res = (D.results && D.results.length ? D.results : old.results) || [];
+  const ups = (D.upcoming && D.upcoming.length ? D.upcoming : old.upcoming) || [];
+  const day = d => /^\d{4}-\d{2}-\d{2}$/.test(d) ? d : new Date(d).toLocaleDateString("sv-SE", { timeZone: "Europe/Stockholm" });
+  const prevDay = d => new Date(Date.parse(d + "T12:00:00Z") - 864e5).toISOString().slice(0, 10);
+  const pl = Object.values(old.roster || {}).flat().map(p => fold(p[1]).split(" ").pop()).filter(w => w && w.length > 3);
+  const named = t => new RegExp(`bogren|kentta${pl.length ? "|\\b(?:" + pl.join("|") + ")\\b" : ""}`).test(t);
+  const matchOk = g => {
+    const t = fold(g.title);
+    if (named(t)) return true;
+    const m = t.match(/\bmoter (.+)$/);
+    if (m && /inf.r match/.test(t)) return ups.some(u => fold(u[3]).split(" ").some(w => w.length > 3 && m[1].includes(w)));
+    const d = day(g.date); if (!d || d < (res[0] || [])[0]) return true;
+    const i = res.map((r, k) => [r, k]).filter(([r]) => r[0] === d || r[0] === prevDay(d) || r[0] === prevDay(prevDay(d)));
+    const win = /\b(?:vann|vinst|seger|segern|slog|besegrade|bruten|brot|bryter)\b/.test(t);
+    const loss = /\b(?:foll|forlust|forlorade|tapp|torsk)\b/.test(t) && !win;
+    const streak = /segersvit/.test(t);
+    if (!win && !loss && !streak) return true;
+    if (!i.length) return false;
+    if (streak) return i.some(([r, k]) => r[3] > r[4] && res[k - 1] && res[k - 1][3] > res[k - 1][4]);
+    return i.some(([r]) => win ? r[3] > r[4] : r[3] < r[4]);
+  };
   return list.filter(x => {
     if (bad.has(x)) return false;
     const g = get(x), t = fold(g.title);
     if (badLinks.has(g.link)) return false;                       // samma artikel som en dam/junior-artikel
     if (names(g.title).some(n => badNames.has(n))) return false;  // samma person som i en dam/junior-artikel
+    if (!matchOk(g)) return false;                               // matchrapport som inte stämmer med herrlagets matcher
     if (usRe.test(t)) return true;
     // "LHC-kaptenen", "Modo-tränaren" o.d. handlar om en annan klubb
     return LOVEN_SRC.test(g.src) && !/(?:^|[^a-zåäö])(?:lhc|modo|brynäs|luleå|skellefteå|timrå|frölunda|färjestad|rögle|växjö|örebro|hv ?71|djurgården|malmö|linköping|sundsvall|aik)-[a-zåäö]/i.test(g.title);
@@ -349,7 +372,7 @@ await source("nyheter", async () => {
     if (rule) items.push([d.toISOString().slice(0, 10), rule[0], title, "", src, link]);
   });
   const seen = new Set();
-  D.feed = menOnly([...items, ...old.feed], f => ({ title: f[2], text: f[3] || "", src: f[4], link: f[5] }))
+  D.feed = menOnly([...items, ...old.feed], f => ({ title: f[2], text: f[3] || "", src: f[4], link: f[5], date: f[0] }))
     .filter(f => { const k = fold(f[2]).slice(0, 60); if (seen.has(k)) return false; seen.add(k); return true; })
     .sort((a, b) => b[0].localeCompare(a[0]))
     .slice(0, 40);
@@ -382,7 +405,7 @@ await source("nyheter", async () => {
   for (const f of D.feed) { if (!f[3]) { const b = match(f[2]); if (b) f[3] = b.text; } }
   // Alla nyheter till nyhetsfliken, nyast först, max 60 dagar och 30 st
   const cutoff = Date.now() - 60 * 864e5, seenN = new Set();
-  const news = menOnly([...all, ...(old.news || [])], n => ({ title: n[1], text: n[4] || "", src: n[2], link: n[3] }))
+  const news = menOnly([...all, ...(old.news || [])], n => ({ title: n[1], text: n[4] || "", src: n[2], link: n[3], date: n[0] }))
     .filter(n => Date.parse(n[0]) > cutoff)
     .filter(n => { const k = fold(n[1]).slice(0, 60); if (seenN.has(k)) return false; seenN.add(k); return true; })
     .sort((a, b) => b[0].localeCompare(a[0])).slice(0, 30);
