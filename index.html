@@ -151,7 +151,9 @@ tr.us td{background:color-mix(in srgb,var(--leaf) 28%,transparent);background-cl
 tr.cut-q + tr.us td{box-shadow:inset 0 2px 0 var(--green)}
 tr.cut-k + tr.us td{box-shadow:inset 0 2px 0 #C0281C}
 tr.us td:first-child{color:var(--ink)}
-.players{min-width:360px}
+.players{min-width:0}
+.players th,.players td{padding:8px 5px}
+.players td:first-child{white-space:normal}
 .players th:first-child,.players td:first-child{text-align:left;width:100%}
 .players th button{all:unset;cursor:pointer}
 .players th button:focus-visible{outline:2px solid var(--leaf)}
@@ -560,13 +562,15 @@ renderResults();
 $("statnote").textContent = D.statnote || "";
 let sortKey = 5, sortDir = -1;
 function renderPlayers(){
-  const cols = [["Spelare",0],["Pos",1],["GP",2],["M",3],["A",4],["P",5]];
-  const rows = PLAYERS.map(p => [...p, p[3]+p[4]]);
+  const cols = [["Spelare",0],["Pos",1],["GP",2],["M",3],["A",4],["P",5],["+/-",6]];
+  // rad: [namn, pos, GP, M, A, P, +/-]
+  const rows = PLAYERS.map(p => [p[0], p[1], p[2], p[3], p[4], p[3]+p[4], Number.isFinite(p[6]) ? p[6] : null]);
   const key = sortKey;
-  rows.sort((a,b) => key<2 ? sortDir*String(a[key]).localeCompare(b[key],"sv") : sortDir*(a[key]-b[key]) || (b[5]-a[5]));
+  rows.sort((a,b) => key<2 ? sortDir*String(a[key]).localeCompare(b[key],"sv") : sortDir*((a[key]??-999)-(b[key]??-999)) || (b[5]-a[5]));
+  const pm = v => v == null ? "–" : (v > 0 ? "+" : "") + v;
   const t = $("players");
   t.innerHTML = `<thead><tr>${cols.map(([n,i]) => `<th scope="col" aria-sort="${sortKey===i?(sortDir<0?"descending":"ascending"):"none"}"><button type="button" data-k="${i}">${n}</button></th>`).join("")}</tr></thead>
-    <tbody>${rows.map(r => `<tr><td>${esc(r[0])}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td class="p">${r[5]}</td></tr>`).join("")}</tbody>`;
+    <tbody>${rows.map(r => `<tr><td>${esc(r[0])}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td class="p">${r[5]}</td><td>${pm(r[6])}</td></tr>`).join("")}</tbody>`;
   t.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
     const k = +b.dataset.k;
     if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = k<2 ? 1 : -1; }
