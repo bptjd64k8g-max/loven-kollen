@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-25T05:41:46.680Z",
- "updatedText": "25 november 2026, kl. 06.41",
+ "updated": "2026-11-25T08:11:29.710Z",
+ "updatedText": "25 november 2026, kl. 09.11",
  "results": [
   [
    "2026-09-19",
@@ -893,14 +893,6 @@
   [
    "2026-11-21",
    "besked",
-   "Phil DiGiuseppe & Magnus Bogren inför Örebro | Youtube",
-   "",
-   "Björklöven",
-   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1SQW82SG9QUmpSQ2ZfUjZuS3lnNGRmck1RNS1CNVJyRk9pVThSUnlDa3o0d1FVelJVc0FEOWdfV1ZOaUp4SFVLX19MNXFIdkhtamZaMi1OV3lWNHhoXzR4QVRaWQ?oc=5"
-  ],
-  [
-   "2026-11-21",
-   "besked",
    "Wallmark om tuffa hösten: ”Kenttä säger att jag spelar på torsdag”",
    "",
    "Aftonbladet",
@@ -913,6 +905,14 @@
    "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
    "Hockeynews",
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
+  ],
+  [
+   "2026-11-21",
+   "besked",
+   "Phil DiGiuseppe & Magnus Bogren inför Örebro | Youtube",
+   "",
+   "Björklöven",
+   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1SQW82SG9QUmpSQ2ZfUjZuS3lnNGRmck1RNS1CNVJyRk9pVThSUnlDa3o0d1FVelJVc0FEOWdfV1ZOaUp4SFVLX19MNXFIdkhtamZaMi1OV3lWNHhoXzR4QVRaWQ?oc=5"
   ],
   [
    "2026-11-20",
@@ -1028,19 +1028,19 @@
   ],
   [
    "2026-10-19",
-   "klart",
-   "Anton Malmström återvänder till Björklöven",
-   "",
-   "Björklöven",
-   "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBNR3R6dmxfcWRCalVwQWxsNDBkaTFKOUhWd2pCTXdudUdwaGh6TmhubXZTWjFnY0EtMkhiQUpSSFZUbXRBLTZxN2FUQ2xzZUliZDY5MTFBZXhHSzNWTmV0cGc4VQ?oc=5"
-  ],
-  [
-   "2026-10-19",
    "skada",
    "Björklöven-värvningen borta resten av året",
    "",
    "Aftonbladet",
    "https://news.google.com/rss/articles/CBMisAFBVV95cUxQaUI3Nk9ELWk5RDlHcVJxMkxOd2ZhbWpIcDY5UmxHcExjaDZEck9ZT291dE5yQUIwalliSTFXTUxQVm9xZFgxaFNyMl9DVmYyVmFDdGk2VDdWV25TVDhnTmVJNDJ2T2dvTkZvSGY4bkJmek5KOE9qb1BURGtsYWxsMlhOY0lYNHlXNG41Uzl1VHVTd3V2N0lwOWhvVzRmMWpXU29RYVNwZFZCNXNsM2hiWA?oc=5"
+  ],
+  [
+   "2026-10-19",
+   "klart",
+   "Anton Malmström återvänder till Björklöven",
+   "",
+   "Björklöven",
+   "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBNR3R6dmxfcWRCalVwQWxsNDBkaTFKOUhWd2pCTXdudUdwaGh6TmhubXZTWjFnY0EtMkhiQUpSSFZUbXRBLTZxN2FUQ2xzZUliZDY5MTFBZXhHSzNWTmV0cGc4VQ?oc=5"
   ],
   [
    "2026-10-19",
@@ -1543,6 +1543,14 @@
    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1JLWNfbG50WGhPUzQ5c1pWVTlJYkVNVC0zZlQ0aW9lR0d2RzNmOC13MjdZcEZXN3Y1eUxKeHp5Z3BZYTNFVTVXeXAzeGdNdXBVQ25XS3JxZUs?oc=5"
   ],
   [
+   "2026-11-24T10:35:00.000Z",
+   "Kovács: \"Det gjorde mitt jobb svårare\"",
+   "Hockeysverige",
+   "https://hockeysverige.se/nyheter/robin-kovacs-om-formdippen-i-shl-med-bjorkloven-a6J9C1s9UPgu/",
+   "Både Björklöven och Robin Kovács har svalnat efter en stark start. Nykomlingen åkte på åtta raka förluster – samtidigt som stjärnan fått kritik för utebliven produktion. – De senaste tre, fyra matcher ...",
+   false
+  ],
+  [
    "2026-11-24T09:07:42.000Z",
    "Pausade och röt ifrån: ”Vi måste...”",
    "Västerbottens-Kuriren",
@@ -1639,12 +1647,6 @@
    "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSXcxdGc0WDVFcVdiT3NPbEVlNFZGUnlhU1RQTEtoWk9TN0t4Uk9ZTmJ1V3pJOWZZNWxBT252Z3plNXhVX2dNZjVJUE5Qc0pEMTJIeVVhbG5PSXVMeXFHU3hNd0dBYmJMTjRIdld4c0Rhd082SWd4aU10dEJWWVgtejdoSW1KWXpzbVQ0Sy13?oc=5"
   ],
   [
-   "2026-11-21T23:47:41.000Z",
-   "”Trodde att hela hallen skulle gå sönder”",
-   "Västerbotten | Folkbladet",
-   "https://news.google.com/rss/articles/CBMiiwFBVV95cUxObVFoNHRDVU1NYTZ4R1NmakJEdWlXM0lMdENmTG51ekdwa0ZGaWN6ekQ1Z0poTllucmtSbWVSUklPbkg0YkR2RFdWOFhlaEVQWmdzWm45cmg2VnA1d2phT3Q1QVhQUk5OMDd2WnlPRkdTVVA1ZzFTS05OcTkwTjRTeGVRZ1Rwb0hwZV8w?oc=5"
-  ],
-  [
    "2026-11-21T21:27:13.000Z",
    "Lägre publiksiffror för Modo utan derbyn mot Björklöven",
    "Sveriges Radio",
@@ -1674,9 +1676,7 @@
    "2026-11-21T20:51:52.000Z",
    "Björklöven vann på försök tio: ”Är otroligt skönt”",
    "Omni",
-   "https://omni.se/bjorkloven-vann-pa-forsok-tio-ar-otroligt-skont/a/z0Gy9r",
-   "En trepoängare mot Linköping gör att Björklöven bryter trenden med nio raka förluster, skriver Sportbladet. Inför kvällens drabbning hade Umeålaget inte vunnit sedan 10 oktober och en 2–1-seger efter ...",
-   false
+   "https://news.google.com/rss/articles/CBMifEFVX3lxTE9lengtYWlkV0FQR0plNGtOY0hrQXlHNUFkLWp6eTBGQ2FUdDZVdXRPR1FVR1J3WlBQeC1jRFBZRE8xMW54OXZKdVR0dFN0SlR1T2dkai1rWk5Vd3JzOXVqc2VrbW51dGw5empiUzFOekVtWGlYQmZBSUlvcjQ?oc=5"
   ],
   [
    "2026-11-21T20:49:19.000Z",
@@ -1693,6 +1693,12 @@
    "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbjlkOGtOTWxGWTN5OHFYUzZScFo2cEZCM005YVlYbU1QajJoU3NyYXRweUtXWlZORGRtck5kRUJodFl5RkhvVVdDSkxQbl9LaGRxNWVsdklLMWhZSEpwbGxpSWItMmZLY0ZMa1E0M05tMzNUbWpzSjBnVzl5eGs0WlAzU1AyTEQ2VXdv?oc=5"
   ],
   [
+   "2026-11-21T20:30:15.000Z",
+   "”Trodde att hela hallen skulle gå sönder”",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYmN1MS16MFp6d2hYY2pNWGxuNURQaHBJMjFWbVZHM1A5dl9fZktGd2xzdkEtNXk1NWhVU3Z0cEk5bUpLeVJhZkFwaFhTV1ZLT0tEZUx1MFFlUF8teTl5UXRLTGxWeG1DMkx5MUZGOVU1aFZ1ZmhSLVZhTlBiUzRTVA?oc=5"
+  ],
+  [
    "2026-11-21T20:19:11.000Z",
    "Nionde raka förlusten för Löven: ”Allt självförtroende saknas”",
    "Västerbottens-Kuriren",
@@ -1707,12 +1713,6 @@
    "https://hockeysverige.se/shl/bjorkloven-vaxjo-nionde-raka-forlust-skitstart-bogren-aWIMQ8Y8vASi/",
    "Mardrömssviten växer för Björklöven. Under torsdagskvällen kom nionde raka förlusten efter 1–3 borta mot Växjö Lakers, men Magnus Bogren var ändå inte helt besviken. – Jag tycker ändå att vi gör en ok ...",
    false
-  ],
-  [
-   "2026-11-21T20:19:11.000Z",
-   "Vann igen efter 42 dagar: ”Nästan glömt bort hur det känns”",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQlEyUi0yU0ZBZVZ5MmFnQVYwc1IxclFTdUtUVkRwdlZiZU9WWkVJNE11MmxhYllBOG1aV0NQTWstMWdlSHJDT0FiN2ROV25kMmUzcjNGWWtiT0lSUnRaUE9TRXFoQTVyY2ZCMm15bXlqWVVjSjdMaEhLUGlYNFNsT0ROTnljNWtnQkRocWhJcHBjUTZJemc?oc=5"
   ]
  ],
  "newsBlock": {
