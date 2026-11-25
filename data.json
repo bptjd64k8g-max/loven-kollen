@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-25T15:43:18.392Z",
- "updatedText": "25 november 2026, kl. 16.43",
+ "updated": "2026-11-25T16:46:09.957Z",
+ "updatedText": "25 november 2026, kl. 17.46",
  "results": [
   [
    "2026-09-19",
@@ -1519,16 +1519,16 @@
  },
  "news": [
   [
-   "2026-11-25T15:22:30.000Z",
-   "Svaret: Wallmark följer med på resan",
-   "Västerbotten | Folkbladet",
-   "https://news.google.com/rss/articles/CBMidEFVX3lxTE1Ic3NGM21qaTEzV2s0RkpIcGdoaU5uMTU5MHlXYmtQcEIxTmMtc184SXBfY1M1bDN2XzRlX1ZVQWlHVnZfQjhXQ0NNQWJOaWRiV2k4LUwwaHZQb3dzQVpIYXA4T0ExUFlMWHpCQUJqaExDbXVz?oc=5"
-  ],
-  [
    "2026-11-25T08:48:51.000Z",
    "Just nu: Wallmark följer med på resan",
    "Västerbotten | Folkbladet",
    "https://news.google.com/rss/articles/CBMidEFVX3lxTE1Ic3NGM21qaTEzV2s0RkpIcGdoaU5uMTU5MHlXYmtQcEIxTmMtc184SXBfY1M1bDN2XzRlX1ZVQWlHVnZfQjhXQ0NNQWJOaWRiV2k4LUwwaHZQb3dzQVpIYXA4T0ExUFlMWHpCQUJqaExDbXVz?oc=5"
+  ],
+  [
+   "2026-11-25T05:47:00.000Z",
+   "Svaret: Wallmark följer med på resan",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMiakFVX3lxTE1IU3k4U2ZpcGl3MlhKV0QtRmFVODBoNnhLN3A4UVBIcy00VkVodjV1MDVsbTJyLVpWczZ4WVZPTHg4Q1l1SDZlUEdrcFFzOVhfcDlkcVFucGV5dXJoMTV1R0FURHdrVTNJdUE?oc=5"
   ],
   [
    "2026-11-25T03:07:00.000Z",
@@ -1618,7 +1618,9 @@
    "2026-11-23T06:13:30.000Z",
    "Inför match: Björklöven jagar seger och trendbrott mot Linköping",
    "Björklöven",
-   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5jcE4tOUhsX1pSN09GeDRLTFFUSnlPd3ZISXB1U3dwZ1RWcnprZWpWX3hrYVJzNXhZcFl4VzcwdExUNjhKTzktNTVUWmhUS3hBSU96UDlGdHFNbkdmOVdzWDVocw?oc=5"
+   "https://www.expressen.se/sport/hockey/hockeyallsvenskan/bjorkloven-ar-en-seger-fran-shl-/",
+   "Karlskoga tappade ledning sent – Björklöven vände till 5–4. Björklöven leder nu finalserien med 3–0 i matcher. Segern ger chans att säkra SHL-platsen redan på onsdag. Dramatisk avslutning med ...",
+   false
   ],
   [
    "2026-11-23T01:30:17.000Z",
@@ -1685,14 +1687,6 @@
    "https://news.google.com/rss/articles/CBMifkFVX3lxTE45LVlwaXdmaVRPT18zYXM4SUJQS2RaYjJ6eHlFY2lHRmptWU9JZW1iY1d1UXVGUGxfVUpIVGZ4X3FrdlNDVUZMY1BQbGRSZmh5Z2xVMU55anJ6eWNmd25Vc3M0RGtYdmk5RkFmY3g3OEVhUXlocEJyY0NFcmNMdw?oc=5"
   ],
   [
-   "2026-11-21T21:08:05.000Z",
-   "Chris DiDomenico har inte träffat sonen på fyra månader",
-   "Expressen",
-   "https://www.expressen.se/sport/hockey/shl/chris-didomenico-har-inte-traffat-sonen-pa-fyra-manader/",
-   "Chris DiDomenico bröt måltorkan när Björklöven satte stopp för sin långa förlustsvit. Men den största glädjen för stjärnan finns just nu utanför isen. – Det har varit tufft, säger han.",
-   false
-  ],
-  [
    "2026-11-21T20:55:28.000Z",
    "Live: Löven gör en ändring",
    "Västerbotten | Folkbladet",
@@ -1711,6 +1705,13 @@
    "https://www.aftonbladet.se/sportbladet/hockey/a/6PjnP0/bjorkloven-tappade-ledning-till-forlust-mot-orebro",
    "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
    false
+  ],
+  [
+   "2026-11-21T20:13:56.000Z",
+   "Förlust mot Växjö för Björklöven",
+   "Björklöven",
+   "https://www.vk.se/2026-11-10/modo-hockey-for-tuffa-for-bjorkloven-forlust-med-0-4-3109a",
+   "John Hägglöf gav Modo Hockey ledningen efter elva minuter efter förarbete från Viggo Lundström. Efter 3.04 i andra perioden nätade Emil Öberg på pass av Rasmus Sahlman och Melvin Nylén och gjorde 0-2."
   ]
  ],
  "newsBlock": {
@@ -1739,7 +1740,8 @@
    "https://www.msn.com/sv-se/sport/allm%C3%A4nt/oliwer-sj%C3%B6str%C3%B6m-ume%C3%A5-bj%C3%B6rkl%C3%B6ven-l%C3%A5net-och-genombrottet-i-lule%C3%A5/ar-AA2i8JK5",
    "https://www.msn.com/sv-se/nyheter/other/oliwer-sj%C3%B6str%C3%B6m-ume%C3%A5-bj%C3%B6rkl%C3%B6ven-l%C3%A5net-och-genombrottet-i-lule%C3%A5/ar-AA2i8JK5",
    "https://news.google.com/rss/articles/CBMiY0FVX3lxTE96anJpLUlGcnZIc2szMGhzczZVUm83b01BRFVOYWhGOUtmcWFtZVlhU0xFbl83dDVlUC1pZDVGTVBoNGZIOEdDQ0hCQWdDS1k5SGlURVIxMDhubF81MHVOX0V0Yw?oc=5",
-   "https://www.msn.com/sv-se/sport/fotboll/oliwer-sj%C3%B6str%C3%B6m-ume%C3%A5-bj%C3%B6rkl%C3%B6ven-l%C3%A5net-och-genombrottet-i-lule%C3%A5/ar-AA2i8JK5"
+   "https://www.msn.com/sv-se/sport/fotboll/oliwer-sj%C3%B6str%C3%B6m-ume%C3%A5-bj%C3%B6rkl%C3%B6ven-l%C3%A5net-och-genombrottet-i-lule%C3%A5/ar-AA2i8JK5",
+   "https://news.google.com/rss/articles/CBMigAFBVV95cUxNcERCZ2xDdkIzRHZQcTd4OVZuVm5sMlFRTHJGR2c1UDFIdDA4aGp3MkJqM0I2RXFuNjV2MEFaT1B6ZkVsbkZ0RE1qQlF3VEZNNkRNZVpmbUJ2VWdhOTZ3Nm00ZWEycmFWUWUxRWNkVEdrMjFzUUhrSEtBX0owNVdUUQ?oc=5"
   ]
  }
 }
