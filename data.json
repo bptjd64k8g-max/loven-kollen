@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-25T08:11:29.710Z",
- "updatedText": "25 november 2026, kl. 09.11",
+ "updated": "2026-11-25T09:25:11.528Z",
+ "updatedText": "25 november 2026, kl. 10.25",
  "results": [
   [
    "2026-09-19",
@@ -893,6 +893,14 @@
   [
    "2026-11-21",
    "besked",
+   "Phil DiGiuseppe & Magnus Bogren inför Örebro | Youtube",
+   "",
+   "Björklöven",
+   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1SQW82SG9QUmpSQ2ZfUjZuS3lnNGRmck1RNS1CNVJyRk9pVThSUnlDa3o0d1FVelJVc0FEOWdfV1ZOaUp4SFVLX19MNXFIdkhtamZaMi1OV3lWNHhoXzR4QVRaWQ?oc=5"
+  ],
+  [
+   "2026-11-21",
+   "besked",
    "Wallmark om tuffa hösten: ”Kenttä säger att jag spelar på torsdag”",
    "",
    "Aftonbladet",
@@ -905,14 +913,6 @@
    "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
    "Hockeynews",
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
-  ],
-  [
-   "2026-11-21",
-   "besked",
-   "Phil DiGiuseppe & Magnus Bogren inför Örebro | Youtube",
-   "",
-   "Björklöven",
-   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1SQW82SG9QUmpSQ2ZfUjZuS3lnNGRmck1RNS1CNVJyRk9pVThSUnlDa3o0d1FVelJVc0FEOWdfV1ZOaUp4SFVLX19MNXFIdkhtamZaMi1OV3lWNHhoXzR4QVRaWQ?oc=5"
   ],
   [
    "2026-11-20",
@@ -1519,6 +1519,14 @@
  },
  "news": [
   [
+   "2026-11-25T00:35:00.000Z",
+   "Kovács: \"Det gjorde mitt jobb svårare\"",
+   "Hockeysverige",
+   "https://hockeysverige.se/nyheter/robin-kovacs-om-formdippen-i-shl-med-bjorkloven-a6J9C1s9UPgu/",
+   "Både Björklöven och Robin Kovács har svalnat efter en stark start. Nykomlingen åkte på åtta raka förluster – samtidigt som stjärnan fått kritik för utebliven produktion. – De senaste tre, fyra matcher ...",
+   false
+  ],
+  [
    "2026-11-24T20:08:31.000Z",
    "Studio Ladan: Ställs mot väggen av tittarna – i två timmar",
    "Västerbotten | Folkbladet",
@@ -1541,14 +1549,6 @@
    "LHC tappade greppet mot Björklöven: \"Riktigt irriterad\"",
    "Linköping HC",
    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1JLWNfbG50WGhPUzQ5c1pWVTlJYkVNVC0zZlQ0aW9lR0d2RzNmOC13MjdZcEZXN3Y1eUxKeHp5Z3BZYTNFVTVXeXAzeGdNdXBVQ25XS3JxZUs?oc=5"
-  ],
-  [
-   "2026-11-24T10:35:00.000Z",
-   "Kovács: \"Det gjorde mitt jobb svårare\"",
-   "Hockeysverige",
-   "https://hockeysverige.se/nyheter/robin-kovacs-om-formdippen-i-shl-med-bjorkloven-a6J9C1s9UPgu/",
-   "Både Björklöven och Robin Kovács har svalnat efter en stark start. Nykomlingen åkte på åtta raka förluster – samtidigt som stjärnan fått kritik för utebliven produktion. – De senaste tre, fyra matcher ...",
-   false
   ],
   [
    "2026-11-24T09:07:42.000Z",
@@ -1676,7 +1676,9 @@
    "2026-11-21T20:51:52.000Z",
    "Björklöven vann på försök tio: ”Är otroligt skönt”",
    "Omni",
-   "https://news.google.com/rss/articles/CBMifEFVX3lxTE9lengtYWlkV0FQR0plNGtOY0hrQXlHNUFkLWp6eTBGQ2FUdDZVdXRPR1FVR1J3WlBQeC1jRFBZRE8xMW54OXZKdVR0dFN0SlR1T2dkai1rWk5Vd3JzOXVqc2VrbW51dGw5empiUzFOekVtWGlYQmZBSUlvcjQ?oc=5"
+   "https://omni.se/bjorkloven-vann-pa-forsok-tio-ar-otroligt-skont/a/z0Gy9r",
+   "En trepoängare mot Linköping gör att Björklöven bryter trenden med nio raka förluster, skriver Sportbladet. Inför kvällens drabbning hade Umeålaget inte vunnit sedan 10 oktober och en 2–1-seger efter ...",
+   false
   ],
   [
    "2026-11-21T20:49:19.000Z",
@@ -1700,15 +1702,13 @@
   ],
   [
    "2026-11-21T20:19:11.000Z",
-   "Nionde raka förlusten för Löven: ”Allt självförtroende saknas”",
+   "Segrade: ”Förlösande för en hel stad”",
    "Västerbottens-Kuriren",
-   "https://hockeysverige.se/shl/bjorkloven-vaxjo-nionde-raka-forlust-skitstart-bogren-aWIMQ8Y8vASi/",
-   "Mardrömssviten växer för Björklöven. Under torsdagskvällen kom nionde raka förlusten efter 1–3 borta mot Växjö Lakers, men Magnus Bogren var ändå inte helt besviken. – Jag tycker ändå att vi gör en ok ...",
-   false
+   "https://news.google.com/rss/articles/CBMiogFBVV95cUxQOGhSa3Y1d29nV3M5ZkRfcUdBdFFQUWpSMFNtbjlSd0JFMlhXMUpSUFZXc2NVR0hiWFpRdDBBd0VtY3lZdE53OThoSjVyMUlSQTRDcEJiNWFIS0hfOExaS09Ca2JQSVZjZEhmakZMaGRUUXlIMzVObDJ1aDBON29DazBocndrWlJWX3ktY0NWNC1Ma3V3bmVHQVhQY0tRRklBLUE?oc=5"
   ],
   [
    "2026-11-21T20:19:11.000Z",
-   "Daniel Rahimis ord efter nionde raka förlusten",
+   "Nionde raka förlusten för Löven: ”Allt självförtroende saknas”",
    "Västerbottens-Kuriren",
    "https://hockeysverige.se/shl/bjorkloven-vaxjo-nionde-raka-forlust-skitstart-bogren-aWIMQ8Y8vASi/",
    "Mardrömssviten växer för Björklöven. Under torsdagskvällen kom nionde raka förlusten efter 1–3 borta mot Växjö Lakers, men Magnus Bogren var ändå inte helt besviken. – Jag tycker ändå att vi gör en ok ...",
