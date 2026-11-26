@@ -455,15 +455,15 @@ function renderHero(n){
   tick(d);
   renderLineup();
 }
-// Laguppställningen visas under biljettläget från att den kommer ut till 20 min efter nedsläpp
-const LINEUP_MS = 20*60*1000;
+// Laguppställningen visas under biljettläget från att den kommer ut till 3 timmar efter nedsläpp (hela matchen)
+const LINEUP_MS = 3*60*60*1000;
 let lineupPoll = null, lineupHide = null;
 function renderLineup(){
   const box = $("lineup"), n = NEXT;
   if (!box || !n) return;
   const end = startOf(n) + LINEUP_MS, L = D.lineup;
   const isToday = n[0] === new Intl.DateTimeFormat("sv-SE", {timeZone:"Europe/Stockholm"}).format(new Date());
-  // Kolla efter uppställningen varannan minut under matchdagen fram till 20 min efter nedsläpp
+  // Kolla efter uppställningen varannan minut under matchdagen fram till 3 timmar efter nedsläpp
   if (isToday && Date.now() < end && !lineupPoll) {
     lineupPoll = setInterval(async () => {
       if (Date.now() > end) { clearInterval(lineupPoll); renderLineup(); return; }

@@ -469,7 +469,7 @@ await source("tv", async () => {
 });
 
 /* ---------- Laguppställning inför dagens match ---------- */
-// Swehockey lägger ut uppställningen strax före nedsläpp. Den visas överst på sidan till 20 min efter nedsläpp.
+// Swehockey lägger ut uppställningen strax före nedsläpp. Den visas överst på sidan till 3 timmar efter nedsläpp.
 await source("uppställning", async () => {
   const today = new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Stockholm" }).format(new Date());
   if (D.lineup && D.lineup.date < today) delete D.lineup;
@@ -495,8 +495,8 @@ await source("uppställning", async () => {
     if (/coach/i.test(lab)) break;
     if (lab) { cur = { label: LABEL[lab] || lab, p: [] }; groups.push(cur); }
     if (!cur) continue;
-    // I femmorna står backarna på raden med etiketten och forwards på raden under.
-    const pos = /^Femma/.test(cur.label) ? (lab ? "B" : "F") : "";
+    // I femmorna står forwards på raden med etiketten och backarna på raden under.
+    const pos = /^Femma/.test(cur.label) ? (lab ? "F" : "B") : "";
     $(r).find(".lineUpPlayer").each((_, p) => {
       const m = clean($(p).text()).match(/^(\d+)\.\s*(.+?)(?:\s*\(\w+\))?$/);
       if (m) cur.p.push([+m[1], rosterName(nameOf(m[2])), $(p).hasClass("red") ? 1 : 0, pos]);
