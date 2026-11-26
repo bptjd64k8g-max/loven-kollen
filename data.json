@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26T20:26:19.205Z",
- "updatedText": "26 november 2026, kl. 21.26",
+ "updated": "2026-11-26T21:18:24.529Z",
+ "updatedText": "26 november 2026, kl. 22.18",
  "results": [
   [
    "2026-09-19",
@@ -181,24 +181,19 @@
    true,
    5095,
    "18:00"
+  ],
+  [
+   "2026-11-26",
+   "B",
+   "Frölunda HC",
+   2,
+   5,
+   false,
+   11024,
+   "19:00"
   ]
  ],
  "upcoming": [
-  [
-   "2026-11-26",
-   "19:00",
-   "B",
-   "Frölunda HC",
-   "Startmålvakt ej klar. Saknas: Barklund (skadad), Hemmyr (utlånad). Wallmark osäker (knä).",
-   {
-    "kanal": "TV4 Sportkanalen och TV4 Play"
-   },
-   {
-    "us": 2,
-    "them": 5,
-    "period": 3
-   }
-  ],
   [
    "2026-11-28",
    "18:00",
@@ -449,43 +444,43 @@
  "table": [
   [
    "Färjestad BK",
-   18,
+   19,
    14,
-   2,
+   3,
    1,
    1,
-   43,
-   47
+   44,
+   49
   ],
   [
    "Frölunda HC",
-   21,
-   12,
+   22,
+   13,
    2,
    1,
    6,
-   21,
-   41
+   24,
+   44
   ],
   [
    "Skellefteå AIK",
-   18,
+   19,
    11,
    1,
    2,
-   4,
-   20,
+   5,
+   17,
    37
   ],
   [
    "Örebro HK",
-   19,
-   10,
+   20,
+   11,
    1,
    2,
    6,
-   -5,
-   34
+   -4,
+   37
   ],
   [
    "IF Malmö Redhawks",
@@ -498,6 +493,16 @@
    32
   ],
   [
+   "Brynäs IF",
+   19,
+   8,
+   1,
+   1,
+   9,
+   13,
+   27
+  ],
+  [
    "Luleå HF",
    19,
    7,
@@ -508,83 +513,73 @@
    27
   ],
   [
-   "Timrå IK",
-   18,
-   6,
-   3,
-   1,
-   8,
-   -3,
-   25
-  ],
-  [
-   "Brynäs IF",
-   18,
-   7,
-   1,
-   1,
-   9,
-   10,
-   24
-  ],
-  [
    "Rögle BK",
-   19,
-   6,
+   20,
+   7,
    2,
    2,
    9,
-   -8,
-   24
+   -5,
+   27
   ],
   [
    "Växjö Lakers HC",
-   18,
-   7,
+   19,
+   8,
    1,
    1,
    9,
-   -8,
-   24
+   -5,
+   27
+  ],
+  [
+   "Timrå IK",
+   19,
+   6,
+   3,
+   2,
+   8,
+   -4,
+   26
   ],
   [
    "Djurgårdens IF",
-   19,
+   20,
    4,
    3,
    2,
-   10,
-   -19,
+   11,
+   -22,
    20
   ],
   [
    "Linköping HC",
-   18,
+   19,
    5,
    1,
    2,
-   10,
-   -21,
+   11,
+   -24,
    19
   ],
   [
    "IF Björklöven",
-   18,
+   19,
    5,
    2,
    0,
-   11,
-   -23,
+   12,
+   -26,
    19
   ],
   [
    "HV 71",
-   18,
+   19,
    3,
    2,
    4,
-   9,
-   -19,
+   10,
+   -20,
    17
   ]
  ],
@@ -592,37 +587,47 @@
   [
    "Fredrik Forsberg",
    "RW",
-   18,
+   19,
    3,
    7,
    4,
    1,
-   42
+   43
   ],
   [
    "Robin Kovács",
    "RW",
-   18,
+   19,
    7,
    2,
    8,
-   -18,
+   -20,
    49
   ],
   [
    "Lukas Ekeståhl-Jonsson",
    "B",
-   18,
+   19,
    3,
    6,
-   8,
+   10,
    -12,
-   35
+   36
+  ],
+  [
+   "Phil Di Giuseppe",
+   "LW",
+   19,
+   4,
+   3,
+   31,
+   -5,
+   39
   ],
   [
    "Oscar Tellström",
    "RW",
-   18,
+   19,
    3,
    4,
    0,
@@ -632,37 +637,27 @@
   [
    "Axel Ottosson",
    "C",
-   18,
+   19,
    3,
    4,
    6,
    -3,
-   15
+   16
   ],
   [
    "Chris DiDomenico",
    "RW",
-   18,
+   19,
    3,
    4,
    18,
-   -12,
+   -15,
    17
-  ],
-  [
-   "Phil Di Giuseppe",
-   "LW",
-   18,
-   3,
-   3,
-   31,
-   -5,
-   36
   ],
   [
    "Marcus Nilsson",
    "LW",
-   12,
+   13,
    1,
    5,
    0,
@@ -672,47 +667,47 @@
   [
    "Tristen Robins",
    "C",
-   18,
+   19,
    2,
    3,
-   4,
+   6,
    -2,
    25
   ],
   [
    "Topi Niemelä",
    "B",
-   18,
+   19,
    1,
    4,
    8,
-   -8,
-   29
+   -10,
+   30
   ],
   [
    "Gustav Possler",
    "LW",
-   18,
+   19,
    1,
    3,
    0,
-   -7,
-   10
+   -10,
+   12
   ],
   [
    "Tarmo Reunanen",
    "B",
-   18,
+   19,
    0,
    4,
    0,
    1,
-   26
+   27
   ],
   [
    "Albin Lundin",
    "C",
-   18,
+   19,
    2,
    1,
    6,
@@ -732,12 +727,32 @@
   [
    "Joel Mustonen",
    "LW",
-   18,
+   19,
    1,
-   0,
+   1,
    6,
    -6,
-   8
+   9
+  ],
+  [
+   "Lenni Killinen",
+   "LW",
+   19,
+   0,
+   2,
+   4,
+   -4,
+   6
+  ],
+  [
+   "Anton Malmström",
+   "B",
+   11,
+   1,
+   0,
+   2,
+   -2,
+   3
   ],
   [
    "Philip Hemmyr",
@@ -750,24 +765,14 @@
    0
   ],
   [
-   "Lenni Killinen",
-   "LW",
-   18,
-   0,
-   1,
-   4,
-   -4,
-   6
-  ],
-  [
    "Marcus Björk",
    "B",
-   18,
+   19,
    0,
    1,
    10,
-   -6,
-   25
+   -7,
+   27
   ],
   [
    "Douglas Flygt",
@@ -782,37 +787,27 @@
   [
    "Alfred Barklund",
    "B",
-   7,
+   8,
    0,
    0,
-   2,
+   4,
    -1,
-   2
-  ],
-  [
-   "Anton Malmström",
-   "B",
-   10,
-   0,
-   0,
-   2,
-   -3,
    2
   ],
   [
    "Linus Cronholm",
    "B",
-   18,
+   19,
    0,
    0,
    8,
-   -5,
-   16
+   -6,
+   17
   ],
   [
    "Josiah Didier",
    "B",
-   18,
+   19,
    0,
    0,
    14,
@@ -829,9 +824,9 @@
   ],
   [
    "Lassi Lehtinen",
-   9,
-   "90,77",
-   "3,10"
+   10,
+   "90,40",
+   "3,21"
   ]
  ],
  "nums": [
@@ -848,17 +843,17 @@
   [
    "20,0 %",
    "powerplay",
-   10
+   11
   ],
   [
    "76,4 %",
    "boxplay",
-   7
+   8
   ],
   [
    "89,4 %",
    "räddningsprocent",
-   8
+   7
   ],
   [
    "22,2",
@@ -873,7 +868,7 @@
   [
    "8,6 %",
    "skotteffektivitet",
-   11
+   12
   ],
   [
    "47,7 %",
@@ -926,7 +921,7 @@
    "2026-11-21",
    "besked",
    "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
-   "Nykomlingen Björklöven fortsätter att förlora efter sin succéstart. Ledning blev till förlust hemma mot Örebro.",
+   "",
    "Hockeynews",
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
   ],
@@ -1522,7 +1517,7 @@
    ""
   ]
  },
- "statnote": "Efter 18 omgångar. Björklöven är 14:a i SHL på gjorda mål per match och 12:a på insläppta, med 89,4 % i räddningsprocent. Poängbäst i laget är Fredrik Forsberg med 3+7.",
+ "statnote": "Efter 19 omgångar. Björklöven är 14:a i SHL på gjorda mål per match och 12:a på insläppta, med 89,4 % i räddningsprocent. Poängbäst i laget är Fredrik Forsberg med 3+7.",
  "sources": {
   "tabell": "ok",
   "schema": "ok",
@@ -1539,9 +1534,53 @@
   "rank": 12,
   "of": 14,
   "max": 5400,
-  "league": 7065
+  "league": 7062
  },
  "news": [
+  [
+   "2026-11-26T21:13:53.000Z",
+   "SHL: Höjdpunkter – Frölunda–Björklöven 26/11",
+   "SVT Play",
+   "https://news.google.com/rss/articles/CBMib0FVX3lxTE1zcVR0d05qdG9uWEY2ZjZVMnNsYXphd3dTczBva3Z6RHpXV3h2N2pJcGpzSGJiUVFHZlRQbTVjU0VKVDU0WTFuUGJycW1NT2ZEMUVHQU4xcE1nYUxsamgtenlESDZXdFF0bWJvd1EwOA?oc=5"
+  ],
+  [
+   "2026-11-26T21:01:52.000Z",
+   "Frölunda–Björklöven 5–2 – snabb analys och eftersnack",
+   "rakapuckar.com",
+   "https://news.google.com/rss/articles/CBMigAFBVV95cUxPaEJDMHVJOEJNVUwtNUs5eEZNWjdsSFFIa05LWDdkSEFwblJLV2tQMUYxaGttN1JzWkdBU1ZGeTJWcFl3SGNjTXZGR040VkJhdVNMRzg4anE3SlBXQ1Z5ZkF1X0xlaEZUNUlXYlBiUUxJQ21jVFVDbjNmMVpfenNQQg?oc=5"
+  ],
+  [
+   "2026-11-26T20:50:06.000Z",
+   "Ros: Det är Frölundas största utmaning",
+   "Aftonbladet",
+   "https://news.google.com/rss/articles/CBMiowFBVV95cUxPR05ma1ZXUVp5YVRyU1VMNmF4UmxBVnRaQzk4QzEwb256MFo2UHZZTGgtMzJybEFyYjZCWUFtNkdCTjBsemhvT3Zlb0d0UnpNZ3draTF1MlN6aVJWblZIcGtENTVrSEpWOXpCOHNtdllVX0lDMHRmTmR0RmYtYW1SNlpNRGlmMGZCVzd0NGNFWk1kR1hZcmJnWjFFcnBITWJpM1dN?oc=5"
+  ],
+  [
+   "2026-11-26T20:44:58.000Z",
+   "Frölundas nyförvärv Cédric Paré dödshotades i NHL • SHL",
+   "Aftonbladet",
+   "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVkhCbXBBVmlkWFJwRVB0OVlFVmdVVGxqbmI3NThoUF9TT0gxWFBibHE3enJSU18xRWFrdW5fTXhsLW1JdmVPU2tQTUdKSUZveTBQaFVqMjhRdmdJYjZhb05EUEF5UVUxNTBvTWJNeFBRMVRtRHQ3bGFlZXhXM0xpM0tQS0d3b0lXZElNWV9BUWxDQTMtM1hCdmE3UlNDcU5ycjRzNkVpRnQ4TUJw?oc=5"
+  ],
+  [
+   "2026-11-26T20:44:02.000Z",
+   "Förlust efter godkänd bortamatch",
+   "SvenskaFans.com",
+   "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1uWC1CeU5nTUt1SUx3MjAxSDV2TWhUdHVJbkhNbm4wcUhEcS1fQlowNDJ2OE1jMGJUTGtWOFBFRjJwanRzRTlGRVdRWVBER1M4b0t4dGZDU2p0OVhP?oc=5"
+  ],
+  [
+   "2026-11-26T20:31:25.000Z",
+   "Analys: ”Han borde ses som ansvarig”",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdGJJdVY5Yk85WUJZSUljRDJoTTBnNG02dmhlNGx6ZFA3eUlpVmIwVlZiLUx5NWpzUTNvMUhlbTRyVlRITXRwVjRmY3FiU3gteUhmbXF0QUtncXV4WExvMnpvX3FIbGU3Wm4tcXNUU2sxLTNGMU9UaFB3MGJaZWI3OTQ1MVZBdFRHRGc?oc=5"
+  ],
+  [
+   "2026-11-26T20:22:59.000Z",
+   "Ishockey: Frölunda – Björklöven (5-2) – SLUT – Senaste nytt från SHL",
+   "SVT Nyheter",
+   "https://www.expressen.se/sport/hockey/hockeyallsvenskan/bjorkloven-ar-en-seger-fran-shl-/",
+   "Karlskoga tappade ledning sent – Björklöven vände till 5–4. Björklöven leder nu finalserien med 3–0 i matcher. Segern ger chans att säkra SHL-platsen redan på onsdag. Dramatisk avslutning med ...",
+   false
+  ],
   [
    "2026-11-26T20:21:10.000Z",
    "Svaret efter petningen – stod för hattrick",
@@ -1568,16 +1607,22 @@
    "2026-11-26T19:22:48.000Z",
    "Ishockey: Frölunda – Björklöven (3-2) – Senaste nytt från SHL",
    "SVT Nyheter",
-   "https://www.svt.se/sport/ishockey/shl-2025-2026?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
-   "SHL-säsongen 2026/27 – här får du senaste nytt från svenska hockeyligan. SHL-säsongen 2026/27 – här får du senaste nytt från svenska hockeyligan. Det såg ljust ut för Björklöven när de vände till 1-2, ...",
+   "https://www.expressen.se/sport/hockey/hockeyallsvenskan/bjorkloven-ar-en-seger-fran-shl-/",
+   "Karlskoga tappade ledning sent – Björklöven vände till 5–4. Björklöven leder nu finalserien med 3–0 i matcher. Segern ger chans att säkra SHL-platsen redan på onsdag. Dramatisk avslutning med ...",
    false
+  ],
+  [
+   "2026-11-26T19:11:07.000Z",
+   "Live: Två mål – på 15 sekunder",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMiakFVX3lxTFBCMzRvNEdwamN3WVNDM1N1VGZWOXdBNVkzSTk4SFBFam5sQ190cTJXXzRZTlE0ZjVkWWhkcjJaLXdtYzBzZlU0djlhWkN5UEhkQmxQdUs3VTNhb1YyZ2RwUmNqc1JQaHRvdXc?oc=5"
   ],
   [
    "2026-11-26T19:00:17.000Z",
    "Ishockey: Frölunda – Björklöven (1-2) – Senaste nytt från SHL",
    "SVT Nyheter",
-   "https://www.svt.se/sport/ishockey/shl-2025-2026?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
-   "SHL-säsongen 2026/27 – här får du senaste nytt från svenska hockeyligan. SHL-säsongen 2026/27 – här får du senaste nytt från svenska hockeyligan. Det såg ljust ut för Björklöven när de vände till 1-2, ...",
+   "https://www.expressen.se/sport/hockey/hockeyallsvenskan/bjorkloven-ar-en-seger-fran-shl-/",
+   "Karlskoga tappade ledning sent – Björklöven vände till 5–4. Björklöven leder nu finalserien med 3–0 i matcher. Segern ger chans att säkra SHL-platsen redan på onsdag. Dramatisk avslutning med ...",
    false
   ],
   [
@@ -1590,8 +1635,8 @@
    "2026-11-26T18:24:37.000Z",
    "Ishockey: Frölunda – Björklöven (1-1) – Senaste nytt från SHL",
    "SVT Nyheter",
-   "https://www.svt.se/sport/ishockey/shl-2025-2026?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
-   "SHL-säsongen 2026/27 – här får du senaste nytt från svenska hockeyligan. SHL-säsongen 2026/27 – här får du senaste nytt från svenska hockeyligan. Det såg ljust ut för Björklöven när de vände till 1-2, ...",
+   "https://www.expressen.se/sport/hockey/hockeyallsvenskan/bjorkloven-ar-en-seger-fran-shl-/",
+   "Karlskoga tappade ledning sent – Björklöven vände till 5–4. Björklöven leder nu finalserien med 3–0 i matcher. Segern ger chans att säkra SHL-platsen redan på onsdag. Dramatisk avslutning med ...",
    false
   ],
   [
@@ -1604,9 +1649,7 @@
    "2026-11-26T16:10:53.000Z",
    "Frölunda–Björklöven 261126 – kommentera matchen här",
    "rakapuckar.com",
-   "https://www.svt.se/sport/ishockey/shl-2026-2027?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
-   "Det såg ljust ut för Björklöven när de vände till 1-2, men de får lik förbannat åka hem med noll poäng från Göteborg. Eller hem och hem, de ska till Jönköping och spela match på lördag. Kanske med Luc ...",
-   false
+   "https://news.google.com/rss/articles/CBMifkFVX3lxTE1JV1cxRWxHdFBoSXhWZVJ1WExhMEFBNHhfMTYxQmlNVzhlQThNNTJMSi1URW55MUp1V0h5T2FBMjRFdHcza1lRX2UwMUhZNUZDbkJhVDBYOW5VQnNwS1JJMGQ5NUtLYks2RFd3TThLVmc0RFlVNFFvTnh3LXNxUQ?oc=5"
   ],
   [
    "2026-11-26T14:24:59.000Z",
@@ -1632,9 +1675,7 @@
    "2026-11-26T08:38:56.000Z",
    "Var kan man se Frölunda HC – IF Björklöven? TV-kanal, streaming och tid",
    "news.bet365.com",
-   "https://www.svt.se/sport/ishockey/shl-2026-2027?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
-   "Det såg ljust ut för Björklöven när de vände till 1-2, men de får lik förbannat åka hem med noll poäng från Göteborg. Eller hem och hem, de ska till Jönköping och spela match på lördag. Kanske med Luc ...",
-   false
+   "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQVkZwVFZndWZUV2xQN3VQYjZTYk9DTGRYS19CelR0SGl6WDdIRllNaGJMSnM2WVZ5aHQ2cW8xUVFuUUdFVVdoVFJwRHVNMFpFTWg0Sk1SVzZ6R2tJMVYyd0xzaVpFZ3pjVXNJUlZLeVpkY1E2dUNkUDZVSE9IWkpESVNHQWJWcHctS1VDT2FxQTJMOGJGZC1sQlFPRnRnRm1GaWV0SmM5Ny02OEVaVDBQR3JHZ2YyaXJ4OXpxRV96NndvQkk?oc=5"
   ],
   [
    "2026-11-26T07:02:00.000Z",
@@ -1648,9 +1689,7 @@
    "2026-11-26T06:08:03.000Z",
    "Inför match: Efter trendbrottet senast – Björklöven jagar nya poäng mot Frölunda",
    "Björklöven",
-   "https://www.svt.se/sport/ishockey/shl-2026-2027?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
-   "Det såg ljust ut för Björklöven när de vände till 1-2, men de får lik förbannat åka hem med noll poäng från Göteborg. Eller hem och hem, de ska till Jönköping och spela match på lördag. Kanske med Luc ...",
-   false
+   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5HbmdUYTZMUTN3WGRWcVdGNl94anBsS0xKS1dVRkRaNlRhcDh1SzB0d3ZWTmlDUjBZMVNic1dOaFlOU1pSOUJvNklmeW92akxFUzAwa3dLOWJDamVtTW1yQVBvOA?oc=5"
   ],
   [
    "2026-11-26T02:00:00.000Z",
@@ -1672,9 +1711,7 @@
    "2026-11-25T20:15:00.000Z",
    "Så ser du Frölunda–Björklöven i SHL – tv-kanal, tider och stream",
    "Hockeyresultat.se",
-   "https://www.svt.se/sport/ishockey/shl-2026-2027?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
-   "Det såg ljust ut för Björklöven när de vände till 1-2, men de får lik förbannat åka hem med noll poäng från Göteborg. Eller hem och hem, de ska till Jönköping och spela match på lördag. Kanske med Luc ...",
-   false
+   "https://news.google.com/rss/articles/CBMikgFBVV95cUxNd2wxRWtKQjdIaVVhQVh1MFZyOHhxOHVoeWUzRHdseWxfVVZkVkd1UnZVU0Z2NTZUd0c0Q2w1ZGltZHkzeEZTS2VOLVJYRWpFRkkwWjJiTm5qNzRDNHNtVElsZVRuRjRlUGx2RnZXYTN1SkFVeDVWV2FlVjJuZ1I1TWJFRDd2a0NVQThYWXhrendGdw?oc=5"
   ],
   [
    "2026-11-25T18:44:07.000Z",
@@ -1699,61 +1736,6 @@
    "Speltips: Frölunda - Björklöven 26/11 \"Frölunda vinner på hemmaplan\"",
    "Bettingstugan.se",
    "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1PbVNvZkRmS2FVeFA5VXpIV2JCVjNza0VodUpfRTNUZXExcjRTMXZCekNxNldzbDRkaXVvUVlNMmlVSFJhT3pic3FkT1E0NUVhUWhpYjR0Ums4T3h1b2pEWmpKVQ?oc=5"
-  ],
-  [
-   "2026-11-25T11:04:57.000Z",
-   "Oväntade orden: ”Enda jag kunde tänka på... ”",
-   "Västerbotten | Folkbladet",
-   "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOWW02WEVoQURqWmhCQ2ZNSkVNQ0hIMlRNYzFBdm5TYlZ4MmFzVUhYMGpXWkgtUTdRWkNCRkhuY0Q2RTc3VG4ya3Vobk5ENGF1eHZPM3ozSnp1by1VN2hBaWxVMGMtVEtXZVpVNzZoSE92bFhpMVFfWHRPZjkzeFZ5Zzc5SU1jaS1ob2V3b3ZNMHB2aUxUVGpoa2xQVmlrdXA5dEhfZXBldmV1UUk?oc=5"
-  ],
-  [
-   "2026-11-25T07:27:48.000Z",
-   "Wallmark är nära comeback",
-   "SvenskaFans.com",
-   "https://news.google.com/rss/articles/CBMiekFVX3lxTE52ZzRHUVd1c1RuR0QxTWw3cEZEYnUzVVVnMkdDQWxwd0RCMHgydTNKTjNYdVJGRzduUHRydFpTN3gtX2lpek8zX1VSVWU2OUc5QkF6YWJ0XzFLMXlaXzBIeldDc00zUGt1QktzSWNmbmNLc2FHNllXSWZn?oc=5"
-  ],
-  [
-   "2026-11-25T03:07:00.000Z",
-   "Glädjen: Wallmark med på bortaresan",
-   "Aftonbladet",
-   "https://www.aftonbladet.se/sportbladet/a/LoAK31/gladjen-wallmark-med-pa-bortaresan",
-   "Storvärvningen Lucas Wallmark är nu väldigt nära debut hos SHL-nykomlingen Björklöven efter skadeproblemen. Efter att ha varit med på träningen fullt ut den senaste tiden följer kaptenen och tänkte fö ...",
-   false
-  ],
-  [
-   "2026-11-25T00:35:00.000Z",
-   "Kovács: \"Det gjorde mitt jobb svårare\"",
-   "Hockeysverige",
-   "https://hockeysverige.se/nyheter/robin-kovacs-om-formdippen-i-shl-med-bjorkloven-a6J9C1s9UPgu/",
-   "Både Björklöven och Robin Kovács har svalnat efter en stark start. Nykomlingen åkte på åtta raka förluster – samtidigt som stjärnan fått kritik för utebliven produktion. – De senaste tre, fyra matcher ...",
-   false
-  ],
-  [
-   "2026-11-24T20:08:31.000Z",
-   "Studio Ladan: Ställs mot väggen av tittarna – i två timmar",
-   "Västerbotten | Folkbladet",
-   "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUFpkbE10YjhqQ3l6VjJISUxQWlhtd1BScFVHYlZVd3pPUDJUM3RJYkt0aG1UOW9SYkpEejBJNVh4MHBKMlV2YkIyZ0pxZTU2NkMxSVEtT29sVUVESXNQU2RTV0s1M1l4bjFGWlFreXI2SWxBRGF0Ykd2OTdoRUgtaEZNd2NhY3BmZkN4dDFpQlRsNFhyYUE3Q1JIbUUxOGM?oc=5"
-  ],
-  [
-   "2026-11-24T17:01:21.000Z",
-   "Pausade och röt ifrån: ”Vi måste...”",
-   "Västerbotten | Folkbladet",
-   "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTDJFSDU3QzlXM3dNdUhsSmpmT1VGWHdyZENEQUhrWTlETkVyTTJyeUcwU0lMN0hJMy1md3dVV2RZRFRmMWhZVzFydTFLRnFBUXNYbGIwRG8wYXdjeHNULUd3RWFHcUVyRHlCWWRKTUEyOEdhOXdXVkY0djN2V0l4TUJ4SkJBcHJvSDVGaHVCQjZCaVBDT0dnRjJyYzgyUEw5M3dnU2p0aw?oc=5"
-  ],
-  [
-   "2026-11-24T16:41:50.000Z",
-   "Ishockey: Ett inlägg i ”Senaste nytt från SHL”",
-   "SVT Nyheter",
-   "https://www.svt.se/sport/ishockey/shl-2025-2026?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
-   "SHL-säsongen 2026/27 – här får du senaste nytt från svenska hockeyligan. SHL-säsongen 2026/27 – här får du senaste nytt från svenska hockeyligan. Det såg ljust ut för Björklöven när de vände till 1-2, ...",
-   false
-  ],
-  [
-   "2026-11-24T15:00:00.000Z",
-   "Inför match: Efter trendbrottet senast – Brynäs jagar nya poäng mot Björklöven",
-   "Brynäs IF",
-   "https://www.svenskafans.com/ishockey/infor-bjorkloven-brynas-703320",
-   "Brynäs har tagit sig upp till Umeå för att ikväll ställas mot Björklöven i Visionite Arena. Aldrig förr har det varit viktigare att hålla fötterna på jorden, och undvika hybris."
   ]
  ],
  "newsBlock": {
