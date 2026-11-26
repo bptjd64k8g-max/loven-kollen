@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26T22:13:01.251Z",
- "updatedText": "26 november 2026, kl. 23.13",
+ "updated": "2026-11-26T23:08:51.430Z",
+ "updatedText": "27 november 2026, kl. 00.08",
  "results": [
   [
    "2026-09-19",
@@ -887,6 +887,14 @@
   ],
   [
    "2026-11-25",
+   "rykte",
+   "Wallmark är nära en comeback",
+   "",
+   "SvenskaFans.com",
+   "https://news.google.com/rss/articles/CBMiekFVX3lxTE52ZzRHUVd1c1RuR0QxTWw3cEZEYnUzVVVnMkdDQWxwd0RCMHgydTNKTjNYdVJGRzduUHRydFpTN3gtX2lpek8zX1VSVWU2OUc5QkF6YWJ0XzFLMXlaXzBIeldDc00zUGt1QktzSWNmbmNLc2FHNllXSWZn?oc=5"
+  ],
+  [
+   "2026-11-25",
    "skada",
    "Wallmark är nära comeback",
    "",
@@ -1538,6 +1546,12 @@
  },
  "news": [
   [
+   "2026-11-26T22:07:30.000Z",
+   "Just nu: Så ställer Björklöven upp",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMiakFVX3lxTFBCMzRvNEdwamN3WVNDM1N1VGZWOXdBNVkzSTk4SFBFam5sQ190cTJXXzRZTlE0ZjVkWWhkcjJaLXdtYzBzZlU0djlhWkN5UEhkQmxQdUs3VTNhb1YyZ2RwUmNqc1JQaHRvdXc?oc=5"
+  ],
+  [
    "2026-11-26T21:45:43.000Z",
    "Snabba återkomsten: ”Förstklassig service”",
    "Västerbottens-Kuriren",
@@ -1559,8 +1573,8 @@
    "2026-11-26T21:13:53.000Z",
    "SHL: Höjdpunkter – Frölunda–Björklöven 26/11",
    "SVT Play",
-   "https://www.svt.se/sport/ishockey/shl-2026-2027?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
-   "Det såg ljust ut för Björklöven när de vände till 1-2, men de får lik förbannat åka hem med noll poäng från Göteborg. Eller hem och hem, de ska till Jönköping och spela match på lördag. Kanske med Luc ...",
+   "https://hockeynews.se/nyheter/fagemo-hattrickhjalte-nar-frolunda-besegrade-bjorkloven",
+   "Björklöven höll länge jämna steg med Frölunda under kvällen. Sen klev Samuel Fagemo in i handlingarna. – Jag har varit i väg i sex år och att vara tillbaka ...",
    false
   ],
   [
@@ -1573,6 +1587,14 @@
    "2026-11-26T21:01:52.000Z",
    "Frölunda–Björklöven 5–2 – snabb analys och eftersnack",
    "rakapuckar.com",
+   "https://www.svt.se/sport/ishockey/shl-2026-2027?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
+   "Det såg ljust ut för Björklöven när de vände till 1-2, men de får lik förbannat åka hem med noll poäng från Göteborg. Eller hem och hem, de ska till Jönköping och spela match på lördag. Kanske med Luc ...",
+   false
+  ],
+  [
+   "2026-11-26T20:51:01.000Z",
+   "Slut: Björklöven förlorade i Göteborg",
+   "Västerbotten | Folkbladet",
    "https://www.svt.se/sport/ishockey/shl-2026-2027?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
    "Det såg ljust ut för Björklöven när de vände till 1-2, men de får lik förbannat åka hem med noll poäng från Göteborg. Eller hem och hem, de ska till Jönköping och spela match på lördag. Kanske med Luc ...",
    false
@@ -1635,12 +1657,6 @@
   ],
   [
    "2026-11-26T19:11:07.000Z",
-   "Just nu: Så ställer Björklöven upp",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMiakFVX3lxTFBCMzRvNEdwamN3WVNDM1N1VGZWOXdBNVkzSTk4SFBFam5sQ190cTJXXzRZTlE0ZjVkWWhkcjJaLXdtYzBzZlU0djlhWkN5UEhkQmxQdUs3VTNhb1YyZ2RwUmNqc1JQaHRvdXc?oc=5"
-  ],
-  [
-   "2026-11-26T19:11:07.000Z",
    "Live: Två mål – på 15 sekunder",
    "Västerbottens-Kuriren",
    "https://news.google.com/rss/articles/CBMiakFVX3lxTFBCMzRvNEdwamN3WVNDM1N1VGZWOXdBNVkzSTk4SFBFam5sQ190cTJXXzRZTlE0ZjVkWWhkcjJaLXdtYzBzZlU0djlhWkN5UEhkQmxQdUs3VTNhb1YyZ2RwUmNqc1JQaHRvdXc?oc=5"
@@ -1673,6 +1689,14 @@
    "rakapuckar.com",
    "https://www.svt.se/sport/ishockey/shl-2026-2027?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
    "Det såg ljust ut för Björklöven när de vände till 1-2, men de får lik förbannat åka hem med noll poäng från Göteborg. Eller hem och hem, de ska till Jönköping och spela match på lördag. Kanske med Luc ...",
+   false
+  ],
+  [
+   "2026-11-26T15:05:00.000Z",
+   "Stjärnan lyrisk efter hattricket: \"Gåshud\"",
+   "Hockeysverige",
+   "https://hockeysverige.se/matcher/stjarnan-lyrisk-efter-hattricket-gashud-agTzb0s6g5kx/",
+   "Samuel Fagemo blev stor matchvinnare för Frölunda hemma mot Björklöven. Det efter sitt första SHL-hattrick. Efteråt fick han dra igång hemmaklacken -- Det var såklart mäktigt, säger han efter matchen ...",
    false
   ],
   [
@@ -1728,26 +1752,12 @@
    false
   ],
   [
-   "2026-11-26T01:06:00.000Z",
-   "Stjärnan lyrisk efter hattricket: \"Gåshud\"",
-   "Hockeysverige",
-   "https://hockeysverige.se/matcher/stjarnan-lyrisk-efter-hattricket-gashud-agTzb0s6g5kx/",
-   "Samuel Fagemo blev stor matchvinnare för Frölunda hemma mot Björklöven. Det efter sitt första SHL-hattrick. Efteråt fick han dra igång hemmaklacken -- Det var såklart mäktigt, säger han efter matchen ...",
-   false
-  ],
-  [
    "2026-11-26T00:07:27.000Z",
    "Frölunda HC - IF Björklöven på TV4 Play imorgon 19:00",
    "TV.nu",
    "https://www.svt.se/sport/ishockey/shl-2026-2027?inlagg=2f5f0ea0885b5098c90cfeeb8929952b",
    "Det såg ljust ut för Björklöven när de vände till 1-2, men de får lik förbannat åka hem med noll poäng från Göteborg. Eller hem och hem, de ska till Jönköping och spela match på lördag. Kanske med Luc ...",
    false
-  ],
-  [
-   "2026-11-25T20:15:00.000Z",
-   "Så ser du Frölunda–Björklöven i SHL – tv-kanal, tider och stream",
-   "Hockeyresultat.se",
-   "https://news.google.com/rss/articles/CBMikgFBVV95cUxNd2wxRWtKQjdIaVVhQVh1MFZyOHhxOHVoeWUzRHdseWxfVVZkVkd1UnZVU0Z2NTZUd0c0Q2w1ZGltZHkzeEZTS2VOLVJYRWpFRkkwWjJiTm5qNzRDNHNtVElsZVRuRjRlUGx2RnZXYTN1SkFVeDVWV2FlVjJuZ1I1TWJFRDd2a0NVQThYWXhrendGdw?oc=5"
   ]
  ],
  "newsBlock": {
@@ -1780,191 +1790,6 @@
    "https://news.google.com/rss/articles/CBMigAFBVV95cUxNcERCZ2xDdkIzRHZQcTd4OVZuVm5sMlFRTHJGR2c1UDFIdDA4aGp3MkJqM0I2RXFuNjV2MEFaT1B6ZkVsbkZ0RE1qQlF3VEZNNkRNZVpmbUJ2VWdhOTZ3Nm00ZWEycmFWUWUxRWNkVEdrMjFzUUhrSEtBX0owNVdUUQ?oc=5",
    "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNXR1QU5PSmVxQWpxQlhNOThFUjZ1bEI2UnRvNndnSTdQRDlFTmU4Y2k4d3gtdnVBTl9DYnh3c25UaUN3ejcwZ09VVE1PNGtSLV9qamxoMWJTdGhQTjJraEdCX0lPYmllaDFpNkEtQV9IVnJocXFTc1JpbzA0b29kNmFyYVJOZw?oc=5",
    "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSkRrWHJ0bFBOMlNtTENaSmRvTVE4Q2QwSENONFNpWlNuTEMxLThIclJoamFUWERzQjFRTEI2cUMyZFNXdEV0VU41TkwwcGRqSUtPZlJwalJuQWlqVms5amZ0dE84aW56cGpsbFlSdW5lTXl0UldGcDN0SHUxczZIZzFtMGg?oc=5"
-  ]
- },
- "lineup": {
-  "date": "2026-11-26",
-  "opp": "Frölunda HC",
-  "groups": [
-   {
-    "label": "Målvakter",
-    "p": [
-     [
-      50,
-      "Frans Tuohimaa",
-      0,
-      ""
-     ],
-     [
-      30,
-      "Lassi Lehtinen",
-      1,
-      ""
-     ]
-    ]
-   },
-   {
-    "label": "Femma 1",
-    "p": [
-     [
-      86,
-      "Robin Kovács",
-      1,
-      "F"
-     ],
-     [
-      88,
-      "Chris DiDomenico",
-      1,
-      "F"
-     ],
-     [
-      71,
-      "Gustav Possler",
-      1,
-      "F"
-     ],
-     [
-      16,
-      "Lukas Ekeståhl-Jonsson",
-      1,
-      "B"
-     ],
-     [
-      7,
-      "Topi Niemelä",
-      1,
-      "B"
-     ]
-    ]
-   },
-   {
-    "label": "Femma 2",
-    "p": [
-     [
-      10,
-      "Marcus Nilsson",
-      0,
-      "F"
-     ],
-     [
-      93,
-      "Tristen Robins",
-      0,
-      "F"
-     ],
-     [
-      34,
-      "Phil Di Giuseppe",
-      0,
-      "F"
-     ],
-     [
-      11,
-      "Tarmo Reunanen",
-      0,
-      "B"
-     ],
-     [
-      44,
-      "Josiah Didier",
-      0,
-      "B"
-     ]
-    ]
-   },
-   {
-    "label": "Femma 3",
-    "p": [
-     [
-      91,
-      "Oscar Tellström",
-      0,
-      "F"
-     ],
-     [
-      18,
-      "Axel Ottosson",
-      0,
-      "F"
-     ],
-     [
-      56,
-      "Fredrik Forsberg",
-      0,
-      "F"
-     ],
-     [
-      24,
-      "Linus Cronholm",
-      0,
-      "B"
-     ],
-     [
-      47,
-      "Marcus Björk",
-      0,
-      "B"
-     ]
-    ]
-   },
-   {
-    "label": "Femma 4",
-    "p": [
-     [
-      39,
-      "Joel Mustonen",
-      0,
-      "F"
-     ],
-     [
-      33,
-      "Albin Lundin",
-      0,
-      "F"
-     ],
-     [
-      37,
-      "Lenni Killinen",
-      0,
-      "F"
-     ],
-     [
-      57,
-      "Alfred Barklund",
-      0,
-      "B"
-     ],
-     [
-      64,
-      "Anton Malmström",
-      0,
-      "B"
-     ]
-    ]
-   }
-  ],
-  "out": [
-   [
-    32,
-    "Lucas Wallmark",
-    "skadad, tränar fullt"
-   ],
-   [
-    77,
-    "Philip Hemmyr",
-    "utlånad till Östersund"
-   ],
-   [
-    14,
-    "Douglas Flygt",
-    ""
-   ],
-   [
-    28,
-    "Emil Alba",
-    ""
-   ]
   ]
  }
 }
