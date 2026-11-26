@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26T09:54:23.622Z",
- "updatedText": "26 november 2026, kl. 10.54",
+ "updated": "2026-11-26T10:45:05.276Z",
+ "updatedText": "26 november 2026, kl. 11.45",
  "results": [
   [
    "2026-09-19",
@@ -875,20 +875,20 @@
  ],
  "feed": [
   [
+   "2026-11-26",
+   "skada",
+   "Ledig onsdag, mot Björklöven ser vi om den fick önskad effekt",
+   "",
+   "rakapuckar.com",
+   "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcFUzbTNvYzFmZnFjbGJONGNYeHZnQjhUMHFRa0tOdF80bXE3SldJME4ySHpJalF1c0tkSVhyMG5mUTVOazEyLXNmNDNfRTcwQ05QT1dYZ3pPSV9maUlvUFJBV05zOWtIOTNWSVNBZ2Z6V0lSaUFkTTZEZnFiYm5wV1lCc0dlLVlBSzkwUA?oc=5"
+  ],
+  [
    "2026-11-25",
    "skada",
    "Wallmark är nära comeback",
    "",
    "SvenskaFans.com",
    "https://news.google.com/rss/articles/CBMiekFVX3lxTE52ZzRHUVd1c1RuR0QxTWw3cEZEYnUzVVVnMkdDQWxwd0RCMHgydTNKTjNYdVJGRzduUHRydFpTN3gtX2lpek8zX1VSVWU2OUc5QkF6YWJ0XzFLMXlaXzBIeldDc00zUGt1QktzSWNmbmNLc2FHNllXSWZn?oc=5"
-  ],
-  [
-   "2026-11-25",
-   "skada",
-   "Ledig onsdag, mot Björklöven ser vi om den fick önskad effekt",
-   "",
-   "rakapuckar.com",
-   "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcFUzbTNvYzFmZnFjbGJONGNYeHZnQjhUMHFRa0tOdF80bXE3SldJME4ySHpJalF1c0tkSVhyMG5mUTVOazEyLXNmNDNfRTcwQ05QT1dYZ3pPSV9maUlvUFJBV05zOWtIOTNWSVNBZ2Z6V0lSaUFkTTZEZnFiYm5wV1lCc0dlLVlBSzkwUA?oc=5"
   ],
   [
    "2026-11-24",
@@ -909,14 +909,6 @@
   [
    "2026-11-21",
    "besked",
-   "Phil DiGiuseppe & Magnus Bogren inför Örebro | Youtube",
-   "",
-   "Björklöven",
-   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1SQW82SG9QUmpSQ2ZfUjZuS3lnNGRmck1RNS1CNVJyRk9pVThSUnlDa3o0d1FVelJVc0FEOWdfV1ZOaUp4SFVLX19MNXFIdkhtamZaMi1OV3lWNHhoXzR4QVRaWQ?oc=5"
-  ],
-  [
-   "2026-11-21",
-   "besked",
    "Wallmark om tuffa hösten: ”Kenttä säger att jag spelar på torsdag”",
    "",
    "Aftonbladet",
@@ -926,9 +918,17 @@
    "2026-11-21",
    "besked",
    "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
-   "Björklövens mardrömssvit bara växer och växer. Mot Växjö blev det lagets nionde raka förlust. Växjö ser ut att ha fått bästa möjliga effekt sedan sportchef Henrik Evertsson tog steget ner i ...",
+   "",
    "Hockeynews",
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
+  ],
+  [
+   "2026-11-21",
+   "besked",
+   "Phil DiGiuseppe & Magnus Bogren inför Örebro | Youtube",
+   "",
+   "Björklöven",
+   "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1SQW82SG9QUmpSQ2ZfUjZuS3lnNGRmck1RNS1CNVJyRk9pVThSUnlDa3o0d1FVelJVc0FEOWdfV1ZOaUp4SFVLX19MNXFIdkhtamZaMi1OV3lWNHhoXzR4QVRaWQ?oc=5"
   ],
   [
    "2026-11-20",
@@ -1535,10 +1535,24 @@
  },
  "news": [
   [
+   "2026-11-26T10:00:13.000Z",
+   "Frölunda – Björklöven 26 november 2026: handikapp",
+   "HurBra.se",
+   "https://hurbra.se/bjorkloven-orebro-tv-12-november-2026/",
+   "Se Björklöven–Örebro på TV den 12 november 2026. Här hittar du kanal, sändningsstart, TV4 Play, matchtid och försnack inför SHL-mötet.",
+   false
+  ],
+  [
    "2026-11-26T08:38:56.000Z",
    "Var kan man se Frölunda HC – IF Björklöven? TV-kanal, streaming och tid",
    "news.bet365.com",
    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQVkZwVFZndWZUV2xQN3VQYjZTYk9DTGRYS19CelR0SGl6WDdIRllNaGJMSnM2WVZ5aHQ2cW8xUVFuUUdFVVdoVFJwRHVNMFpFTWg0Sk1SVzZ6R2tJMVYyd0xzaVpFZ3pjVXNJUlZLeVpkY1E2dUNkUDZVSE9IWkpESVNHQWJWcHctS1VDT2FxQTJMOGJGZC1sQlFPRnRnRm1GaWV0SmM5Ny02OEVaVDBQR3JHZ2YyaXJ4OXpxRV96NndvQkk?oc=5"
+  ],
+  [
+   "2026-11-26T06:25:36.000Z",
+   "Ledig onsdag, mot Björklöven ser vi om den fick önskad effekt",
+   "rakapuckar.com",
+   "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcFUzbTNvYzFmZnFjbGJONGNYeHZnQjhUMHFRa0tOdF80bXE3SldJME4ySHpJalF1c0tkSVhyMG5mUTVOazEyLXNmNDNfRTcwQ05QT1dYZ3pPSV9maUlvUFJBV05zOWtIOTNWSVNBZ2Z6V0lSaUFkTTZEZnFiYm5wV1lCc0dlLVlBSzkwUA?oc=5"
   ],
   [
    "2026-11-26T06:08:02.000Z",
@@ -1553,12 +1567,6 @@
    "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9ROVJ6RnBkaVVLVXZfQXlSUm1xNnFwNXVidlZHUXRhZFk2NWY4cFFVNVRHRjFQYTRNNU9HQ0FlWnNMY3IxeHlTSms3dHpVbzA?oc=5"
   ],
   [
-   "2026-11-25T20:46:39.000Z",
-   "Tillsammans med landslagsspelaren: ”Jäkligt glad för henne”",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaElKWnJ2MTNBc2dRVG5ZTjFNX3R4ZFhOTVY0dDFickpCajFvOGxBRTBqNEJaanhtYmRmNEhmVEl0M3o3bG5scGdCOG9ZbEZFaWtUTFJpNUdZdGlIRkx2Ym8xNU5JSFV3dVpJZjNkNTdBMklMSVVzeTNtdWZmNnpvWnI1cHJtOW51TnFTd1ZFbHp4SFBaOVE?oc=5"
-  ],
-  [
    "2026-11-25T20:15:00.000Z",
    "Så ser du Frölunda–Björklöven i SHL – tv-kanal, tider och stream",
    "Hockeyresultat.se",
@@ -1571,10 +1579,10 @@
    "https://news.google.com/rss/articles/CBMiakFVX3lxTE1IU3k4U2ZpcGl3MlhKV0QtRmFVODBoNnhLN3A4UVBIcy00VkVodjV1MDVsbTJyLVpWczZ4WVZPTHg4Q1l1SDZlUEdrcFFzOVhfcDlkcVFucGV5dXJoMTV1R0FURHdrVTNJdUE?oc=5"
   ],
   [
-   "2026-11-25T16:00:42.000Z",
-   "Ledig onsdag, mot Björklöven ser vi om den fick önskad effekt",
-   "rakapuckar.com",
-   "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcFUzbTNvYzFmZnFjbGJONGNYeHZnQjhUMHFRa0tOdF80bXE3SldJME4ySHpJalF1c0tkSVhyMG5mUTVOazEyLXNmNDNfRTcwQ05QT1dYZ3pPSV9maUlvUFJBV05zOWtIOTNWSVNBZ2Z6V0lSaUFkTTZEZnFiYm5wV1lCc0dlLVlBSzkwUA?oc=5"
+   "2026-11-25T17:58:54.000Z",
+   "Tillsammans med landslagsspelaren: ”Jäkligt glad för henne”",
+   "Västerbotten | Folkbladet",
+   "https://news.google.com/rss/articles/CBMioAFBVV95cUxQcnZKVXpmbkxMMzBreXRDRkcxZzBKMVNOWXpZM3ZHODZLb1c4OE1iUFU4anhJY0ttbVVtVFhGeUtvWkl0VjBtbURwMi1OZ3ZicHFQczZuNEJqRk96aEVjQ2Rwck9LNGxTVTBQZEJuUk8zQzBkamN4YlpVX3lBZGFOYVBQblBXMjBIMUVEZjJwbHZndTZVdUVMX1lvNFM2N25V?oc=5"
   ],
   [
    "2026-11-25T15:25:46.000Z",
@@ -1717,12 +1725,6 @@
    "https://www.aftonbladet.se/sportbladet/hockey/a/0vn7W2/bjorklovens-chris-didomenico-om-kritiken-jag-har-fatt-ta-mycket-skit",
    "UMEÅ. Med familjen på plats börjar Chris DiDomenico, 37, äntligen att lyfta i Björklöven. Men kanadensaren har fått utstå hård kritik under sin första tid i SHL. – Jag har spelat hockey tillräckligt l ...",
    true
-  ],
-  [
-   "2026-11-22T10:19:57.000Z",
-   "De reste till Sverige – för skadade stjärnan",
-   "Expressen",
-   "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSTZWM0xDWEVGeE5SSU1uYVo4T0JKQTlpdHpjT3E1d3lYNkI3QzlaQTJtalBBQmtTLTBraF8wdDBQTnpqNmNJOS02WkZ2VzBRUVQ4aUJKNWlSUE0zTzdid2JVek1KYUh6TkVPZ2R1UXBUdkkzR0xMOEhqeF9GeDhTYVAya3dtZVdTUDRwdFd0LXl1YzJwc2ZUZ3ozVl9VbnFY?oc=5"
   ]
  ],
  "newsBlock": {
