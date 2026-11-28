@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-28T01:53:57.346Z",
- "updatedText": "28 november 2026, kl. 02.53",
+ "updated": "2026-11-28T02:41:03.454Z",
+ "updatedText": "28 november 2026, kl. 03.41",
  "results": [
   [
    "2026-09-19",
@@ -937,7 +937,7 @@
    "2026-11-21",
    "besked",
    "Nio raka förluster – så hanterar Bogren krisen i Björklöven",
-   "Björklövens mardrömssvit bara växer och växer. Mot Växjö blev det lagets nionde raka förlust. Växjö ser ut att ha fått bästa möjliga effekt sedan sportchef Henrik Evertsson tog steget ner i ...",
+   "",
    "Hockeynews",
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY0FmRXAxOHFzTWZLV2d1bXF1WEk2UFpsODI4M0MxaTVTZ3NfazFTSkJRMXRCQ2xVcDBoQ2lPaWt6VmxqUTBhVmxMSHBTN2ZlQkZQY2EyQ3VibXl2X3ZHenFlNGFEZ3UxNkRrczd1UUNNMnFnelZna21xRTBHeDdFTVRNYlY0X0U3U003aUxOSUk?oc=5"
   ],
@@ -1640,12 +1640,6 @@
    "https://news.google.com/rss/articles/CBMiT0FVX3lxTFByVkpadlJhemNWWU1ZNkRveGo2dEtuS2NXcHZkYjFUT003ZGUyZVBfWXJYbjNfU25PMjZReDM1NmxJSzg4emZnNTI5MGJvSm8?oc=5"
   ],
   [
-   "2026-11-26T22:11:46.000Z",
-   "Just nu: Så ställer Björklöven upp",
-   "Västerbottens-Kuriren",
-   "https://news.google.com/rss/articles/CBMiakFVX3lxTFBCMzRvNEdwamN3WVNDM1N1VGZWOXdBNVkzSTk4SFBFam5sQ190cTJXXzRZTlE0ZjVkWWhkcjJaLXdtYzBzZlU0djlhWkN5UEhkQmxQdUs3VTNhb1YyZ2RwUmNqc1JQaHRvdXc?oc=5"
-  ],
-  [
    "2026-11-26T21:45:43.000Z",
    "Snabba återkomsten: ”Förstklassig service”",
    "Västerbottens-Kuriren",
@@ -1688,6 +1682,12 @@
    "Första SHL-målet: ”Ger såklart mycket”",
    "Västerbottens-Kuriren",
    "https://news.google.com/rss/articles/CBMiekFVX3lxTE5mbUVPMnFCR3dkcWczbVJzdV93WFUzY0VPZ2JUYlpheTVYZjdBXzZtSnAwMmJmdnpwUmdjd1lwVWM1M1pqV01YbFhFY2RIRHFfZ2xVVEFvWkE4czRlalE4cFdIRjY1bFFLZWdaZWFCQXhaMXlKbTZGLUh3?oc=5"
+  ],
+  [
+   "2026-11-26T20:51:01.000Z",
+   "Just nu: Så ställer Björklöven upp",
+   "Folkbladet",
+   "https://news.google.com/rss/articles/CBMidEFVX3lxTE1ONUctZzNybHFGQmhNUExxRFhERVNvZGVBY1h3ZURSNGx3YXlIcHdESk9uTmZuc2dybUttX0xabFpmRml3WmdRWkpKY2E5RVhNQTJ3ektFaGFhYnBhRHU0Zlp5MzRpcTdrQWxCUFBFbHJWWm5o?oc=5"
   ],
   [
    "2026-11-26T20:51:01.000Z",
@@ -1735,7 +1735,9 @@
    "2026-11-26T20:22:59.000Z",
    "Ishockey: Frölunda – Björklöven (5-2) – SLUT – Senaste nytt från SHL",
    "SVT Nyheter",
-   "https://news.google.com/rss/articles/CBMikAFBVV95cUxPaERXeFhNZFdxTzFhM0tlZ0hMcWlYYTJaRlFpTzlLQ0pxRHJVNHo5bUxYdHJROE5zdFFnWFAwWlRKWFRZMWNwNGxSbWgxTHFhbTBFUTdPX3RNdjl5TnRKRFJ4U2FLbF9GenBCdHlvUGJYRGtyUGZhQmE3WUNJQWJjWm1Kb09CcnhPRkFWaU5ieEQ?oc=5"
+   "https://www.expressen.se/sport/hockey/hockeyallsvenskan/bjorkloven-ar-en-seger-fran-shl-/",
+   "Karlskoga tappade ledning sent – Björklöven vände till 5–4. Björklöven leder nu finalserien med 3–0 i matcher. Segern ger chans att säkra SHL-platsen redan på onsdag. Dramatisk avslutning med ...",
+   false
   ]
  ],
  "newsBlock": {
