@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-28T08:39:27.254Z",
- "updatedText": "28 november 2026, kl. 09.39",
+ "updated": "2026-11-28T09:29:24.395Z",
+ "updatedText": "28 november 2026, kl. 10.29",
  "results": [
   [
    "2026-09-19",
@@ -199,7 +199,11 @@
    "18:00",
    "B",
    "HV 71",
-   ""
+   "",
+   {
+    "kanal": "TV4 Hockey och TV4 Play",
+    "start": "17:50"
+   }
   ],
   [
    "2026-12-03",
@@ -1121,7 +1125,7 @@
    "2026-09-18",
    "skada",
    "Nu gör Björklöven comeback i SHL – siktar på slutspel: ”Ska sätta ned foten”",
-   "Björklöven är tillbaka i SHL – efter 25 år. Lagbygget sticker ut då man har fem Umeåspelare i truppen – och målet är högt satt. – Vi ska ta för oss och inte bara be om ursäkt, vi siktar på slutspel, ...",
+   "",
    "SVT Nyheter",
    "https://news.google.com/rss/articles/CBMiugFBVV95cUxPN2xid1FwOUV4X1laSU0xQU5tX0dLR0RNMFkya1dzNG9RXzhGZW9YZG5kTURyMnV5ZDQ2cGdsdUdaTmpDZXJWRFNHRG9pNlNuaGZISXpkNnlIT0lDTHZ6SnhpUi1lR2lLMm83d2o1RWZ5aHo1em9BQmJBVEcyby1qdUVFY055MVlhWHJSeWV6dS1RRHkzWXdEUGlZZG1BR2tiYnNGMExRdXJSNzUzVXdrcDZKU1hKdkh4ekE?oc=5"
   ],
@@ -1592,22 +1596,22 @@
    "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZk5uSnFMTnNINi1ROFpTRmJ1UkJBcHhWMkFkUUZEOElOWFlrREFfcnpGRzkzVEhXbEdyMHU5RElGRFdweEw3SElLd0xxNUI2OUhPT3FkOEhOX2R2cU5Gc0RraVJ6QWw2d3I2c252cldwb1JkeGdXX2huSDZ1eW9pRnVCaDNPS2JmUnotQUJVMXpPdw?oc=5"
   ],
   [
+   "2026-11-28T04:07:07.000Z",
+   "Hyllningen: ”Stöttar oss i vått och torrt”",
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMickFVX3lxTFBTRkpzR0h1TldRVFliWGx1b1BoV2dNRUw3Vi1hMlZTNTN3ZXJaWE5KTW1DdkpLb1BkcGpIQjloWGt0eWxDOFVBQnM5TU5nWTBRSFplV0lUeEg0dFBsOVpDSGhKLVNnNnFrcWxDejRZUmRrUQ?oc=5"
+  ],
+  [
    "2026-11-27T19:00:00.000Z",
    "Så ser du HV71–Björklöven i SHL – tv-kanal, tider och stream",
    "Hockeyresultat.se",
    "https://news.google.com/rss/articles/CBMijAFBVV95cUxPd1dwZFcybjg1VkJXeDlGQlplNXVuRG15dkhfYWpBLU9FbVN6OC1pRjdUd2xEYUtnT0tnWTFibXg2cVhIVXlaeXltYUlNb21SMlJvdHNzb3EzZHBRYk1relZpblVMMnJrTkJBVHFzbkpmRWhyQVJyRlBjMVRSN0doX3hTQVFDQktSYWNPUA?oc=5"
   ],
   [
-   "2026-11-27T16:13:33.000Z",
-   "Hyllningen: ”Stöttar oss i vått och torrt”",
-   "Folkbladet",
-   "https://news.google.com/rss/articles/CBMifEFVX3lxTFBjaEVGcDJnRjhkaUl3WnpMVV9ROFVpa2VJcjFwbFd5WGFZci1FRFZyaEV5ektqNVdBSV9sZ3QyU1VnbVZCZlNFemRsTG9BbGlZcmJlc3FleVFYYklqOThZQTNFNV9JNXJuc0FKcFJ2UHhhSEI2dzRUeG91NUk?oc=5"
-  ],
-  [
-   "2026-11-27T16:13:33.000Z",
+   "2026-11-27T16:31:17.000Z",
    "Portas från Björklövens matcher",
-   "Västerbotten | Folkbladet",
-   "https://news.google.com/rss/articles/CBMif0FVX3lxTFByRTF5UUVJT0FVdTBnRWJMSEh6cm54cXZSbkxYS0ZveVpSakJiYllDS0hHSmpXdXg4WE9NbG1wakEyUmpmSGpSclgwRWl2b2tmdkI4bWh1U2F3Mi1xYjlWNzhIdEVPME13azFpRWQ0R1dCbmE2eF9jT2hPN3M4eDQ?oc=5"
+   "Västerbottens-Kuriren",
+   "https://news.google.com/rss/articles/CBMidEFVX3lxTE5JbTViM0dwejdoekhmZE5EZnJqbGNqNGxzd0tTMFdXWVExdUFrWnlPYWpxQmRPM2ZTUWdFT1V5YVZwQTNpcXdPQ2RvemRxbVBhOGhfY0pPNjRoa1pHOS1fSy0tcXVSaG9GbENEekpCNVhJb0N3?oc=5"
   ],
   [
    "2026-11-27T12:25:08.000Z",
